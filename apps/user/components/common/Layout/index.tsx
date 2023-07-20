@@ -1,4 +1,3 @@
-import Nav from "../Nav";
 import { Container } from "./style";
 
 interface Props {
@@ -6,12 +5,7 @@ interface Props {
 }
 
 const Layout = ({ children }: Props) => {
-  return (
-    <Container>
-      <Nav />
-      {children}
-    </Container>
-  );
+  return <Container>{children}</Container>;
 };
 
 export default Layout;

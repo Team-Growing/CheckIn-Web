@@ -1,8 +1,10 @@
 import Image from "next/image";
 import * as S from "./style";
 import profile from "../../../../assets/Profile/profile.svg";
+import { useRouter } from "next/router";
 
 const NavUser = () => {
+  const router = useRouter();
   return (
     <S.NavBottomBox>
       <S.NavUserBox>
@@ -15,7 +17,9 @@ const NavUser = () => {
         </S.NavUserInfoBox>
       </S.NavUserBox>
       <S.NavAuthBox>
-        <S.NavLoginText>로그인</S.NavLoginText>
+        <S.NavLoginText onClick={() => router.push("/auth/login")}>
+          로그인
+        </S.NavLoginText>
         <S.NavLoginText>회원가입</S.NavLoginText>
       </S.NavAuthBox>
     </S.NavBottomBox>

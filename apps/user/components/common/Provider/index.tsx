@@ -1,8 +1,8 @@
 import { ProvidersProps } from "./types";
-
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
+import ThemeProviderContainer from "../ThemeProviderContainer";
 
 const queryClient = new QueryClient({
   defaultOptions: {
