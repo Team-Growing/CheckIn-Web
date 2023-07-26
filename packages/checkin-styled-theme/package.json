@@ -1,0 +1,8 @@
+{
+  "name": "@checkin/styled-theme",
+  "version": "1.0.0",
+  "description": "checkin styled-components-theme",
+  "main": "./index.ts",
+  "author": "baekseungha",
+  "license": "MIT"
+}
