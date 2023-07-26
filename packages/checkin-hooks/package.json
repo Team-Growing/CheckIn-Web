@@ -1,0 +1,7 @@
+{
+  "name": "@checkin/hooks",
+  "version": "1.0.0",
+  "description": "checkin common hooks",
+  "main": "index.tsx",
+  "license": "MIT"
+}
