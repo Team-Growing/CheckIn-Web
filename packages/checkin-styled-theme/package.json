@@ -4,5 +4,11 @@
   "description": "checkin styled-components-theme",
   "main": "./index.ts",
   "author": "baekseungha",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "5.3.6"
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
+  }
 }
