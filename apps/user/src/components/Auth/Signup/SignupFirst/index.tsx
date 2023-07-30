@@ -8,7 +8,7 @@ import {
   AuthOppositePartWrap,
 } from "../../style";
 import { IoIosArrowForward } from "react-icons/io";
-
+import { Button } from "@checkin/ui";
 interface Props {
   signupData: SignupStudentData;
   onChangeSignupData: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -92,9 +92,9 @@ const SignupFirst = ({
               다음 <IoIosArrowForward />
             </S.SignupSubmitBtn>
           ) : (
-            <S.SignupSecondSubmitBtn onClick={submitFirstSignup}>
+            <Button type="primary" onClick={submitFirstSignup}>
               Check In 가입하기
-            </S.SignupSecondSubmitBtn>
+            </Button>
           )}
         </div>
       </S.SignupInputContainer>
