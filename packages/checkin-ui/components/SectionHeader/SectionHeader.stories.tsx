@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { SectionHeader } from "./SectionHeader";
 export default {
-  title: "ui/Card",
+  title: "ui/SectionHeader",
   component: SectionHeader,
   argTypes: {},
 } as ComponentMeta<typeof SectionHeader>;

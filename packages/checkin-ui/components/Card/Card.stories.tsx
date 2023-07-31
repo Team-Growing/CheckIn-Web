@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { Card } from "./Card";
-import CalendarImg from "../../assets/Icons/Calendar.svg";
+
 export default {
   title: "ui/Card",
   component: Card,
