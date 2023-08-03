@@ -1,0 +1,8 @@
+{
+  "name": "checkin-utils",
+  "version": "1.0.0",
+  "description": "checkin-utils",
+  "main": "index.ts",
+  "author": "baekseungha",
+  "license": "MIT"
+}
