@@ -13,7 +13,7 @@
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
-  "name": "my-turborepo",
+  "name": "check-in",
   "packageManager": "yarn@1.22.19",
   "workspaces": [
     "apps/*",
