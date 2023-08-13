@@ -82,10 +82,10 @@
     <path d="M19.0249 29.8203H12.9749V24.5203C12.9749 24.1303 13.2849 23.8203 13.6749 23.8203H18.3249C18.7149 23.8203 19.0249 24.1303 19.0249 24.5203V29.8203Z" fill="url(#paint45_linear_337_3485)"/>
   </g>
   <g filter="url(#filter16_f_337_3485)">
-    <path d="M16.0498 14.8418L17.6028 16.4058" stroke="url(#paint46_linear_337_3485)" stroke-width="0.25" stroke-linecap="round"/>
+    <path d="M16.0498 14.8418L17.6028 16.4058" stroke="url(#paint46_linear_337_3485)" strokeWidth="0.25" strokeLinecap="round"/>
   </g>
   <g filter="url(#filter17_f_337_3485)">
-    <path d="M16.3059 6.33984L23.3899 13.4438" stroke="url(#paint47_linear_337_3485)" stroke-width="0.4" stroke-linecap="round"/>
+    <path d="M16.3059 6.33984L23.3899 13.4438" stroke="url(#paint47_linear_337_3485)" strokeWidth="0.4" strokeLinecap="round"/>
   </g>
   <defs>
     <filter id="filter0_d_337_3485" x="1.26489" y="10.5605" width="29" height="6.01953" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

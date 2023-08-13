@@ -1,0 +1,16 @@
+{
+  "name": "@checkin/toast",
+  "version": "0.1.0",
+  "description": "checkin-toast",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "author": "baekseungha",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-toastify": "^9.1.3"
+  }
+}

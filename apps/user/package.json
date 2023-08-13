@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@checkin/toast": "*",
     "@checkin/ui": "*",
     "@types/node": "20.4.5",
     "@types/react": "18.2.16",

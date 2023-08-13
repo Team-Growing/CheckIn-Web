@@ -1,6 +1,7 @@
 import React from "react";
 import {
   SectionHeaderContainer,
+  SectionHeaderImage,
   SectionHeaderSubTitle,
   SectionHeaderTitle,
 } from "./style";
@@ -10,7 +11,7 @@ import { SectionHeaderProps } from "./types";
 export const SectionHeader = ({ subTitle, title }: SectionHeaderProps) => {
   return (
     <SectionHeaderContainer>
-      <img src={CheckLogo} alt="" width={56} height={56} />
+      <SectionHeaderImage src={CheckLogo.src} alt="" width={56} height={56} />
       <SectionHeaderTitle>{title}</SectionHeaderTitle>
       <SectionHeaderSubTitle>{subTitle}</SectionHeaderSubTitle>
     </SectionHeaderContainer>
