@@ -5,7 +5,7 @@ import {
   SectionHeaderSubTitle,
   SectionHeaderTitle,
 } from "./style";
-import CheckLogo from "../../assets/Logo/CheckLogo.svg";
+import CheckLogo from "../../../assets/Logo/CheckLogo.svg";
 import { SectionHeaderProps } from "./types";
 
 export const SectionHeader = ({ subTitle, title }: SectionHeaderProps) => {
