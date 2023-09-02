@@ -1,40 +1,22 @@
-import {
-  ACCESS_TOKEN_KEY,
-  REFRESH_TOKEN_KEY,
-} from "@/constant/Token/Token.constant";
-import { Storage } from "../Storage/Storage";
-import Cookie from "../Storage/Cookie";
+import { Storage } from "./storage";
+import cookie from "js-cookie";
 
-class Token {
-  private storage: Storage;
-
-  constructor(storage: Storage) {
-    this.storage = storage;
+class Token implements Storage {
+  public getCookie(key: string): string | undefined {
+    let item = undefined;
+    if (cookie.get(key) !== undefined) {
+      item = cookie.get(key);
+    }
+    return item;
   }
 
-  public getToken(
-    key: typeof ACCESS_TOKEN_KEY | typeof REFRESH_TOKEN_KEY
-  ): string | undefined {
-    return this.storage.get(key);
+  public setCookie(key: string, value: string): void {
+    cookie.set(key, value);
   }
 
-  public setToken(
-    key: typeof ACCESS_TOKEN_KEY | typeof REFRESH_TOKEN_KEY,
-    value: string
-  ): void {
-    this.storage.set(key, value);
-  }
-
-  public removeToken(
-    key: typeof ACCESS_TOKEN_KEY | typeof REFRESH_TOKEN_KEY
-  ): void {
-    this.storage.remove(key);
-  }
-
-  public clearToken(): void {
-    this.storage.remove(ACCESS_TOKEN_KEY);
-    this.storage.remove(REFRESH_TOKEN_KEY);
+  public removeCookie(key: string): void {
+    cookie.remove(key);
   }
 }
 
-export default new Token(Cookie);
+export default new Token();

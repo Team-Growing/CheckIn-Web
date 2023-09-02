@@ -1,15 +1,35 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 export const NavContainer = styled.div`
   width: 300px;
   height: 100vh;
+
   background: #ffffff;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+
   padding-top: 67px;
   padding-bottom: 52px;
+`;
+
+export const NavTopWrap = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 66px;
+`;
+
+export const NavLogo = styled(Image)`
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 `;
 
 export const NavBottomBox = styled.div`

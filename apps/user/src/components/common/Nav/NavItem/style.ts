@@ -1,12 +1,28 @@
 import styled from "styled-components";
 
-export const NavItemBox = styled.div`
+export const NavItemWrap = styled.div`
   width: 100%;
-  height: 96px;
+
   display: flex;
   flex-direction: column;
-  padding-left: 76px;
-  row-gap: 10px;
+
+  row-gap: 18px;
+`;
+
+export const NavItemBox = styled.div<{ isMatch: boolean }>`
+  width: 260px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 57px;
+  column-gap: 17px;
+
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-size: 20px;
+  background-color: ${({ isMatch }) => (isMatch == true ? "#00C537" : null)};
+  color: ${({ isMatch }) => (isMatch == true ? "#ffffff" : "#636363")};
 `;
 
 export const NavItemText = styled.p`
@@ -14,10 +30,7 @@ export const NavItemText = styled.p`
   cursor: pointer;
 `;
 
-export const NavUserBox = styled.div`
-  min-width: 220px;
-  max-width: 220px;
-  height: 90px;
-  display: flex;
-  row-gap: 19px;
+export const NavItemIcon = styled.img`
+  width: 24px;
+  height: 24px;
 `;

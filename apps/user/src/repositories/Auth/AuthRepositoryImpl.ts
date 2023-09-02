@@ -1,4 +1,4 @@
-import { customAxios } from "../../libs/Auth/customAxios";
+import apiClient from "@/libs/Auth/customAxios";
 import { LoginResponse } from "../../types/Auth/Login/Login.type";
 import { Response } from "../../types/util/response";
 import {
@@ -10,14 +10,14 @@ import {
 
 class AuthRepositoryImpl implements AuthRepository {
   public async login(loginData: LoginParam): Promise<LoginResponse> {
-    const { data } = await customAxios.post("/sign-in", loginData);
+    const { data } = await apiClient.post("/sign-in", loginData);
     return data;
   }
 
   public async signupStudent(
     studentSignupData: SignupStudentParam
   ): Promise<Response> {
-    const { data } = await customAxios.post(
+    const { data } = await apiClient.post(
       "/sign-up/student",
       studentSignupData
     );
@@ -27,7 +27,7 @@ class AuthRepositoryImpl implements AuthRepository {
   public async signupTeacher(
     teacherSignupData: SignupTeacherParam
   ): Promise<Response> {
-    const { data } = await customAxios.post(
+    const { data } = await apiClient.post(
       "/sign-up/teacher",
       teacherSignupData
     );

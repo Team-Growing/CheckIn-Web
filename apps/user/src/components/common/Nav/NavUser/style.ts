@@ -33,7 +33,7 @@ export const NavUserImageBackground = styled.div`
 `;
 
 export const NavUserInfoBox = styled.div`
-  width: 81px;
+  width: 90px;
   height: 41px;
   display: flex;
   flex-direction: column;
@@ -50,18 +50,16 @@ export const NavUserGrade = styled.p`
 
 export const NavAuthBox = styled.div`
   display: flex;
+  font-size: 20px;
 `;
 
 export const NavLoginText = styled.p`
   & + & {
-    border-left: 3px solid #adadad;
+    border-left: 2px solid #6d6d6d;
     padding-left: 8px;
     margin-left: 8px;
   }
-  font-size: 24px;
-  line-height: 29px;
-  letter-spacing: -0.05em;
+
   color: #6d6d6d;
   cursor: pointer;
-  height: 28px;
 `;

@@ -3,6 +3,8 @@ import { ChangeEvent, FormEvent, useCallback, useState } from "react";
 import AuthRepositoryImpl from "../../repositories/Auth/AuthRepositoryImpl";
 import { Login } from "../../types/Auth/Login/Login.type";
 import { sha512 } from "js-sha512";
+import Token from "@/libs/Token/Token";
+import { ACCESS_TOKEN_KEY } from "@/constant/Token/Token.constant";
 
 export const useLogin = () => {
   const router = useRouter();
@@ -29,8 +31,12 @@ export const useLogin = () => {
         id,
         pw: sha512(pw),
       };
+
       try {
-        await AuthRepositoryImpl.login(validLoginData);
+        const { data } = await AuthRepositoryImpl.login(validLoginData);
+        Token.setCookie(ACCESS_TOKEN_KEY, data.accessToken);
+        Token.setCookie(ACCESS_TOKEN_KEY, data.refreshToken);
+
         window.alert("로그인 성공");
         router.push("/");
       } catch {
