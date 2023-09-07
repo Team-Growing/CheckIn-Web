@@ -20,7 +20,7 @@ export const CardContainer = styled.div<{
 `;
 
 const cardSize: Record<CardType, FlattenSimpleInterpolation> = {
-  Class: css`
+  Lecture: css`
     width: 92.5%;
     height: 32.8vh;
 
@@ -41,7 +41,7 @@ const cardSize: Record<CardType, FlattenSimpleInterpolation> = {
 
     padding: 27px 0 0 36px;
   `,
-  Calendar: css`
+  Enrol: css`
     width: 56.5%;
     height: 52.1vh;
 

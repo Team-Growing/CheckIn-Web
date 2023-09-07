@@ -1,4 +1,3 @@
-import React from "react";
 import { FlexContainer } from "./style";
 import { FlexProps } from "./types";
 

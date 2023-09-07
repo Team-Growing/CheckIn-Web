@@ -7,7 +7,7 @@ export interface CardProps {
   customStyle?: CSSObject;
 }
 
-export type CardType = "Lecture" | "Notifiction" | "Calendar" | "Applyout";
+export type CardType = "Lecture" | "Notifiction" | "Enrol" | "Applyout";
 
 export interface CardTitlProps {
   children: ReactNode;

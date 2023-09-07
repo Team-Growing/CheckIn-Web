@@ -3,9 +3,9 @@ import Image from "next/image";
 import React from "react";
 import CalendarImg from "../../../assets/Icon/Calendar.svg";
 
-const Calendar = () => {
+const Enrol = () => {
   return (
-    <Card type="Calendar">
+    <Card type="Enrol">
       <CardTitle>
         <Image
           width={32}
@@ -14,10 +14,10 @@ const Calendar = () => {
           alt=""
           style={{ marginBottom: "4px" }}
         />
-        방과후 결강 신청
+        출석코드 입력
       </CardTitle>
     </Card>
   );
 };
 
-export default Calendar;
+export default Enrol;
