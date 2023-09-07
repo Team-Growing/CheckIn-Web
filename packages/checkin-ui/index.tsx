@@ -4,5 +4,7 @@ import * as React from "react";
 export * from "./components/UI/Button/Button";
 export * from "./components/UI/SectionHeader/SectionHeader";
 export * from "./components/UI/Card/Card";
+export * from "./components/UI/LectureBox/LectureBox";
 
+// Layout exports
 export * from "./components/Layout/Flex/Flex";
