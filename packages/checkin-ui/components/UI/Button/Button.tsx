@@ -1,6 +1,6 @@
 import React from "react";
-import { ButtonProps } from "./types";
-import { ButtonContainer } from "./style";
+import { ButtonProps, ButtonWrapperProps } from "./types";
+import { ButtonContainer, ButtonWrapperBox } from "./style";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { ImPencil } from "react-icons/im";
 
@@ -42,4 +42,8 @@ export const WriteButton = ({
       {children}
     </ButtonContainer>
   );
+};
+
+export const ButtonWrapper = ({ children }: ButtonWrapperProps) => {
+  return <ButtonWrapperBox>{children}</ButtonWrapperBox>;
 };

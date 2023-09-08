@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { CSSObject } from "styled-components";
 
 export interface ButtonProps {
@@ -7,4 +8,13 @@ export interface ButtonProps {
   children: string;
 }
 
-export type ButtonType = "primary" | "secondary" | "outline" | "text";
+export type ButtonType =
+  | "primary"
+  | "secondary"
+  | "outline"
+  | "text"
+  | "unSelect";
+
+export interface ButtonWrapperProps {
+  children: ReactNode;
+}

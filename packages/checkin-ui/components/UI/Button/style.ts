@@ -30,6 +30,17 @@ export const ButtonContainer = styled.button<{
   ${({ buttonType }) => buttonStyle[buttonType]}
 `;
 
+export const ButtonWrapperBox = styled.div`
+  width: auto;
+  height: auto;
+
+  display: flex;
+
+  margin-top: 1rem;
+
+  column-gap: 13px;
+`;
+
 const buttonStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
   primary: css`
     background-color: #00c537;
@@ -50,5 +61,10 @@ const buttonStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
     background-color: #ffffff;
     color: #00c537;
     border: none;
+  `,
+  unSelect: css`
+    border: 2px solid #636363;
+    background-color: #f5f5f5;
+    color: #636363;
   `,
 };
