@@ -2,6 +2,8 @@ import Image from "next/image";
 import styled from "styled-components";
 
 export const NavContainer = styled.div`
+  position: fixed;
+
   width: 300px;
   height: 100vh;
 

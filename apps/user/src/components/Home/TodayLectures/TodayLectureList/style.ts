@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const HomeContainer = styled.div`
+export const LectureListWrapper = styled.div`
   width: 100%;
   height: 100%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 
-  row-gap: 15px;
+  column-gap: 20px;
+  overflow-x: scroll;
 `;

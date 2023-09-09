@@ -39,13 +39,14 @@ const cardSize: Record<CardType, FlattenSimpleInterpolation> = {
     width: 34.4%;
     height: 52.1vh;
 
-    padding: 27px 0 0 36px;
+    padding: 25px 36px 0px 36px;
+    overflow: auto;
   `,
   Enrol: css`
     width: 56.5%;
     height: 52.1vh;
 
-    padding: 24px 0 0 32px;
+    padding: 21px 62px 55px 32px;
   `,
 };
 

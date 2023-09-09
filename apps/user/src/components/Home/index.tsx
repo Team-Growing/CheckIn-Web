@@ -1,17 +1,17 @@
 import React from "react";
 import * as S from "./stlye";
 import { Flex } from "@checkin/ui";
-import TodayClasses from "./TodayClasses";
+import TodayLectures from "./TodayLectures";
 import Applyout from "./Applyout";
-import Calendar from "./Calendar";
 import Notifiction from "./Notifiction";
 import useTokenCheck from "@/hooks/Auth/useTokenCheck";
+import Enrol from "./Enrol";
 
 const Home = () => {
   useTokenCheck();
   return (
     <S.HomeContainer>
-      <TodayClasses />
+      <TodayLectures />
       <Notifiction />
       <Flex
         customStyle={{
@@ -22,7 +22,7 @@ const Home = () => {
         gap={20}
       >
         <Applyout />
-        <Calendar />
+        <Enrol />
       </Flex>
     </S.HomeContainer>
   );

@@ -5,3 +5,10 @@ export interface LectureBoxProps {
   teacher: string;
   people: string;
 }
+
+export interface EnrolLectureBoxProps {
+  title: string;
+  grade: string;
+  place: string;
+  people: string;
+}

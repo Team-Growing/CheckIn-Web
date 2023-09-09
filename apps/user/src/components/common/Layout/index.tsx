@@ -1,30 +1,22 @@
-import Token from "@/libs/Token/Token";
+import styled from "styled-components";
 import Nav from "../Nav";
-import { Container } from "./style";
-import { ACCESS_TOKEN_KEY } from "@/constant/Token/Token.constant";
-import { useEffect, useState } from "react";
+import { Container, Wrap } from "./style";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 interface Props {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: Props) => {
-  const [mounted, setMounted] = useState<boolean>(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  let loggedin;
-  if (typeof window !== undefined) {
-    loggedin = Token.getCookie(ACCESS_TOKEN_KEY);
-  }
-
+  const { pathname } = useRouter();
   return (
-    <Container>
-      {mounted && loggedin && <Nav />}
-      {children}
-    </Container>
+    <>
+      <Container>
+        {pathname !== "/sign" && <Nav />}
+        <Wrap>{children}</Wrap>
+      </Container>
+    </>
   );
 };
 

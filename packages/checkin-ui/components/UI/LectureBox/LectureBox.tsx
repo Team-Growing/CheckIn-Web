@@ -1,4 +1,11 @@
 import {
+  EnrolLectureBottomWrap,
+  EnrolLectureBoxContainer,
+  EnrolLectureBoxTopWrap,
+  EnrolLectureCard,
+  EnrolLectureGrade,
+  EnrolLectureInfoText,
+  EnrolLectureTitle,
   LectureBottomWrap,
   LectureBoxContainer,
   LectureBoxTopWrap,
@@ -7,7 +14,7 @@ import {
   LectureInfoText,
   LectureTitle,
 } from "./style";
-import { LectureBoxProps } from "./types";
+import { EnrolLectureBoxProps, LectureBoxProps } from "./types";
 
 export const LectureBox = ({
   grade,
@@ -30,5 +37,27 @@ export const LectureBox = ({
         </LectureBottomWrap>
       </LectureCard>
     </LectureBoxContainer>
+  );
+};
+
+export const EnrolLectureBox = ({
+  grade,
+  people,
+  place,
+  title,
+}: EnrolLectureBoxProps) => {
+  return (
+    <EnrolLectureBoxContainer>
+      <EnrolLectureCard>
+        <EnrolLectureBoxTopWrap>
+          <EnrolLectureTitle>{title}</EnrolLectureTitle>
+          <EnrolLectureGrade>{grade}</EnrolLectureGrade>
+        </EnrolLectureBoxTopWrap>
+        <EnrolLectureBottomWrap>
+          <EnrolLectureInfoText>{`장소 : ${place}`}</EnrolLectureInfoText>
+          <EnrolLectureInfoText>{`참가인원 : ${people}`}</EnrolLectureInfoText>
+        </EnrolLectureBottomWrap>
+      </EnrolLectureCard>
+    </EnrolLectureBoxContainer>
   );
 };

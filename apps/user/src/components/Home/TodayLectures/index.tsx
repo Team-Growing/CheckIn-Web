@@ -2,10 +2,11 @@ import { Card, CardTitle } from "@checkin/ui";
 import Image from "next/image";
 import React from "react";
 import Club from "../../../assets/Icon/Club.svg";
+import TodayLaectureList from "./TodayLectureList";
 
-const TodayClasses = () => {
+const TodayLectures = () => {
   return (
-    <Card type="Class">
+    <Card type="Lecture">
       <CardTitle>
         <Image
           width={32}
@@ -16,8 +17,9 @@ const TodayClasses = () => {
         />
         오늘의 방과후
       </CardTitle>
+      <TodayLaectureList />
     </Card>
   );
 };
 
-export default TodayClasses;
+export default TodayLectures;
