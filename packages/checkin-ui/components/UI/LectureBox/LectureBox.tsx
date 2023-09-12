@@ -1,20 +1,11 @@
+import { Flex } from "../../Layout/Flex/Flex";
+import { Button } from "../Button/Button";
+import * as S from "./style";
 import {
-  EnrolLectureBottomWrap,
-  EnrolLectureBoxContainer,
-  EnrolLectureBoxTopWrap,
-  EnrolLectureCard,
-  EnrolLectureGrade,
-  EnrolLectureInfoText,
-  EnrolLectureTitle,
-  LectureBottomWrap,
-  LectureBoxContainer,
-  LectureBoxTopWrap,
-  LectureCard,
-  LectureGrade,
-  LectureInfoText,
-  LectureTitle,
-} from "./style";
-import { EnrolLectureBoxProps, LectureBoxProps } from "./types";
+  EnrolLectureBoxProps,
+  LectureBoxProps,
+  LectureTagBoxProps,
+} from "./types";
 
 export const LectureBox = ({
   grade,
@@ -24,19 +15,19 @@ export const LectureBox = ({
   title,
 }: LectureBoxProps) => {
   return (
-    <LectureBoxContainer>
-      <LectureCard>
-        <LectureBoxTopWrap>
-          <LectureTitle>{title}</LectureTitle>
-          <LectureGrade>{grade}</LectureGrade>
-        </LectureBoxTopWrap>
-        <LectureBottomWrap>
-          <LectureInfoText>{`장소 : ${place}`}</LectureInfoText>
-          <LectureInfoText>{`강사 : ${teacher}`}</LectureInfoText>
-          <LectureInfoText>{`참가인원 : ${people}`}</LectureInfoText>
-        </LectureBottomWrap>
-      </LectureCard>
-    </LectureBoxContainer>
+    <S.LectureBoxContainer>
+      <S.LectureCard>
+        <S.LectureBoxTopWrap>
+          <S.LectureTitle>{title}</S.LectureTitle>
+          <S.LectureGrade>{grade}</S.LectureGrade>
+        </S.LectureBoxTopWrap>
+        <S.LectureBottomWrap>
+          <S.LectureInfoText>{`장소 : ${place}`}</S.LectureInfoText>
+          <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
+          <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
+        </S.LectureBottomWrap>
+      </S.LectureCard>
+    </S.LectureBoxContainer>
   );
 };
 
@@ -47,17 +38,57 @@ export const EnrolLectureBox = ({
   title,
 }: EnrolLectureBoxProps) => {
   return (
-    <EnrolLectureBoxContainer>
-      <EnrolLectureCard>
-        <EnrolLectureBoxTopWrap>
-          <EnrolLectureTitle>{title}</EnrolLectureTitle>
-          <EnrolLectureGrade>{grade}</EnrolLectureGrade>
-        </EnrolLectureBoxTopWrap>
-        <EnrolLectureBottomWrap>
-          <EnrolLectureInfoText>{`장소 : ${place}`}</EnrolLectureInfoText>
-          <EnrolLectureInfoText>{`참가인원 : ${people}`}</EnrolLectureInfoText>
-        </EnrolLectureBottomWrap>
-      </EnrolLectureCard>
-    </EnrolLectureBoxContainer>
+    <S.EnrolLectureBoxContainer>
+      <S.EnrolLectureCard>
+        <S.EnrolLectureBoxTopWrap>
+          <S.EnrolLectureTitle>{title}</S.EnrolLectureTitle>
+          <S.EnrolLectureGrade>{grade}</S.EnrolLectureGrade>
+        </S.EnrolLectureBoxTopWrap>
+        <S.EnrolLectureBottomWrap>
+          <S.EnrolLectureInfoText>{`장소 : ${place}`}</S.EnrolLectureInfoText>
+          <S.EnrolLectureInfoText>{`참가인원 : ${people}`}</S.EnrolLectureInfoText>
+        </S.EnrolLectureBottomWrap>
+      </S.EnrolLectureCard>
+    </S.EnrolLectureBoxContainer>
   );
 };
+
+export const LectureTagBox = ({
+  grade,
+  people,
+  place,
+  teacher,
+  title,
+  type,
+}: LectureTagBoxProps) => {
+  return (
+    <S.LectureTagBoxContainer>
+      <Flex direction="column">
+        <S.LectureBoxTopWrap>
+          <S.LectureTitle>{title}</S.LectureTitle>
+          <S.LectureGrade>{grade}</S.LectureGrade>
+        </S.LectureBoxTopWrap>
+        <S.LectureTag>스포츠</S.LectureTag>
+      </Flex>
+      {type == "Enrol" ? (
+        <Flex justify="between">
+          <S.LectureBottomWrap>
+            <S.LectureInfoText>{`장소 : ${place}`}</S.LectureInfoText>
+            <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
+            <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
+          </S.LectureBottomWrap>
+          <Button type="outline" style={{ marginTop: "5px" }}>
+            수강신청
+          </Button>
+        </Flex>
+      ) : (
+        <S.CanceledLectureReasonBox>
+          <S.CancelReason>결강사유</S.CancelReason>
+          <S.CancelReasonText>건강검진으로 인한 병원방문</S.CancelReasonText>
+        </S.CanceledLectureReasonBox>
+      )}
+    </S.LectureTagBoxContainer>
+  );
+};
+
+export const CanceledLectureBox = () => {};

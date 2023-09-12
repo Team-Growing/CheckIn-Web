@@ -11,13 +11,21 @@ const ApplyoutForm = () => {
         <S.ApplyoutRequireText>
           방과후 이름 <span>*</span>
         </S.ApplyoutRequireText>
-        <Select items={["방과후", "라면"]} onChange={onChange} value={value} />
+        <Select
+          items={["방과후", "라면"]}
+          onChange={onChange}
+          value={value}
+          customStyle={{ width: "100%" }}
+        />
       </S.ApplyoutFormInputWrap>
       <S.ApplyoutFormInputWrap>
         <S.ApplyoutRequireText>
           결강 사유 <span>*</span>
         </S.ApplyoutRequireText>
-        <Textarea placeholder="결강 사유를 입력해주세요" />
+        <Textarea
+          placeholder="결강 사유를 입력해주세요"
+          customStyle={{ width: "100%" }}
+        />
       </S.ApplyoutFormInputWrap>
       <S.ApplyoutFormInputWrap>
         <S.ApplyoutRequireText>
@@ -27,6 +35,7 @@ const ApplyoutForm = () => {
           items={["방과후", "라면"]}
           onChange={onChange}
           value={teacherValue}
+          customStyle={{ width: "100%" }}
         />
       </S.ApplyoutFormInputWrap>
       <div style={{ display: "flex", justifyContent: "flex-end" }}>

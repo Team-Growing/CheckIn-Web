@@ -32,7 +32,6 @@ export const LectureCard = styled.div`
 
 export const LectureTitle = styled.h1`
   font-size: 26px;
-  font-weight: bold;
 `;
 
 export const LectureGrade = styled.p`
@@ -125,4 +124,58 @@ export const EnrolLectureBottomWrap = styled.div`
 export const EnrolLectureInfoText = styled.p`
   font-size: 14px;
   color: #1f1f1f;
+`;
+
+export const LectureTagBoxContainer = styled.div`
+  width: 330px;
+  height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 10px;
+  background: #fff;
+
+  padding: 30px 28px;
+`;
+
+export const LectureTag = styled.div`
+  width: 88px;
+  height: 27.5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 30px;
+  border: 2px solid rgba(53, 170, 255, 0);
+  background: rgba(53, 170, 255, 0.4);
+
+  margin-top: 8px;
+`;
+
+export const CanceledLectureReasonBox = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 5px;
+
+  width: 270px;
+  height: 80px;
+
+  border-radius: 10px;
+  background: #f2f2f2;
+
+  padding: 10px 13px;
+`;
+
+export const CancelReason = styled.p`
+  font-size: 16px;
+  font-weight: 500;
+`;
+
+export const CancelReasonText = styled.p`
+  font-size: 14px;
+  font-weight: 400;
 `;

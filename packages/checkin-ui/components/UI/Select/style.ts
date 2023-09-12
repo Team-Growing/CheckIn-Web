@@ -7,6 +7,7 @@ export const SelectContainer = styled.div<{ close: boolean }>`
   display: flex;
   align-items: center;
   padding: 0px 8px;
+  justify-content: space-between;
 
   box-shadow: 0px 2px 4px 0px rgba(5, 16, 55, 0.06),
     0px 0px 0px 1px #cdd0dc inset;

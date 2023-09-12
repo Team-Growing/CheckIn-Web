@@ -5,7 +5,7 @@ export const ApplyoutFormContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  row-gap: 15px;
+  row-gap: 3vh;
   margin-top: 24px;
 `;
 

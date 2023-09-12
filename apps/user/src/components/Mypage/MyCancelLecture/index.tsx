@@ -7,6 +7,7 @@ const MyCancelLectures = () => {
     <MyCancelLecturesContainer>
       {Array.from({ length: 5 }).map(() => (
         <LectureTagBox
+          type="absence"
           grade="2학년"
           people="10명"
           place="라이온즈파크"

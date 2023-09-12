@@ -8,6 +8,7 @@ const MyLectures = () => {
       <MyLectusContainer>
         {Array.from({ length: 5 }).map(() => (
           <LectureTagBox
+            type="Enrol"
             grade="2학년"
             people="10명"
             place="라이온즈파크"

@@ -9,6 +9,7 @@ const RegistList = () => {
         return (
           <>
             <LectureTagBox
+              type="Enrol"
               grade="2학년"
               people="10명"
               place="하이"

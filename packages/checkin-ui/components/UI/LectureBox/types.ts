@@ -12,3 +12,7 @@ export interface EnrolLectureBoxProps {
   place: string;
   people: string;
 }
+
+export interface LectureTagBoxProps extends LectureBoxProps {
+  type: "absence" | "Enrol";
+}
