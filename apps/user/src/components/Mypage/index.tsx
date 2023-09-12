@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { SectionHeader } from "@checkin/ui";
 import * as S from "./style";
 import MypageForm from "./MypageForm";

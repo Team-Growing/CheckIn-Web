@@ -1,10 +1,10 @@
 import apiClient from "@/libs/Auth/customAxios";
 import { MemberRepository } from "./MemberRepository";
-import { MemberType } from "@/types/Member/Member.type";
+import { MemberType } from "@checkin/types";
 
 class MemberRepositoryImpl implements MemberRepository {
   public async getMemberInfo(): Promise<MemberType> {
-    const { data } = await apiClient.get("/memberInfo/my");
+    const { data } = await apiClient.get("/member/my");
     return data;
   }
 }

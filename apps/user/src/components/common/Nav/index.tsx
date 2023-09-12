@@ -1,6 +1,5 @@
 import * as S from "./style";
 import logo from "../../../assets/Logo/logo.svg";
-import Image from "next/image";
 import NavItem from "./NavItem/index";
 import NavUser from "./NavUser/index";
 import { useRouter } from "next/router";

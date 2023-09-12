@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Select, Textarea } from "@checkin/ui";
 import * as S from "./style";
+
 const ApplyoutForm = () => {
   const [value, setValue] = useState("방과후 이름을 선택해주세요");
   const [teacherValue, setTeacherValue] = useState("담당선생님을 선택해주세요");

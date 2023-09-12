@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, LectureBox } from "@checkin/ui";
+import { LectureBox } from "@checkin/ui";
 import { LectureListWrapper } from "./style";
 
 const TodayLaectureList = () => {

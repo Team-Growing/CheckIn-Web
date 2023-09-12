@@ -1,11 +1,10 @@
 import { useRouter } from "next/router";
 import { ChangeEvent, FormEvent, useCallback, useState } from "react";
-import AuthRepositoryImpl from "../../repositories/Auth/AuthRepositoryImpl";
-import { Login } from "../../types/Auth/Login/Login.type";
+import AuthRepositoryImpl from "../../repositories/AuthRepository/AuthRepositoryImpl";
 import { sha512 } from "js-sha512";
-import Token from "@/libs/Token/Token";
+import Token from "@/libs/Token/token";
 import { ACCESS_TOKEN_KEY } from "@/constant/Token/Token.constant";
-
+import { Login } from "@checkin/types";
 export const useLogin = () => {
   const router = useRouter();
 

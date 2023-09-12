@@ -1,6 +1,4 @@
 import * as S from "./style";
-import { SignupStudentData } from "../../../../types/Auth/Signup/Signup.type";
-import { useState } from "react";
 import { UserRole } from "@/hooks/Auth/useSignup";
 import {
   AuthOppositePartButton,
@@ -8,7 +6,7 @@ import {
   AuthOppositePartWrap,
 } from "../../style";
 import { IoIosArrowForward } from "react-icons/io";
-import { Button } from "@checkin/ui";
+import { SignupStudentData } from "@checkin/types";
 interface Props {
   signupData: SignupStudentData;
   onChangeSignupData: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,8 +15,6 @@ interface Props {
   setRole: React.Dispatch<React.SetStateAction<UserRole>>;
   setIsLogin: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
-export type Role = "student" | "teacher";
 
 const SignupFirst = ({
   onChangeSignupData,
@@ -35,7 +31,7 @@ const SignupFirst = ({
           학생
         </S.AuthStudentBox>
         <S.AuthTeacherBox onClick={() => setRole("teacher")} role={role}>
-          교직원
+          선생님
         </S.AuthTeacherBox>
       </S.AuthSelectUserWrap>
       <S.SignupInputContainer>
@@ -87,15 +83,9 @@ const SignupFirst = ({
           </AuthOppositePartButton>
         </AuthOppositePartWrap>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          {role === "student" ? (
-            <S.SignupSubmitBtn onClick={submitFirstSignup}>
-              다음 <IoIosArrowForward />
-            </S.SignupSubmitBtn>
-          ) : (
-            <Button type="primary" onClick={submitFirstSignup}>
-              Check In 가입하기
-            </Button>
-          )}
+          <S.SignupSubmitBtn onClick={submitFirstSignup}>
+            다음 <IoIosArrowForward />
+          </S.SignupSubmitBtn>
         </div>
       </S.SignupInputContainer>
     </>
