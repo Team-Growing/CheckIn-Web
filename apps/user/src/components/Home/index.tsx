@@ -8,7 +8,6 @@ import useTokenCheck from "@/hooks/Auth/useTokenCheck";
 import Enrol from "./Enrol";
 
 const Home = () => {
-  useTokenCheck();
   return (
     <S.HomeContainer>
       <TodayLectures />

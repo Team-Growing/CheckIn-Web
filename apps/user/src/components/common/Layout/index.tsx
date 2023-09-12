@@ -1,8 +1,6 @@
-import styled from "styled-components";
 import Nav from "../Nav";
 import { Container, Wrap } from "./style";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
 interface Props {
   children: React.ReactNode;
