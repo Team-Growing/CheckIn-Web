@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./style";
 import {
-  Button,
   Flex,
   Input,
   InputIntroText,
@@ -9,6 +8,7 @@ import {
   WriteButton,
 } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
+
 const MypageForm = () => {
   return (
     <S.MypageFormContainer>

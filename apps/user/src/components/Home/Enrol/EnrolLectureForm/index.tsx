@@ -5,6 +5,7 @@ import {
   EnrolLectureInput,
 } from "./style";
 import { Button, Flex } from "@checkin/ui";
+
 const EnrolLectureForm = () => {
   return (
     <EnrolLectureFormContainer>

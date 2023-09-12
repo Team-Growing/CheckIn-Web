@@ -1,6 +1,7 @@
 import RegistList from "./RegistList/item";
 import * as S from "./style";
 import { Button, ButtonWrapper, SectionHeader } from "@checkin/ui";
+
 const Register = () => {
   return (
     <S.RegisterContainer>

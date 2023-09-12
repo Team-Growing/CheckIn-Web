@@ -1,4 +1,4 @@
-import { MemberType } from "@/types/Member/Member.type";
+import { MemberType } from "@checkin/types";
 
 export interface MemberRepository {
   getMemberInfo(): Promise<MemberType>;

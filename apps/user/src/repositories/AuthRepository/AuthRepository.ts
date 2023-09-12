@@ -1,9 +1,10 @@
-import { Login, LoginResponse } from "../../types/Auth/Login/Login.type";
 import {
+  Login,
+  LoginResponse,
+  Response,
   SignupStudent,
   SignupTeacher,
-} from "../../types/Auth/Signup/Signup.type";
-import { Response } from "../../types/util/response";
+} from "@checkin/types";
 
 export interface AuthRepository {
   signupStudent(studentSignupData: SignupStudentParam): Promise<Response>;

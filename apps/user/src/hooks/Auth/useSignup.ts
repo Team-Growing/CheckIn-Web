@@ -1,18 +1,16 @@
-import { useRouter } from "next/router";
 import { ChangeEvent, useCallback, useState } from "react";
-import {
-  SignupStudentInfo,
-  SignupStudentData,
-  SignupStudent,
-  SignupTeacher,
-} from "../../types/Auth/Signup/Signup.type";
 import { sha512 } from "js-sha512";
-import AuthRepositoryImpl from "../../repositories/Auth/AuthRepositoryImpl";
+import AuthRepositoryImpl from "../../repositories/AuthRepository/AuthRepositoryImpl";
+import {
+  SignupStudent,
+  SignupStudentData,
+  SignupStudentInfo,
+  SignupTeacher,
+} from "@checkin/types";
 
 export type UserRole = "student" | "teacher";
 
 export const useSignup = () => {
-  const router = useRouter();
   const [section, setSection] = useState<"first" | "second">("first");
   const [role, setRole] = useState<UserRole>("student");
   const [signupData, setSignupData] = useState<SignupStudentData>({
@@ -20,6 +18,7 @@ export const useSignup = () => {
     id: "",
     name: "",
     pw: "",
+    subject: "",
   });
   const [signupStudentInfo, setSignupStudentInfo] = useState<SignupStudentInfo>(
     {

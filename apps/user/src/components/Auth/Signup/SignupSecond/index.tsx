@@ -1,10 +1,13 @@
 import React from "react";
 import * as S from "./style";
 import SignupImg from "../../../../assets/Image/SignupImg.svg";
-import { SignupStudentInfo } from "../../../../types/Auth/Signup/Signup.type";
 import { SignupSecondSubmitBtn } from "../SignupFirst/style";
 import { AuthFlex } from "../../Login/style";
 import { IoIosArrowBack } from "react-icons/io";
+import { UserRole } from "@/hooks/Auth/useSignup";
+import { SignupStudentInfo } from "@checkin/types";
+
+export type Role = "student" | "teacher";
 
 interface Props {
   setSection: React.Dispatch<React.SetStateAction<"first" | "second">>;
@@ -13,6 +16,7 @@ interface Props {
   ) => void;
   signupStudentInfo: SignupStudentInfo;
   submitSecondStudentSignup: () => Promise<void>;
+  role: UserRole;
 }
 
 const SignupSecond = ({
@@ -20,41 +24,67 @@ const SignupSecond = ({
   setSection,
   signupStudentInfo,
   submitSecondStudentSignup,
+  role,
 }: Props) => {
   return (
     <>
-      <S.SignupSecondInputContainer>
-        <S.SigupSecondInputWrap>
-          <S.SignupRequireText>
-            학년 <span>*</span>
-          </S.SignupRequireText>
-          <S.SignupSecondInput
-            name="grade"
-            value={signupStudentInfo.grade}
-            onChange={onChangeSignupStudentInfoData}
-          />
-        </S.SigupSecondInputWrap>
-        <S.SigupSecondInputWrap>
-          <S.SignupRequireText>
-            반 <span>*</span>
-          </S.SignupRequireText>
-          <S.SignupSecondInput
-            name="room"
-            value={signupStudentInfo.room}
-            onChange={onChangeSignupStudentInfoData}
-          />
-        </S.SigupSecondInputWrap>
-        <S.SigupSecondInputWrap>
-          <S.SignupRequireText>
-            번호 <span>*</span>
-          </S.SignupRequireText>
-          <S.SignupSecondInput
-            name="number"
-            value={signupStudentInfo.number}
-            onChange={onChangeSignupStudentInfoData}
-          />
-        </S.SigupSecondInputWrap>
-      </S.SignupSecondInputContainer>
+      {role == "student" ? (
+        <>
+          {" "}
+          <S.SignupSecondInputContainer>
+            <S.SigupSecondInputWrap>
+              <S.SignupRequireText>
+                학년 <span>*</span>
+              </S.SignupRequireText>
+              <S.SignupSecondInput
+                type="student"
+                name="grade"
+                value={signupStudentInfo.grade}
+                onChange={onChangeSignupStudentInfoData}
+              />
+            </S.SigupSecondInputWrap>
+            <S.SigupSecondInputWrap>
+              <S.SignupRequireText>
+                반 <span>*</span>
+              </S.SignupRequireText>
+              <S.SignupSecondInput
+                type="student"
+                name="room"
+                value={signupStudentInfo.room}
+                onChange={onChangeSignupStudentInfoData}
+              />
+            </S.SigupSecondInputWrap>
+            <S.SigupSecondInputWrap>
+              <S.SignupRequireText>
+                번호 <span>*</span>
+              </S.SignupRequireText>
+              <S.SignupSecondInput
+                type="student"
+                name="number"
+                value={signupStudentInfo.number}
+                onChange={onChangeSignupStudentInfoData}
+              />
+            </S.SigupSecondInputWrap>
+          </S.SignupSecondInputContainer>
+        </>
+      ) : (
+        <>
+          <S.SignupSecondInputContainer>
+            <S.SigupSecondInputWrap>
+              <S.SignupRequireText>
+                담당 과목 <span>*</span>
+              </S.SignupRequireText>
+              <S.SignupSecondInput
+                type="teacher"
+                name="subject"
+                value={signupStudentInfo.grade}
+                onChange={onChangeSignupStudentInfoData}
+              />
+            </S.SigupSecondInputWrap>
+          </S.SignupSecondInputContainer>
+        </>
+      )}
+
       <S.SignupIntroText>
         DAS와 함께 간편한 방과후 생활을 누려보세요!
       </S.SignupIntroText>

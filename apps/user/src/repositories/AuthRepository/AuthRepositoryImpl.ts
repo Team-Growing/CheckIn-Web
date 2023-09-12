@@ -1,12 +1,11 @@
 import apiClient from "@/libs/Auth/customAxios";
-import { LoginResponse } from "../../types/Auth/Login/Login.type";
-import { Response } from "../../types/util/response";
 import {
   AuthRepository,
   LoginParam,
   SignupStudentParam,
   SignupTeacherParam,
 } from "./AuthRepository";
+import { LoginResponse, Response } from "@checkin/types";
 
 class AuthRepositoryImpl implements AuthRepository {
   public async login(loginData: LoginParam): Promise<LoginResponse> {
