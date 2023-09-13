@@ -8,11 +8,12 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   const { pathname } = useRouter();
+
   return (
     <>
       <Container>
         {pathname !== "/sign" && <Nav />}
-        <Wrap>{children}</Wrap>
+        <Wrap isSign={pathname == "/sign" ? false : true}>{children}</Wrap>
       </Container>
     </>
   );
