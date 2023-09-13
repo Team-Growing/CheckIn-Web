@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("../../public/font/Pretendard-Regular.woff2");
+}
+
+* {
+  font-family: "Pretendard-Regular" !important;
+}
