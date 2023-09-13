@@ -1,4 +1,4 @@
-import Main from "@/components/common/Main";
+import Attend from "@/components/common/Attend";
 import Sidebar from "../components/common/Sidebar";
 
 export async function getServerSideProps() {
@@ -16,7 +16,8 @@ interface Props {
 export default function Home({ time }: Props) {
   return (
     <>
-      <Main></Main>
+      <Sidebar></Sidebar>
+      <Attend></Attend>
     </>
   );
 }

@@ -2,10 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Pretendard-Regular" !important;
+  font-family: "Pretendard";
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+body {
+  font-family: "Pretendard";
 }
