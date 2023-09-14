@@ -2,6 +2,11 @@ import styled from "styled-components";
 import BackgroundImage from "../../../assets/Image/Background.svg";
 import Image from "next/image";
 
+export const LoginContainer = styled.form`
+  width: 100%;
+  height: 100%;
+`;
+
 export const AuthBackGround = styled.div`
   width: 100%;
   height: 100vh;
@@ -31,12 +36,6 @@ export const AuthPanel = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`;
-
-export const AuthWrap = styled.form`
-  width: 100%;
-  height: 100%;
-  padding: 70px 72px 0 84px;
 `;
 
 export const AuthWrapImage = styled(Image)`
@@ -86,6 +85,8 @@ export const AuthFlex = styled.div`
   display: flex;
   align-items: center;
   column-gap: 8px;
+
+  margin-top: 10px;
 `;
 
 export const AuthInput = styled.input`
@@ -118,4 +119,24 @@ export const AuthCheckText = styled.p`
   justify-content: flex-end;
   margin-top: 14px;
   cursor: pointer;
+`;
+
+export const AuthOppositePartButton = styled.button`
+  font-size: 14px;
+  color: #00c537;
+  background: none;
+  border: 0px;
+  cursor: pointer;
+`;
+
+export const AuthOppositePartText = styled.p`
+  color: #636363;
+  font-size: 14px;
+`;
+
+export const AuthOppositePartWrap = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  margin-right: auto;
 `;

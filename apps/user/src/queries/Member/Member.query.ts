@@ -1,10 +1,10 @@
 import { UseQueryOptions, useQuery } from "react-query";
 import { QueryKey } from "../queryKey";
 import { CheckinToast } from "@checkin/toast";
-import Token from "@/libs/Token/token";
 import { AxiosError } from "axios";
 import { MemberType } from "@checkin/types";
 import MemberRepositoryImpl from "@/repositories/MemberRepository/MemberRepositoryImpl";
+import Token from "@/hooks/token/Token";
 
 export const useGetMemberInfo = (
   options?: UseQueryOptions<MemberType, AxiosError, MemberType, string>
@@ -13,9 +13,9 @@ export const useGetMemberInfo = (
     cacheTime: 1000 * 60 * 60,
     staleTime: 1000 * 60 * 5,
     onError: () => {
-      // CheckinToast.showError("토근이 위조되었습니다");
-      // Token.clearToken();
-      // window.location.href = "/sign";
+      CheckinToast.showError("토근이 위조되었습니다");
+      Token.clearToken();
+      window.location.href = "/sign";
     },
     ...options,
   });
