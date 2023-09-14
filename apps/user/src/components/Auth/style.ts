@@ -20,28 +20,20 @@ export const AuthContainer = styled.div`
 `;
 
 export const AuthPanelWrap = styled.div`
-  min-width: 583px;
-  max-width: 583px;
+  min-width: 644px;
+  max-width: 644px;
   height: 100%;
   position: relative;
 `;
 
-export const AuthOppositePartWrap = styled.div`
-  display: flex;
-  align-items: center;
-  column-gap: 7px;
-  margin-right: auto;
+export const AuthPanel = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
-export const AuthOppositePartText = styled.p`
-  color: #636363;
-  font-size: 14px;
-`;
-
-export const AuthOppositePartButton = styled.button`
-  font-size: 14px;
-  color: #00c537;
-  background: none;
-  border: 0px;
-  cursor: pointer;
+export const AuthWrap = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 70px 72px 0 84px;
 `;

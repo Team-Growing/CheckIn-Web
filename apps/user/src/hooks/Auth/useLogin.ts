@@ -1,53 +1,44 @@
 import { useRouter } from "next/router";
-import { ChangeEvent, FormEvent, useCallback, useState } from "react";
-import AuthRepositoryImpl from "../../repositories/AuthRepository/AuthRepositoryImpl";
+import { FormEvent, useRef } from "react";
 import { sha512 } from "js-sha512";
-import Token from "@/libs/Token/token";
-import { ACCESS_TOKEN_KEY } from "@/constant/Token/Token.constant";
-import { Login } from "@checkin/types";
+import {
+  ACCESS_TOKEN_KEY,
+  REFRESH_TOKEN_KEY,
+} from "@/constant/Token/Token.constant";
+import { usePostLoginMutation } from "@/queries/Auth/Auth.query";
+import Token from "../token/Token";
+
 export const useLogin = () => {
   const router = useRouter();
 
-  const [loginData, setIsLoginData] = useState({
-    id: "",
-    pw: "",
-  });
+  const idRef = useRef<HTMLInputElement>(null);
+  const pwRef = useRef<HTMLInputElement>(null);
 
-  const onChangeLoginData = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = e.target;
-      setIsLoginData((prev) => ({ ...prev, [name]: value }));
-    },
-    [loginData]
-  );
+  const postLoginMutation = usePostLoginMutation();
 
-  const submitLoginData = useCallback(
-    async (e: FormEvent) => {
-      e.preventDefault();
+  const onLogin = (e: FormEvent) => {
+    e.preventDefault();
 
-      const { id, pw } = loginData;
-      const validLoginData: Login = {
-        id,
-        pw: sha512(pw),
-      };
-
-      try {
-        const { data } = await AuthRepositoryImpl.login(validLoginData);
-        Token.setCookie(ACCESS_TOKEN_KEY, data.accessToken);
-        Token.setCookie(ACCESS_TOKEN_KEY, data.refreshToken);
-
-        window.alert("로그인 성공");
-        router.push("/");
-      } catch {
-        window.alert("실패");
-      }
-    },
-    [loginData]
-  );
+    if (idRef.current && pwRef.current) {
+      postLoginMutation.mutate(
+        {
+          id: idRef.current.value,
+          pw: sha512(pwRef.current.value),
+        },
+        {
+          onSuccess: (data) => {
+            Token.setToken(ACCESS_TOKEN_KEY, data.data.accessToken);
+            Token.setToken(REFRESH_TOKEN_KEY, data.data.refreshToken);
+            router.push("/");
+          },
+        }
+      );
+    }
+  };
 
   return {
-    loginData,
-    onChangeLoginData,
-    submitLoginData,
+    idRef,
+    pwRef,
+    onLogin,
   };
 };

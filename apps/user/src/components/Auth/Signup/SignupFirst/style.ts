@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Role } from ".";
+import { Role } from "../SignupSecond";
 
 export const AuthStudentBox = styled.div<{ role: Role }>`
   width: 177px;

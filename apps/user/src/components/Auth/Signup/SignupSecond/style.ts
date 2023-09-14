@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+type UserRoleType = "teacher" | "student";
+
 export const SignupSecondInputContainer = styled.div`
   width: 100%;
   display: flex;
@@ -14,8 +16,8 @@ export const SigupSecondInputWrap = styled.div`
   row-gap: 5px;
 `;
 
-export const SignupSecondInput = styled.input`
-  width: 100px;
+export const SignupSecondInput = styled.input<{ type: UserRoleType }>`
+  width: ${({ type }) => (type == "student" ? "100px" : "358px")};
   height: 40px;
   border-radius: 5px;
   background: #e1e1e1;
@@ -37,7 +39,7 @@ export const SignupIntroText = styled.p`
   color: #828282;
   font-size: 16px;
   margin-left: 35px;
-  margin-top: 50px;
+  margin-top: 25px;
 `;
 
 export const SignupImage = styled(Image)``;
