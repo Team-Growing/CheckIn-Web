@@ -24,7 +24,7 @@ const MypageForm = () => {
             <Input customStyle={{ width: "80px" }} value="김예림" />
           </InputWrap>
           <InputWrap>
-            <InputIntroText>이름</InputIntroText>
+            <InputIntroText>E-mail</InputIntroText>
             <Input customStyle={{ width: "210px" }} />
           </InputWrap>
         </Flex>
@@ -34,7 +34,7 @@ const MypageForm = () => {
             <Input customStyle={{ width: "80px" }} value="김예림" />
           </InputWrap>
           <InputWrap>
-            <InputIntroText>이름</InputIntroText>
+            <InputIntroText>아이디</InputIntroText>
             <Input customStyle={{ width: "123px" }} />
           </InputWrap>
           <WriteButton type="primary" style={{ marginTop: "20px" }}>
