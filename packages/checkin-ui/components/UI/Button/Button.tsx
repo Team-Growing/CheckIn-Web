@@ -24,8 +24,8 @@ export const PrevButton = ({ type, onClick, style, children }: ButtonProps) => {
 export const NextButton = ({ type, onClick, style, children }: ButtonProps) => {
   return (
     <ButtonContainer customStyle={style} onClick={onClick} buttonType={type}>
-      <FiChevronRight />
       {children}
+      <FiChevronRight />
     </ButtonContainer>
   );
 };

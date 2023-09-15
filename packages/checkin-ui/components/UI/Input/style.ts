@@ -14,6 +14,10 @@ export const InputContainer = styled.input<{ customStyle?: CSSObject }>`
   border: none;
   outline: none;
 
+  ::placeholder {
+    color: #c1c7de;
+  }
+
   ${({ customStyle }) => customStyle}
 `;
 

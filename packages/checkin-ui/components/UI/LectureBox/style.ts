@@ -20,7 +20,7 @@ export const LectureCard = styled.div`
   bottom: 0;
 
   width: 100%;
-  height: 144px;
+  height: 154px;
 
   padding: 15px 11px;
 
