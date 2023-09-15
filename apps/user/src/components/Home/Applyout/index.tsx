@@ -3,18 +3,13 @@ import Image from "next/image";
 import React from "react";
 import Write from "../../../assets/Icon/Write.svg";
 import ApplyoutForm from "./ApplyoutForm";
+import { WriteIcon } from "@checkin/icon";
 
 const Applyout = () => {
   return (
     <Card type="Applyout">
       <CardTitle>
-        <Image
-          width={32}
-          height={32}
-          src={Write.src}
-          alt=""
-          style={{ marginBottom: "4px" }}
-        />
+        <WriteIcon />
         방과후 결강 신청
       </CardTitle>
       <ApplyoutForm />
