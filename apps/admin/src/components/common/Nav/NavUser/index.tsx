@@ -1,15 +1,13 @@
-import Image from "next/image";
 import * as S from "./style";
-import profile from "../../../../assets/Icon/ProfileIcon.svg";
 import { useRouter } from "next/router";
-
+import { ProfileIcon } from "@checkin/icon";
 const NavUser = () => {
   const router = useRouter();
   return (
     <S.NavBottomBox>
       <S.NavUserBox>
         <S.NavUserImageBackground>
-          <Image src={profile} alt="유저 이미지" />
+          <ProfileIcon />
         </S.NavUserImageBackground>
         <S.NavUserInfoBox>
           <S.NavUserName>백승하</S.NavUserName>

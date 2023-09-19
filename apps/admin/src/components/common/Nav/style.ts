@@ -5,6 +5,8 @@ export const NavContainer = styled.div`
   width: 300px;
   height: 100vh;
 
+  position: fixed;
+
   background: #ffffff;
 
   display: flex;
@@ -20,6 +22,7 @@ export const NavTopWrap = styled.div`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   row-gap: 66px;
 `;
