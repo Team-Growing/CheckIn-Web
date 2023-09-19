@@ -1,18 +1,20 @@
-import Token from "@/libs/Token/Token";
 import Nav from "../Nav";
-import { Container } from "./style";
-import { ACCESS_TOKEN_KEY } from "@/constant/Token/Token.constant";
+import { Container, Wrap } from "./style";
+import { useRouter } from "next/router";
 
 interface Props {
   children: React.ReactNode;
 }
 
 const Layout = ({ children }: Props) => {
+  const { pathname } = useRouter();
   return (
-    <Container>
-      {Token.getToken(ACCESS_TOKEN_KEY) && <Nav />}
-      {children}
-    </Container>
+    <>
+      <Container>
+        {pathname !== "/sign" && <Nav />}
+        <Wrap>{children}</Wrap>
+      </Container>
+    </>
   );
 };
 

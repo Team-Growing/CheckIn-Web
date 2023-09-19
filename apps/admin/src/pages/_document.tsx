@@ -37,7 +37,6 @@ class MyDocument extends Document {
       <Html lang="ko">
         <Head />
         <body>
-          <
           <Main />
           <NextScript />
         </body>

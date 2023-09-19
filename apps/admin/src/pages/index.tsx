@@ -1,19 +1,5 @@
-export async function getServerSideProps() {
-  console.log("test");
+import Home from "@/components/Home";
 
-  return {
-    props: { time: new Date().toISOString() },
-  };
-}
-
-interface Props {
-  time: string;
-}
-
-export default function Home({ time }: Props) {
-  return (
-    <>
-      <div>{time}</div>
-    </>
-  );
+export default function HomePage() {
+  return <Home />;
 }
