@@ -262,9 +262,9 @@ export const LectureIcon = () => {
           width="29"
           height="6.01953"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -297,9 +297,9 @@ export const LectureIcon = () => {
           width="3.82998"
           height="2.85"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -350,9 +350,9 @@ export const LectureIcon = () => {
           width="1.84307"
           height="0.430469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -371,9 +371,9 @@ export const LectureIcon = () => {
           width="4.00049"
           height="2.5"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -406,9 +406,9 @@ export const LectureIcon = () => {
           width="6.70288"
           height="5.40234"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -427,9 +427,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -462,9 +462,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -497,9 +497,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -532,9 +532,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -567,9 +567,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -602,9 +602,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -637,9 +637,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -672,9 +672,9 @@ export const LectureIcon = () => {
           width="2.6"
           height="3.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -707,9 +707,9 @@ export const LectureIcon = () => {
           width="8.6"
           height="8.6"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -760,9 +760,9 @@ export const LectureIcon = () => {
           width="17.2"
           height="11.3031"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -813,9 +813,9 @@ export const LectureIcon = () => {
           width="7.05005"
           height="7"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -848,9 +848,9 @@ export const LectureIcon = () => {
           width="2.80298"
           height="2.81445"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -869,9 +869,9 @@ export const LectureIcon = () => {
           width="8.28389"
           height="8.30391"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -891,8 +891,8 @@ export const LectureIcon = () => {
           y2="15.8295"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#A77060" />
-          <stop offset="1" stop-color="#6E504C" />
+          <stop stopColor="#A77060" />
+          <stop offset="1" stopColor="#6E504C" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_337_3485"
@@ -902,8 +902,8 @@ export const LectureIcon = () => {
           y2="14.4905"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#554540" />
-          <stop offset="1" stop-color="#735348" stop-opacity="0" />
+          <stop stopColor="#554540" />
+          <stop offset="1" stopColor="#735348" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_337_3485"
@@ -913,8 +913,8 @@ export const LectureIcon = () => {
           y2="4.63239"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#67C175" />
-          <stop offset="1" stop-color="#A1E16D" />
+          <stop stopColor="#67C175" />
+          <stop offset="1" stopColor="#A1E16D" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_337_3485"
@@ -924,8 +924,8 @@ export const LectureIcon = () => {
           y2="3.78339"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#308649" />
-          <stop offset="1" stop-color="#308649" stop-opacity="0" />
+          <stop stopColor="#308649" />
+          <stop offset="1" stopColor="#308649" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint4_radial_337_3485"
@@ -935,8 +935,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.5249 2.81331) rotate(90) scale(4.3447 1.98139)"
         >
-          <stop stop-color="#B27C6D" />
-          <stop offset="0.868" stop-color="#523C35" />
+          <stop stopColor="#B27C6D" />
+          <stop offset="0.868" stopColor="#523C35" />
         </radialGradient>
         <radialGradient
           id="paint5_radial_337_3485"
@@ -946,8 +946,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.7319 1.82031) rotate(180) scale(1.06047 1.04878)"
         >
-          <stop stop-color="#D19580" />
-          <stop offset="1" stop-color="#D19580" stop-opacity="0" />
+          <stop stopColor="#D19580" />
+          <stop offset="1" stopColor="#D19580" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint6_linear_337_3485"
@@ -957,8 +957,8 @@ export const LectureIcon = () => {
           y2="28.6803"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C9885B" />
-          <stop offset="1" stop-color="#E79F6A" />
+          <stop stopColor="#C9885B" />
+          <stop offset="1" stopColor="#E79F6A" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_337_3485"
@@ -968,8 +968,8 @@ export const LectureIcon = () => {
           y2="23.5993"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#935B42" />
-          <stop offset="1" stop-color="#B67358" stop-opacity="0" />
+          <stop stopColor="#935B42" />
+          <stop offset="1" stopColor="#B67358" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_337_3485"
@@ -979,8 +979,8 @@ export const LectureIcon = () => {
           y2="27.2883"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#A1714D" />
-          <stop offset="1" stop-color="#A1714D" stop-opacity="0" />
+          <stop stopColor="#A1714D" />
+          <stop offset="1" stopColor="#A1714D" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_337_3485"
@@ -990,8 +990,8 @@ export const LectureIcon = () => {
           y2="16.5573"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#8B5243" />
-          <stop offset="1" stop-color="#8B5243" stop-opacity="0" />
+          <stop stopColor="#8B5243" />
+          <stop offset="1" stopColor="#8B5243" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_337_3485"
@@ -1001,8 +1001,8 @@ export const LectureIcon = () => {
           y2="26.8743"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FFD19E" />
-          <stop offset="1" stop-color="#F2BEA5" />
+          <stop stopColor="#FFD19E" />
+          <stop offset="1" stopColor="#F2BEA5" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_337_3485"
@@ -1012,8 +1012,8 @@ export const LectureIcon = () => {
           y2="25.0333"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#EEC9A8" />
-          <stop offset="1" stop-color="#EEC9A8" stop-opacity="0" />
+          <stop stopColor="#EEC9A8" />
+          <stop offset="1" stopColor="#EEC9A8" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_337_3485"
@@ -1023,8 +1023,8 @@ export const LectureIcon = () => {
           y2="16.2083"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#A97469" />
-          <stop offset="1" stop-color="#A97469" stop-opacity="0" />
+          <stop stopColor="#A97469" />
+          <stop offset="1" stopColor="#A97469" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint13_radial_337_3485"
@@ -1034,8 +1034,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(22.9059 15.8203) rotate(90) scale(1.17186 0.9375)"
         >
-          <stop offset="0.307" stop-color="#A97469" />
-          <stop offset="1" stop-color="#A97469" stop-opacity="0" />
+          <stop offset="0.307" stopColor="#A97469" />
+          <stop offset="1" stopColor="#A97469" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint14_linear_337_3485"
@@ -1045,8 +1045,8 @@ export const LectureIcon = () => {
           y2="23.8821"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F2B98E" />
-          <stop offset="1" stop-color="#FFD7AB" />
+          <stop stopColor="#F2B98E" />
+          <stop offset="1" stopColor="#FFD7AB" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_337_3485"
@@ -1056,9 +1056,9 @@ export const LectureIcon = () => {
           y2="24.7801"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.214" stop-color="#A3785B" />
-          <stop offset="0.657" stop-color="#B27E5B" />
-          <stop offset="0.914" stop-color="#DEA072" stop-opacity="0" />
+          <stop offset="0.214" stopColor="#A3785B" />
+          <stop offset="0.657" stopColor="#B27E5B" />
+          <stop offset="0.914" stopColor="#DEA072" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_337_3485"
@@ -1068,8 +1068,8 @@ export const LectureIcon = () => {
           y2="24.2051"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.403" stop-color="#FFE4B3" />
-          <stop offset="1" stop-color="#FFE4B3" stop-opacity="0" />
+          <stop offset="0.403" stopColor="#FFE4B3" />
+          <stop offset="1" stopColor="#FFE4B3" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_337_3485"
@@ -1079,8 +1079,8 @@ export const LectureIcon = () => {
           y2="11.6861"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.19" stop-color="#8A594A" />
-          <stop offset="1" stop-color="#986658" stop-opacity="0" />
+          <stop offset="0.19" stopColor="#8A594A" />
+          <stop offset="1" stopColor="#986658" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_337_3485"
@@ -1090,8 +1090,8 @@ export const LectureIcon = () => {
           y2="10.9441"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#794D30" />
-          <stop offset="1" stop-color="#794D30" stop-opacity="0" />
+          <stop stopColor="#794D30" />
+          <stop offset="1" stopColor="#794D30" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint19_radial_337_3485"
@@ -1101,8 +1101,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(23.0249 14.3661) rotate(90) scale(2.79688 0.76001)"
         >
-          <stop offset="0.274" stop-color="#1D0C0B" />
-          <stop offset="1" stop-color="#AC7C6C" stop-opacity="0" />
+          <stop offset="0.274" stopColor="#1D0C0B" />
+          <stop offset="1" stopColor="#AC7C6C" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint20_radial_337_3485"
@@ -1112,8 +1112,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(8.8429 14.3031) rotate(90) scale(2.4375 0.82813)"
         >
-          <stop offset="0.244" stop-color="#1D0C0B" />
-          <stop offset="1" stop-color="#1D0C0B" stop-opacity="0" />
+          <stop offset="0.244" stopColor="#1D0C0B" />
+          <stop offset="1" stopColor="#1D0C0B" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint21_linear_337_3485"
@@ -1123,9 +1123,9 @@ export const LectureIcon = () => {
           y2="19.7313"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#53C7FF" />
-          <stop offset="0.842" stop-color="#44ACFA" />
-          <stop offset="1" stop-color="#3EA2ED" />
+          <stop stopColor="#53C7FF" />
+          <stop offset="0.842" stopColor="#44ACFA" />
+          <stop offset="1" stopColor="#3EA2ED" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_337_3485"
@@ -1135,8 +1135,8 @@ export const LectureIcon = () => {
           y2="19.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_337_3485"
@@ -1146,9 +1146,9 @@ export const LectureIcon = () => {
           y2="19.7313"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#53C7FF" />
-          <stop offset="0.842" stop-color="#44ACFA" />
-          <stop offset="1" stop-color="#3EA2ED" />
+          <stop stopColor="#53C7FF" />
+          <stop offset="0.842" stopColor="#44ACFA" />
+          <stop offset="1" stopColor="#3EA2ED" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_337_3485"
@@ -1158,8 +1158,8 @@ export const LectureIcon = () => {
           y2="19.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint25_linear_337_3485"
@@ -1169,9 +1169,9 @@ export const LectureIcon = () => {
           y2="23.7313"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#53C7FF" />
-          <stop offset="0.842" stop-color="#44ACFA" />
-          <stop offset="1" stop-color="#3EA2ED" />
+          <stop stopColor="#53C7FF" />
+          <stop offset="0.842" stopColor="#44ACFA" />
+          <stop offset="1" stopColor="#3EA2ED" />
         </linearGradient>
         <linearGradient
           id="paint26_linear_337_3485"
@@ -1181,8 +1181,8 @@ export const LectureIcon = () => {
           y2="23.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint27_linear_337_3485"
@@ -1192,9 +1192,9 @@ export const LectureIcon = () => {
           y2="23.7313"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#53C7FF" />
-          <stop offset="0.842" stop-color="#44ACFA" />
-          <stop offset="1" stop-color="#3EA2ED" />
+          <stop stopColor="#53C7FF" />
+          <stop offset="0.842" stopColor="#44ACFA" />
+          <stop offset="1" stopColor="#3EA2ED" />
         </linearGradient>
         <linearGradient
           id="paint28_linear_337_3485"
@@ -1204,8 +1204,8 @@ export const LectureIcon = () => {
           y2="23.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint29_linear_337_3485"
@@ -1215,8 +1215,8 @@ export const LectureIcon = () => {
           y2="17.6843"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#54D3FF" />
-          <stop offset="1" stop-color="#44ACFA" />
+          <stop stopColor="#54D3FF" />
+          <stop offset="1" stopColor="#44ACFA" />
         </linearGradient>
         <linearGradient
           id="paint30_linear_337_3485"
@@ -1226,8 +1226,8 @@ export const LectureIcon = () => {
           y2="19.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint31_linear_337_3485"
@@ -1237,8 +1237,8 @@ export const LectureIcon = () => {
           y2="17.6843"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#54D3FF" />
-          <stop offset="1" stop-color="#44ACFA" />
+          <stop stopColor="#54D3FF" />
+          <stop offset="1" stopColor="#44ACFA" />
         </linearGradient>
         <linearGradient
           id="paint32_linear_337_3485"
@@ -1248,8 +1248,8 @@ export const LectureIcon = () => {
           y2="19.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint33_linear_337_3485"
@@ -1259,8 +1259,8 @@ export const LectureIcon = () => {
           y2="21.6843"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#54D3FF" />
-          <stop offset="1" stop-color="#44ACFA" />
+          <stop stopColor="#54D3FF" />
+          <stop offset="1" stopColor="#44ACFA" />
         </linearGradient>
         <linearGradient
           id="paint34_linear_337_3485"
@@ -1270,8 +1270,8 @@ export const LectureIcon = () => {
           y2="23.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint35_linear_337_3485"
@@ -1281,8 +1281,8 @@ export const LectureIcon = () => {
           y2="21.6843"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#54D3FF" />
-          <stop offset="1" stop-color="#44ACFA" />
+          <stop stopColor="#54D3FF" />
+          <stop offset="1" stopColor="#44ACFA" />
         </linearGradient>
         <linearGradient
           id="paint36_linear_337_3485"
@@ -1292,8 +1292,8 @@ export const LectureIcon = () => {
           y2="23.3193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5ADFFF" />
-          <stop offset="0.909" stop-color="#5ADFFF" stop-opacity="0" />
+          <stop stopColor="#5ADFFF" />
+          <stop offset="0.909" stopColor="#5ADFFF" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint37_radial_337_3485"
@@ -1303,8 +1303,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.2219 13.3703) rotate(90) scale(1.85923 0.852759)"
         >
-          <stop stop-color="#B1786C" />
-          <stop offset="1" stop-color="#735351" />
+          <stop stopColor="#B1786C" />
+          <stop offset="1" stopColor="#735351" />
         </radialGradient>
         <radialGradient
           id="paint38_radial_337_3485"
@@ -1314,8 +1314,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.2349 13.1703) scale(0.47677 0.25583)"
         >
-          <stop stop-color="#BE8370" />
-          <stop offset="1" stop-color="#BE8370" stop-opacity="0" />
+          <stop stopColor="#BE8370" />
+          <stop offset="1" stopColor="#BE8370" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint39_linear_337_3485"
@@ -1325,8 +1325,8 @@ export const LectureIcon = () => {
           y2="16.6511"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6C4B40" />
-          <stop offset="1" stop-color="#B16F60" />
+          <stop stopColor="#6C4B40" />
+          <stop offset="1" stopColor="#B16F60" />
         </linearGradient>
         <linearGradient
           id="paint40_linear_337_3485"
@@ -1336,8 +1336,8 @@ export const LectureIcon = () => {
           y2="16.3296"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#B67A6C" />
-          <stop offset="1" stop-color="#825E59" />
+          <stop stopColor="#B67A6C" />
+          <stop offset="1" stopColor="#825E59" />
         </linearGradient>
         <linearGradient
           id="paint41_linear_337_3485"
@@ -1347,8 +1347,8 @@ export const LectureIcon = () => {
           y2="9.78561"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#BF8B78" />
-          <stop offset="1" stop-color="#BF8B78" stop-opacity="0" />
+          <stop stopColor="#BF8B78" />
+          <stop offset="1" stopColor="#BF8B78" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint42_linear_337_3485"
@@ -1358,8 +1358,8 @@ export const LectureIcon = () => {
           y2="15.6586"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#543C46" />
-          <stop offset="1" stop-color="#543C46" stop-opacity="0" />
+          <stop stopColor="#543C46" />
+          <stop offset="1" stopColor="#543C46" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint43_radial_337_3485"
@@ -1369,8 +1369,8 @@ export const LectureIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.0149 8.83761) rotate(-90) scale(1.96417 1.31017)"
         >
-          <stop offset="0.527" stop-color="#7E4541" />
-          <stop offset="1" stop-color="#7E4541" stop-opacity="0" />
+          <stop offset="0.527" stopColor="#7E4541" />
+          <stop offset="1" stopColor="#7E4541" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint44_linear_337_3485"
@@ -1380,8 +1380,8 @@ export const LectureIcon = () => {
           y2="27.3043"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#534264" />
-          <stop offset="1" stop-color="#423B49" />
+          <stop stopColor="#534264" />
+          <stop offset="1" stopColor="#423B49" />
         </linearGradient>
         <linearGradient
           id="paint45_linear_337_3485"
@@ -1391,8 +1391,8 @@ export const LectureIcon = () => {
           y2="27.3283"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.347" stop-color="#695282" />
-          <stop offset="1" stop-color="#695282" stop-opacity="0" />
+          <stop offset="0.347" stopColor="#695282" />
+          <stop offset="1" stopColor="#695282" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint46_linear_337_3485"
@@ -1402,8 +1402,8 @@ export const LectureIcon = () => {
           y2="14.6528"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#C38878" />
-          <stop offset="1" stop-color="#A57A6D" />
+          <stop stopColor="#C38878" />
+          <stop offset="1" stopColor="#A57A6D" />
         </linearGradient>
         <linearGradient
           id="paint47_linear_337_3485"
@@ -1413,8 +1413,8 @@ export const LectureIcon = () => {
           y2="6.16984"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D4967E" stop-opacity="0" />
-          <stop offset="1" stop-color="#D4967E" />
+          <stop stopColor="#D4967E" stopOpacity="0" />
+          <stop offset="1" stopColor="#D4967E" />
         </linearGradient>
       </defs>
     </svg>

@@ -202,9 +202,9 @@ export const CalendarIcon = () => {
           width="34.5837"
           height="31.9922"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -291,9 +291,9 @@ export const CalendarIcon = () => {
           width="14.0755"
           height="12.9682"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -344,9 +344,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -415,9 +415,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -486,9 +486,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -557,9 +557,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -628,9 +628,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -699,9 +699,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -770,9 +770,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -841,9 +841,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -912,9 +912,9 @@ export const CalendarIcon = () => {
           width="3.52964"
           height="3.45469"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -983,9 +983,9 @@ export const CalendarIcon = () => {
           width="10.4022"
           height="10.1432"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -1018,9 +1018,9 @@ export const CalendarIcon = () => {
           width="19.0654"
           height="8.5"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1039,9 +1039,9 @@ export const CalendarIcon = () => {
           width="5.0188"
           height="5.92578"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1060,9 +1060,9 @@ export const CalendarIcon = () => {
           width="5.0188"
           height="5.92578"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1081,9 +1081,9 @@ export const CalendarIcon = () => {
           width="5.0188"
           height="5.92578"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1102,9 +1102,9 @@ export const CalendarIcon = () => {
           width="4.9917"
           height="5.92578"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1123,9 +1123,9 @@ export const CalendarIcon = () => {
           width="5.94634"
           height="6.71367"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1144,9 +1144,9 @@ export const CalendarIcon = () => {
           width="5.94756"
           height="6.71367"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1165,9 +1165,9 @@ export const CalendarIcon = () => {
           width="5.94756"
           height="6.71367"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1186,9 +1186,9 @@ export const CalendarIcon = () => {
           width="5.94634"
           height="6.71367"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -1208,8 +1208,8 @@ export const CalendarIcon = () => {
           y2="18.8193"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E4DEEC" />
-          <stop offset="1" stop-color="#E7E2EF" />
+          <stop stopColor="#E4DEEC" />
+          <stop offset="1" stopColor="#E7E2EF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_337_3653"
@@ -1219,8 +1219,8 @@ export const CalendarIcon = () => {
           y2="9.58134"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4271C7" />
-          <stop offset="0.794" stop-color="#4F9FDC" />
+          <stop stopColor="#4271C7" />
+          <stop offset="0.794" stopColor="#4F9FDC" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_337_3653"
@@ -1230,8 +1230,8 @@ export const CalendarIcon = () => {
           y2="6.23534"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#5591D3" />
-          <stop offset="1" stop-color="#5591D3" stop-opacity="0" />
+          <stop stopColor="#5591D3" />
+          <stop offset="1" stopColor="#5591D3" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint3_radial_337_3653"
@@ -1241,8 +1241,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(24.005 11.1323) rotate(-170.407) scale(20.4407 11.0861)"
         >
-          <stop offset="0.759" stop-color="#3E62C2" stop-opacity="0" />
-          <stop offset="1" stop-color="#3B41A1" />
+          <stop offset="0.759" stopColor="#3E62C2" stopOpacity="0" />
+          <stop offset="1" stopColor="#3B41A1" />
         </radialGradient>
         <linearGradient
           id="paint4_linear_337_3653"
@@ -1252,8 +1252,8 @@ export const CalendarIcon = () => {
           y2="10.4933"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#437AC4" />
-          <stop offset="1" stop-color="#437AC4" stop-opacity="0" />
+          <stop stopColor="#437AC4" />
+          <stop offset="1" stopColor="#437AC4" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_337_3653"
@@ -1263,8 +1263,8 @@ export const CalendarIcon = () => {
           y2="21.6609"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4C92DE" />
-          <stop offset="1" stop-color="#4B91DB" />
+          <stop stopColor="#4C92DE" />
+          <stop offset="1" stopColor="#4B91DB" />
         </linearGradient>
         <radialGradient
           id="paint6_radial_337_3653"
@@ -1274,8 +1274,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(25.3448 23.0073) rotate(44.9481) scale(3.44488 8.3508)"
         >
-          <stop stop-color="#E4DDED" />
-          <stop offset="1" stop-color="#D5CFDC" />
+          <stop stopColor="#E4DDED" />
+          <stop offset="1" stopColor="#D5CFDC" />
         </radialGradient>
         <linearGradient
           id="paint7_linear_337_3653"
@@ -1285,8 +1285,8 @@ export const CalendarIcon = () => {
           y2="25.7546"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.461" stop-color="#BFB8CA" />
-          <stop offset="1" stop-color="#D9D3E0" stop-opacity="0" />
+          <stop offset="0.461" stopColor="#BFB8CA" />
+          <stop offset="1" stopColor="#D9D3E0" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint8_radial_337_3653"
@@ -1296,8 +1296,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(33.4458 5.36095) rotate(153.368) scale(10.2999 14.5832)"
         >
-          <stop stop-color="#70C0F8" />
-          <stop offset="1" stop-color="#70C0F8" stop-opacity="0" />
+          <stop stopColor="#70C0F8" />
+          <stop offset="1" stopColor="#70C0F8" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint9_radial_337_3653"
@@ -1307,8 +1307,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(11.4324 4.68504) rotate(138.567) scale(4.72823 5.22125)"
         >
-          <stop offset="0.525" stop-color="#C2C4CC" />
-          <stop offset="0.962" stop-color="#938DA1" />
+          <stop offset="0.525" stopColor="#C2C4CC" />
+          <stop offset="0.962" stopColor="#938DA1" />
         </radialGradient>
         <radialGradient
           id="paint10_radial_337_3653"
@@ -1318,8 +1318,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(10.1964 5.256) rotate(-59.9076) scale(2.43127 2.58649)"
         >
-          <stop offset="0.546" stop-color="#8F96BB" />
-          <stop offset="1" stop-color="#8F96BB" stop-opacity="0" />
+          <stop offset="0.546" stopColor="#8F96BB" />
+          <stop offset="1" stopColor="#8F96BB" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint11_radial_337_3653"
@@ -1329,8 +1329,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(16.783 4.68496) rotate(138.567) scale(4.72823 5.22125)"
         >
-          <stop offset="0.525" stop-color="#C2C4CC" />
-          <stop offset="0.962" stop-color="#938DA1" />
+          <stop offset="0.525" stopColor="#C2C4CC" />
+          <stop offset="0.962" stopColor="#938DA1" />
         </radialGradient>
         <radialGradient
           id="paint12_radial_337_3653"
@@ -1340,8 +1340,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(15.547 5.257) rotate(-59.907) scale(2.43127 2.58648)"
         >
-          <stop offset="0.546" stop-color="#8F96BB" />
-          <stop offset="1" stop-color="#8F96BB" stop-opacity="0" />
+          <stop offset="0.546" stopColor="#8F96BB" />
+          <stop offset="1" stopColor="#8F96BB" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint13_radial_337_3653"
@@ -1351,8 +1351,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(22.1721 4.6843) rotate(138.567) scale(4.72823 5.22125)"
         >
-          <stop offset="0.525" stop-color="#C2C4CC" />
-          <stop offset="0.962" stop-color="#938DA1" />
+          <stop offset="0.525" stopColor="#C2C4CC" />
+          <stop offset="0.962" stopColor="#938DA1" />
         </radialGradient>
         <radialGradient
           id="paint14_radial_337_3653"
@@ -1362,8 +1362,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(20.9364 5.257) rotate(-59.907) scale(2.43127 2.58648)"
         >
-          <stop offset="0.546" stop-color="#8F96BB" />
-          <stop offset="1" stop-color="#8F96BB" stop-opacity="0" />
+          <stop offset="0.546" stopColor="#8F96BB" />
+          <stop offset="1" stopColor="#8F96BB" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint15_radial_337_3653"
@@ -1373,8 +1373,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(27.5509 4.68352) rotate(138.567) scale(4.72823 5.22125)"
         >
-          <stop offset="0.525" stop-color="#C2C4CC" />
-          <stop offset="0.962" stop-color="#938DA1" />
+          <stop offset="0.525" stopColor="#C2C4CC" />
+          <stop offset="0.962" stopColor="#938DA1" />
         </radialGradient>
         <radialGradient
           id="paint16_radial_337_3653"
@@ -1384,8 +1384,8 @@ export const CalendarIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(26.3165 5.257) rotate(-59.907) scale(2.43127 2.58648)"
         >
-          <stop offset="0.546" stop-color="#8F96BB" />
-          <stop offset="1" stop-color="#8F96BB" stop-opacity="0" />
+          <stop offset="0.546" stopColor="#8F96BB" />
+          <stop offset="1" stopColor="#8F96BB" stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>

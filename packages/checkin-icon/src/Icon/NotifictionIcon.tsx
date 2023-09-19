@@ -61,9 +61,9 @@ export const NotifictionIcon = () => {
           width="3.44287"
           height="5.42383"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -96,9 +96,9 @@ export const NotifictionIcon = () => {
           width="37.2957"
           height="32.0312"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -167,9 +167,9 @@ export const NotifictionIcon = () => {
           width="25.3044"
           height="6.15625"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -188,9 +188,9 @@ export const NotifictionIcon = () => {
           width="11.6086"
           height="18.4561"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -210,8 +210,8 @@ export const NotifictionIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(23.4105 29.6984) rotate(-126.512) scale(2.99779 4.14008)"
         >
-          <stop stop-color="#FFC26D" />
-          <stop offset="1" stop-color="#F68D61" />
+          <stop stopColor="#FFC26D" />
+          <stop offset="1" stopColor="#F68D61" />
         </radialGradient>
         <linearGradient
           id="paint1_linear_337_3753"
@@ -221,8 +221,8 @@ export const NotifictionIcon = () => {
           y2="29.0644"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.186" stop-color="#E57356" />
-          <stop offset="1" stop-color="#E57356" stop-opacity="0" />
+          <stop offset="0.186" stopColor="#E57356" />
+          <stop offset="1" stopColor="#E57356" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint2_radial_337_3753"
@@ -232,8 +232,8 @@ export const NotifictionIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(22.5239 26.8123) rotate(135) scale(4.12479 6.80629)"
         >
-          <stop offset="0.441" stop-color="#EA8059" stop-opacity="0" />
-          <stop offset="1" stop-color="#C27068" />
+          <stop offset="0.441" stopColor="#EA8059" stopOpacity="0" />
+          <stop offset="1" stopColor="#C27068" />
         </radialGradient>
         <radialGradient
           id="paint3_radial_337_3753"
@@ -243,8 +243,8 @@ export const NotifictionIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(22.4287 4.00847) rotate(-90) scale(2.21226 1.33152)"
         >
-          <stop stop-color="#FFE957" />
-          <stop offset="1" stop-color="#F7A630" />
+          <stop stopColor="#FFE957" />
+          <stop offset="1" stopColor="#F7A630" />
         </radialGradient>
         <linearGradient
           id="paint4_linear_337_3753"
@@ -254,8 +254,8 @@ export const NotifictionIcon = () => {
           y2="26.1775"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FCB949" />
-          <stop offset="1" stop-color="#E28C37" />
+          <stop stopColor="#FCB949" />
+          <stop offset="1" stopColor="#E28C37" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_337_3753"
@@ -265,8 +265,8 @@ export const NotifictionIcon = () => {
           y2="25.2603"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D7737D" />
-          <stop offset="0.302" stop-color="#FCA162" stop-opacity="0" />
+          <stop stopColor="#D7737D" />
+          <stop offset="0.302" stopColor="#FCA162" stopOpacity="0" />
         </linearGradient>
         <radialGradient
           id="paint6_radial_337_3753"
@@ -276,8 +276,8 @@ export const NotifictionIcon = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(27.7546 14.5443) rotate(146.139) scale(23.2146 22.2698)"
         >
-          <stop offset="0.67" stop-color="#E69136" stop-opacity="0" />
-          <stop offset="0.977" stop-color="#CF7D44" />
+          <stop offset="0.67" stopColor="#E69136" stopOpacity="0" />
+          <stop offset="0.977" stopColor="#CF7D44" />
         </radialGradient>
         <linearGradient
           id="paint7_linear_337_3753"
@@ -287,8 +287,8 @@ export const NotifictionIcon = () => {
           y2="23.4849"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.277" stop-color="#F5A43C" />
-          <stop offset="1" stop-color="#FFE154" />
+          <stop offset="0.277" stopColor="#F5A43C" />
+          <stop offset="1" stopColor="#FFE154" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_337_3753"
@@ -298,8 +298,8 @@ export const NotifictionIcon = () => {
           y2="18.5494"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.118" stop-color="#FFEF6D" />
-          <stop offset="1" stop-color="#FFEF6D" stop-opacity="0" />
+          <stop offset="0.118" stopColor="#FFEF6D" />
+          <stop offset="1" stopColor="#FFEF6D" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

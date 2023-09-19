@@ -103,9 +103,9 @@ export const WriteIcon = () => {
           width="20.8049"
           height="26.2891"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -156,9 +156,9 @@ export const WriteIcon = () => {
           width="18.0581"
           height="26.5391"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -177,9 +177,9 @@ export const WriteIcon = () => {
           width="21.4771"
           height="27.0203"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -266,9 +266,9 @@ export const WriteIcon = () => {
           width="7.44995"
           height="7.81055"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -287,9 +287,9 @@ export const WriteIcon = () => {
           width="7.0499"
           height="7.16465"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -340,9 +340,9 @@ export const WriteIcon = () => {
           width="3.89897"
           height="3.96563"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -361,9 +361,9 @@ export const WriteIcon = () => {
           width="5.92896"
           height="3.76563"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -414,9 +414,9 @@ export const WriteIcon = () => {
           width="4.14741"
           height="3.56563"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -435,9 +435,9 @@ export const WriteIcon = () => {
           width="5.92896"
           height="3.76563"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -489,8 +489,8 @@ export const WriteIcon = () => {
           y2="26.6952"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#AFAAB6" />
-          <stop offset="1" stop-color="#B7B0C0" />
+          <stop stopColor="#AFAAB6" />
+          <stop offset="1" stopColor="#B7B0C0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_337_3625"
@@ -500,8 +500,8 @@ export const WriteIcon = () => {
           y2="21.2572"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#A79FB2" />
-          <stop offset="1" stop-color="#A79FB2" stop-opacity="0" />
+          <stop stopColor="#A79FB2" />
+          <stop offset="1" stopColor="#A79FB2" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_337_3625"
@@ -511,8 +511,8 @@ export const WriteIcon = () => {
           y2="26.82"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#EBE4F3" />
-          <stop offset="1" stop-color="#E4DAF0" />
+          <stop stopColor="#EBE4F3" />
+          <stop offset="1" stopColor="#E4DAF0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_337_3625"
@@ -522,8 +522,8 @@ export const WriteIcon = () => {
           y2="4.72095"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#D9D3E1" />
-          <stop offset="1" stop-color="#CCC7D1" />
+          <stop stopColor="#D9D3E1" />
+          <stop offset="1" stopColor="#CCC7D1" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_337_3625"
@@ -533,8 +533,8 @@ export const WriteIcon = () => {
           y2="4.82195"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.119" stop-color="#DBDADC" />
-          <stop offset="0.577" stop-color="#CBC7D0" stop-opacity="0" />
+          <stop offset="0.119" stopColor="#DBDADC" />
+          <stop offset="0.577" stopColor="#CBC7D0" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_337_3625"
@@ -544,8 +544,8 @@ export const WriteIcon = () => {
           y2="10.6651"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#9C96A2" />
-          <stop offset="1" stop-color="#9A95A1" />
+          <stop stopColor="#9C96A2" />
+          <stop offset="1" stopColor="#9A95A1" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_337_3625"
@@ -555,8 +555,8 @@ export const WriteIcon = () => {
           y2="13.4404"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#9C96A2" />
-          <stop offset="1" stop-color="#9A95A1" />
+          <stop stopColor="#9C96A2" />
+          <stop offset="1" stopColor="#9A95A1" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_337_3625"
@@ -566,8 +566,8 @@ export const WriteIcon = () => {
           y2="16.2149"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#9C96A2" />
-          <stop offset="1" stop-color="#9A95A1" />
+          <stop stopColor="#9C96A2" />
+          <stop offset="1" stopColor="#9A95A1" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_337_3625"
@@ -577,8 +577,8 @@ export const WriteIcon = () => {
           y2="18.9902"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#9C96A2" />
-          <stop offset="1" stop-color="#9A95A1" />
+          <stop stopColor="#9C96A2" />
+          <stop offset="1" stopColor="#9A95A1" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_337_3625"
@@ -588,8 +588,8 @@ export const WriteIcon = () => {
           y2="14.8041"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E0437B" />
-          <stop offset="1" stop-color="#DC4369" />
+          <stop stopColor="#E0437B" />
+          <stop offset="1" stopColor="#DC4369" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_337_3625"
@@ -599,8 +599,8 @@ export const WriteIcon = () => {
           y2="13.1011"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.263" stop-color="#CA4A72" />
-          <stop offset="1" stop-color="#CA4A72" stop-opacity="0" />
+          <stop offset="0.263" stopColor="#CA4A72" />
+          <stop offset="1" stopColor="#CA4A72" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_337_3625"
@@ -610,8 +610,8 @@ export const WriteIcon = () => {
           y2="21.7572"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#E4BD58" />
-          <stop offset="1" stop-color="#D89D52" />
+          <stop stopColor="#E4BD58" />
+          <stop offset="1" stopColor="#D89D52" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_337_3625"
@@ -621,8 +621,8 @@ export const WriteIcon = () => {
           y2="20.1012"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.263" stop-color="#AB9365" />
-          <stop offset="1" stop-color="#E3B758" stop-opacity="0" />
+          <stop offset="0.263" stopColor="#AB9365" />
+          <stop offset="1" stopColor="#E3B758" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
