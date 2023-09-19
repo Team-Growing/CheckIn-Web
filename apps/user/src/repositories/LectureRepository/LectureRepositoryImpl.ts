@@ -1,5 +1,6 @@
-import { Response } from "@checkin/types";
+import { Lectures, Response } from "@checkin/types";
 import {
+  AttendLectureParam,
   GetLecturesParam,
   LectureRepository,
   enroLectureByIdParam,
@@ -13,13 +14,26 @@ class LectureRepositoryImpl implements LectureRepository {
     return data;
   }
 
-  public async getLectures(params: GetLecturesParam): Promise<Response> {
-    const { data } = await apiClient.post("/lecture", params);
+  // public async getLectures(params: GetLecturesParam): Promise<Response> {
+  //   const { data } = await apiClient.post("/lecture", params);
+  //   return data;
+  // }
+
+  public async getLectureById(id: getLectureByIdParam): Promise<Lectures> {
+    const { data } = await apiClient.get(`/lecture/${id}`);
     return data;
   }
 
-  public async getLectureById(id: getLectureByIdParam): Promise<Response> {
-    const { data } = await apiClient.get(`/lecture/${id}`);
+  public async getTodayLecture(): Promise<Lectures> {
+    const { data } = await apiClient.get("/lecture/today");
+    return data;
+  }
+
+  public async attendanceLecture({
+    code,
+    lectureId,
+  }: AttendLectureParam): Promise<Response> {
+    const { data } = await apiClient.post(`/attendance/${lectureId}`, { code });
     return data;
   }
 }

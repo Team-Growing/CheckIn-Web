@@ -21,6 +21,10 @@ export type DayOfWeekType =
   | "SATURDAY"
   | "SUNDAY";
 
+export interface LecturesResponse extends Response {
+  data: Lectures[];
+}
+
 export interface Lectures {
   lectureName: string;
   explanation: string;
