@@ -1,4 +1,10 @@
-import { MypageIcon, NoticeIcon, SchoolIcon } from "@checkin/icon";
+import {
+  MypageIcon,
+  NoticeIcon,
+  SchoolIcon,
+  GenerateIcon,
+  CheckSuggestionIcon,
+} from "@checkin/icon";
 
 export const NAV_ITEM = [
   {
@@ -9,12 +15,12 @@ export const NAV_ITEM = [
   {
     title: "수업, 공지 생성",
     path: "/createLecture",
-    icon: NoticeIcon,
+    icon: GenerateIcon,
   },
   {
     title: "문의, 제안 확인",
     path: "/checkSuggestion",
-    icon: MypageIcon,
+    icon: CheckSuggestionIcon,
   },
   {
     title: "방과후 학생 관리",
