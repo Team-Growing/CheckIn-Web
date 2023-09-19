@@ -4,7 +4,8 @@ import { CSSObject } from "styled-components";
 export interface SelectProps {
   items: string[];
   value: string;
-  onChange: Dispatch<SetStateAction<string>>;
+  onChange: (value: string, name: string) => void;
   zIndex?: number;
   customStyle?: CSSObject;
+  name: string;
 }

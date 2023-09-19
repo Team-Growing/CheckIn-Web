@@ -8,36 +8,52 @@ import {
 } from "./style";
 import { IoIosArrowDown } from "react-icons/io";
 import { SelectProps } from "./types";
-import React from "react";
-
+import {
+  useBooleanState,
+  useOutsideClick,
+} from "../../../../checkin-util/index";
 export const Select = ({
   items,
   value,
   zIndex,
   onChange,
   customStyle,
+  name,
 }: SelectProps) => {
   const [close, setClose] = useState<boolean>(true);
+  const {
+    value: isOpen,
+    setFalse: isClose,
+    toggle: handleToggleButtonClick,
+  } = useBooleanState();
+
+  const dropdownRef = useOutsideClick(isClose);
+
+  const handleDropdownItemButtonClick = (data: string) => {
+    onChange(name, data);
+    setClose(true);
+  };
 
   return (
-    <SelectContainer
-      close={close}
-      onClick={() => setClose((prev) => !prev)}
-      style={customStyle}
-    >
-      <SelectText>{value}</SelectText>
-      <SelectIcon close={close}>
-        <IoIosArrowDown />
-      </SelectIcon>
-      {!close && (
-        <SelectItemWrap style={{ zIndex }}>
-          {items.map((item, idx) => (
-            <SelectItem key={idx} onClick={() => onChange(item)}>
-              {item}
-            </SelectItem>
-          ))}
-        </SelectItemWrap>
-      )}
-    </SelectContainer>
+    <div ref={dropdownRef}>
+      <SelectContainer close={isOpen} onClick={handleToggleButtonClick}>
+        <SelectText>{value}</SelectText>
+        <SelectIcon close={!isOpen}>
+          <IoIosArrowDown />
+        </SelectIcon>
+        {isOpen && (
+          <SelectItemWrap style={{ zIndex }}>
+            {items.map((item, idx) => (
+              <SelectItem
+                key={idx}
+                onClick={() => handleDropdownItemButtonClick(item)}
+              >
+                {item}
+              </SelectItem>
+            ))}
+          </SelectItemWrap>
+        )}
+      </SelectContainer>
+    </div>
   );
 };

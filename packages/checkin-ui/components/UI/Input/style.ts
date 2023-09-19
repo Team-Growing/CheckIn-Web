@@ -7,7 +7,7 @@ export const InputContainer = styled.input<{ customStyle?: CSSObject }>`
   font-size: 16px;
 
   padding-left: 11px;
-  color: #c1c7de;
+  color: #000;
   border-radius: 6px;
   background: #fff;
   box-shadow: 0px 0px 0px 1px #cdd1dc;
