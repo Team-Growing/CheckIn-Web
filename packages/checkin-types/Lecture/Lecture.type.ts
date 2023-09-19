@@ -22,20 +22,34 @@ export type DayOfWeekType =
   | "SUNDAY";
 
 export interface Lectures {
+  lectureName: string;
   explanation: string;
   placeType: string;
-  acceptableStudent: {
-    maxStudent: string;
-    minStudent: string;
-    targetGrade: string;
-  };
-  lectureSchedule: {
-    startDay: string;
-    endDay: string;
-    dayOfWeek: string;
-    startTime: string;
-    endTime: string;
-  };
+  lectureTag: LectureTagType | string;
+  teacherId: string;
+  acceptableStudent: LectureAcceptableStudent;
+  lectureSchedule: LectureSchedule;
+}
+export interface LectureInfo {
+  lectureName: string;
+  explanation: string;
+  placeType: string;
+  lectureTag: LectureTagType;
+  teacherId: string;
+}
+
+export interface LectureAcceptableStudent {
+  maxStudent: string;
+  minStudent: string;
+  targetGrade: string;
+}
+
+export interface LectureSchedule {
+  startDay: string;
+  endDay: string;
+  dayOfWeek: DayOfWeekType | string;
+  startTime: string;
+  endTime: string;
 }
 
 export interface LectureResponse extends Response {
