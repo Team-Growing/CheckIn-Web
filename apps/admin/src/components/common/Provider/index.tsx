@@ -1,3 +1,5 @@
+"use client";
+
 import { ProvidersProps } from "./types";
 import React from "react";
 import { RecoilRoot } from "recoil";

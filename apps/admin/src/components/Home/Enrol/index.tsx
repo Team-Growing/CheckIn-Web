@@ -8,13 +8,8 @@ const Enrol = () => {
     <Card type="Enrol">
       <CardTitle>
         <CalendarIcon />
-        출석코드 생성
+        결강자 승인
       </CardTitle>
-      <ButtonWrapper>
-        <Button type="primary">테니스 A</Button>
-        <Button type="unSelect">테니스 B</Button>
-      </ButtonWrapper>
-      <Form />
     </Card>
   );
 };
