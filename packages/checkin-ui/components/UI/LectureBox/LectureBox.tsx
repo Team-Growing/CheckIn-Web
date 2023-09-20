@@ -63,6 +63,7 @@ export const LectureTagBox = ({
   teacher,
   title,
   type,
+  lectureTag,
 }: LectureTagBoxProps) => {
   return (
     <S.LectureTagBoxContainer>
@@ -71,7 +72,7 @@ export const LectureTagBox = ({
           <S.LectureTitle>{title}</S.LectureTitle>
           <S.LectureGrade>{grade}</S.LectureGrade>
         </S.LectureBoxTopWrap>
-        <S.LectureTag>스포츠</S.LectureTag>
+        <S.LectureTag type={lectureTag}>스포츠</S.LectureTag>
       </Flex>
       {type == "Enrol" ? (
         <Flex justify="between">
