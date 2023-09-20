@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Select } from "./Select";
 
@@ -13,6 +13,7 @@ const Template: ComponentStory<typeof Select> = (args) => {
   return (
     <>
       <Select
+        name="test"
         items={["전체보기", "1학년", "2학년", "3학년"]}
         value={classification}
         onChange={setClassification}
