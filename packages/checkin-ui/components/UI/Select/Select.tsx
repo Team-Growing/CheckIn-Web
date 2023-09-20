@@ -8,10 +8,8 @@ import {
 } from "./style";
 import { IoIosArrowDown } from "react-icons/io";
 import { SelectProps } from "./types";
-import {
-  useBooleanState,
-  useOutsideClick,
-} from "../../../../checkin-util/index";
+import { useBooleanState, useOutsideClick } from "@checkin/uitl";
+
 export const Select = ({
   items,
   value,
