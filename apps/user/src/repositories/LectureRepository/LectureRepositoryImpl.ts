@@ -1,4 +1,9 @@
-import { Lectures, Response } from "@checkin/types";
+import {
+  LectureResponse,
+  Lectures,
+  LecturesResponse,
+  Response,
+} from "@checkin/types";
 import {
   AttendLectureParam,
   GetLecturesParam,
@@ -24,7 +29,7 @@ class LectureRepositoryImpl implements LectureRepository {
     return data;
   }
 
-  public async getTodayLecture(): Promise<Lectures> {
+  public async getTodayLecture(): Promise<LecturesResponse> {
     const { data } = await apiClient.get("/lecture/today");
     return data;
   }

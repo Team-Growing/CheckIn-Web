@@ -1,10 +1,10 @@
-import { Lectures, Response } from "@checkin/types";
+import { LecturesResponse, Lectures, Response } from "@checkin/types";
 
 export interface LectureRepository {
   enrolLecture(id: enroLectureByIdParam): Promise<Response>;
   // getLectures(params: GetLecturesParam): Promise<Response>;
   getLectureById(id: getLectureByIdParam): Promise<Lectures>;
-  getTodayLecture(): Promise<Lectures>;
+  getTodayLecture(): Promise<LecturesResponse>;
   attendanceLecture({ code, lectureId }: AttendLectureParam): Promise<Response>;
 }
 
