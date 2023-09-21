@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import BackgroundImage from "../../assets/Image/Background.svg";
+import BackgroundImage from "../../assets/Image/AuthBackground.svg";
 
 export const AuthBackGround = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
   justify-content: center;
   background-image: url(${BackgroundImage.src});
 `;

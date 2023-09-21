@@ -1,7 +1,5 @@
 import { Card, CardTitle } from "@checkin/ui";
-import Image from "next/image";
 import React from "react";
-import ApplyoutForm from "./ApplyoutForm";
 import { WriteIcon } from "@checkin/icon";
 const Applyout = () => {
   return (
@@ -10,7 +8,6 @@ const Applyout = () => {
         <WriteIcon />
         담당자 문의
       </CardTitle>
-      <ApplyoutForm />
     </Card>
   );
 };

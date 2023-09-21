@@ -1,13 +1,18 @@
+import { LectureTagType } from "@checkin/types";
+import dataTransform from "@checkin/uitl/util/dataTransform";
 import styled from "styled-components";
 
-export const LectureBoxContainer = styled.div`
+export const LectureBoxContainer = styled.div<{
+  type: LectureTagType | string;
+}>`
   position: relative;
   width: 250px;
   height: 172px;
 
   border-radius: 10px;
-  background-color: #0073c9;
+
   border: none;
+  background-color: ${({ type }) => dataTransform.LectureTypeColor(type)};
 
   margin-top: 20px;
 `;
@@ -31,7 +36,7 @@ export const LectureCard = styled.div`
 `;
 
 export const LectureTitle = styled.h1`
-  font-size: 26px;
+  font-size: 1.3rem;
 `;
 
 export const LectureGrade = styled.p`
@@ -140,7 +145,7 @@ export const LectureTagBoxContainer = styled.div`
   padding: 30px 28px;
 `;
 
-export const LectureTag = styled.div`
+export const LectureTag = styled.div<{ type: LectureTagType | string }>`
   width: 88px;
   height: 27.5px;
 
@@ -150,8 +155,7 @@ export const LectureTag = styled.div`
 
   border-radius: 30px;
   border: 2px solid rgba(53, 170, 255, 0);
-  background: rgba(53, 170, 255, 0.4);
-
+  background-color: ${({ type }) => dataTransform.LectureTypeColor(type)};
   margin-top: 8px;
 `;
 

@@ -1,3 +1,4 @@
+import dataTransform from "@checkin/uitl/util/dataTransform";
 import { Flex } from "../../Layout/Flex/Flex";
 import { Button } from "../Button/Button";
 import * as S from "./style";
@@ -13,18 +14,20 @@ export const LectureBox = ({
   place,
   teacher,
   title,
+  lectureTag,
 }: LectureBoxProps) => {
+  const LecturePlaceName = dataTransform.LecturePlaceTypeName(place);
   return (
-    <S.LectureBoxContainer>
+    <S.LectureBoxContainer type={lectureTag}>
       <S.LectureCard>
         <S.LectureBoxTopWrap>
           <S.LectureTitle>{title}</S.LectureTitle>
-          <S.LectureGrade>{grade}</S.LectureGrade>
+          <S.LectureGrade>{`${grade}학년`}</S.LectureGrade>
         </S.LectureBoxTopWrap>
         <S.LectureBottomWrap>
-          <S.LectureInfoText>{`장소 : ${place}`}</S.LectureInfoText>
+          <S.LectureInfoText>{`장소 : ${LecturePlaceName}`}</S.LectureInfoText>
           <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
-          <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
+          <S.LectureInfoText>{`참가인원 : ${people}명`}</S.LectureInfoText>
         </S.LectureBottomWrap>
       </S.LectureCard>
     </S.LectureBoxContainer>
@@ -60,6 +63,7 @@ export const LectureTagBox = ({
   teacher,
   title,
   type,
+  lectureTag,
 }: LectureTagBoxProps) => {
   return (
     <S.LectureTagBoxContainer>
@@ -68,7 +72,7 @@ export const LectureTagBox = ({
           <S.LectureTitle>{title}</S.LectureTitle>
           <S.LectureGrade>{grade}</S.LectureGrade>
         </S.LectureBoxTopWrap>
-        <S.LectureTag>스포츠</S.LectureTag>
+        <S.LectureTag type={lectureTag}>스포츠</S.LectureTag>
       </Flex>
       {type == "Enrol" ? (
         <Flex justify="between">
