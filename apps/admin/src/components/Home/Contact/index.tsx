@@ -1,7 +1,8 @@
 import { Card, CardTitle } from "@checkin/ui";
 import React from "react";
 import { WriteIcon } from "@checkin/icon";
-const Applyout = () => {
+
+const Contact = () => {
   return (
     <Card type="Applyout">
       <CardTitle>
@@ -12,4 +13,4 @@ const Applyout = () => {
   );
 };
 
-export default Applyout;
+export default Contact;
