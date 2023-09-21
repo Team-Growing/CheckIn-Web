@@ -1,8 +1,8 @@
-import React from "react";
 import * as S from "./style";
 import { ProfileIcon } from "@checkin/icon";
-import { Button, Flex } from "@checkin/ui";
+import { Flex } from "@checkin/ui";
 import { AbsenseStudentBox } from "./types";
+import dataTransform from "@checkin/uitl/util/dataTransform";
 
 export const AbsenceStudentList = ({
   children,
@@ -22,15 +22,13 @@ export const AbsenceStudentList = ({
           <Flex gap={5}>
             <S.AbsensedStudentName>{name}</S.AbsensedStudentName>
             <S.AbsensedStudentInfoText>
-              2학년 1반 12번
+              {dataTransform.schoolInfoTransform(grade, room, number)}
             </S.AbsensedStudentInfoText>
           </Flex>
-          <S.AbsensedReasonText>
-            사유 : 몸이 별로 안좋아서 병원 다녀오겠습니다....
-          </S.AbsensedReasonText>
+          <S.AbsensedReasonText>{`사유 : ${reason}`}</S.AbsensedReasonText>
         </Flex>
       </Flex>
-      <Button type="primary">결강 승인</Button>
+      {children}
     </S.AbsenceStudentListContainer>
   );
 };
