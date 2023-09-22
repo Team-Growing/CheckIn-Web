@@ -1,9 +1,13 @@
 import styled from "styled-components";
-import BackgroundImage from "../../assets/Image/AuthBackground.svg";
+import AuthBackground from "../../assets/Image/AuthBackground.svg";
 
 export const AuthBackGround = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  background-image: url(${BackgroundImage.src});
+  background-image: url(${AuthBackground.src});
 `;
 
 export const AuthContainer = styled.div`

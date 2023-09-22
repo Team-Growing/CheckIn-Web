@@ -1,7 +1,7 @@
 import * as S from "./style";
 import { useRouter } from "next/router";
 import { useGetMemberInfo } from "@/queries/Member/Member.query";
-import dataTransform from "@/utils/Transform/dataTransform";
+import dataTransform from "@checkin/uitl/util/dataTransform";
 
 const NavUser = () => {
   const router = useRouter();

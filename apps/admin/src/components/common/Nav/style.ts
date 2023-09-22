@@ -100,3 +100,8 @@ export const NavLoginText = styled.p`
   cursor: pointer;
   height: 28px;
 `;
+
+export const NavLogoText = styled.p`
+  color: #54d879;
+  font-size: 16px;
+`;
