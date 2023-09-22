@@ -6,7 +6,7 @@ export type LectureStatusType =
 
 export type LectureTagType = "SPORTS" | "INSTRUMENT" | "AUTONOMY" | "NARSHA";
 
-export type PlaceType =
+export type LecturePlaceType =
   | "PLAYGROUND"
   | "GYM"
   | "BASKETBALL_COURT"
@@ -22,7 +22,49 @@ export type DayOfWeekType =
   | "SUNDAY";
 
 export interface LecturesResponse extends Response {
-  data: Lectures[];
+  data: LectureType[];
+}
+
+export interface LectureType {
+  lectureId: {
+    value: number;
+  };
+  lectureName: string;
+  explanation: string;
+  lectureStatus: LectureStatusType;
+  placeType: LecturePlaceType;
+  lectureTag: LectureTagType;
+  acceptableStudent: {
+    maxStudent: number;
+    minStudent: number;
+    targetGrade: number;
+  };
+  lectureTeacher: {
+    memberId: {
+      value: number;
+    };
+    name: string;
+  };
+  lectureSchedule: {
+    startDay: string;
+    endDay: string;
+    dayOfWeek: DayOfWeekType;
+  };
+  enrollStudent: 0;
+  weekPlans: [
+    {
+      week: 0;
+      introduction: string;
+    }
+  ];
+  participants: [
+    {
+      applyDateTime: string;
+      participantId: {
+        value: string;
+      };
+    }
+  ];
 }
 
 export interface Lectures {
@@ -63,7 +105,7 @@ export interface LectureResponse extends Response {
     };
     explanation: string;
     lectureStatus: LectureStatusType;
-    placeType: PlaceType;
+    placeType: LecturePlaceType;
     lectureTag: LectureTagType;
     acceptableStudent: {
       maxStudent: number;

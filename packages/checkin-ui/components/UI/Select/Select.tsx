@@ -34,7 +34,11 @@ export const Select = ({
 
   return (
     <div ref={dropdownRef}>
-      <SelectContainer close={isOpen} onClick={handleToggleButtonClick}>
+      <SelectContainer
+        customStyle={customStyle}
+        close={isOpen}
+        onClick={handleToggleButtonClick}
+      >
         <SelectText>{value}</SelectText>
         <SelectIcon close={!isOpen}>
           <IoIosArrowDown />

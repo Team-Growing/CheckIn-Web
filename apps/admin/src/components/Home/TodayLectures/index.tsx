@@ -1,7 +1,7 @@
 import { Card, CardTitle } from "@checkin/ui";
 import React from "react";
-import TodayLaectureList from "./TodayLectureList";
 import { LectureIcon } from "@checkin/icon";
+import TodayLecturesList from "./TodayLectureList";
 
 const TodayLectures = () => {
   return (
@@ -10,7 +10,7 @@ const TodayLectures = () => {
         <LectureIcon />
         오늘의 방과후
       </CardTitle>
-      <TodayLaectureList />
+      <TodayLecturesList />
     </Card>
   );
 };

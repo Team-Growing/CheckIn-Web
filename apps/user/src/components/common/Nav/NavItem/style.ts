@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const NavItemWrap = styled.div`
   width: 100%;
@@ -23,6 +23,22 @@ export const NavItemBox = styled.div<{ isMatch: boolean }>`
   font-size: 20px;
   background-color: ${({ isMatch }) => (isMatch == true ? "#00C537" : null)};
   color: ${({ isMatch }) => (isMatch == true ? "#ffffff" : "#636363")};
+
+  transform: scale(1);
+  transition: all 0.1s ease-in-out;
+
+  ${({ isMatch }) =>
+    !isMatch &&
+    css`
+      &:hover {
+        background-color: #eeeeee;
+        transform: scale(0.98);
+      }
+    `}
+
+  &:active {
+    background-color: #dddddd;
+  }
 `;
 
 export const NavItemText = styled.p`

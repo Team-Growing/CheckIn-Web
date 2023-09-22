@@ -6,7 +6,6 @@ import { useGetTodayLectures } from "@/queries/Lectures/query";
 
 const TodayLectures = () => {
   const { data } = useGetTodayLectures();
-  console.log(data);
 
   return (
     <Card type="Lecture">

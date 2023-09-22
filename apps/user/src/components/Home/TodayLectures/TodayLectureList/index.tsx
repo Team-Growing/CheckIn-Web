@@ -2,7 +2,6 @@ import React from "react";
 import { LectureBox } from "@checkin/ui";
 import { LectureListWrapper } from "./style";
 import { LecturesResponse } from "@checkin/types";
-import dataTransform from "@checkin/uitl/util/dataTransform";
 
 interface Props {
   data: LecturesResponse;

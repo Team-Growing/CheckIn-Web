@@ -1,6 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { CSSObject, css } from "styled-components";
 
-export const SelectContainer = styled.div<{ close: boolean }>`
+export const SelectContainer = styled.div<{
+  close: boolean;
+  customStyle?: CSSObject;
+}>`
   width: min-content;
   height: 35px;
 
@@ -17,6 +20,7 @@ export const SelectContainer = styled.div<{ close: boolean }>`
   cursor: pointer;
 
   ${({ close }) => !close && css``}
+  ${({ customStyle }) => customStyle}
 `;
 
 export const SelectText = styled.p`
