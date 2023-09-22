@@ -1,4 +1,4 @@
-import LectureRepositoryImpl from "@/repositories/Lecture/LectureRepositoryImpl";
+import LectureRepositoryImpl from "@/repositories/LectureRepository/LectureRepositoryImpl";
 import { useMutation } from "react-query";
 
 export const useCreateLectureMutation = () => {

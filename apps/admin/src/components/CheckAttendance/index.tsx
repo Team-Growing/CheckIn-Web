@@ -12,16 +12,13 @@ const CheckAttendance = () => {
         subTitle="after-school attendance check"
       />
       <Select
+        name="gd"
         items={["방과후 이름"]}
         onChange={onChange}
         value="방과후 이름"
         customStyle={{ marginTop: "26px" }}
       />
-      <Box>
-        {Array.from({ length: 10 }).map(() => (
-          <AttendanceStudent />
-        ))}
-      </Box>
+      <Box></Box>
     </S.CheckAttendanceContainer>
   );
 };

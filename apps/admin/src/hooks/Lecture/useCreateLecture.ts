@@ -1,5 +1,4 @@
 import { useCreateLectureMutation } from "@/queries/Lecture/Query";
-import { Lectures } from "@checkin/types";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 export const useCreateLecture = () => {
