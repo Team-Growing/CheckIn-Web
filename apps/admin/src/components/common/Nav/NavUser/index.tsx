@@ -1,8 +1,12 @@
 import * as S from "./style";
 import { useRouter } from "next/router";
 import { ProfileIcon } from "@checkin/icon";
+import { useGetMemberInfo } from "@/queries/Member/query";
+
 const NavUser = () => {
+  const { data } = useGetMemberInfo();
   const router = useRouter();
+
   return (
     <S.NavBottomBox>
       <S.NavUserBox>
@@ -10,8 +14,8 @@ const NavUser = () => {
           <ProfileIcon />
         </S.NavUserImageBackground>
         <S.NavUserInfoBox>
-          <S.NavUserName>백승하</S.NavUserName>
-          <S.NavUserGrade>2학년 4반 2번</S.NavUserGrade>
+          <S.NavUserName>{data?.data.name}</S.NavUserName>
+          <S.NavUserGrade>{data?.data.memberRole}</S.NavUserGrade>
         </S.NavUserInfoBox>
       </S.NavUserBox>
       <S.NavAuthBox>
