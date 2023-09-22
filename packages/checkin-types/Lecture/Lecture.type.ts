@@ -60,7 +60,7 @@ export interface LectureType {
   participants: [
     {
       applyDateTime: string;
-      memberId: {
+      participantId: {
         value: string;
       };
     }
