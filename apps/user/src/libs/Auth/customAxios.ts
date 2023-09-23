@@ -5,7 +5,7 @@ import {
   REQUEST_TOKEN_KEY,
   ACCESS_TOKEN_KEY,
 } from "@/constant/Token/Token.constant";
-import Token from "@/hooks/token/Token";
+import Token from "../token/Token";
 
 export const apiHost = CONFIG.API_HOST;
 
