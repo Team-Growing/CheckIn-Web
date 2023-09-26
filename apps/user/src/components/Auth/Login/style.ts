@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { AuthPartFade } from "../style";
 
 export const LoginContainer = styled.form`
   width: 100%;
   height: 100%;
+  animation: ${AuthPartFade} 1s;
 `;
 
 export const AuthContainer = styled.div`

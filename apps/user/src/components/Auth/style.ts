@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import AuthBackground from "../../assets/Image/AuthBackground.svg";
 
 export const AuthBackGround = styled.div`
@@ -36,4 +36,14 @@ export const AuthWrap = styled.div`
   width: 100%;
   height: 100%;
   padding: 70px 72px 0 84px;
+`;
+
+export const AuthPartFade = keyframes`
+  from {
+    transform: translate3d(-50px, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 `;
