@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { ACCESS_TOKEN_KEY } from "@/constant/Token/Token.constant";
 import { CheckinToast } from "@checkin/toast";
-import Token from "../token/Token";
+import Token from "@/libs/token/Token";
 
 const useTokenCheck = () => {
   const router = useRouter();

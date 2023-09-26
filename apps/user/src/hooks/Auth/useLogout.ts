@@ -1,5 +1,5 @@
+import Token from "@/libs/token/Token";
 import { useRouter } from "next/router";
-import Token from "../token/Token";
 
 const useLogout = () => {
   const router = useRouter();

@@ -3,7 +3,6 @@ import {
   AuthRepository,
   LoginParam,
   SignupStudentParam,
-  SignupTeacherParam,
 } from "./AuthRepository";
 import { LoginResponse, Response } from "@checkin/types";
 
@@ -19,16 +18,6 @@ class AuthRepositoryImpl implements AuthRepository {
     const { data } = await apiClient.post(
       "/sign-up/student",
       studentSignupData
-    );
-    return data;
-  }
-
-  public async signupTeacher(
-    teacherSignupData: SignupTeacherParam
-  ): Promise<Response> {
-    const { data } = await apiClient.post(
-      "/sign-up/teacher",
-      teacherSignupData
     );
     return data;
   }

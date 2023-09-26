@@ -3,12 +3,10 @@ import * as S from "./stlye";
 import { Flex } from "@checkin/ui";
 import TodayLectures from "./TodayLectures";
 import Notifiction from "./Notifiction";
-import useTokenCheck from "@/hooks/Auth/useTokenCheck";
 import Enrol from "./Enrol";
 import Absense from "./Absense";
 
 const Home = () => {
-  useTokenCheck();
   return (
     <S.HomeContainer>
       <TodayLectures />

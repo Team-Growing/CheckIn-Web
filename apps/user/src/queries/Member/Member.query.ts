@@ -4,7 +4,7 @@ import { CheckinToast } from "@checkin/toast";
 import { AxiosError } from "axios";
 import { MemberType } from "@checkin/types";
 import MemberRepositoryImpl from "@/repositories/MemberRepository/MemberRepositoryImpl";
-import Token from "@/hooks/token/Token";
+import Token from "@/libs/token/Token";
 
 export const useGetMemberInfo = (
   options?: UseQueryOptions<MemberType, AxiosError, MemberType, string>

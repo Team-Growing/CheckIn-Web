@@ -13,11 +13,8 @@ const TodayLectures = () => {
         <LectureIcon />
         오늘의 방과후
       </CardTitle>
-      {data?.data ? (
-        <TodayLaectureList data={data} />
-      ) : (
-        <div>오늘의 방과후는 없습니다</div>
-      )}
+      {data?.data.length === 0 && <div>오늘의 방과후는 없습니다</div>}
+      {data?.data && <TodayLaectureList data={data} />}
     </Card>
   );
 };

@@ -6,7 +6,7 @@ import {
   REFRESH_TOKEN_KEY,
 } from "@/constant/Token/Token.constant";
 import { usePostLoginMutation } from "@/queries/Auth/Auth.query";
-import Token from "../token/Token";
+import Token from "@/libs/token/Token";
 
 export const useLogin = () => {
   const router = useRouter();
