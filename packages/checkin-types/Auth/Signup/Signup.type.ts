@@ -14,7 +14,7 @@ export interface StudentSignupType {
 }
 
 export interface StudentInfoType {
-  grade: string;
-  room: string;
-  number: string;
+  grade: number;
+  room: number;
+  number: number;
 }

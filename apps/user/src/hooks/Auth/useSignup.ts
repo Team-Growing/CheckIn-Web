@@ -13,9 +13,9 @@ export const useSignup = () => {
   });
 
   const [studentInfoData, setStudentInfoData] = useState<StudentInfoType>({
-    grade: "",
-    room: "",
-    number: "",
+    grade: 0,
+    room: 0,
+    number: 0,
   });
 
   const onChangeSignupData = useCallback(
