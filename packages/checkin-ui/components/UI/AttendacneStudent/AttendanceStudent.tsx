@@ -2,7 +2,7 @@ import { Flex } from "../../Layout/Flex/Flex";
 import * as S from "./style";
 import { ProfileIcon } from "@checkin/icon";
 import { AttendStudentProps } from "./types";
-import dataTransform from "@checkin/uitl/util/dataTransform";
+import { dataTransform } from "@checkin/util";
 
 export const AttendanceStudent = ({
   children,

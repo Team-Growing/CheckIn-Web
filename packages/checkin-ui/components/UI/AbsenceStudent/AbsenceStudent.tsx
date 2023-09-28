@@ -2,7 +2,7 @@ import * as S from "./style";
 import { ProfileIcon } from "@checkin/icon";
 import { Flex } from "@checkin/ui";
 import { AbsenseStudentBox } from "./types";
-import dataTransform from "@checkin/uitl/util/dataTransform";
+import { dataTransform } from "@checkin/util";
 
 export const AbsenceStudentList = ({
   children,
