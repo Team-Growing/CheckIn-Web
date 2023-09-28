@@ -1,7 +1,7 @@
-import { InputHTMLAttributes } from "react";
 import { CSSObject } from "styled-components";
+import { SelectProps } from "../../UI/Select/types";
 
-export interface InputWrapProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface SelectWrapProps extends SelectProps {
   customStyle?: CSSObject;
   require: Boolean;
   info?: string;
