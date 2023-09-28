@@ -1,4 +1,4 @@
-import dataTransform from "@checkin/uitl/util/dataTransform";
+import { dataTransform } from "@checkin/util";
 import { Flex } from "../../Layout/Flex/Flex";
 import { Button } from "../Button/Button";
 import * as S from "./style";

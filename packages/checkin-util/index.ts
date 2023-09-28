@@ -5,4 +5,5 @@ export * from "./components/SwitchCase";
 export * from "./hooks/useOutsideClick";
 export * from "./hooks/useBooleanState";
 
-export * from "./util/dataTransform";
+export { default as dataTransform } from "./util/dataTransform";
+export { default as patternCheck } from "./util/patternCheck";

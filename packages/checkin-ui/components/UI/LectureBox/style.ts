@@ -1,5 +1,5 @@
 import { LectureTagType } from "@checkin/types";
-import dataTransform from "@checkin/uitl/util/dataTransform";
+import { dataTransform } from "@checkin/util";
 import styled from "styled-components";
 
 export const LectureBoxContainer = styled.div<{
