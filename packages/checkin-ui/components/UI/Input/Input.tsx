@@ -12,3 +12,7 @@ export const InputInfo = ({ children }: InputInfoProps) => {
 export const InputIntroText = ({ children }: InputInfoProps) => {
   return <InputIntroTextStyle>{children}</InputIntroTextStyle>;
 };
+
+export const DateInput = () => {
+  return <Input type="date" />;
+};

@@ -11,3 +11,5 @@ export * from "./components/UI/AttendacneStudent/AttendanceStudent";
 // Layout exports
 export * from "./components/Layout/Flex/Flex";
 export * from "./components/Layout/InputWrap/InputWrap";
+export * from "./components/Layout/SelectWrap/SelectWrap";
+export * from "./components/Layout/TextareaWrap/TextareaWrap";
