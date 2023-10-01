@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./style";
-import { AttendanceStudent, SectionHeader, Select } from "@checkin/ui";
+import { SectionHeader, Select } from "@checkin/ui";
 import styled from "styled-components";
 
-const CheckAttendance = () => {
+const SMS = () => {
   const onChange = () => {};
   return (
     <S.CheckAttendanceContainer>
@@ -23,7 +23,7 @@ const CheckAttendance = () => {
   );
 };
 
-export default CheckAttendance;
+export default SMS;
 
 const Box = styled.div`
   display: flex;

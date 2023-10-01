@@ -1,7 +1,7 @@
 import { Button, Flex } from "@checkin/ui";
 import React from "react";
 
-const GenerateButton = () => {
+const LectureSubmitButton = () => {
   return (
     <Flex justify="end" customStyle={{ marginTop: "26px" }}>
       <Button style={{ width: "200px" }} type="primary">
@@ -11,4 +11,4 @@ const GenerateButton = () => {
   );
 };
 
-export default GenerateButton;
+export default LectureSubmitButton;

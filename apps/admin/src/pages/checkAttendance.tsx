@@ -1,8 +1,8 @@
-import CheckAttendance from "@/components/CheckAttendance";
 import React from "react";
+import SMS from "@/components/SMS";
 
 const checkAttendancePage = () => {
-  return <CheckAttendance />;
+  return <SMS />;
 };
 
 export default checkAttendancePage;
