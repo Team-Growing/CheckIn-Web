@@ -1,4 +1,3 @@
-import React from "react";
 import { ButtonProps, ButtonWrapperProps } from "./types";
 import { ButtonContainer, ButtonWrapperBox } from "./style";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";

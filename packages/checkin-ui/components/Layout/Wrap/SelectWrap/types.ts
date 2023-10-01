@@ -1,5 +1,5 @@
 import { CSSObject } from "styled-components";
-import { SelectProps } from "../../UI/Select/types";
+import { SelectProps } from "../../../UI/Select/types";
 
 export interface SelectWrapProps extends SelectProps {
   customStyle?: CSSObject;

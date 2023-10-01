@@ -1,13 +1,13 @@
-import { InputInfo, InputIntroText } from "../../UI/Input/Input";
-import { Textarea } from "../../UI/Textarea/Textarea";
 import { TextareaWrapWrapContainer } from "./style";
 import { TextareaWrapProps } from "./types";
+import { InputInfo, InputIntroText, Textarea } from "@checkin/ui";
 
 export const TextareaWrap = ({
   customStyle,
   require,
   info,
   intro,
+  placeholder,
   ...attr
 }: TextareaWrapProps) => {
   return (
@@ -19,7 +19,7 @@ export const TextareaWrap = ({
             </InputInfo>
           )
         : info && <InputInfo>{info}</InputInfo>}
-      <Textarea customStyle={customStyle} {...attr} />
+      <Textarea placeholder={placeholder} customStyle={customStyle} {...attr} />
       {intro && <InputIntroText>{intro}</InputIntroText>}
     </TextareaWrapWrapContainer>
   );
