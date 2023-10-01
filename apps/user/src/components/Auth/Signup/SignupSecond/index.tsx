@@ -10,8 +10,7 @@ import {
 } from "../../Login/style";
 import { IoIosArrowBack } from "react-icons/io";
 import { StudentInfoType } from "@checkin/types";
-
-export type Role = "student" | "teacher";
+import { AuthInputWrap } from "@checkin/ui";
 
 interface Props {
   setSection: React.Dispatch<React.SetStateAction<"first" | "second">>;
@@ -33,39 +32,30 @@ const SignupSecond = ({
   return (
     <>
       <S.SignupSecondInputContainer>
-        <S.SigupSecondInputWrap>
-          <S.SignupRequireText>
-            학년 <span>*</span>
-          </S.SignupRequireText>
-          <S.SignupSecondInput
-            type="student"
-            name="grade"
-            value={studentInfoData.grade}
-            onChange={onChangeSignupStudentInfoData}
-          />
-        </S.SigupSecondInputWrap>
-        <S.SigupSecondInputWrap>
-          <S.SignupRequireText>
-            반 <span>*</span>
-          </S.SignupRequireText>
-          <S.SignupSecondInput
-            type="student"
-            name="room"
-            value={studentInfoData.room}
-            onChange={onChangeSignupStudentInfoData}
-          />
-        </S.SigupSecondInputWrap>
-        <S.SigupSecondInputWrap>
-          <S.SignupRequireText>
-            번호 <span>*</span>
-          </S.SignupRequireText>
-          <S.SignupSecondInput
-            type="student"
-            name="number"
-            value={studentInfoData.number}
-            onChange={onChangeSignupStudentInfoData}
-          />
-        </S.SigupSecondInputWrap>
+        <AuthInputWrap
+          customStyle={{ width: "90%" }}
+          require={true}
+          inputTitle="학년"
+          name="grade"
+          value={studentInfoData.grade}
+          onChange={onChangeSignupStudentInfoData}
+        />
+        <AuthInputWrap
+          customStyle={{ width: "90%" }}
+          require={true}
+          inputTitle="반"
+          name="room"
+          value={studentInfoData.room}
+          onChange={onChangeSignupStudentInfoData}
+        />
+        <AuthInputWrap
+          customStyle={{ width: "90%" }}
+          require={true}
+          inputTitle="번호"
+          name="number"
+          value={studentInfoData.number}
+          onChange={onChangeSignupStudentInfoData}
+        />
       </S.SignupSecondInputContainer>
       <S.SignupIntroText>
         DAS와 함께 간편한 방과후 생활을 누려보세요!

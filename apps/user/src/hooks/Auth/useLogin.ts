@@ -7,6 +7,7 @@ import {
 } from "@/constant/Token/Token.constant";
 import { usePostLoginMutation } from "@/queries/Auth/Auth.query";
 import Token from "@/libs/token/Token";
+import { CheckinToast } from "@checkin/toast";
 
 export const useLogin = () => {
   const router = useRouter();
@@ -30,6 +31,7 @@ export const useLogin = () => {
             Token.setToken(ACCESS_TOKEN_KEY, data.data.accessToken);
             Token.setToken(REFRESH_TOKEN_KEY, data.data.refreshToken);
             router.push("/");
+            CheckinToast.showSuccess("로그인 성공");
           },
         }
       );
