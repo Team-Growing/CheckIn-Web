@@ -24,7 +24,7 @@ export const NAV_ITEM = [
   },
   {
     title: "방과후 학생 관리",
-    path: "/manageStudent",
+    path: "/sms",
     icon: MypageIcon,
   },
 ];

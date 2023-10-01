@@ -33,3 +33,17 @@ export const InputIntroTextStyle = styled.label`
   font-size: 16px;
   color: #737992;
 `;
+
+export const AuthInputStyle = styled.input<{ customStyle?: CSSObject }>`
+  width: 100%;
+  height: 40px;
+
+  border-radius: 5px;
+  background-color: #e1e1e1;
+  border: none;
+  outline: none;
+
+  padding-left: 10px;
+
+  ${({ customStyle }) => customStyle}
+`;

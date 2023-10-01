@@ -7,4 +7,5 @@ export interface TextareaWrapProps
   require: Boolean;
   info?: string;
   intro?: string;
+  placeholder?: string;
 }

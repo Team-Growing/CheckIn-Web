@@ -1,6 +1,7 @@
 import { Card, CardTitle } from "@checkin/ui";
 import React from "react";
 import { WriteIcon } from "@checkin/icon";
+import ContactList from "./ContactList";
 
 const Contact = () => {
   return (
@@ -9,6 +10,7 @@ const Contact = () => {
         <WriteIcon />
         담당자 문의
       </CardTitle>
+      <ContactList />
     </Card>
   );
 };

@@ -1,7 +1,12 @@
-import { InputContainer, InputInfoText, InputIntroTextStyle } from "./style";
-import { InputInfoProps, InputProps } from "./types";
+import {
+  AuthInputStyle,
+  InputContainer,
+  InputInfoText,
+  InputIntroTextStyle,
+} from "./style";
+import { AuthInputProps, InputInfoProps, InputProps } from "./types";
 
-export const Input = ({ customStyle, ...attr }: InputProps) => {
+export const TextInput = ({ customStyle, ...attr }: InputProps) => {
   return <InputContainer customStyle={customStyle} {...attr} />;
 };
 
@@ -14,5 +19,9 @@ export const InputIntroText = ({ children }: InputInfoProps) => {
 };
 
 export const DateInput = () => {
-  return <Input type="date" />;
+  return <TextInput type="date" />;
+};
+
+export const AuthInput = ({ customStyle, ...attr }: AuthInputProps) => {
+  return <AuthInputStyle customStyle={customStyle} {...attr} />;
 };

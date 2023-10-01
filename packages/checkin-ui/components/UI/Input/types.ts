@@ -8,3 +8,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export interface InputInfoProps {
   children: string | ReactNode;
 }
+
+export interface AuthInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  customStyle?: CSSObject;
+}
