@@ -35,7 +35,7 @@ export const AuthPanel = styled.img`
 export const AuthWrap = styled.div`
   width: 100%;
   height: 100%;
-  padding: 70px 72px 0 84px;
+  padding: 70px 72px 0 74px;
 `;
 
 export const AuthPartFade = keyframes`

@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./stlye";
+import * as S from "./style";
 import { Flex } from "@checkin/ui";
 import TodayLectures from "./TodayLectures";
 import Notifiction from "./Notifiction";

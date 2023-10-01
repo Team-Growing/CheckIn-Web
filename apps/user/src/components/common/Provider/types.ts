@@ -1,6 +1,4 @@
-import { ReactNode } from "react";
-
 export interface ProvidersProps {
-  children: ReactNode;
+  children: React.ReactNode;
   pageProps: any;
 }

@@ -1,9 +1,11 @@
+"use client";
+
 import { ProvidersProps } from "./types";
 import React from "react";
 import { RecoilRoot } from "recoil";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { CheckinToastContainer } from "@checkin/toast";
-import GlobalStyle from "@/styles/globalStyle";
+import { GlobalStyle } from "@checkin/styled-theme";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -16,6 +18,7 @@ const queryClient = new QueryClient({
     },
   },
 });
+
 const Providers = ({ children, pageProps }: ProvidersProps) => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -24,7 +27,6 @@ const Providers = ({ children, pageProps }: ProvidersProps) => {
           <CheckinToastContainer autoClose={4000} limit={4} />
           <GlobalStyle />
           {children}
-          {/* <ThemeProviderContainer>{children}</ThemeProviderContainer> */}
         </RecoilRoot>
       </Hydrate>
     </QueryClientProvider>
