@@ -2,17 +2,17 @@ import { MypageIcon, NoticeIcon, SchoolIcon } from "@checkin/icon";
 
 export const NAV_ITEM = [
   {
-    title: "방과후 수강신청",
+    title: "방과후 출석확인",
     path: "/register",
     icon: SchoolIcon,
   },
   {
-    title: "수업 제안,건의",
+    title: "출석코드 생성",
     path: "/suggestion",
     icon: NoticeIcon,
   },
   {
-    title: "마이페이지",
+    title: "수업시수 관리",
     path: "/myinfo",
     icon: MypageIcon,
   },

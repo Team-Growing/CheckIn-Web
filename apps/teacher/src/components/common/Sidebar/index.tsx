@@ -1,5 +1,5 @@
 import * as S from "./style";
-import logo from "../../../assets/Logo/logo.svg";
+import logo from "../../../assets/image/TeacherLogo.svg";
 import NavItem from "./SidebarItem/index";
 import NavUser from "./";
 import { useRouter } from "next/router";
@@ -11,14 +11,14 @@ const Nav = () => {
       <S.NavTopWrap>
         <S.NavLogo
           src={logo.src}
-          width={125}
-          height={38}
+          width={200}
+          height={50}
           alt="메인 로고"
           onClick={() => router.push("/")}
         />
         <NavItem />
       </S.NavTopWrap>
-      <NavUser />
+      {/* <NavUser /> */}
     </S.NavContainer>
   );
 };

@@ -1,4 +1,4 @@
-import Main from "@/components/common/Main";
+import Main from "../components/Home/index";
 import Sidebar from "../components/common/Sidebar";
 
 export async function getServerSideProps() {
