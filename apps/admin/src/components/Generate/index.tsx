@@ -10,7 +10,7 @@ const Suggestion = () => {
   return (
     <S.SuggestionContainer>
       <SectionHeader
-        title="방과후 수업 생성"
+        title="방과후 수업, 공지 생성"
         subTitle="suggesting an after-school class"
       />
       <ButtonWrapper>
