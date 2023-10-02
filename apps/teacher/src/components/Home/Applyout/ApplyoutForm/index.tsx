@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Select, Textarea } from "@checkin/ui";
+import { Button, Select, Textarea, Flex } from "@checkin/ui";
 import * as S from "./style";
 
 const ApplyoutForm = () => {
@@ -44,11 +44,17 @@ const ApplyoutForm = () => {
           onKeyUp={autoResizeTextarea} // keyup이되엇을때마다 autoResizeTextarea실행
         />
       </S.ApplyoutFormInputWrap>
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
+      <Flex
+        justify={"center"}
+        customStyle={{
+          width: "100%",
+        }}
+        gap={20}
+      >
         <Button type="primary" style={{ width: "200px" }}>
           문의하기
         </Button>
-      </div>
+      </Flex>
     </S.ApplyoutFormContainer>
   );
 };

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const NavItemWrap = styled.div`
   width: 100%;
 

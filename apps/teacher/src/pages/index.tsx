@@ -1,5 +1,5 @@
 import Main from "../components/Home/index";
-import Sidebar from "../components/common/Sidebar";
+import Nav from "../components/common/Nav";
 
 export async function getServerSideProps() {
   console.log("test");

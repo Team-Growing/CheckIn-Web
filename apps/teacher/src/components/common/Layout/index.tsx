@@ -1,4 +1,4 @@
-import Nav from "../Sidebar";
+import Nav from "../Nav";
 import { Container, Wrap } from "./style";
 import { useRouter } from "next/router";
 

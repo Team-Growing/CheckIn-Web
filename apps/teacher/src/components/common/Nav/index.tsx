@@ -1,6 +1,6 @@
 import * as S from "./style";
 import logo from "../../../assets/image/TeacherLogo.svg";
-import NavItem from "./SidebarItem/index";
+import NavItem from "./NavItem/index";
 import NavUser from "./";
 import { useRouter } from "next/router";
 
