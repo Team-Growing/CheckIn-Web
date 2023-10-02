@@ -5,12 +5,21 @@ import ContactList from "./ContactList";
 
 const Contact = () => {
   return (
-    <Card type="Applyout">
+    <Card type="Enrol">
       <CardTitle>
         <WriteIcon />
         담당자 문의
       </CardTitle>
-      <ContactList />
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          overflow: "auto",
+          marginTop: "20px",
+        }}
+      >
+        <ContactList />
+      </div>
     </Card>
   );
 };

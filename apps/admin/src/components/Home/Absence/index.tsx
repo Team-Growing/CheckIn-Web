@@ -4,7 +4,7 @@ import { CalendarIcon } from "@checkin/icon";
 
 const Absence = () => {
   return (
-    <Card type="Enrol">
+    <Card type="Applyout">
       <CardTitle>
         <CalendarIcon />
         결강자 승인
