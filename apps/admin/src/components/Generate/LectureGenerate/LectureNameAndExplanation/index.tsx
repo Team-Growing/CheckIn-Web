@@ -1,4 +1,4 @@
-import { InputWrap, Textarea, TextareaWrap } from "@checkin/ui";
+import { TextInputWrap, TextareaWrap } from "@checkin/ui";
 import React, { ChangeEvent } from "react";
 
 interface Props {
@@ -17,7 +17,7 @@ const LectureNameAndExplantion = ({
 }: Props) => {
   return (
     <>
-      <InputWrap
+      <TextInputWrap
         info="수업 이름"
         intro="생성할 수업 이름을 입력해주세요"
         require={true}

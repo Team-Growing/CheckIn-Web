@@ -7,6 +7,7 @@ export * from "./components/UI/Select/Select";
 export * from "./components/UI/Textarea/Textarea";
 export * from "./components/UI/Input/Input";
 export * from "./components/UI/AttendacneStudent/AttendanceStudent";
+export * from "./components/UI/Text/Text";
 
 // Layout exports
 export * from "./components/Layout/Flex/Flex";
