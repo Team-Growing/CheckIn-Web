@@ -1,9 +1,33 @@
 import React from "react";
 import * as S from "./style";
-import Sidebar from "../Sidebar";
 import AttendIcon from "../../../assets/image/AttendTitleIcon.svg";
 import AttendCard from "../../common/Attend/AttendCard";
 import { Button } from "@checkin/ui";
+
+const dummyList = [
+  {
+    id: 1,
+    author: "hyun",
+    content: "첫번째",
+    emotion: 1,
+    created_date: new Date().getTime(),
+  },
+  {
+    id: 2,
+    author: "jeong",
+    content: "두번째",
+    emotion: 2,
+    created_date: new Date().getTime(),
+  },
+  {
+    id: 3,
+    author: "react",
+    content: "3번째",
+    emotion: 3,
+    created_date: new Date().getTime(),
+  },
+];
+
 const Attend = () => {
   return (
     <>
@@ -31,10 +55,18 @@ const Attend = () => {
             테니스B
           </Button>
         </S.ButtonWrap>
-        <S.AttendCardContainer>
-          <AttendCard
-          ></AttendCard>
-        </S.AttendCardContainer>
+        <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
+        <S.AttendListWrapper>
+          {[...Array(5)].map((idx) => (
+            <AttendCard></AttendCard>
+          ))}
+        </S.AttendListWrapper>
+        <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
+        <S.AttendListWrapper>
+          {[...Array(5)].map((idx) => (
+            <AttendCard></AttendCard>
+          ))}
+        </S.AttendListWrapper>
       </S.AttendWrap>
     </>
   );

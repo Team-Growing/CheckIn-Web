@@ -1,5 +1,5 @@
 import Attend from "@/components/common/Attend";
-import Sidebar from "../components/common/Sidebar";
+import Nav from "../components/common/Nav";
 
 export async function getServerSideProps() {
   console.log("test");
@@ -16,7 +16,6 @@ interface Props {
 export default function Home({ time }: Props) {
   return (
     <>
-      <Sidebar></Sidebar>
       <Attend></Attend>
     </>
   );
