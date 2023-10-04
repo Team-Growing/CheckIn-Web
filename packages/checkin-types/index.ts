@@ -10,3 +10,6 @@ export * from "./Member/Member.type";
 
 //Util
 export * from "./util/response";
+
+//Notice
+export * from "./Notice/Notice.type";
