@@ -1,4 +1,5 @@
 import { LectureTagType } from "@checkin/types";
+import { CSSObject } from "styled-components";
 
 export interface LectureBoxProps {
   title: string;
@@ -18,4 +19,5 @@ export interface EnrolLectureBoxProps {
 
 export interface LectureTagBoxProps extends LectureBoxProps {
   type: "absence" | "Enrol";
+  customStyle?: CSSObject;
 }

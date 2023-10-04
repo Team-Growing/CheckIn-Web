@@ -18,8 +18,8 @@ export const InputIntroText = ({ children }: InputInfoProps) => {
   return <InputIntroTextStyle>{children}</InputIntroTextStyle>;
 };
 
-export const DateInput = () => {
-  return <TextInput type="date" />;
+export const DateInput = ({ customStyle, ...attr }: InputProps) => {
+  return <TextInput type="date" {...attr} />;
 };
 
 export const AuthInput = ({ customStyle, ...attr }: AuthInputProps) => {

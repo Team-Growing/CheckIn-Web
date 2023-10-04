@@ -1,13 +1,13 @@
 import React from "react";
 import * as S from "./style";
-import { Button, InputWrap, SelectWrap, TextareaWrap } from "@checkin/ui";
+import { Button, TextInputWrap, SelectWrap, TextareaWrap } from "@checkin/ui";
 
 const SuggestionForm = () => {
   const onChange = () => {};
   return (
     <>
       <S.SuggestionFormContainer>
-        <InputWrap
+        <TextInputWrap
           customStyle={{ width: "55%" }}
           require={true}
           placeholder="ex) 알고리즘, Springboot 심화반"

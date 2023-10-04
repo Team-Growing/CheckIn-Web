@@ -51,7 +51,7 @@ const cardSize: Record<CardType, FlattenSimpleInterpolation> = {
 };
 
 export const CardTitleBox = styled.div`
-  width: 300px;
+  width: auto;
   height: 36px;
 
   display: flex;

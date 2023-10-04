@@ -64,9 +64,10 @@ export const LectureTagBox = ({
   title,
   type,
   lectureTag,
+  customStyle,
 }: LectureTagBoxProps) => {
   return (
-    <S.LectureTagBoxContainer>
+    <S.LectureTagBoxContainer customStyle={customStyle}>
       <Flex direction="column">
         <S.LectureBoxTopWrap>
           <S.LectureTitle>{title}</S.LectureTitle>

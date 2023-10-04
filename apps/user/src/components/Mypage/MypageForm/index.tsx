@@ -2,9 +2,9 @@ import React from "react";
 import * as S from "./style";
 import {
   Flex,
-  Input,
+  TextInput,
   InputIntroText,
-  InputWrap,
+  TextInputWrap,
   WriteButton,
 } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
@@ -19,24 +19,32 @@ const MypageForm = () => {
       </S.MypageImageBox>
       <Flex direction="column" gap={13}>
         <Flex gap={30}>
-          <InputWrap>
-            <InputIntroText>이름</InputIntroText>
-            <Input customStyle={{ width: "80px" }} value="김예림" />
-          </InputWrap>
-          <InputWrap>
-            <InputIntroText>E-mail</InputIntroText>
-            <Input customStyle={{ width: "210px" }} />
-          </InputWrap>
+          <TextInputWrap
+            info="이름"
+            customStyle={{ width: "80px" }}
+            value="김예림"
+            require={false}
+          />
+          <TextInputWrap
+            info="E-mail"
+            customStyle={{ width: "auto" }}
+            value="loveyr0118@gmail.com"
+            require={false}
+          />
         </Flex>
         <Flex gap={30}>
-          <InputWrap>
-            <InputIntroText>학번</InputIntroText>
-            <Input customStyle={{ width: "80px" }} value="김예림" />
-          </InputWrap>
-          <InputWrap>
-            <InputIntroText>아이디</InputIntroText>
-            <Input customStyle={{ width: "123px" }} />
-          </InputWrap>
+          <TextInputWrap
+            info="학번"
+            customStyle={{ width: "80px" }}
+            value="2402"
+            require={false}
+          />
+          <TextInputWrap
+            info="아이디"
+            customStyle={{ width: "auto" }}
+            value="loveyr0118"
+            require={false}
+          />
           <WriteButton type="primary" style={{ marginTop: "20px" }}>
             수정하기
           </WriteButton>

@@ -1,6 +1,6 @@
 import { LectureTagType } from "@checkin/types";
 import { dataTransform } from "@checkin/util";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 
 export const LectureBoxContainer = styled.div<{
   type: LectureTagType | string;
@@ -15,6 +15,8 @@ export const LectureBoxContainer = styled.div<{
   background-color: ${({ type }) => dataTransform.LectureTypeColor(type)};
 
   margin-top: 20px;
+
+  cursor: pointer;
 `;
 
 export const LectureCard = styled.div`
@@ -131,7 +133,7 @@ export const EnrolLectureInfoText = styled.p`
   color: #1f1f1f;
 `;
 
-export const LectureTagBoxContainer = styled.div`
+export const LectureTagBoxContainer = styled.div<{ customStyle?: CSSObject }>`
   width: 330px;
   height: 220px;
 
@@ -143,6 +145,9 @@ export const LectureTagBoxContainer = styled.div`
   background: #fff;
 
   padding: 30px 28px;
+
+  ${({ customStyle }) => customStyle}
+  cursor: pointer;
 `;
 
 export const LectureTag = styled.div<{ type: LectureTagType | string }>`
