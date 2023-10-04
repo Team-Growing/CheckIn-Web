@@ -5,15 +5,15 @@ export const AttendWrap = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #f2f2f2;
-  position: relative;
-
-  padding: 20rem 20rem 20rem 20rem;
+  padding: 69px 0px 30px 112px;
+  box-sizing: border-box;
 `;
 
 export const AttendTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  box-sizing: border-box;
 `;
 
 export const AttendIconImg = styled(Image)`
@@ -37,11 +37,28 @@ export const AttendSubtitle = styled.div`
   line-height: 2rem; /* 160% */
 `;
 
+export const AttendStudentTitle = styled.p`
+  font-size: 1.5em;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+`;
 export const AttendCardContainer = styled.div``;
 
 export const ButtonWrap = styled.div`
   display: flex;
   flex-direction: row;
   width: 12vw;
-  justify-content: space-between;
+  column-gap: 20px;
+  margin-top: 2vh;
+`;
+
+export const AttendListWrapper = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  column-gap: 20px;
+  overflow-x: scroll;
 `;
