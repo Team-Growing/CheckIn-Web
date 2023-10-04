@@ -66,6 +66,7 @@ export const LectureTagBox = ({
   lectureTag,
   customStyle,
 }: LectureTagBoxProps) => {
+  const LectureTagColor = dataTransform.LectureTypeColor(lectureTag);
   return (
     <S.LectureTagBoxContainer customStyle={customStyle}>
       <Flex direction="column">
@@ -73,7 +74,12 @@ export const LectureTagBox = ({
           <S.LectureTitle>{title}</S.LectureTitle>
           <S.LectureGrade>{grade}</S.LectureGrade>
         </S.LectureBoxTopWrap>
-        <S.LectureTag type={lectureTag}>스포츠</S.LectureTag>
+        <S.LectureTag
+          tagBackground={LectureTagColor?.background}
+          tagColor={LectureTagColor?.color}
+        >
+          스포츠
+        </S.LectureTag>
       </Flex>
       {type == "Enrol" ? (
         <Flex justify="between">

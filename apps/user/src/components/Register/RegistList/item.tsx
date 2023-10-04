@@ -1,5 +1,5 @@
 import React from "react";
-import { ItemBox, ItemContainer } from "./style";
+import { ItemContainer } from "./style";
 import { LectureTagBox } from "@checkin/ui";
 
 const RegistList = () => {
@@ -9,6 +9,7 @@ const RegistList = () => {
         return (
           <>
             <LectureTagBox
+              lectureTag="SPORTS"
               type="Enrol"
               grade="2학년"
               people="10명"

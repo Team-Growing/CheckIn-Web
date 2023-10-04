@@ -4,13 +4,15 @@ class dataTransForm {
   public LectureTypeColor(type: LectureTagType | string) {
     switch (type) {
       case "SPORTS":
-        return "#0073C9";
+        return { background: "#0073C9", color: "#FFF" };
+
       case "INSTRUMENT":
-        return "#F7D356";
+        return { background: "#F7D356", color: "#000" };
       case "AUTONOMY":
-        return "#DE4B41";
+        return { background: "#DE4B41", color: "#000" };
+
       case "NARSHA":
-        return "#209915";
+        return { background: "#209915", color: "#000" };
     }
   }
 

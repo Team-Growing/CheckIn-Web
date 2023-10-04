@@ -150,7 +150,10 @@ export const LectureTagBoxContainer = styled.div<{ customStyle?: CSSObject }>`
   cursor: pointer;
 `;
 
-export const LectureTag = styled.div<{ type: LectureTagType | string }>`
+export const LectureTag = styled.div<{
+  tagColor: string;
+  tagBackground: string;
+}>`
   width: 88px;
   height: 27.5px;
 
@@ -160,7 +163,8 @@ export const LectureTag = styled.div<{ type: LectureTagType | string }>`
 
   border-radius: 30px;
   border: 2px solid rgba(53, 170, 255, 0);
-  background-color: ${({ type }) => dataTransform.LectureTypeColor(type)};
+  background-color: ${({ tagBackground }) => tagBackground};
+  color: ${({ tagColor }) => tagColor};
   margin-top: 8px;
 `;
 
