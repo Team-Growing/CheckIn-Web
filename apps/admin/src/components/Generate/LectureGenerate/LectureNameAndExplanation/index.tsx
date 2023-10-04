@@ -2,7 +2,7 @@ import { TextInputWrap, TextareaWrap } from "@checkin/ui";
 import React, { ChangeEvent } from "react";
 
 interface Props {
-  lectureText: {
+  lectureNameExplan: {
     lectureName: string;
     explanation: string;
   };
@@ -12,7 +12,7 @@ interface Props {
 }
 
 const LectureNameAndExplantion = ({
-  lectureText,
+  lectureNameExplan,
   onChangeLectureText,
 }: Props) => {
   return (

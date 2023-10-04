@@ -9,7 +9,7 @@ import {
 export const NAV_ITEM = [
   {
     title: "방과후 출석확인",
-    path: "/checkAttendance",
+    path: "/sms",
     icon: SchoolIcon,
   },
   {
@@ -23,8 +23,8 @@ export const NAV_ITEM = [
     icon: CheckSuggestionIcon,
   },
   {
-    title: "방과후 학생 관리",
-    path: "/sms",
+    title: "방과후 관리",
+    path: "/cms",
     icon: MypageIcon,
   },
 ];

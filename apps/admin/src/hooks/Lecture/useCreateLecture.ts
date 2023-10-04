@@ -1,70 +1,75 @@
-import { useCreateLectureMutation } from "@/queries/Lecture/Query";
+import { useCreateLectureMutation } from "@/queries/Lecture/query";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 export const useCreateLecture = () => {
   const createLectureMutation = useCreateLectureMutation();
 
-  const [lectureText, setLectureText] = useState({
+  const [lectureNameExplan, setLectureNameExplan] = useState({
     lectureName: "",
     explanation: "",
   });
 
-  const [lectureInfo, setLectureInfo] = useState({
+  const [lectureSelectState, setLectureSelectState] = useState({
     placeType: "",
     lectureTag: "SPORTS",
     teacherId: "",
-  });
-  const [acceptableStudent, setAcceptableStudent] = useState({
-    maxStudent: "",
-    minStudent: "",
     targetGrade: "",
   });
-  const [dayOfWeek, setDayOfWeek] = useState("");
+
   const [lectureTime, setLectureTime] = useState({
+    dayOfWeek: "",
     startTime: "",
     endTime: "",
   });
+
+  const [acceptableStudent, setAcceptableStudent] = useState({
+    maxStudent: "",
+    minStudent: "",
+  });
+
   const [lecturePeriod, setLecturePeriod] = useState({
     startDay: "",
     endDay: "",
   });
 
-  const onChangeLectureText = (
+  const onChangeLectureNameExplan = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-    setLectureText((prev) => ({ ...prev, [name]: value }));
+    const { value, name } = e.target;
+    setLectureNameExplan((prev) => ({ ...prev, [name]: value }));
   };
 
-  const onChangeLectureInfo = (name: string, value: string) => {
-    setLectureInfo((prev) => ({ ...prev, [name]: value }));
+  const onChangeLectureSelectState = (name: string, value: string) => {
+    setLectureSelectState((prev) => ({ ...prev, [name]: value }));
   };
+
+  const onChangeLectureTime = () => {};
 
   const onChangeAcceptableStudent = (name: string, value: string) => {
     setAcceptableStudent((prev) => ({ ...prev, [name]: value }));
   };
 
-  const onChangeDayOfWeek = (value: string) => {
-    setDayOfWeek(value);
-  };
-
-  const onChangeLectureTime = (name: string, value: string) => {
-    setLectureTime((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const onChangeLecturePeriod = (name: string, value: string) => {
+  const onChangeLecturePeriod = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
     setLecturePeriod((prev) => ({ ...prev, [name]: value }));
   };
 
   const onSubmitLectureData = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { lectureTag, placeType, teacherId } = lectureInfo;
-    const { explanation, lectureName } = lectureText;
+    const { lectureName, explanation } = lectureNameExplan;
+    const { lectureTag, placeType, targetGrade, teacherId } =
+      lectureSelectState;
+    const { startTime, endTime, dayOfWeek } = lectureTime;
+    const { maxStudent, minStudent } = acceptableStudent;
     const { startDay, endDay } = lecturePeriod;
-    const { startTime, endTime } = lectureTime;
+
     createLectureMutation.mutate(
       {
-        acceptableStudent: acceptableStudent,
+        acceptableStudent: {
+          maxStudent: maxStudent,
+          minStudent: minStudent,
+          targetGrade: targetGrade,
+        },
         lectureTag: lectureTag,
         teacherId: teacherId,
         explanation: explanation,
@@ -87,19 +92,16 @@ export const useCreateLecture = () => {
   };
 
   return {
-    lectureText,
-    lectureInfo,
-    acceptableStudent,
-    dayOfWeek,
+    lectureNameExplan,
+    lectureSelectState,
     lectureTime,
+    acceptableStudent,
     lecturePeriod,
-    setDayOfWeek,
-    onChangeAcceptableStudent,
-    onChangeDayOfWeek,
-    onChangeLectureInfo,
-    onChangeLecturePeriod,
+    onChangeLectureNameExplan,
+    onChangeLectureSelectState,
     onChangeLectureTime,
-    onChangeLectureText,
+    onChangeAcceptableStudent,
+    onChangeLecturePeriod,
     onSubmitLectureData,
   };
 };
