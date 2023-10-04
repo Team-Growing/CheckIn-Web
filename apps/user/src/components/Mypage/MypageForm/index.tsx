@@ -1,12 +1,6 @@
 import React from "react";
 import * as S from "./style";
-import {
-  Flex,
-  TextInput,
-  InputIntroText,
-  TextInputWrap,
-  WriteButton,
-} from "@checkin/ui";
+import { Flex, TextInputWrap, WriteButton } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
 
 const MypageForm = () => {

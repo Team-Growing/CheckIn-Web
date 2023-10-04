@@ -1,7 +1,7 @@
 import * as S from "./style";
-import { ProfileIcon } from "@checkin/icon";
+import { CheckAbsenseIcon, ProfileIcon } from "@checkin/icon";
 import { Flex } from "@checkin/ui";
-import { AbsenseStudentBox } from "./types";
+import { AbsenseStudentBox, CheckAbsenseProps } from "./types";
 import { dataTransform } from "@checkin/util";
 
 export const AbsenceStudentList = ({
@@ -30,5 +30,34 @@ export const AbsenceStudentList = ({
       </Flex>
       {children}
     </S.AbsenceStudentListContainer>
+  );
+};
+
+export const CheckMyAbsense = ({
+  grade,
+  isCheck,
+  name,
+  number,
+  reason,
+  room,
+}: CheckAbsenseProps) => {
+  return (
+    <S.CheckMyAbsenseBox>
+      <Flex gap={15} align="center">
+        <S.AbsenceStudentProfileBox>
+          <ProfileIcon />
+        </S.AbsenceStudentProfileBox>
+        <Flex direction="column" gap={6}>
+          <Flex gap={5}>
+            <S.AbsensedStudentName>{name}</S.AbsensedStudentName>
+            <S.AbsensedStudentInfoText>
+              {dataTransform.schoolInfoTransform(grade, room, number)}
+            </S.AbsensedStudentInfoText>
+          </Flex>
+          <S.AbsensedReasonText>{`사유 : ${reason}`}</S.AbsensedReasonText>
+        </Flex>
+      </Flex>
+      <CheckAbsenseIcon isCheck={isCheck} />
+    </S.CheckMyAbsenseBox>
   );
 };

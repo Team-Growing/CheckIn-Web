@@ -53,3 +53,16 @@ export const AbsensedReasonText = styled.p`
   color: #404446;
   font-size: 14px;
 `;
+
+export const CheckMyAbsenseBox = styled.div`
+  width: 40%;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #fff;
+  padding-left: 17px;
+  padding-right: 28px;
+`;
