@@ -3,7 +3,7 @@ import { CSSObject } from "styled-components";
 
 export interface ButtonProps {
   type: ButtonType;
-  style?: CSSObject;
+  customStyle?: CSSObject;
   onClick?: () => void;
   children: string;
 }

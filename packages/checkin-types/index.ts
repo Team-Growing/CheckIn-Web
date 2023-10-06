@@ -13,3 +13,5 @@ export * from "./util/response";
 
 //Notice
 export * from "./Notice/Notice.type";
+
+export * from "./Attendance/Attendance.type";

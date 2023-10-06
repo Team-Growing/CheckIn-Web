@@ -48,7 +48,7 @@ export interface LectureType {
   lectureSchedule: {
     startDay: string;
     endDay: string;
-    dayOfWeek: DayOfWeekType;
+    dayOfWeek: string[];
   };
   enrollStudent: 0;
   weekPlans: [
@@ -85,15 +85,15 @@ export interface LectureInfo {
 }
 
 export interface LectureAcceptableStudent {
-  maxStudent: string;
-  minStudent: string;
-  targetGrade: string;
+  maxStudent: number;
+  minStudent: number;
+  targetGrade: number;
 }
 
 export interface LectureSchedule {
   startDay: string;
   endDay: string;
-  dayOfWeek: DayOfWeekType | string;
+  dayOfWeek: string[];
   startTime: string;
   endTime: string;
 }

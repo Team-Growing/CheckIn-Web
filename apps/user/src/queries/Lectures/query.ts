@@ -1,5 +1,5 @@
 import LectureRepositoryImpl from "@/repositories/LectureRepository/LectureRepositoryImpl";
-import { LectureResponse, LecturesResponse } from "@checkin/types";
+import { LecturesResponse } from "@checkin/types";
 import { AxiosError } from "axios";
 import { UseQueryOptions, useQuery } from "react-query";
 
@@ -20,3 +20,17 @@ export const useGetTodayLectures = (
       cacheTime: 1000 * 60 * 60,
     }
   );
+
+export const useGetMyLectures = (
+  options?: UseQueryOptions<
+    LecturesResponse,
+    AxiosError,
+    LecturesResponse,
+    "lectures/myLectures"
+  >
+) =>
+  useQuery("lectures/myLectures", () => LectureRepositoryImpl.getMyLectures(), {
+    ...options,
+    staleTime: 1000 * 60 * 60,
+    cacheTime: 1000 * 60 * 60,
+  });

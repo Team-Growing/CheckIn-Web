@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -24,12 +25,12 @@ export const SignupSecondInput = styled.input<{ type: UserRoleType }>`
   border: none;
   outline: none;
   padding-left: 10px;
-  font-size: 16px;
+  font-size: ${getRem(16)};
 `;
 
 export const SignupRequireText = styled.label`
   color: #636363;
-  font-size: 14px;
+  font-size: ${getRem(14)};
   span {
     color: #008325;
   }
@@ -37,7 +38,7 @@ export const SignupRequireText = styled.label`
 
 export const SignupIntroText = styled.p`
   color: #828282;
-  font-size: 16px;
+  font-size: ${getRem(16)};
   margin-left: 35px;
   margin-top: 25px;
 `;
@@ -66,5 +67,5 @@ export const SignupSecondPrevBtn = styled.button`
   border-radius: 10px;
   border: 2px solid #636363ff;
   color: #636363ff;
-  font-size: 20px;
+  font-size: ${getRem(20)};
 `;

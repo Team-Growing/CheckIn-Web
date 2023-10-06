@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled, { css } from "styled-components";
 
 export const NavItemWrap = styled.div`
@@ -20,7 +21,7 @@ export const NavItemBox = styled.div<{ isMatch: boolean }>`
 
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  font-size: 20px;
+  font-size: ${getRem(20)};
   background-color: ${({ isMatch }) => (isMatch == true ? "#00C537" : null)};
   color: ${({ isMatch }) => (isMatch == true ? "#ffffff" : "#636363")};
 
@@ -42,7 +43,7 @@ export const NavItemBox = styled.div<{ isMatch: boolean }>`
 `;
 
 export const NavItemText = styled.p`
-  font-size: 18px;
+  font-size: ${getRem(18)};
   cursor: pointer;
 `;
 

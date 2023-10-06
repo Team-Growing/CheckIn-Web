@@ -4,6 +4,7 @@ import styled, {
   css,
 } from "styled-components";
 import { ButtonType } from "./types";
+import { getRem } from "@checkin/util";
 
 export const ButtonContainer = styled.button<{
   buttonType: ButtonType;
@@ -24,7 +25,7 @@ export const ButtonContainer = styled.button<{
   cursor: pointer;
 
   border-radius: 6px;
-  font-size: 16px;
+  font-size: ${getRem(16)};
 
   ${({ customStyle }) => customStyle}
   ${({ buttonType }) => buttonStyle[buttonType]}
@@ -56,6 +57,10 @@ const buttonStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
     background-color: #ffffff;
     color: #00c537;
     border: 1px solid #00c537;
+    :hover {
+      background-color: #00c537;
+      color: #fff;
+    }
   `,
   text: css`
     background-color: #ffffff;

@@ -5,12 +5,10 @@ class dataTransForm {
     switch (type) {
       case "SPORTS":
         return { background: "#0073C9", color: "#FFF" };
-
       case "INSTRUMENT":
         return { background: "#F7D356", color: "#000" };
       case "AUTONOMY":
         return { background: "#DE4B41", color: "#000" };
-
       case "NARSHA":
         return { background: "#209915", color: "#000" };
     }

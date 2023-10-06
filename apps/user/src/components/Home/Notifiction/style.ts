@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const NoticeContainer = styled.div`
@@ -19,6 +20,6 @@ export const NoticeContainer = styled.div`
 
 export const NoticeContent = styled.div`
   color: #828282;
-  font-size: 18px;
+  font-size: ${getRem(18)};
   font-weight: 500;
 `;

@@ -4,15 +4,22 @@ import {
   EnrolLectureFormText,
   EnrolLectureInput,
 } from "./style";
-import { Button, Flex } from "@checkin/ui";
+import { Button } from "@checkin/ui";
 
-const EnrolLectureForm = () => {
+interface Props {
+  onAttendanceLecture: (e: React.FormEvent<HTMLFormElement>) => void;
+  onChangeAttendanceCode: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const EnrolLectureForm = ({
+  onAttendanceLecture,
+  onChangeAttendanceCode,
+}: Props) => {
   return (
-    <EnrolLectureFormContainer>
+    <EnrolLectureFormContainer onSubmit={onAttendanceLecture}>
       <EnrolLectureFormText>출석 입력 코드</EnrolLectureFormText>
-      <EnrolLectureInput />
-
-      <Button style={{ width: "90%" }} type="primary">
+      <EnrolLectureInput onChange={onChangeAttendanceCode} />
+      <Button customStyle={{ width: "90%" }} type="primary">
         코드 입력
       </Button>
     </EnrolLectureFormContainer>

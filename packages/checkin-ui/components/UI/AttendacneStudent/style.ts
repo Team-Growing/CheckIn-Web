@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const AttendanceStudentContainer = styled.div`
@@ -29,11 +30,11 @@ export const AttendanceStudentProfileBox = styled.div`
 `;
 
 export const AttendanceStudentName = styled.p`
-  font-size: 24px;
+  font-size: ${getRem(24)};
   font-weight: 600;
 `;
 
 export const AttendanceStudentGrade = styled.p`
-  font-size: 16px;
+  font-size: ${getRem(16)};
   font-weight: 400;
 `;

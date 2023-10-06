@@ -5,7 +5,7 @@ import { CheckMyAbsense } from "@checkin/ui";
 const MyCancelLectures = () => {
   return (
     <MyCancelLecturesContainer>
-      {Array.from({ length: 10 }).map(() => (
+      {Array.from({ length: 2 }).map(() => (
         <CheckMyAbsense
           grade="2"
           isCheck={true}

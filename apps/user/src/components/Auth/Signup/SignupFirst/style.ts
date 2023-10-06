@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Role } from "../SignupSecond";
+import { getRem } from "@checkin/util";
+
+type Role = "student" | "teacher";
 
 export const AuthStudentBox = styled.div<{ role: Role }>`
   width: 177px;
@@ -56,7 +58,7 @@ export const SignupInput = styled.input`
 
 export const SignupRequireText = styled.label`
   color: #636363;
-  font-size: 14px;
+  font-size: ${getRem(14)};
   span {
     color: #008325;
   }
@@ -76,7 +78,7 @@ export const SignupSubmitBtn = styled.button`
   background: #00c537;
   color: #fff;
   border: none;
-  font-size: 20px;
+  font-size: ${getRem(20)};
 `;
 
 export const SignupSecondSubmitBtn = styled.button`
@@ -93,5 +95,5 @@ export const SignupSecondSubmitBtn = styled.button`
   background: #00c537;
   color: #fff;
   border: none;
-  font-size: 20px;
+  font-size: ${getRem(20)};
 `;

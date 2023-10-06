@@ -15,7 +15,7 @@ const EnrolLectureForm = () => {
         <EnrolLectureFormText>출석 코드</EnrolLectureFormText>
         <EnrolLectureCodeText>9292</EnrolLectureCodeText>
       </EnrolLecutureTextContainer>
-      <Button style={{ width: "40%" }} type="primary">
+      <Button customStyle={{ width: "40%" }} type="primary">
         출석코드 변경
       </Button>
     </EnrolLectureFormContainer>

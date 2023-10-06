@@ -9,8 +9,12 @@ import {
   TitleText,
 } from "@checkin/ui";
 import styled from "styled-components";
+import { useGetAttendanceListQuery } from "@/queries/Attendance/query";
 
 const SMS = () => {
+  const { data } = useGetAttendanceListQuery(1);
+  console.log(data);
+
   const onChange = () => {};
   return (
     <S.CheckAttendanceContainer>
@@ -20,7 +24,7 @@ const SMS = () => {
       />
       <Select
         name="gd"
-        items={["방과후 이름"]}
+        items={["자바", "파이썬 ", "C언어 "]}
         onChange={onChange}
         value="방과후 이름"
         customStyle={{ marginTop: "26px", background: "#fff" }}

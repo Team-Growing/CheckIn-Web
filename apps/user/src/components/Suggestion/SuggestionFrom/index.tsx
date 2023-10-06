@@ -48,7 +48,7 @@ const SuggestionForm = () => {
             marginTop: "26px",
           }}
         >
-          <Button style={{ width: "200px" }} type="primary">
+          <Button customStyle={{ width: "200px" }} type="primary">
             전송하기
           </Button>
         </div>

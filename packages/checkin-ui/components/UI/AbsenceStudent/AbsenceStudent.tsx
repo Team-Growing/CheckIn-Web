@@ -15,9 +15,7 @@ export const AbsenceStudentList = ({
   return (
     <S.AbsenceStudentListContainer>
       <Flex gap={15} align="center">
-        <S.AbsenceStudentProfileBox>
-          <ProfileIcon />
-        </S.AbsenceStudentProfileBox>
+        <ProfileIcon />
         <Flex direction="column" gap={6}>
           <Flex gap={5}>
             <S.AbsensedStudentName>{name}</S.AbsensedStudentName>

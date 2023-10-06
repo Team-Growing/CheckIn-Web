@@ -9,6 +9,6 @@ export const Card = ({ children, type, customStyle }: CardProps) => {
   );
 };
 
-export const CardTitle = ({ children }: CardTitlProps) => {
-  return <CardTitleBox>{children}</CardTitleBox>;
+export const CardTitle = ({ children, customStyle }: CardTitlProps) => {
+  return <CardTitleBox customStyle={customStyle}>{children}</CardTitleBox>;
 };

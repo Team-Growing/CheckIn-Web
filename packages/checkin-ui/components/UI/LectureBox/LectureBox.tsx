@@ -39,16 +39,25 @@ export const EnrolLectureBox = ({
   people,
   place,
   title,
+  lectureTag,
+  onClick,
+  isSelect,
 }: EnrolLectureBoxProps) => {
   return (
-    <S.EnrolLectureBoxContainer>
+    <S.EnrolLectureBoxContainer
+      lectureId={isSelect}
+      type={lectureTag}
+      onClick={onClick}
+    >
       <S.EnrolLectureCard>
         <S.EnrolLectureBoxTopWrap>
           <S.EnrolLectureTitle>{title}</S.EnrolLectureTitle>
-          <S.EnrolLectureGrade>{grade}</S.EnrolLectureGrade>
+          <S.EnrolLectureGrade>{`${grade}학년`}</S.EnrolLectureGrade>
         </S.EnrolLectureBoxTopWrap>
         <S.EnrolLectureBottomWrap>
-          <S.EnrolLectureInfoText>{`장소 : ${place}`}</S.EnrolLectureInfoText>
+          <S.EnrolLectureInfoText>{`장소 : ${dataTransform.LecturePlaceTypeName(
+            place
+          )}`}</S.EnrolLectureInfoText>
           <S.EnrolLectureInfoText>{`참가인원 : ${people}`}</S.EnrolLectureInfoText>
         </S.EnrolLectureBottomWrap>
       </S.EnrolLectureCard>
@@ -88,7 +97,7 @@ export const LectureTagBox = ({
             <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
             <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
           </S.LectureBottomWrap>
-          <Button type="outline" style={{ marginTop: "5px" }}>
+          <Button type="outline" customStyle={{ marginTop: "5px" }}>
             수강신청
           </Button>
         </Flex>
