@@ -18,6 +18,8 @@ const GenerateForm = () => {
     lectureTime,
     acceptableStudent,
     lecturePeriod,
+    lectureDayOfWeek,
+    onChangeLectureDayOfWeek,
     onChangeLectureNameExplan,
     onChangeLectureSelectState,
     onChangeLectureTime,
@@ -36,7 +38,9 @@ const GenerateForm = () => {
           onChangeLectureSelectState={onChangeLectureSelectState}
         />
         <LectureTime
+          onChangeLectureDayOfWeek={onChangeLectureDayOfWeek}
           lectureTime={lectureTime}
+          lectureDayOfWeek={lectureDayOfWeek}
           onChangeLectureTime={onChangeLectureTime}
         />
         <Flex gap={115}>

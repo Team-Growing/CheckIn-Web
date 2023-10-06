@@ -1,6 +1,7 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
-export const SelectDateBox = styled.div<{ isSelect: boolean }>`
+export const SelectDateBox = styled.div<{ isSelect?: boolean }>`
   width: 100px;
   height: 27px;
 
@@ -11,7 +12,7 @@ export const SelectDateBox = styled.div<{ isSelect: boolean }>`
   border-radius: 50px;
   background: #f2f2f2;
 
-  font-size: 14px;
+  font-size: ${getRem(14)};
   cursor: pointer;
 
   background-color: ${({ isSelect }) => (isSelect ? "#00c537" : "#F2F2F2")};
