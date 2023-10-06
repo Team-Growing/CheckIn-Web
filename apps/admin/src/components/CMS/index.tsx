@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./style";
-import { Flex, LectureBox, LectureTagBox, SectionHeader } from "@checkin/ui";
+import { Flex, LectureTagBox, SectionHeader } from "@checkin/ui";
 import { CmsStatusList } from "./constant";
 
 const CMS = () => {
@@ -21,7 +21,7 @@ const CMS = () => {
               <S.CmsStatusColorBox status={item.color}></S.CmsStatusColorBox>
               <p>{item.name}</p>
             </S.CmsStatusBox>
-            {Array.from({ length: 5 }).map(() => (
+            {Array.from({ length: 3 }).map(() => (
               <LectureTagBox
                 type="Enrol"
                 grade="2"

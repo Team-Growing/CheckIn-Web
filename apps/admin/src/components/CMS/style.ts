@@ -1,4 +1,4 @@
-import { LectureStatusType } from "@checkin/types";
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const CMSContainer = styled.div`
@@ -45,7 +45,7 @@ export const CmsStatusBox = styled.div`
   p {
     color: #000;
     font-family: Pretendard;
-    font-size: 20px;
+    font-size: ${getRem(20)};
     font-style: normal;
     font-weight: 400;
   }
