@@ -1,9 +1,11 @@
 import { useCreateLectureMutation } from "@/queries/Lecture/query";
 import { CheckinToast } from "@checkin/toast";
 import { ChangeEvent, FormEvent, useState } from "react";
+import { useQueryClient } from "react-query";
 
 export const useCreateLecture = () => {
   const createLectureMutation = useCreateLectureMutation();
+  const queryClient = useQueryClient();
 
   const [lectureNameExplan, setLectureNameExplan] = useState({
     lectureName: "",
@@ -47,13 +49,14 @@ export const useCreateLecture = () => {
 
   const onChangeLectureDayOfWeek = (value: string) => {
     if (lectureDayOfWeek.includes(value)) {
-      lectureDayOfWeek.filter((item) => item !== value);
+      setLectureDayOfWeek(lectureDayOfWeek.filter((item) => item !== value));
     } else {
       setLectureDayOfWeek((prev) => [...prev, value]);
     }
   };
 
-  const onChangeAcceptableStudent = (name: string, value: string) => {
+  const onChangeAcceptableStudent = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
     setAcceptableStudent((prev) => ({ ...prev, [name]: value }));
   };
 
@@ -81,12 +84,8 @@ export const useCreateLecture = () => {
   const onSubmitLectureData = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const { lectureName, explanation } = lectureNameExplan;
-    const {
-      lectureTag,
-      placeType,
-      targetGrade,
-      teacherId,
-    } = lectureSelectState;
+    const { lectureTag, placeType, targetGrade, teacherId } =
+      lectureSelectState;
     const { startTime, endTime } = lectureTime;
     const { maxStudent, minStudent } = acceptableStudent;
     const { startDay, endDay } = lecturePeriod;
@@ -113,7 +112,19 @@ export const useCreateLecture = () => {
       },
       {
         onSuccess: () => {
-          console.log("성공");
+          CheckinToast.showSuccess("강좌 생성 성공");
+          queryClient.invalidateQueries("lectures/getLectures");
+          setLectureNameExplan({ explanation: "", lectureName: "" });
+          setLectureSelectState({
+            lectureTag: "",
+            placeType: "",
+            targetGrade: "",
+            teacherId: "",
+          });
+          setLectureDayOfWeek([]);
+          setLectureTime({ startTime: "", endTime: "" });
+          setAcceptableStudent({ maxStudent: "", minStudent: "" });
+          setLecturePeriod({ startDay: "", endDay: "" });
         },
       }
     );

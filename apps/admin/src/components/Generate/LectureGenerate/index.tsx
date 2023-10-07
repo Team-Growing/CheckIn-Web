@@ -43,7 +43,7 @@ const GenerateForm = () => {
           lectureDayOfWeek={lectureDayOfWeek}
           onChangeLectureTime={onChangeLectureTime}
         />
-        <Flex gap={115}>
+        <Flex gap={80}>
           <LectureAcceptableStudent
             acceptableStudent={acceptableStudent}
             onChangeAcceptableStudent={onChangeAcceptableStudent}

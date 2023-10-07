@@ -11,4 +11,7 @@ export const TextareaStyle = styled.textarea<{ customStyle?: CSSObject }>`
   outline: none;
   padding: 11px 8px;
   ${({ customStyle }) => customStyle}
+  ::placeholder {
+    color: #c1c7de;
+  }
 `;

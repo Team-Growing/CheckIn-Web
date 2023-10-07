@@ -1,4 +1,4 @@
-import { Flex, SelectWrap } from "@checkin/ui";
+import { Flex, TextInputWrap } from "@checkin/ui";
 import React from "react";
 
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
     maxStudent: string;
     minStudent: string;
   };
-  onChangeAcceptableStudent: (name: string, value: string) => void;
+  onChangeAcceptableStudent: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const LectureAcceptableStudent = ({
@@ -15,28 +15,22 @@ const LectureAcceptableStudent = ({
 }: Props) => {
   return (
     <Flex gap={40}>
-      <SelectWrap
-        info="최소인원"
-        items={["1", "2"]}
+      <TextInputWrap
+        info="최소 인원"
+        customStyle={{ width: "80%" }}
+        placeholder="ex ) 4"
         onChange={onChangeAcceptableStudent}
-        value={
-          acceptableStudent.minStudent == ""
-            ? "ex 0명"
-            : acceptableStudent.minStudent
-        }
+        value={acceptableStudent.minStudent}
         name="minStudent"
         intro="최소 인원을 선택해주세요"
         require={true}
       />
-      <SelectWrap
+      <TextInputWrap
         info="최대 인원"
-        items={["20", "19"]}
+        customStyle={{ width: "80%" }}
+        placeholder="ex ) 10"
         onChange={onChangeAcceptableStudent}
-        value={
-          acceptableStudent.maxStudent == ""
-            ? "ex 20명"
-            : acceptableStudent.maxStudent
-        }
+        value={acceptableStudent.maxStudent}
         name="maxStudent"
         intro="최대 인원을 선택해주세요"
         require={true}
