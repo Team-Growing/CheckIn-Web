@@ -47,6 +47,7 @@ const LectureTime = ({
         <Flex gap={10}>
           {LECTURE_TIMES.map((item, idx) => (
             <S.SelectDateBox
+              isSelect={lectureTime.startTime == item.startTime ? true : false}
               onClick={() => onChangeLectureTime(item.dataName)}
               key={idx}
             >

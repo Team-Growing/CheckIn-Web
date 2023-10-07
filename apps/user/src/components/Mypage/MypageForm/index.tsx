@@ -39,7 +39,7 @@ const MypageForm = () => {
             value="loveyr0118"
             require={false}
           />
-          <WriteButton type="primary" style={{ marginTop: "20px" }}>
+          <WriteButton type="primary" customStyle={{ marginTop: "20px" }}>
             수정하기
           </WriteButton>
         </Flex>

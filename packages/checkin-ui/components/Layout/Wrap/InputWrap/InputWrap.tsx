@@ -1,6 +1,12 @@
 import { InputWrapContainer } from "./style";
 import { AuthInputWrapProps, InputWrapProps } from "./types";
-import { AuthInput, InputInfo, InputIntroText, TextInput } from "@checkin/ui";
+import {
+  AuthInput,
+  DateInput,
+  InputInfo,
+  InputIntroText,
+  TextInput,
+} from "@checkin/ui";
 
 export const TextInputWrap = ({
   customStyle,
@@ -52,6 +58,29 @@ export const AuthInputWrap = ({
         {...attr}
       />
       {introduction && <InputIntroText>{introduction}</InputIntroText>}
+    </InputWrapContainer>
+  );
+};
+
+export const DateInputWrap = ({
+  customStyle,
+  require,
+  info,
+  intro,
+  placeholder,
+  ...attr
+}: InputWrapProps) => {
+  return (
+    <InputWrapContainer>
+      {require
+        ? info && (
+            <InputInfo>
+              {info} <span>*</span>
+            </InputInfo>
+          )
+        : info && <InputInfo>{info}</InputInfo>}
+      <DateInput customStyle={customStyle} {...attr} />
+      {intro && <InputIntroText>{intro}</InputIntroText>}
     </InputWrapContainer>
   );
 };
