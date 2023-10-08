@@ -87,13 +87,15 @@ export const LectureTagBox = ({
           tagBackground={LectureTagColor?.background}
           tagColor={LectureTagColor?.color}
         >
-          스포츠
+          {dataTransform.LectureTagTransform(lectureTag)}
         </S.LectureTag>
       </Flex>
       {type == "Enrol" ? (
         <Flex justify="between">
           <S.LectureBottomWrap>
-            <S.LectureInfoText>{`장소 : ${place}`}</S.LectureInfoText>
+            <S.LectureInfoText>{`장소 : ${dataTransform.LecturePlaceTypeName(
+              place
+            )}`}</S.LectureInfoText>
             <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
             <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
           </S.LectureBottomWrap>

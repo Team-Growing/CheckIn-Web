@@ -8,9 +8,22 @@ class dataTransForm {
       case "INSTRUMENT":
         return { background: "#F7D356", color: "#000" };
       case "AUTONOMY":
-        return { background: "#DE4B41", color: "#000" };
+        return { background: "#DE4B41", color: "#fff" };
       case "NARSHA":
-        return { background: "#209915", color: "#000" };
+        return { background: "#209915", color: "#fff" };
+    }
+  }
+
+  public LectureTagTransform(lectureTag: string) {
+    switch (lectureTag) {
+      case "SPORTS":
+        return "스포츠";
+      case "INSTRUMENT":
+        return "악기";
+      case "AUTONOMY":
+        return "자치";
+      case "NARSHA":
+        return "나르샤";
     }
   }
 

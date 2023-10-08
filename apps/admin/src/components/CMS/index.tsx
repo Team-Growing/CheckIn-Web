@@ -1,7 +1,8 @@
 import React from "react";
 import * as S from "./style";
-import { Flex, LectureTagBox, SectionHeader } from "@checkin/ui";
+import { Flex, SectionHeader } from "@checkin/ui";
 import { CmsStatusList } from "./constant";
+import LecturesList from "./CMSList";
 
 const CMS = () => {
   return (
@@ -21,17 +22,7 @@ const CMS = () => {
               <S.CmsStatusColorBox status={item.color}></S.CmsStatusColorBox>
               <p>{item.name}</p>
             </S.CmsStatusBox>
-            {Array.from({ length: 3 }).map(() => (
-              <LectureTagBox
-                type="Enrol"
-                grade="2"
-                lectureTag="SPORTS"
-                people="10명"
-                place="PLAYGROUND"
-                teacher="원태인"
-                title="야구교실"
-              />
-            ))}
+            <LecturesList status={item.status} />
           </Flex>
         ))}
       </S.CMSListContainer>
