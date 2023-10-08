@@ -13,7 +13,6 @@ import { useGetAttendanceListQuery } from "@/queries/Attendance/query";
 
 const SMS = () => {
   const { data } = useGetAttendanceListQuery(1);
-  console.log(data);
 
   const onChange = () => {};
   return (

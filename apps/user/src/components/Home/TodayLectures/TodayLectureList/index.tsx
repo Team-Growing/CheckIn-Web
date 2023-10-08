@@ -8,8 +8,6 @@ interface Props {
 }
 
 const TodayLaectureList = ({ data }: Props) => {
-  console.log(data.data);
-
   return (
     <LectureListWrapper>
       {data.data.map((data, idx) => (

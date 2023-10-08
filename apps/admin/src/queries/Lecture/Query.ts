@@ -19,3 +19,8 @@ export const useGetLecturesByStatus = ({
       cacheTime: 1000 * 60 * 60,
     }
   );
+
+export const usePatchLectureStatusMutation = () => {
+  const mutation = useMutation(LectureRepositoryImpl.patchLectureStatus);
+  return mutation;
+};

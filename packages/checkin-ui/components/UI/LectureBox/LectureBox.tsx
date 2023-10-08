@@ -93,7 +93,9 @@ export const LectureTagBox = ({
       {type == "Enrol" ? (
         <Flex justify="between">
           <S.LectureBottomWrap>
-            <S.LectureInfoText>{`장소 : ${place}`}</S.LectureInfoText>
+            <S.LectureInfoText>{`장소 : ${dataTransform.LecturePlaceTypeName(
+              place
+            )}`}</S.LectureInfoText>
             <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
             <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
           </S.LectureBottomWrap>

@@ -1,6 +1,7 @@
 import { Lectures, LecturesResponse, Response } from "@checkin/types";
 import {
   LectureRepository,
+  PatchLectureStatusParam,
   getLecturesByLectureStatusParam,
 } from "./LectureRepository";
 import apiClient from "@/libs/Auth/customAxios";
@@ -18,6 +19,17 @@ class LectureRepositoryImpl implements LectureRepository {
     const { data } =
       await apiClient.get(`/lecture?status=${status}&grade=${grade}
       `);
+    return data;
+  }
+
+  public async patchLectureStatus({
+    lectureStatus,
+    lectureId,
+  }: PatchLectureStatusParam): Promise<Response> {
+    const { data } = await apiClient.patch(
+      `/lecture/status/${lectureId}`,
+      lectureStatus
+    );
     return data;
   }
 }

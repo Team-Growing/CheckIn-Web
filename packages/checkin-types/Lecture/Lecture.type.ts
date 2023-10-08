@@ -40,10 +40,10 @@ export interface LectureType {
     targetGrade: number;
   };
   lectureTeacher: {
-    memberId: {
-      value: number;
+    teacherId: {
+      value: "string";
     };
-    name: string;
+    name: "string";
   };
   lectureSchedule: {
     startDay: string;

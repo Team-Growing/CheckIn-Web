@@ -8,6 +8,7 @@ interface Props {
 
 const LecturesList = ({ status }: Props) => {
   const { data } = useGetLecturesByStatus({ status, grade: 2 });
+
   return (
     <>
       {data?.data.map((data) => (
@@ -16,7 +17,7 @@ const LecturesList = ({ status }: Props) => {
           lectureTag={data.lectureTag}
           people={String(data.enrollStudent)}
           place={data.placeType}
-          teacher={data.lectureTeacher.name}
+          teacher={data.lectureTeacher.teacherId.value}
           title={data.lectureName}
           type="Enrol"
         />
