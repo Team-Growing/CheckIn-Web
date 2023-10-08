@@ -20,3 +20,10 @@ export const CmsStatusList = [
     color: "#454749",
   },
 ];
+
+export const CmsStatus = [
+  "WAITING_PERIOD",
+  "ENROLMENT",
+  "COURSE_PERIOD",
+  "TERMINATION",
+];

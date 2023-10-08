@@ -87,7 +87,7 @@ export const LectureTagBox = ({
           tagBackground={LectureTagColor?.background}
           tagColor={LectureTagColor?.color}
         >
-          스포츠
+          {dataTransform.LectureTagTransform(lectureTag)}
         </S.LectureTag>
       </Flex>
       {type == "Enrol" ? (
