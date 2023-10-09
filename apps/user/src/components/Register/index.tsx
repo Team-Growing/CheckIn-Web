@@ -1,8 +1,10 @@
-import RegistList from "./RegistList/item";
+import { useState } from "react";
+import RegistList from "./RegistList";
 import * as S from "./style";
 import { Button, ButtonWrapper, SectionHeader } from "@checkin/ui";
 
 const Register = () => {
+  const [grade, setGrade] = useState(1);
   return (
     <S.RegisterContainer>
       <SectionHeader
@@ -10,14 +12,24 @@ const Register = () => {
         subTitle="Apply for after-school classes"
       />
       <ButtonWrapper>
-        <Button type="primary" style={{ width: "138px", fontSize: "20px" }}>
+        <Button
+          type="primary"
+          onClick={() => setGrade(1)}
+          isSelect={grade == 1 ? false : true}
+          customStyle={{ width: "138px", fontSize: "20px" }}
+        >
           1학년
         </Button>
-        <Button type="unSelect" style={{ width: "138px", fontSize: "20px" }}>
+        <Button
+          type="primary"
+          onClick={() => setGrade(2)}
+          isSelect={grade == 2 ? false : true}
+          customStyle={{ width: "138px", fontSize: "20px" }}
+        >
           2학년
         </Button>
       </ButtonWrapper>
-      <RegistList />
+      <RegistList grade={grade} />
     </S.RegisterContainer>
   );
 };

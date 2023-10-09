@@ -5,6 +5,7 @@ export interface LectureRepository {
   getLectureById(id: getLectureByIdParam): Promise<Lectures>;
   getTodayLecture(): Promise<LecturesResponse>;
   getMyLectures(): Promise<LecturesResponse>;
+  getEnrolmentLectures(grade: number): Promise<LecturesResponse>;
 }
 
 export interface enroLectureByIdParam {

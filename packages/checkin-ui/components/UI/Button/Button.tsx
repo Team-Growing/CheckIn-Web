@@ -8,9 +8,11 @@ export const Button = ({
   onClick,
   customStyle,
   children,
+  isSelect,
 }: ButtonProps) => {
   return (
     <ButtonContainer
+      isSelect={isSelect}
       customStyle={customStyle}
       onClick={onClick}
       buttonType={type}

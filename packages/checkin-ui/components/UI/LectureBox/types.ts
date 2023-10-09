@@ -23,4 +23,5 @@ export interface EnrolLectureBoxProps {
 export interface LectureTagBoxProps extends LectureBoxProps {
   type: "absence" | "Enrol";
   customStyle?: CSSObject;
+  onClick: () => void;
 }

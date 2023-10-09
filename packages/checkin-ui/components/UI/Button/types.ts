@@ -6,6 +6,7 @@ export interface ButtonProps {
   customStyle?: CSSObject;
   onClick?: () => void;
   children: string;
+  isSelect?: boolean;
 }
 
 export type ButtonType =

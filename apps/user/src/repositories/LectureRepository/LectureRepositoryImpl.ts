@@ -26,6 +26,13 @@ class LectureRepositoryImpl implements LectureRepository {
     const { data } = await apiClient.get("/member/lectures/my");
     return data;
   }
+
+  public async getEnrolmentLectures(grade: number): Promise<LecturesResponse> {
+    const { data } = await apiClient.get(
+      `/lecture?status=ENROLMENT&grade=${grade}`
+    );
+    return data;
+  }
 }
 
 export default new LectureRepositoryImpl();
