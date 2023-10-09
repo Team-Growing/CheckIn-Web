@@ -74,6 +74,7 @@ export const LectureTagBox = ({
   type,
   lectureTag,
   customStyle,
+  onClick,
 }: LectureTagBoxProps) => {
   const LectureTagColor = dataTransform.LectureTypeColor(lectureTag);
   return (
@@ -81,7 +82,7 @@ export const LectureTagBox = ({
       <Flex direction="column">
         <S.LectureBoxTopWrap>
           <S.LectureTitle>{title}</S.LectureTitle>
-          <S.LectureGrade>{grade}</S.LectureGrade>
+          <S.LectureGrade>{`${grade}학년`}</S.LectureGrade>
         </S.LectureBoxTopWrap>
         <S.LectureTag
           tagBackground={LectureTagColor?.background}
@@ -99,7 +100,11 @@ export const LectureTagBox = ({
             <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
             <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
           </S.LectureBottomWrap>
-          <Button type="outline" customStyle={{ marginTop: "5px" }}>
+          <Button
+            type="outline"
+            onClick={onClick}
+            customStyle={{ marginTop: "5px" }}
+          >
             수강신청
           </Button>
         </Flex>

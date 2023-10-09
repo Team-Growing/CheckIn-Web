@@ -34,3 +34,22 @@ export const useGetMyLectures = (
     staleTime: 1000 * 60 * 60,
     cacheTime: 1000 * 60 * 60,
   });
+
+export const useGetEnrolmentLecturesQuery = (
+  grade: number,
+  options?: UseQueryOptions<
+    LecturesResponse,
+    AxiosError,
+    LecturesResponse,
+    ["lectures/getEnrolmentLectures", number]
+  >
+) =>
+  useQuery(
+    ["lectures/getEnrolmentLectures", grade],
+    () => LectureRepositoryImpl.getEnrolmentLectures(grade),
+    {
+      ...options,
+      staleTime: 1000 * 60 * 60,
+      cacheTime: 1000 * 60 * 60,
+    }
+  );

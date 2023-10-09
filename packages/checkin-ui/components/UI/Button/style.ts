@@ -7,6 +7,7 @@ import { ButtonType } from "./types";
 import { getRem } from "@checkin/util";
 
 export const ButtonContainer = styled.button<{
+  isSelect?: boolean;
   buttonType: ButtonType;
   customStyle?: CSSObject;
 }>`
@@ -28,7 +29,13 @@ export const ButtonContainer = styled.button<{
   font-size: ${getRem(16)};
 
   ${({ customStyle }) => customStyle}
-  ${({ buttonType }) => buttonStyle[buttonType]}
+  ${({ buttonType, isSelect }) => {
+    if (isSelect) {
+      return buttonSelectedStyle[buttonType];
+    } else {
+      return buttonStyle[buttonType];
+    }
+  }}
 `;
 
 export const ButtonWrapperBox = styled.div`
@@ -71,5 +78,21 @@ const buttonStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
     border: 2px solid #636363;
     background-color: #f5f5f5;
     color: #636363;
+  `,
+};
+
+const buttonSelectedStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
+  primary: css`
+    border: 2px solid #636363;
+    background-color: #f5f5f5;
+    color: #636363;
+  `,
+  secondary: css``,
+  outline: css``,
+  text: css``,
+  unSelect: css`
+    background-color: #00c537;
+    color: #ffffff;
+    border: none;
   `,
 };
