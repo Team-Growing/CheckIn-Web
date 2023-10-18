@@ -16,20 +16,21 @@ class LectureRepositoryImpl implements LectureRepository {
     grade,
     status,
   }: getLecturesByLectureStatusParam): Promise<LecturesResponse> {
-    const { data } =
-      await apiClient.get(`/lecture?status=${status}&grade=${grade}
+    const {
+      data,
+    } = await apiClient.get(`/lecture?status=${status}&grade=${grade}
       `);
     return data;
   }
 
   public async patchLectureStatus({
     lectureStatus,
-    lectureId,
+    ids,
   }: PatchLectureStatusParam): Promise<Response> {
-    const { data } = await apiClient.patch(
-      `/lecture/status/${lectureId}`,
-      lectureStatus
-    );
+    const { data } = await apiClient.patch(`/lecture/status`, {
+      lectureStatus,
+      ids,
+    });
     return data;
   }
 }

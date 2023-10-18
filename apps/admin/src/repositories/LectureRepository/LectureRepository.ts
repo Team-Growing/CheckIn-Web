@@ -24,6 +24,6 @@ export interface getLecturesByLectureStatusParam {
 }
 
 export interface PatchLectureStatusParam {
-  lectureStatus: LectureStatusType | "";
-  lectureId: number;
+  lectureStatus: LectureStatusType | string;
+  ids: number[];
 }

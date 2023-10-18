@@ -1,6 +1,6 @@
 import { LectureTagType } from "@checkin/types";
 import { dataTransform, getRem } from "@checkin/util";
-import styled, { CSSObject } from "styled-components";
+import styled, { CSSObject, css } from "styled-components";
 
 export const LectureBoxContainer = styled.div<{
   type: LectureTagType | string;
@@ -160,7 +160,10 @@ export const EnrolLectureInfoText = styled.p`
   color: #1f1f1f;
 `;
 
-export const LectureTagBoxContainer = styled.div<{ customStyle?: CSSObject }>`
+export const LectureTagBoxContainer = styled.div<{
+  customStyle?: CSSObject;
+  isSelect?: boolean;
+}>`
   width: 330px;
   height: 220px;
 
@@ -175,6 +178,11 @@ export const LectureTagBoxContainer = styled.div<{ customStyle?: CSSObject }>`
 
   ${({ customStyle }) => customStyle}
   cursor: pointer;
+  ${({ isSelect }) =>
+    isSelect &&
+    css`
+      border: 1px solid var(--main-base, #00c537);
+    `}
 `;
 
 export const LectureTag = styled.div<{
