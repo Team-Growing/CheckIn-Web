@@ -10,9 +10,6 @@
   },
   "dependencies": {
     "@checkin/ui": "*",
-    "@types/node": "20.4.5",
-    "@types/react": "18.2.16",
-    "@types/react-dom": "18.2.7",
     "axios": "^1.4.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
@@ -28,6 +25,10 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@types/js-cookie": "^3.0.3"
+    "@types/js-cookie": "^3.0.3",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "18.0.5",
+    "@types/styled-components": "^5.1.28",
+    "@types/node": "20.4.5"
   }
 }

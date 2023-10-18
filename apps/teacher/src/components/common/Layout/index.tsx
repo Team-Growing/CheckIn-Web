@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
     <>
       <Container>
         {pathname !== "/sign" && <Nav />}
-        <Wrap>{children}</Wrap>
+        <Wrap isSign={pathname == "/sign" ? false : true}>{children}</Wrap>
       </Container>
     </>
   );
