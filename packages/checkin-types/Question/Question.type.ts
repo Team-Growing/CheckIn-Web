@@ -20,7 +20,7 @@ export interface QuestionReponse {
 
 export interface QuestionsResponse {
   data: {
-    totalCount: string;
+    totalCount: number;
     value: QuestionReponse[];
   };
 }

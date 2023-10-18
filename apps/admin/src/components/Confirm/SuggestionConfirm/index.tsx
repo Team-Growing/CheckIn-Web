@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { ConfirmLengthText } from "../style";
 import * as S from "./style";
 import { dateTransform, stringEllipsis } from "@checkin/util";
 import { useGetSuggestionsQuery } from "@/queries/Suggestion/query";
+import Pagination from "react-js-pagination";
 
 const SuggestionConfirm = () => {
   const { data: serverSuggestionsData } = useGetSuggestionsQuery({
@@ -10,8 +11,12 @@ const SuggestionConfirm = () => {
     page: 1,
   });
 
-  console.log(serverSuggestionsData);
+  const [page, setPage] = useState(1);
 
+  const [pageCount, setPageCount] = useState(0);
+  const onChange = (page: number) => {
+    setPage(page);
+  };
   return (
     <>
       <ConfirmLengthText>
@@ -42,6 +47,12 @@ const SuggestionConfirm = () => {
           </S.ConfirmListItemContaienr>
         ))}
       </S.ConfirmListContainer>
+      <Pagination
+        activePage={page}
+        onChange={onChange}
+        totalItemsCount={serverSuggestionsData?.data.totalCount!}
+        itemsCountPerPage={10}
+      />
     </>
   );
 };

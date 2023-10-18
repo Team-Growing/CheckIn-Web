@@ -4,13 +4,12 @@ import { Button, ButtonWrapper, SectionHeader } from "@checkin/ui";
 import { SwitchCase } from "@checkin/util";
 import QuestionConfirm from "./QuestionConfirm";
 import SuggestionConfirm from "./SuggestionConfirm";
-import { useGetQuestionsQuery } from "@/queries/Question/query";
 
 type SectionType = "문의" | "제안";
 
 const Confirm = () => {
   const [section, setSection] = useState<SectionType>("문의");
-
+  const onChange = () => {};
   return (
     <S.ConfirmContainer>
       <S.ConfirmTopWrap>

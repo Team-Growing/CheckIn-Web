@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as S from "./style";
 import { dateTransform, stringEllipsis } from "@checkin/util";
 import { ConfirmLengthText } from "../style";
@@ -12,7 +12,8 @@ const QuestionConfirm = () => {
     page: page,
     limit: 10,
   });
-  console.log(serverQuestionsData);
+
+  const [pageCount, setPageCount] = useState(0);
 
   return (
     <>
