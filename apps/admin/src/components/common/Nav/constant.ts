@@ -19,7 +19,7 @@ export const NAV_ITEM = [
   },
   {
     title: "문의, 제안 확인",
-    path: "/ask/confirm",
+    path: "/checkSuggestion",
     icon: CheckSuggestionIcon,
   },
   {

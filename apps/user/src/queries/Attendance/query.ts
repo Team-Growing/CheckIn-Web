@@ -8,7 +8,7 @@ export const useAttendanceLectureMutation = () => {
 
 export const useGetAttendanceListQuery = (lectureId: number) =>
   useQuery(
-    ["lecture/lectureAttendance", lectureId],
+    "lecture/lectureAttendance",
     () => AttendanceRepositoryImpl.getAttendanceList(lectureId),
     {
       staleTime: 1000 * 60 * 60,

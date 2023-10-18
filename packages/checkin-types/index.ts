@@ -15,7 +15,3 @@ export * from "./util/response";
 export * from "./Notice/Notice.type";
 
 export * from "./Attendance/Attendance.type";
-
-export * from "./Suggestion/Suggestion.type";
-
-export * from "./Question/Question.type";

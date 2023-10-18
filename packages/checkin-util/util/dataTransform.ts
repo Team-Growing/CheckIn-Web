@@ -1,8 +1,4 @@
-import {
-  LectureTagType,
-  LecturePlaceType,
-  DayOfWeekType,
-} from "@checkin/types";
+import { LectureTagType, LecturePlaceType } from "@checkin/types";
 
 class dataTransForm {
   public LectureTypeColor(type: LectureTagType | string) {
@@ -41,19 +37,6 @@ class dataTransForm {
         return "농구장";
       case "TENNIS_COURT":
         return "테니스 장";
-    }
-  }
-
-  public TransformDayOfWeek(dayOfWeek: string) {
-    switch (dayOfWeek) {
-      case "월요일":
-        return "MONDAY";
-      case "화요일":
-        return "TUESDAY";
-      case "수요일":
-        return "WEDNESDAY";
-      case "목요일":
-        return "THURSDAY";
     }
   }
 
