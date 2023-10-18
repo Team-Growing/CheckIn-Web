@@ -75,10 +75,16 @@ export const LectureTagBox = ({
   lectureTag,
   customStyle,
   onClick,
+  isSelect,
+  onSelect,
 }: LectureTagBoxProps) => {
   const LectureTagColor = dataTransform.LectureTypeColor(lectureTag);
   return (
-    <S.LectureTagBoxContainer customStyle={customStyle}>
+    <S.LectureTagBoxContainer
+      customStyle={customStyle}
+      isSelect={isSelect}
+      onClick={onSelect}
+    >
       <Flex direction="column">
         <S.LectureBoxTopWrap>
           <S.LectureTitle>{title}</S.LectureTitle>

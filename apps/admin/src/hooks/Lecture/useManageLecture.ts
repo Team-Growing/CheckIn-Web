@@ -1,6 +1,7 @@
 import { usePatchLectureStatusMutation } from "@/queries/Lecture/query";
 import { PatchLectureStatusParam } from "@/repositories/LectureRepository/LectureRepository";
 import { CheckinToast } from "@checkin/toast";
+import { LectureStatusType } from "@checkin/types";
 import { useState } from "react";
 import { useQueryClient } from "react-query";
 
@@ -9,24 +10,50 @@ const useManageLecture = () => {
 
   const patchLectureStatusMutation = usePatchLectureStatusMutation();
 
-  const [lectures, setLectures] = useState<PatchLectureStatusParam>({
-    lectureId: 0,
-    lectureStatus: "",
-  });
+  const [lectureIdList, setLectureIdList] = useState<number[]>([]);
+  const [lectureStatus, setLectureStatus] = useState<
+    LectureStatusType | string
+  >("");
 
-  const onChangeSetLectures = ({
-    lectureId,
-    lectureStatus,
-  }: PatchLectureStatusParam) => {
-    setLectures((prev) => ({ ...prev, lectureId, lectureStatus }));
+  const onChangeLectureIdList = (id: number) => {
+    if (lectureIdList.includes(id)) {
+      setLectureIdList(lectureIdList.filter((item) => item !== id));
+    } else {
+      setLectureIdList((prev) => [...prev, id]);
+    }
   };
 
-  const onPatchLectureStatus = () => {
+  const onChangeLectureStatus = (status: string) => {
+    setLectureStatus(status);
+  };
+
+  const onPatchLectureStatus = (lectureStatus: LectureStatusType | string) => {
     patchLectureStatusMutation.mutate(
-      { lectureId: 1, lectureStatus: "COURSE_PERIOD" },
+      { ids: lectureIdList, lectureStatus: lectureStatus },
       {
         onSuccess: () => {
           CheckinToast.showSuccess("강좌 상태 수정 변경");
+          setLectureIdList([]);
+          queryClient.invalidateQueries([
+            "lectures/getLectures",
+            "WAITING_PERIOD",
+            2,
+          ]);
+          queryClient.invalidateQueries([
+            "lectures/getLectures",
+            "ENROLMENT",
+            2,
+          ]);
+          queryClient.invalidateQueries([
+            "lectures/getLectures",
+            "COURSE_PERIOD",
+            2,
+          ]);
+          queryClient.invalidateQueries([
+            "lectures/getLectures",
+            "TERMINATION",
+            2,
+          ]);
         },
         onError: () => {
           CheckinToast.showError("강좌 상태 수정 실패");
@@ -34,7 +61,12 @@ const useManageLecture = () => {
       }
     );
   };
-  return {};
+  return {
+    lectureIdList,
+    onChangeLectureStatus,
+    onChangeLectureIdList,
+    onPatchLectureStatus,
+  };
 };
 
 export default useManageLecture;

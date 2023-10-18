@@ -25,7 +25,7 @@ class dataTransForm {
       case "INSTRUMENT":
         return "악기";
       case "AUTONOMY":
-        return "자치";
+        return "자율";
       case "NARSHA":
         return "나르샤";
     }
