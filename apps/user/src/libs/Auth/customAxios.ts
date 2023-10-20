@@ -21,3 +21,7 @@ const apiClient = axios.create(axiosRequestConfig);
 apiClient.interceptors.request.use(requestInterceptor, (err) => err);
 
 export default apiClient;
+
+export const setAccessToken = (token: string) => {
+  apiClient.defaults.headers[REQUEST_TOKEN_KEY] = `Bearer ${token}`;
+};
