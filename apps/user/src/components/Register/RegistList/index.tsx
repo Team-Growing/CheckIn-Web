@@ -19,6 +19,7 @@ const RegistList = ({ grade }: Props) => {
         return (
           <>
             <LectureTagBox
+              key={data.lectureId.value}
               lectureTag={data.lectureTag}
               type="Enrol"
               grade={String(data.acceptableStudent.targetGrade)}

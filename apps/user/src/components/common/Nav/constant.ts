@@ -3,7 +3,7 @@ import { MypageIcon, NoticeIcon, SchoolIcon } from "@checkin/icon";
 export const NAV_ITEM = [
   {
     title: "방과후 수강신청",
-    path: "/register",
+    path: "/register/1",
     icon: SchoolIcon,
   },
   {

@@ -1,10 +1,11 @@
-import { useState } from "react";
 import RegistList from "./RegistList";
 import * as S from "./style";
 import { Button, ButtonWrapper, SectionHeader } from "@checkin/ui";
+import { useRouter } from "next/router";
 
 const Register = () => {
-  const [grade, setGrade] = useState(1);
+  const { query, push } = useRouter();
+
   return (
     <S.RegisterContainer>
       <SectionHeader
@@ -14,22 +15,22 @@ const Register = () => {
       <ButtonWrapper>
         <Button
           type="primary"
-          onClick={() => setGrade(1)}
-          isSelect={grade == 1 ? false : true}
+          onClick={() => push("/register/1")}
+          isSelect={Number(query.grade) == 1 ? false : true}
           customStyle={{ width: "138px", fontSize: "20px" }}
         >
           1학년
         </Button>
         <Button
           type="primary"
-          onClick={() => setGrade(2)}
-          isSelect={grade == 2 ? false : true}
+          onClick={() => push("/register/2")}
+          isSelect={Number(query.grade) == 2 ? false : true}
           customStyle={{ width: "138px", fontSize: "20px" }}
         >
           2학년
         </Button>
       </ButtonWrapper>
-      <RegistList grade={grade} />
+      <RegistList grade={Number(query.grade)} />
     </S.RegisterContainer>
   );
 };
