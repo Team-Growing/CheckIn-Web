@@ -1,0 +1,13 @@
+{
+  "name": "@checkin/querykey",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
