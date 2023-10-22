@@ -5,7 +5,7 @@ import React from "react";
 import { RecoilRoot } from "recoil";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { CheckinToastContainer } from "@checkin/toast";
-import { GlobalStyle } from "@checkin/styled-theme";
+import { CheckInThemeProvider, GlobalStyle } from "@checkin/styled-theme";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,10 +24,8 @@ const Providers = ({ children, pageProps }: ProvidersProps) => {
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
         <RecoilRoot>
-          <GlobalStyle />
           <CheckinToastContainer autoClose={4000} limit={4} />
-          {children}
-          {/* <ThemeProviderContainer>{children}</ThemeProviderContainer> */}
+          <CheckInThemeProvider>{children}</CheckInThemeProvider>
         </RecoilRoot>
       </Hydrate>
     </QueryClientProvider>

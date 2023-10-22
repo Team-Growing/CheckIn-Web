@@ -1,31 +1,25 @@
 import { CheckInThemeType } from "styled-components";
 
 export const CheckInTheme: CheckInThemeType = {
-  Text: {
-    Lighter: "#FFF",
-    Light: "#6C7072",
-    Base: "#404446",
-    Dark: "#303437",
-    Darker: "#202325",
-    Darkest: "#090A0A",
-  },
-  Main: {
-    Base: "#00C537",
-    Dark: "#008325",
-  },
+  TextLighter: "#FFF",
+  TextLight: "#6C7072",
+  TextBase: "#404446",
+  TextDark: "#303437",
+  TextDarker: "#202325",
+  TextDarkest: "#090A0A",
 
-  Background: {
-    Lightest: "#FFF",
-    Lightbase: "#F5F5F5",
-    Lightdark: "#F2F2F2",
-    DarkLighter: "#454749",
-    DarkLight: "#202325",
-    Darkbase: "#090A0A",
-  },
-  Category: {
-    Blue: "#0073C9",
-    Yello: "#F7D356",
-    Green: "#209915",
-    Red: "#DE4B41",
-  },
+  MainBase: "#00C537",
+  MainDark: "#008325",
+
+  BackgroundLightest: "#FFF",
+  BackgroundLightbase: "#F5F5F5",
+  BackgroundLightdark: "#F2F2F2",
+  BackgroundDarkLighter: "#454749",
+  BackgroundDarkLight: "#202325",
+  BackgroundDarkbase: "#090A0A",
+
+  CategoryBlue: "#0073C9",
+  CategoryYello: "#F7D356",
+  CategoryGreen: "#209915",
+  CategoryRed: "#DE4B41",
 };

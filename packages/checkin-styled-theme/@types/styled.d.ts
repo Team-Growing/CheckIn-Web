@@ -2,31 +2,26 @@ import "styled-components";
 
 declare module "styled-components" {
   export interface CheckInThemeType {
-    Text: {
-      Lighter: string;
-      Light: string;
-      Base: string;
-      Dark: string;
-      Darker: string;
-      Darkest: string;
-    };
-    Main: {
-      Base: string;
-      Dark: string;
-    };
-    Background: {
-      Lightest: string;
-      Lightbase: string;
-      Lightdark: string;
-      DarkLighter: string;
-      DarkLight: string;
-      Darkbase: string;
-    };
-    Category: {
-      Blue: string;
-      Yello: string;
-      Green: string;
-      Red: string;
-    };
+    TextLighter: string;
+    TextLight: string;
+    TextBase: string;
+    TextDark: string;
+    TextDarker: string;
+    TextDarkest: string;
+
+    MainBase: string;
+    MainDark: string;
+
+    BackgroundLightest: string;
+    BackgroundLightbase: string;
+    BackgroundLightdark: string;
+    BackgroundDarkLighter: string;
+    BackgroundDarkLight: string;
+    BackgroundDarkbase: string;
+
+    CategoryBlue: string;
+    CategoryYello: string;
+    CategoryGreen: string;
+    CategoryRed: string;
   }
 }
