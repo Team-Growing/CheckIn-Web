@@ -1,3 +1,4 @@
+import { Response } from "../util/response";
 export interface AttendanceList {
   attendStudentCnt: number;
   attendants: [
@@ -26,4 +27,10 @@ export interface AttendanceList {
 
 export interface AttendanceListResponse {
   data: AttendanceList[];
+}
+
+export interface AttendanceCode extends Response {
+  data: {
+    code: string;
+  };
 }
