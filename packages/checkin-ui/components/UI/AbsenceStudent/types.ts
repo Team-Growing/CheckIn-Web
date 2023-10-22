@@ -8,3 +8,7 @@ export interface AbsenseStudentBox {
   reason: string;
   children: ReactNode;
 }
+
+export interface CheckAbsenseProps extends Omit<AbsenseStudentBox, "children"> {
+  isCheck: boolean;
+}

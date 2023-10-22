@@ -1,10 +1,11 @@
+import { getRem } from "@checkin/util";
 import styled, { CSSObject } from "styled-components";
 
 export const InputContainer = styled.input<{ customStyle?: CSSObject }>`
   width: min-content;
   height: 40px;
 
-  font-size: 16px;
+  font-size: ${getRem(16)};
 
   padding-left: 11px;
   color: #000;
@@ -23,14 +24,14 @@ export const InputContainer = styled.input<{ customStyle?: CSSObject }>`
 
 export const InputInfoText = styled.label`
   color: #636363;
-  font-size: 20px;
+  font-size: ${getRem(20)};
   span {
     color: #fb2047;
   }
 `;
 
 export const InputIntroTextStyle = styled.label`
-  font-size: 16px;
+  font-size: ${getRem(16)};
   color: #737992;
 `;
 

@@ -1,17 +1,28 @@
 import React from "react";
 import * as S from "./style";
 import { EnrolLectureBox } from "@checkin/ui";
+import { useGetMyLectures } from "@/queries/Lectures/query";
 
-const EnrolLectureList = () => {
+interface Props {
+  lectureId: number;
+  onClickSetId: (value: number) => void;
+}
+
+const EnrolLectureList = ({ lectureId, onClickSetId }: Props) => {
+  const { data } = useGetMyLectures();
+
   return (
     <S.EnrolLectureListContainer>
-      {Array.from({ length: 2 }).map((id, idx) => (
+      {data?.data.map((data) => (
         <EnrolLectureBox
-          grade="2학년"
-          people="10명"
-          place="강당"
-          title="펑고"
-          key={idx}
+          isSelect={lectureId === data.lectureId.value ? true : false}
+          onClick={() => onClickSetId(data.lectureId.value)}
+          lectureTag={data.lectureTag}
+          grade={String(data.acceptableStudent.targetGrade)}
+          people={String(data.acceptableStudent.maxStudent)}
+          place={data.placeType}
+          title={data.lectureName}
+          key={data.lectureId.value}
         />
       ))}
     </S.EnrolLectureListContainer>

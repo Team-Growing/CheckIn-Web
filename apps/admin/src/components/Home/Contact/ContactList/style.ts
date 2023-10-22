@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const ContactListContainer = styled.div`
@@ -20,7 +21,7 @@ export const ContactListTitle = styled.div`
   border-bottom: 1px solid #cdd0dc;
 
   p {
-    font-size: 16px;
+    font-size: ${getRem(16)};
     color: #6c7072;
     font-weight: 400;
   }
@@ -39,7 +40,7 @@ export const ContactListText = styled.div`
 
   p {
     color: #202325;
-    font-size: 16px;
+    font-size: ${getRem(16)};
     font-weight: 400;
   }
 

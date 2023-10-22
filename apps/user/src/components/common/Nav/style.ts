@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -75,11 +76,11 @@ export const NavUserInfoBox = styled.div`
 `;
 
 export const NavUserName = styled.p`
-  font-size: 16px;
+  font-size: ${getRem(16)};
 `;
 
 export const NavUserGrade = styled.p`
-  font-size: 14px;
+  font-size: ${getRem(14)};
 `;
 
 export const NavAuthBox = styled.div`
@@ -92,7 +93,7 @@ export const NavLoginText = styled.p`
     padding-left: 8px;
     margin-left: 8px;
   }
-  font-size: 24px;
+  font-size: ${getRem(24)};
   line-height: 29px;
   letter-spacing: -0.05em;
   color: #6d6d6d;

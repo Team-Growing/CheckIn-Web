@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const NavBottomBox = styled.div`
@@ -41,16 +42,16 @@ export const NavUserInfoBox = styled.div`
 `;
 
 export const NavUserName = styled.p`
-  font-size: 16px;
+  font-size: ${getRem(16)};
 `;
 
 export const NavUserGrade = styled.p`
-  font-size: 14px;
+  font-size: ${getRem(14)};
 `;
 
 export const NavAuthBox = styled.div`
   display: flex;
-  font-size: 20px;
+  font-size: ${getRem(20)};
 `;
 
 export const NavLoginText = styled.p`

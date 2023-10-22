@@ -1,6 +1,5 @@
 import { Lectures, LecturesResponse, Response } from "@checkin/types";
 import {
-  AttendLectureParam,
   LectureRepository,
   enroLectureByIdParam,
   getLectureByIdParam,
@@ -23,11 +22,15 @@ class LectureRepositoryImpl implements LectureRepository {
     return data;
   }
 
-  public async attendanceLecture({
-    code,
-    lectureId,
-  }: AttendLectureParam): Promise<Response> {
-    const { data } = await apiClient.post(`/attendance/${lectureId}`, { code });
+  public async getMyLectures(): Promise<LecturesResponse> {
+    const { data } = await apiClient.get("/member/lectures/my");
+    return data;
+  }
+
+  public async getEnrolmentLectures(grade: number): Promise<LecturesResponse> {
+    const { data } = await apiClient.get(
+      `/lecture?status=ENROLMENT&grade=${grade}`
+    );
     return data;
   }
 }

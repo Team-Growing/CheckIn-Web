@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { AuthPartFade } from "../style";
+import { getRem } from "@checkin/util";
 
 export const LoginContainer = styled.form`
   width: 100%;
@@ -45,13 +46,13 @@ export const AuthTopWrap = styled.div`
 
 export const AuthHeading = styled.h1`
   color: #000;
-  font-size: 32px;
+  font-size: ${getRem(32)};
   font-weight: 600;
 `;
 
 export const AuthSubHeading = styled.h2`
   color: #828282;
-  font-size: 16px;
+  font-size: ${getRem(16)};
   font-weight: 500;
 `;
 
@@ -70,7 +71,7 @@ export const AuthInputWrap = styled.div`
 `;
 
 export const AuthText = styled.label`
-  font-size: 20px;
+  font-size: ${getRem(20)};
 `;
 
 export const AuthFlex = styled.div`
@@ -84,7 +85,7 @@ export const AuthFlex = styled.div`
 export const AuthInput = styled.input`
   width: 100%;
   height: 40px;
-  font-size: 20px;
+  font-size: ${getRem(20)};
   outline: none;
   border: none;
   background: none;
@@ -106,7 +107,7 @@ export const AuthSubmitBtn = styled.button`
 
 export const AuthCheckText = styled.p`
   color: #5f5f5f;
-  font-size: 16px;
+  font-size: ${getRem(16)};
   display: flex;
   justify-content: flex-end;
   margin-top: 14px;
@@ -114,7 +115,7 @@ export const AuthCheckText = styled.p`
 `;
 
 export const AuthOppositePartButton = styled.button`
-  font-size: 14px;
+  font-size: ${getRem(14)};
   color: #00c537;
   background: none;
   border: 0px;
@@ -123,7 +124,7 @@ export const AuthOppositePartButton = styled.button`
 
 export const AuthOppositePartText = styled.p`
   color: #636363;
-  font-size: 14px;
+  font-size: ${getRem(14)};
 `;
 
 export const AuthOppositePartWrap = styled.div`

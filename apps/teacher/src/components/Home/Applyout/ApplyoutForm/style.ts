@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const ApplyoutFormContainer = styled.div`
@@ -18,7 +19,7 @@ export const ApplyoutFormInputWrap = styled.div`
 
 export const ApplyoutRequireText = styled.label`
   color: #636363;
-  font-size: 14px;
+  font-size: ${getRem(14)};
   span {
     color: #008325;
   }

@@ -39,16 +39,25 @@ export const EnrolLectureBox = ({
   people,
   place,
   title,
+  lectureTag,
+  onClick,
+  isSelect,
 }: EnrolLectureBoxProps) => {
   return (
-    <S.EnrolLectureBoxContainer>
+    <S.EnrolLectureBoxContainer
+      lectureId={isSelect}
+      type={lectureTag}
+      onClick={onClick}
+    >
       <S.EnrolLectureCard>
         <S.EnrolLectureBoxTopWrap>
           <S.EnrolLectureTitle>{title}</S.EnrolLectureTitle>
-          <S.EnrolLectureGrade>{grade}</S.EnrolLectureGrade>
+          <S.EnrolLectureGrade>{`${grade}학년`}</S.EnrolLectureGrade>
         </S.EnrolLectureBoxTopWrap>
         <S.EnrolLectureBottomWrap>
-          <S.EnrolLectureInfoText>{`장소 : ${place}`}</S.EnrolLectureInfoText>
+          <S.EnrolLectureInfoText>{`장소 : ${dataTransform.LecturePlaceTypeName(
+            place
+          )}`}</S.EnrolLectureInfoText>
           <S.EnrolLectureInfoText>{`참가인원 : ${people}`}</S.EnrolLectureInfoText>
         </S.EnrolLectureBottomWrap>
       </S.EnrolLectureCard>
@@ -64,24 +73,44 @@ export const LectureTagBox = ({
   title,
   type,
   lectureTag,
+  customStyle,
+  onClick,
+  isSelect,
+  onSelect,
 }: LectureTagBoxProps) => {
+  const LectureTagColor = dataTransform.LectureTypeColor(lectureTag);
   return (
-    <S.LectureTagBoxContainer>
+    <S.LectureTagBoxContainer
+      customStyle={customStyle}
+      isSelect={isSelect}
+      onClick={onSelect}
+    >
       <Flex direction="column">
         <S.LectureBoxTopWrap>
           <S.LectureTitle>{title}</S.LectureTitle>
-          <S.LectureGrade>{grade}</S.LectureGrade>
+          <S.LectureGrade>{`${grade}학년`}</S.LectureGrade>
         </S.LectureBoxTopWrap>
-        <S.LectureTag type={lectureTag}>스포츠</S.LectureTag>
+        <S.LectureTag
+          tagBackground={LectureTagColor?.background}
+          tagColor={LectureTagColor?.color}
+        >
+          {dataTransform.LectureTagTransform(lectureTag)}
+        </S.LectureTag>
       </Flex>
       {type == "Enrol" ? (
         <Flex justify="between">
           <S.LectureBottomWrap>
-            <S.LectureInfoText>{`장소 : ${place}`}</S.LectureInfoText>
+            <S.LectureInfoText>{`장소 : ${dataTransform.LecturePlaceTypeName(
+              place
+            )}`}</S.LectureInfoText>
             <S.LectureInfoText>{`강사 : ${teacher}`}</S.LectureInfoText>
             <S.LectureInfoText>{`참가인원 : ${people}`}</S.LectureInfoText>
           </S.LectureBottomWrap>
-          <Button type="outline" style={{ marginTop: "5px" }}>
+          <Button
+            type="outline"
+            onClick={onClick}
+            customStyle={{ marginTop: "5px" }}
+          >
             수강신청
           </Button>
         </Flex>

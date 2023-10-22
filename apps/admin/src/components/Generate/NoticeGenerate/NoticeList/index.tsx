@@ -1,15 +1,21 @@
 import { TitleText } from "@checkin/ui";
 import * as S from "./style";
 import { DeleteIcon } from "@checkin/icon";
+import useDeleteNotice from "@/hooks/Notice/useDeleteNotice";
+import { useGetAllNoticeQuery } from "@/queries/Notice/query";
 
 const NoticeList = () => {
+  const { onDeleteNotice } = useDeleteNotice();
+  const { data } = useGetAllNoticeQuery();
   return (
     <S.NoticeListContainer>
       <TitleText>NoticeList</TitleText>
-      {Array.from({ length: 10 }).map(() => (
-        <S.NoticeWrap key={`gd`}>
-          <S.NoticeText>오늘은 방과후 없다 쉬라</S.NoticeText>
-          <DeleteIcon />
+      {data?.data.map((data) => (
+        <S.NoticeWrap key={`${data.noticeId}`}>
+          <S.NoticeText>{data.content}</S.NoticeText>
+          <DeleteIcon
+            onClick={() => onDeleteNotice(String(data.noticeId.value))}
+          />
         </S.NoticeWrap>
       ))}
     </S.NoticeListContainer>

@@ -17,11 +17,14 @@
     "js-cookie": "^3.0.5",
     "js-sha512": "^0.8.0",
     "next": "13.4.12",
+    "next-cookies": "^2.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "react-query": "^3.39.3",
+    "react-slick": "^0.29.0",
     "recoil": "^0.7.7",
+    "slick-carousel": "^1.8.1",
     "styled-components": "5.3.6",
     "styled-reset": "^4.5.1",
     "typescript": "5.1.6"
@@ -31,7 +34,9 @@
     "@types/node": "20.4.5",
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
-    "@types/styled-components": "^5.1.28"
+    "@types/react-slick": "^0.23.10",
+    "@types/styled-components": "^5.1.28",
+    "slick-carousel": "^1.8.1"
   },
   "resolutions": {
     "@types/react": "^18.0.10",

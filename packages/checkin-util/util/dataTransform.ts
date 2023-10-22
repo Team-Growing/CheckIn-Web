@@ -1,16 +1,33 @@
-import { LectureTagType, LecturePlaceType } from "@checkin/types";
+import {
+  LectureTagType,
+  LecturePlaceType,
+  DayOfWeekType,
+} from "@checkin/types";
 
 class dataTransForm {
   public LectureTypeColor(type: LectureTagType | string) {
     switch (type) {
       case "SPORTS":
-        return "#0073C9";
+        return { background: "#0073C9", color: "#FFF" };
       case "INSTRUMENT":
-        return "#F7D356";
+        return { background: "#F7D356", color: "#000" };
       case "AUTONOMY":
-        return "#DE4B41";
+        return { background: "#DE4B41", color: "#fff" };
       case "NARSHA":
-        return "#209915";
+        return { background: "#209915", color: "#fff" };
+    }
+  }
+
+  public LectureTagTransform(lectureTag: string) {
+    switch (lectureTag) {
+      case "SPORTS":
+        return "스포츠";
+      case "INSTRUMENT":
+        return "악기";
+      case "AUTONOMY":
+        return "자율";
+      case "NARSHA":
+        return "나르샤";
     }
   }
 
@@ -24,6 +41,19 @@ class dataTransForm {
         return "농구장";
       case "TENNIS_COURT":
         return "테니스 장";
+    }
+  }
+
+  public TransformDayOfWeek(dayOfWeek: string) {
+    switch (dayOfWeek) {
+      case "월요일":
+        return "MONDAY";
+      case "화요일":
+        return "TUESDAY";
+      case "수요일":
+        return "WEDNESDAY";
+      case "목요일":
+        return "THURSDAY";
     }
   }
 

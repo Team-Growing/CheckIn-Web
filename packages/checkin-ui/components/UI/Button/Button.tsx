@@ -3,26 +3,55 @@ import { ButtonContainer, ButtonWrapperBox } from "./style";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { ImPencil } from "react-icons/im";
 
-export const Button = ({ type, onClick, style, children }: ButtonProps) => {
+export const Button = ({
+  type,
+  onClick,
+  customStyle,
+  children,
+  isSelect,
+}: ButtonProps) => {
   return (
-    <ButtonContainer customStyle={style} onClick={onClick} buttonType={type}>
+    <ButtonContainer
+      isSelect={isSelect}
+      customStyle={customStyle}
+      onClick={onClick}
+      buttonType={type}
+    >
       {children}
     </ButtonContainer>
   );
 };
 
-export const PrevButton = ({ type, onClick, style, children }: ButtonProps) => {
+export const PrevButton = ({
+  type,
+  onClick,
+  customStyle,
+  children,
+}: ButtonProps) => {
   return (
-    <ButtonContainer customStyle={style} onClick={onClick} buttonType={type}>
+    <ButtonContainer
+      customStyle={customStyle}
+      onClick={onClick}
+      buttonType={type}
+    >
       <FiChevronLeft />
       {children}
     </ButtonContainer>
   );
 };
 
-export const NextButton = ({ type, onClick, style, children }: ButtonProps) => {
+export const NextButton = ({
+  type,
+  onClick,
+  customStyle,
+  children,
+}: ButtonProps) => {
   return (
-    <ButtonContainer customStyle={style} onClick={onClick} buttonType={type}>
+    <ButtonContainer
+      customStyle={customStyle}
+      onClick={onClick}
+      buttonType={type}
+    >
       {children}
       <FiChevronRight />
     </ButtonContainer>
@@ -32,11 +61,15 @@ export const NextButton = ({ type, onClick, style, children }: ButtonProps) => {
 export const WriteButton = ({
   type,
   onClick,
-  style,
+  customStyle,
   children,
 }: ButtonProps) => {
   return (
-    <ButtonContainer customStyle={style} onClick={onClick} buttonType={type}>
+    <ButtonContainer
+      customStyle={customStyle}
+      onClick={onClick}
+      buttonType={type}
+    >
       <ImPencil />
       {children}
     </ButtonContainer>

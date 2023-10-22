@@ -1,6 +1,6 @@
 import { LectureTagType } from "@checkin/types";
-import { dataTransform } from "@checkin/util";
-import styled from "styled-components";
+import { dataTransform, getRem } from "@checkin/util";
+import styled, { CSSObject, css } from "styled-components";
 
 export const LectureBoxContainer = styled.div<{
   type: LectureTagType | string;
@@ -12,9 +12,12 @@ export const LectureBoxContainer = styled.div<{
   border-radius: 10px;
 
   border: none;
-  background-color: ${({ type }) => dataTransform.LectureTypeColor(type)};
+  background-color: ${({ type }) =>
+    dataTransform.LectureTypeColor(type)?.background};
 
   margin-top: 20px;
+
+  cursor: pointer;
 `;
 
 export const LectureCard = styled.div`
@@ -41,7 +44,7 @@ export const LectureTitle = styled.h1`
 
 export const LectureGrade = styled.p`
   color: #949494;
-  font-size: 14px;
+  font-size: ${getRem(14)};
 
   margin-top: 7px;
 `;
@@ -64,20 +67,29 @@ export const LectureBottomWrap = styled.div`
 `;
 
 export const LectureInfoText = styled.p`
-  font-size: 14px;
+  font-size: ${getRem(14)};
   color: #1f1f1f;
 `;
 
-export const EnrolLectureBoxContainer = styled.div`
+export const EnrolLectureBoxContainer = styled.div<{
+  type: LectureTagType | string;
+  lectureId: boolean;
+}>`
   width: 100%;
-  height: 100px;
+  height: 40%;
 
   position: relative;
   border-radius: 10px;
-  background-color: #0073c9;
+  background-color: ${({ type }) =>
+    dataTransform.LectureTypeColor(type)?.background};
   border: none;
 
+  box-shadow: ${({ lectureId }) =>
+    lectureId && "0px 4px 10px rgba(0, 0, 0, 0.15)"};
+
   margin-top: 20px;
+
+  cursor: pointer;
 `;
 
 export const EnrolLectureCard = styled.div`
@@ -88,7 +100,7 @@ export const EnrolLectureCard = styled.div`
   bottom: 0;
 
   width: 100%;
-  height: 85px;
+  height: 85%;
 
   padding: 11px 19px;
 
@@ -100,11 +112,28 @@ export const EnrolLectureCard = styled.div`
 
 export const EnrolLectureTitle = styled.h1`
   font-size: 20px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 10px;
+  }
 `;
 
-export const EnrolLectureGrade = styled.p`
+export const EnrolLectureGrade = styled.div`
+  width: max-content;
   color: #949494;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    font-size: ${getRem(7)};
+  }
+
+  @media (max-width: 576px) {
+    font-size: ${getRem(5)};
+  }
 
   margin-top: 7px;
 `;
@@ -127,11 +156,14 @@ export const EnrolLectureBottomWrap = styled.div`
 `;
 
 export const EnrolLectureInfoText = styled.p`
-  font-size: 14px;
+  font-size: ${getRem(14)};
   color: #1f1f1f;
 `;
 
-export const LectureTagBoxContainer = styled.div`
+export const LectureTagBoxContainer = styled.div<{
+  customStyle?: CSSObject;
+  isSelect?: boolean;
+}>`
   width: 330px;
   height: 220px;
 
@@ -143,9 +175,20 @@ export const LectureTagBoxContainer = styled.div`
   background: #fff;
 
   padding: 30px 28px;
+
+  ${({ customStyle }) => customStyle}
+  cursor: pointer;
+  ${({ isSelect }) =>
+    isSelect &&
+    css`
+      border: 1px solid var(--main-base, #00c537);
+    `}
 `;
 
-export const LectureTag = styled.div<{ type: LectureTagType | string }>`
+export const LectureTag = styled.div<{
+  tagColor?: string;
+  tagBackground?: string;
+}>`
   width: 88px;
   height: 27.5px;
 
@@ -155,7 +198,8 @@ export const LectureTag = styled.div<{ type: LectureTagType | string }>`
 
   border-radius: 30px;
   border: 2px solid rgba(53, 170, 255, 0);
-  background-color: ${({ type }) => dataTransform.LectureTypeColor(type)};
+  background-color: ${({ tagBackground }) => tagBackground};
+  color: ${({ tagColor }) => tagColor};
   margin-top: 8px;
 `;
 
@@ -175,11 +219,11 @@ export const CanceledLectureReasonBox = styled.div`
 `;
 
 export const CancelReason = styled.p`
-  font-size: 16px;
+  font-size: ${getRem(16)};
   font-weight: 500;
 `;
 
 export const CancelReasonText = styled.p`
-  font-size: 14px;
+  font-size: ${getRem(14)};
   font-weight: 400;
 `;

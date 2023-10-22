@@ -24,10 +24,10 @@ const Enrol = () => {
         출석코드 생성
       </CardTitle>
       <EnrolLectureButtonContainer>
-        <Button style={{ width: "15%" }} type="primary">
+        <Button customStyle={{ width: "15%" }} type="primary">
           테니스A
         </Button>
-        <Button style={{ width: "15%" }} type="unSelect">
+        <Button customStyle={{ width: "15%" }} type="unSelect">
           테니스B
         </Button>
       </EnrolLectureButtonContainer>

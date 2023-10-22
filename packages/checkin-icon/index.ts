@@ -13,6 +13,7 @@ export * from "./src/Icon/WriteIcon";
 export * from "./src/Icon/IDIcon";
 export * from "./src/Icon/PWIcon";
 export * from "./src/Icon/DeleteIcon";
+export * from "./src/Icon/CheckAbsenseIcon";
 
 export * from "./src/Logo/CheckLogo";
 export * from "./src/Logo/Logo";

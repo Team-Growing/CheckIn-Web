@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const EnrolLectureFormContainer = styled.form`
@@ -14,7 +15,7 @@ export const EnrolLectureFormContainer = styled.form`
 `;
 
 export const EnrolLectureFormText = styled.label`
-  font-size: 20px;
+  font-size: ${getRem(20)};
 `;
 
 export const EnrolLectureInput = styled.input`
@@ -27,5 +28,5 @@ export const EnrolLectureInput = styled.input`
 
   border: 2px solid #cdd0dc;
   background: #fff;
-  font-size: 24px;
+  font-size: ${getRem(32)};
 `;

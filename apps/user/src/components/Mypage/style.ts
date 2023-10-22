@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const MypageContainer = styled.div`
@@ -6,6 +7,6 @@ export const MypageContainer = styled.div`
 `;
 
 export const MypageSectionTitle = styled.h1`
-  font-size: 24px;
+  font-size: ${getRem(24)};
   color: #000;
 `;

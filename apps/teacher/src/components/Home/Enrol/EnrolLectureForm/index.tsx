@@ -19,7 +19,7 @@ const EnrolLectureForm = () => {
           {JSON.stringify(data, null, 2)}
         </EnrolLectureCodeText>
       </EnrolLecutureTextContainer>
-      <Button style={{ width: "40%" }} type="primary">
+      <Button customStyle={{ width: "40%" }} type="primary">
         출석코드 변경
       </Button>
     </EnrolLectureFormContainer>

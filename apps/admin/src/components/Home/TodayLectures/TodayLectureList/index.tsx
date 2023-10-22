@@ -8,7 +8,7 @@ const TodayLecturesList = () => {
       {Array.from({ length: 10 }).map((idx, d) => (
         <LectureBox
           lectureTag="SPORTS"
-          grade="2학년"
+          grade="2"
           people="10"
           place="PLAYGROUND"
           teacher="백승하"

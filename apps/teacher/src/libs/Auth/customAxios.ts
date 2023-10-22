@@ -1,11 +1,11 @@
 import { CONFIG } from "@/config";
 import axios, { AxiosRequestConfig } from "axios";
 import { requestInterceptor } from "./requestInterceptor";
-import {
-  REQUEST_TOKEN_KEY,
-  ACCESS_TOKEN_KEY,
-} from "@/constant/Token/Token.constant";
 import Token from "../token/Token";
+import {
+  ACCESS_TOKEN_KEY,
+  REQUEST_TOKEN_KEY,
+} from "@/constant/Token/Token.constant";
 
 export const apiHost = CONFIG.API_HOST;
 

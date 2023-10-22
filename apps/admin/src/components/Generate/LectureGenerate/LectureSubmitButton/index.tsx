@@ -4,7 +4,7 @@ import React from "react";
 const LectureSubmitButton = () => {
   return (
     <Flex justify="end" customStyle={{ marginTop: "26px" }}>
-      <Button style={{ width: "200px" }} type="primary">
+      <Button customStyle={{ width: "200px" }} type="primary">
         생성하기
       </Button>
     </Flex>

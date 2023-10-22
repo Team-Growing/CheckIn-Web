@@ -1,3 +1,4 @@
+import { getRem } from "@checkin/util";
 import styled, { CSSObject, css } from "styled-components";
 
 export const SelectContainer = styled.div<{
@@ -24,7 +25,7 @@ export const SelectContainer = styled.div<{
 `;
 
 export const SelectText = styled.p`
-  font-size: 14px;
+  font-size: ${getRem(14)};
   white-space: nowrap;
   color: #c1c7de;
 `;
@@ -32,7 +33,7 @@ export const SelectText = styled.p`
 export const SelectIcon = styled.div<{ close: boolean }>`
   width: 14px;
   height: 14px;
-  font-size: 14px;
+  font-size: ${getRem(14)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +74,7 @@ export const SelectItem = styled.div`
   box-sizing: border-box;
   background-color: white;
   padding: 0px 10px;
-  font-size: 14px;
+  font-size: ${getRem(14)};
 
   :hover {
     filter: brightness(90%);
