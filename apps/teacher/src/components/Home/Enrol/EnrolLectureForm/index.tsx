@@ -7,13 +7,17 @@ import {
   EnrolLecutureTextContainer,
 } from "./style";
 import { Button, Flex } from "@checkin/ui";
+import { useGetCode } from "@/hooks/Main/getCode";
 
 const EnrolLectureForm = () => {
+  const { data, isLoading, isError } = useGetCode();
   return (
     <EnrolLectureFormContainer>
       <EnrolLecutureTextContainer>
         <EnrolLectureFormText>출석 코드</EnrolLectureFormText>
-        <EnrolLectureCodeText>9292</EnrolLectureCodeText>
+        <EnrolLectureCodeText>
+          {JSON.stringify(data, null, 2)}
+        </EnrolLectureCodeText>
       </EnrolLecutureTextContainer>
       <Button style={{ width: "40%" }} type="primary">
         출석코드 변경
