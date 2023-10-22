@@ -1,23 +1,31 @@
-import { CheckInTheme } from "styled-components";
+import { CheckInThemeType } from "styled-components";
 
-export const lightTheme: CheckInTheme = {
-  backgroundColor: "#FFF",
-  backgroundColor2: "#F5F5F5",
-  backgroundColor3: "#F2F2F2",
-  borderColor: "#d2d2d2",
-  borderColor2: "#3d3d3d",
-  contrast: "#090A0A",
-  contrast2: "#202325",
-  contrast3: "#303437",
-};
+export const CheckInTheme: CheckInThemeType = {
+  Text: {
+    Lighter: "#FFF",
+    Light: "#6C7072",
+    Base: "#404446",
+    Dark: "#303437",
+    Darker: "#202325",
+    Darkest: "#090A0A",
+  },
+  Main: {
+    Base: "#00C537",
+    Dark: "#008325",
+  },
 
-export const darkTheme: CheckInTheme = {
-  backgroundColor: "#454749",
-  backgroundColor2: "#202325",
-  backgroundColor3: "#090A0A",
-  borderColor: "#3d3d3d",
-  borderColor2: "#1a1a1a",
-  contrast: "#FFF",
-  contrast2: "#6C7072",
-  contrast3: "#404446",
+  Background: {
+    Lightest: "#FFF",
+    Lightbase: "#F5F5F5",
+    Lightdark: "#F2F2F2",
+    DarkLighter: "#454749",
+    DarkLight: "#202325",
+    Darkbase: "#090A0A",
+  },
+  Category: {
+    Blue: "#0073C9",
+    Yello: "#F7D356",
+    Green: "#209915",
+    Red: "#DE4B41",
+  },
 };
