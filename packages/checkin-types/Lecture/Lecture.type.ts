@@ -41,19 +41,19 @@ export interface LectureType {
   };
   lectureTeacher: {
     teacherId: {
-      value: "string";
+      value: string;
     };
-    name: "string";
+    name: string;
   };
   lectureSchedule: {
     startDay: string;
     endDay: string;
     dayOfWeek: string[];
   };
-  enrollStudent: 0;
+  enrollStudent: number;
   weekPlans: [
     {
-      week: 0;
+      week: number;
       introduction: string;
     }
   ];
