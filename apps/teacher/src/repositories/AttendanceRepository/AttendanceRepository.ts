@@ -5,9 +5,9 @@ import {
   AttendanceCode,
 } from "@checkin/types";
 
-export interface AttendRepository {
+export interface AttendanceRepository {
   attendanceLecture({ code, lectureId }: AttendLectureParam): Promise<Response>;
-  getCode(): Promise<AttendanceCode>;
+  getAttendanceCode(): Promise<AttendanceCode>;
 }
 
 export interface enroLectureByIdParam {

@@ -6,14 +6,14 @@ import {
 } from "@checkin/types";
 import {
   AttendLectureParam,
-  AttendRepository,
+  AttendanceRepository,
   enroLectureByIdParam,
   getLectureByIdParam,
-} from "./AttendRepository";
+} from "./AttendanceRepository";
 import apiClient from "@/libs/Auth/customAxios";
 import { promises } from "dns";
 
-class AttendRepositoryImpl implements AttendRepository {
+class AttendanceRepositoryImpl implements AttendanceRepository {
   public async attendanceLecture({
     code,
     lectureId,
@@ -22,10 +22,10 @@ class AttendRepositoryImpl implements AttendRepository {
     return data;
   }
 
-  public async getCode(): Promise<AttendanceCode> {
+  public async getAttendanceCode(): Promise<AttendanceCode> {
     const { data } = await apiClient.get(`/attendance/code/1`);
     return data;
   }
 }
 
-export default new AttendRepositoryImpl();
+export default new AttendanceRepositoryImpl();
