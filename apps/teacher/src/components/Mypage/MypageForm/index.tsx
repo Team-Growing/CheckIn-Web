@@ -2,9 +2,9 @@ import React from "react";
 import * as S from "./style";
 import {
   Flex,
-  Input,
   InputIntroText,
-  InputWrap,
+  TextInput,
+  TextInputWrap,
   WriteButton,
 } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
@@ -19,24 +19,12 @@ const MypageForm = () => {
       </S.MypageImageBox>
       <Flex direction="column" gap={13}>
         <Flex gap={30}>
-          <InputWrap>
-            <InputIntroText>이름</InputIntroText>
-            <Input customStyle={{ width: "80px" }} value="김예림" />
-          </InputWrap>
-          <InputWrap>
-            <InputIntroText>이름</InputIntroText>
-            <Input customStyle={{ width: "210px" }} />
-          </InputWrap>
+          <TextInputWrap info="이름" require={false} />
+          <TextInputWrap info="아이디" require={false} />
         </Flex>
         <Flex gap={30}>
-          <InputWrap>
-            <InputIntroText>학번</InputIntroText>
-            <Input customStyle={{ width: "80px" }} value="김예림" />
-          </InputWrap>
-          <InputWrap>
-            <InputIntroText>이름</InputIntroText>
-            <Input customStyle={{ width: "123px" }} />
-          </InputWrap>
+          <TextInputWrap info="E-mail" require={false} />
+          <TextInputWrap info="전담과목" require={false} />
           <WriteButton type="primary" style={{ marginTop: "20px" }}>
             수정하기
           </WriteButton>
