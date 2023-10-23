@@ -12,7 +12,6 @@ const RegisterPage = () => {
 export const getServerSideProps = withAuth(
   async ({ query }: GetServerSidePropsContext) => {
     const queryClient = new QueryClient();
-    console.log(query.grade);
 
     await queryClient.prefetchQuery({
       queryKey: ["lectures/getEnrolmentLectures", Number(query.grade)],
