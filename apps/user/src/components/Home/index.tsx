@@ -4,7 +4,7 @@ import { Flex } from "@checkin/ui";
 import TodayLectures from "./TodayLectures";
 import Notifiction from "./Notifiction";
 import Enrol from "./Enrol";
-import Absense from "./Absense";
+import Absence from "./Absence";
 
 const Home = () => {
   return (
@@ -19,7 +19,7 @@ const Home = () => {
         }}
         gap={20}
       >
-        <Absense />
+        <Absence />
         <Enrol />
       </Flex>
     </S.HomeContainer>
