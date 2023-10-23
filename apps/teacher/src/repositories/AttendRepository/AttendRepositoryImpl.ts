@@ -6,29 +6,14 @@ import {
 } from "@checkin/types";
 import {
   AttendLectureParam,
-  HomeRepository,
+  AttendRepository,
   enroLectureByIdParam,
   getLectureByIdParam,
-} from "./HomeRepository";
+} from "./AttendRepository";
 import apiClient from "@/libs/Auth/customAxios";
 import { promises } from "dns";
 
-class HomeRepositoryImpl implements HomeRepository {
-  public async enrolLecture(id: enroLectureByIdParam): Promise<Response> {
-    const { data } = await apiClient.post(`/enrol/${id}`);
-    return data;
-  }
-
-  public async getLectureById(id: getLectureByIdParam): Promise<Lectures> {
-    const { data } = await apiClient.get(`/lecture/${id}`);
-    return data;
-  }
-
-  public async getTodayLecture(): Promise<LecturesResponse> {
-    const { data } = await apiClient.get("/lecture/today");
-    return data;
-  }
-
+class AttendRepositoryImpl implements AttendRepository {
   public async attendanceLecture({
     code,
     lectureId,
@@ -43,4 +28,4 @@ class HomeRepositoryImpl implements HomeRepository {
   }
 }
 
-export default new HomeRepositoryImpl();
+export default new AttendRepositoryImpl();
