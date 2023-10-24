@@ -1,0 +1,60 @@
+import { useApplyAbsenceMutation } from "@/queries/Absence/query";
+import { useGetMyLectures } from "@/queries/Lectures/query";
+import { CheckInQueryKey } from "@checkin/querykey";
+import { CheckinToast } from "@checkin/toast";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { useQueryClient } from "react-query";
+
+const useApplyAbsence = () => {
+  const queryClient = useQueryClient();
+
+  const applyAbsenceMutation = useApplyAbsenceMutation();
+
+  const myLectures = useGetMyLectures().data?.data!;
+
+  const [lectureName, setLectureName] = useState("");
+
+  const [applyAbsenceData, setApplyAbsenceData] = useState({
+    lectureId: 0,
+    reason: "",
+  });
+
+  const onSetLectureId = (value: string) => {
+    setLectureName(value);
+    const lectureId = myLectures.find(
+      (lectures) => lectures.lectureName === value
+    )?.lectureId.value!;
+
+    setApplyAbsenceData((prev) => ({ ...prev, lectureId: lectureId }));
+  };
+
+  const onSetReason = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { value: reason } = e.target;
+    setApplyAbsenceData((prev) => ({ ...prev, reason: reason }));
+  };
+
+  const onSubmitApplyAbsenceData = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    applyAbsenceMutation.mutate(applyAbsenceData, {
+      onSuccess: () => {
+        CheckinToast.showSuccess("결강 신청 성공 선생님의 승인을 기다려주세요");
+        queryClient.invalidateQueries(CheckInQueryKey.absence.getMy);
+      },
+      onError: () => {
+        CheckinToast.showError("서버 에러 ㅋㅋ");
+      },
+    });
+  };
+
+  return {
+    myLectures,
+    lectureName,
+    applyAbsenceData,
+    onSetLectureId,
+    onSetReason,
+    onSubmitApplyAbsenceData,
+  };
+};
+
+export default useApplyAbsence;

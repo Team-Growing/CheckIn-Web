@@ -1,8 +1,10 @@
 import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
-export const ApplyoutFormContainer = styled.div`
+export const ApplyoutFormContainer = styled.form`
   width: 100%;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
 
