@@ -1,6 +1,11 @@
 import React from "react";
 import { LectureBox } from "@checkin/ui";
 import { LectureListWrapper } from "./style";
+import { LecturesResponse } from "@checkin/types";
+
+interface Props {
+  data: LecturesResponse;
+}
 
 const TodayLaectureList = () => {
   return (

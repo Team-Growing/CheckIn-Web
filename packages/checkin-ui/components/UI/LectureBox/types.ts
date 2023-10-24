@@ -3,10 +3,10 @@ import { CSSObject } from "styled-components";
 
 export interface LectureBoxProps {
   title: string;
-  grade: string;
+  grade: number;
   place: string;
   teacher: string;
-  people: string;
+  people: number;
   lectureTag: LectureTagType | string;
 }
 
