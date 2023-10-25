@@ -19,13 +19,13 @@ const useApplyAbsence = () => {
     reason: "",
   });
 
-  const onSetLectureId = (value: string) => {
+  const onSetLectureId = (name: string, value: string) => {
     setLectureName(value);
     const lectureId = myLectures.find(
       (lectures) => lectures.lectureName === value
     )?.lectureId.value!;
 
-    setApplyAbsenceData((prev) => ({ ...prev, lectureId: lectureId }));
+    setApplyAbsenceData((prev) => ({ ...prev, [name]: lectureId }));
   };
 
   const onSetReason = (e: ChangeEvent<HTMLTextAreaElement>) => {
