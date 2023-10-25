@@ -20,8 +20,8 @@ const AbsenceForm = () => {
           방과후 이름 <span>*</span>
         </S.ApplyoutRequireText>
         <Select
-          name="test"
-          items={myLectures.map((data) => data.lectureName)}
+          name="lectureId"
+          items={myLectures?.map((data) => data.lectureName)}
           onChange={onSetLectureId}
           value={lectureName === "" ? "문의 제목을 입력해주세요" : lectureName}
           customStyle={{ width: "100%" }}
