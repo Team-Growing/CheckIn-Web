@@ -1,10 +1,10 @@
 import * as S from "./style";
 import { useRouter } from "next/router";
 import { ProfileIcon } from "@checkin/icon";
-import { useGetMemberInfo } from "@/queries/Member/query";
+import { useGetMemberInfoQuery } from "@/queries/Member/query";
 
 const NavUser = () => {
-  const { data } = useGetMemberInfo();
+  const { data } = useGetMemberInfoQuery();
   const router = useRouter();
 
   return (

@@ -1,5 +1,6 @@
-import { MemberType } from "@checkin/types";
+import { MemberType, TeachersResponse } from "@checkin/types";
 
 export interface MemberRepository {
   getMemberInfo(): Promise<MemberType>;
+  getTeachers(): Promise<TeachersResponse>;
 }

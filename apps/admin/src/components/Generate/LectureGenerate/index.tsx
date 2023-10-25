@@ -12,6 +12,8 @@ import LectureSubmitButton from "./LectureSubmitButton";
 
 const GenerateForm = () => {
   const {
+    teacherName,
+    teachersData,
     onSubmitLectureData,
     lectureNameExplan,
     lectureSelectState,
@@ -34,6 +36,8 @@ const GenerateForm = () => {
           onChangeLectureText={onChangeLectureNameExplan}
         />
         <LectureSelect
+          teacherName={teacherName}
+          teachersData={teachersData}
           lectureSelectState={lectureSelectState}
           onChangeLectureSelectState={onChangeLectureSelectState}
         />

@@ -1,7 +1,15 @@
+import { useGetTeachesrQuery } from "@/queries/Member/query";
 import { Flex, SelectWrap } from "@checkin/ui";
 import React from "react";
 
 interface Props {
+  teacherName: string;
+  teachersData: [
+    {
+      id: string;
+      name: string;
+    }
+  ];
   lectureSelectState: {
     placeType: string;
     lectureTag: string;
@@ -12,8 +20,10 @@ interface Props {
 }
 
 const LectureSelect = ({
+  teachersData,
   lectureSelectState,
   onChangeLectureSelectState,
+  teacherName,
 }: Props) => {
   return (
     <>
@@ -22,7 +32,7 @@ const LectureSelect = ({
           customStyle={{ width: "100%" }}
           require={true}
           info="수업 대상"
-          items={["1학년", "2학년"]}
+          items={["1", "2"]}
           name="targetGrade"
           onChange={onChangeLectureSelectState}
           value={
@@ -49,18 +59,14 @@ const LectureSelect = ({
           intro="수업 카테고리를 선택해주세요"
         />
       </Flex>
-
       <SelectWrap
         require={true}
         info="방과후 강사"
         customStyle={{ width: "25%" }}
-        items={["류현진", "원태인"]}
+        items={teachersData?.map((data) => data.name)}
         onChange={onChangeLectureSelectState}
-        value={
-          lectureSelectState.teacherId == ""
-            ? "류현진"
-            : lectureSelectState.teacherId
-        }
+        value={teacherName == "" ? "백승하(나르샤)" : teacherName}
+        zIndex={3}
         name="teacherId"
         intro="수업을 진행하는 강사를 선택해주세요"
       />

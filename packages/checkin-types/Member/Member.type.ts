@@ -13,3 +13,12 @@ export interface MemberType extends Response {
     };
   };
 }
+
+export interface TeachersResponse extends Response {
+  data: [
+    {
+      id: string;
+      name: string;
+    }
+  ];
+}
