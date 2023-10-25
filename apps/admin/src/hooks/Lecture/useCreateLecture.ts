@@ -1,4 +1,5 @@
 import { useCreateLectureMutation } from "@/queries/Lecture/query";
+import { useGetTeachesrQuery } from "@/queries/Member/query";
 import { CheckinToast } from "@checkin/toast";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useQueryClient } from "react-query";
@@ -7,10 +8,14 @@ export const useCreateLecture = () => {
   const createLectureMutation = useCreateLectureMutation();
   const queryClient = useQueryClient();
 
+  const teachersData = useGetTeachesrQuery().data?.data!;
+
   const [lectureNameExplan, setLectureNameExplan] = useState({
     lectureName: "",
     explanation: "",
   });
+
+  const [teacherName, setTeacherName] = useState("");
 
   const [lectureSelectState, setLectureSelectState] = useState({
     placeType: "",
@@ -44,7 +49,12 @@ export const useCreateLecture = () => {
   };
 
   const onChangeLectureSelectState = (name: string, value: string) => {
-    setLectureSelectState((prev) => ({ ...prev, [name]: value }));
+    if (name === "teacherId") {
+      setTeacherName(value);
+      const teacherId = teachersData.find((lectures) => lectures.name === value)
+        ?.id!;
+      setLectureSelectState((prev) => ({ ...prev, [name]: teacherId }));
+    } else setLectureSelectState((prev) => ({ ...prev, [name]: value }));
   };
 
   const onChangeLectureDayOfWeek = (value: string) => {
@@ -83,6 +93,7 @@ export const useCreateLecture = () => {
 
   const onSubmitLectureData = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     const { lectureName, explanation } = lectureNameExplan;
     const { lectureTag, placeType, targetGrade, teacherId } =
       lectureSelectState;
@@ -131,6 +142,8 @@ export const useCreateLecture = () => {
   };
 
   return {
+    teacherName,
+    teachersData,
     lectureNameExplan,
     lectureSelectState,
     lectureTime,
