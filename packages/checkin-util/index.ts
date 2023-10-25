@@ -10,3 +10,4 @@ export { default as patternCheck } from "./util/patternCheck";
 export { default as dateTransform } from "./util/dateTransform";
 export { default as stringEllipsis } from "./util/stringEllipsis";
 export * from "./util/getRem";
+export * from "./util/stopEvent";
