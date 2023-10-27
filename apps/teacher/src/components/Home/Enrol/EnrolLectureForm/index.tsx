@@ -11,7 +11,6 @@ import { useGetCodeQuery } from "@/queries/AttendanceCode/query";
 
 const EnrolLectureForm = () => {
   const { data } = useGetCodeQuery();
-  console.log(data);
   return (
     <EnrolLectureFormContainer>
       <EnrolLecutureTextContainer>

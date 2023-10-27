@@ -8,32 +8,23 @@ const useWriteQuestion = () => {
 
   const writeNoticeMutation = useWriteQuestionMutation();
 
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
+  const [questionData, setQuestionData] = useState({ title: "", content: "" });
 
-  const onChangeTitleData = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setTitle(value);
-  };
-
-  const onChangeContentData = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    setContent(value);
+  const onChangeQuestionData = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    setQuestionData({ ...questionData, [name]: value });
   };
 
   const onSubmitQuestionData = () => {
     writeNoticeMutation.mutate(
       {
-        title: title,
-        content: content,
+        title: questionData.title,
+        content: questionData.content,
       },
       {
         onSuccess: () => {
           CheckinToast.showSuccess("문의 생성 성공");
-          setTitle("");
-          setContent("");
-          queryClient.invalidateQueries("/question");
-          console.log("hi");
+          setQuestionData({ title: "", content: "" });
         },
         onError: () => {
           CheckinToast.showError("실패");
@@ -43,10 +34,8 @@ const useWriteQuestion = () => {
   };
 
   return {
-    title,
-    content,
-    onChangeTitleData,
-    onChangeContentData,
+    questionData,
+    onChangeQuestionData,
     onSubmitQuestionData,
   };
 };

@@ -4,10 +4,10 @@ export interface QuestionRepository {
   questionTeacher({
     content,
     title,
-  }: writeQuestionParam): Promise<QuestionType>;
+  }: WriteQuestionParam): Promise<QuestionType>;
 }
 
-export interface writeQuestionParam {
+export interface WriteQuestionParam {
   title: string;
   content: string;
 }

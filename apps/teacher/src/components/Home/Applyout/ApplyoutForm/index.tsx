@@ -5,10 +5,8 @@ import useWriteQuestion from "@/hooks/Question/useWriteQuestion";
 
 const ApplyoutForm = () => {
   const {
-    title,
-    content,
-    onChangeTitleData,
-    onChangeContentData,
+    questionData,
+    onChangeQuestionData,
     onSubmitQuestionData,
   } = useWriteQuestion();
 
@@ -35,8 +33,9 @@ const ApplyoutForm = () => {
           customStyle={{ width: "100%" }}
           type="text"
           maxLength="1200%"
-          value={title}
-          onChange={onChangeTitleData}
+          value={questionData.title}
+          name="title"
+          onChange={onChangeQuestionData}
           className="autoTextarea"
           onKeyDown={autoResizeTextarea} // keydown이되엇을때마다 autoResizeTextarea실행
           onKeyUp={autoResizeTextarea} // keyup이되엇을때마다 autoResizeTextarea실행
@@ -50,8 +49,9 @@ const ApplyoutForm = () => {
           placeholder="문의 내용을 입력해주세요"
           customStyle={{ width: "100%" }}
           type="text"
-          value={content}
-          onChange={onChangeContentData}
+          value={questionData.content}
+          name="content"
+          onChange={onChangeQuestionData}
           maxLength="1200%"
           className="autoTextarea"
           onKeyDown={autoResizeTextarea} // keydown이되엇을때마다 autoResizeTextarea실행
