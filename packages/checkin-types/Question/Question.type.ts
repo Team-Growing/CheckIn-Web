@@ -24,3 +24,8 @@ export interface QuestionsResponse {
     value: QuestionReponse[];
   };
 }
+
+export interface QuestionType {
+  title: string;
+  content: string;
+}
