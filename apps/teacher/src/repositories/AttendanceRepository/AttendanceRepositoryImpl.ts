@@ -1,11 +1,14 @@
 import {
   AttendanceCode,
+  AttendanceCodeResponse,
+  AttendanceListResponse,
   Lectures,
   LecturesResponse,
   Response,
 } from "@checkin/types";
 import {
   AttendLectureParam,
+  AttendMemberParam,
   AttendanceRepository,
   enroLectureByIdParam,
   getLectureByIdParam,
@@ -23,7 +26,29 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
   }
 
   public async getAttendanceCode(): Promise<AttendanceCode> {
-    const { data } = await apiClient.get(`/attendance/code/1`);
+    const { data } = await apiClient.get(`/attendance/code/9`);
+    return data;
+  }
+
+  public async getAttendantsCode(): Promise<AttendanceListResponse> {
+    const { data } = await apiClient.get(`/attendance/9/attendants`);
+    return data;
+  }
+
+  public async getChangeCode({
+    lectureId,
+  }: AttendanceCodeResponse): Promise<Response> {
+    const { data } = await apiClient.patch(`/attendance/code/${lectureId}`);
+    return data;
+  }
+
+  public async getAttendance({
+    lectureId,
+    memberId,
+  }: AttendMemberParam): Promise<Response> {
+    const { data } = await apiClient.post(`/attendance/confirmation/9`, {
+      memberId,
+    });
     return data;
   }
 }

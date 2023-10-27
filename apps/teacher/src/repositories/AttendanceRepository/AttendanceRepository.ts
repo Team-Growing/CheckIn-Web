@@ -8,6 +8,7 @@ import {
 export interface AttendanceRepository {
   attendanceLecture({ code, lectureId }: AttendLectureParam): Promise<Response>;
   getAttendanceCode(): Promise<AttendanceCode>;
+  getAttendance({ lectureId, memberId }: AttendMemberParam): Promise<Response>;
 }
 
 export interface enroLectureByIdParam {
@@ -23,4 +24,9 @@ export interface getLectureByIdParam {
 export interface AttendLectureParam {
   code: string;
   lectureId: string;
+}
+
+export interface AttendMemberParam {
+  lectureId: string;
+  memberId: string;
 }

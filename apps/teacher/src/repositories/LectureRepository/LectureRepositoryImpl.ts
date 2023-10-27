@@ -23,7 +23,7 @@ class LectureRepositoryImpl implements LectureRepository {
   }
 
   public async getMyLectures(): Promise<LecturesResponse> {
-    const { data } = await apiClient.get("/member/lectures/my");
+    const { data } = await apiClient.get("/lecture/my");
     return data;
   }
 

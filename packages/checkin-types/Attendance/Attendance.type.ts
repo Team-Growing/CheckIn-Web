@@ -34,3 +34,7 @@ export interface AttendanceCode extends Response {
     code: string;
   };
 }
+
+export interface AttendanceCodeResponse {
+  lectureId: number;
+}

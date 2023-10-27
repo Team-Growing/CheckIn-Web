@@ -3,20 +3,30 @@ import * as S from "./style";
 import AttendIcon from "../../../assets/image/AttendTitleIcon.svg";
 import AttendProfile from "../../../../assets/image/AttendCardProfile.svg";
 import { Button } from "@checkin/ui";
+import { AttendanceListResponse } from "@checkin/types";
+import { UserType } from "..";
 
-const Attendcard = () => {
+// interface Props {
+//   data: AttendanceListResponse;
+// }
+type UserProps = {
+  user: UserType;
+};
+const Attendcard = ({ user }: UserType) => {
+  const { data } = getAttence();
   const [isAttend, setIsAttend] = useState("false");
+  const { name, studentInfo, id } = user;
   return (
     <>
       <S.AttendCardWrap>
         <S.AttendInfoContainer>
           <S.AttendProfileImg src={AttendProfile} alt=""></S.AttendProfileImg>
-          <S.AttendName>김예림</S.AttendName>
-          <S.AttendNumber>2학년 4반 2번</S.AttendNumber>
+          <S.AttendName>{name}</S.AttendName>
+          <S.AttendNumber>{`${studentInfo.grade}학년 ${studentInfo.room}반 ${studentInfo.number}번`}</S.AttendNumber>
           <Button
             type="primary"
             onClick={() => {
-              console.log("click!");
+              console.log(id);
             }}
           >
             출석하기

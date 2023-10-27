@@ -3,32 +3,32 @@ import * as S from "./style";
 import AttendIcon from "../../../assets/image/AttendTitleIcon.svg";
 import AttendCard from "../../common/Attend/AttendCard";
 import { Button } from "@checkin/ui";
-
-const dummyList = [
-  {
-    id: 1,
-    author: "hyun",
-    content: "첫번째",
-    emotion: 1,
-    created_date: new Date().getTime(),
-  },
-  {
-    id: 2,
-    author: "jeong",
-    content: "두번째",
-    emotion: 2,
-    created_date: new Date().getTime(),
-  },
-  {
-    id: 3,
-    author: "react",
-    content: "3번째",
-    emotion: 3,
-    created_date: new Date().getTime(),
-  },
-];
-
+import { useGetAttendantsQuery } from "@/queries/AttendanceCode/query";
+export type UserType = {
+  id: number;
+  name: string;
+  age: number;
+  position: string;
+};
 const Attend = () => {
+  const { data } = useGetAttendantsQuery();
+
+  console.log(data?.data.attendants);
+
+  // const dummyList = [
+  //   {
+  //     id: 0,
+  //     name: "철수",
+  //     age: 27,
+  //     position: "front-end",
+  //   },
+  //   {
+  //     id: 1,
+  //     name: "민성",
+  //     age: 24,
+  //     position: "back-end",
+  //   },
+  // ];
   return (
     <>
       <S.AttendWrap>
@@ -56,16 +56,19 @@ const Attend = () => {
           </Button>
         </S.ButtonWrap>
         <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
-        <S.AttendListWrapper>
-          {[...Array(5)].map((idx) => (
-            <AttendCard></AttendCard>
-          ))}
-        </S.AttendListWrapper>
+        <S.AttendListWrapper></S.AttendListWrapper>
         <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
         <S.AttendListWrapper>
-          {[...Array(5)].map((idx) => (
-            <AttendCard></AttendCard>
-          ))}
+          {data?.data.attendants.map((data) => {
+            return (
+              <AttendCard key={data.id} user={data}>
+                {data.content}
+              </AttendCard>
+            );
+          })}
+          {/* {.map((data) => {
+            return <AttendCard key={data.id} user={data}></AttendCard>;
+          })} */}
         </S.AttendListWrapper>
       </S.AttendWrap>
     </>
