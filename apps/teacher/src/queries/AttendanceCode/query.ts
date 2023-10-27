@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 
 export const useGetCodeQuery = () =>
   useQuery(
-    "notice/activeNotice",
+    "/attendance/code/3",
     () => AttendanceRepositoryImpl.getAttendanceCode(),
     {
       cacheTime: 1000 * 60 * 60,
