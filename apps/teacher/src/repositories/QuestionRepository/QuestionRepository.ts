@@ -1,7 +1,10 @@
 import { QuestionType } from "@checkin/types";
 
 export interface QuestionRepository {
-  questionTeacher({ content }: writeQuestionParam): Promise<QuestionType>;
+  questionTeacher({
+    content,
+    title,
+  }: writeQuestionParam): Promise<QuestionType>;
 }
 
 export interface writeQuestionParam {

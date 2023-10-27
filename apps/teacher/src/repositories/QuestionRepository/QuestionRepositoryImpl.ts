@@ -5,8 +5,9 @@ import apiClient from "@/libs/Auth/customAxios";
 class QuestionRepositoryImpl implements QuestionRepository {
   public async questionTeacher({
     content,
+    title,
   }: writeQuestionParam): Promise<QuestionType> {
-    const { data } = await apiClient.post("/question", { content });
+    const { data } = await apiClient.post("/question", { title, content });
     return data;
   }
 }
