@@ -58,12 +58,14 @@ const Attend = () => {
         <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
         <S.AttendListWrapper>
           {[...Array(5)].map((idx) => (
-           ))}
+            <AttendCard></AttendCard>
+          ))}
         </S.AttendListWrapper>
         <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
         <S.AttendListWrapper>
           {[...Array(5)].map((idx) => (
-           ))}
+            <AttendCard></AttendCard>
+          ))}
         </S.AttendListWrapper>
       </S.AttendWrap>
     </>

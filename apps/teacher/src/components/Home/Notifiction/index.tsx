@@ -1,25 +1,36 @@
-import { Card, CardTitle } from "@checkin/ui";
-import Image from "next/image";
-import React from "react";
-import NotifictionImg from "../../../assets/Icon/Notifiction.svg";
+import { Card, CardTitle, Flex } from "@checkin/ui";
+import React, { useMemo } from "react";
+import { NotifictionIcon } from "@checkin/icon";
+import { useGetActiveNoticeQuery } from "@/queries/Notice/query";
+import Slider from "react-slick";
+import { NoticeContainer, NoticeContent } from "./style";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Notifiction = () => {
+  const { data } = useGetActiveNoticeQuery();
+
+  const noticeSetting = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrow: false,
+  };
+
+  console.log();
+
   return (
-    <Card
-      type="Notifiction"
-      customStyle={{ display: "flex", columnGap: "63px" }}
-    >
+    <NoticeContainer>
       <CardTitle>
-        <Image
-          width={32}
-          height={32}
-          src={NotifictionImg.src}
-          alt=""
-          style={{ marginBottom: "4px" }}
-        />
+        <NotifictionIcon />
         공지사항
       </CardTitle>
-    </Card>
+      {data?.data.map((data) => {
+        return <NoticeContent>{data.content}</NoticeContent>;
+      })}
+    </NoticeContainer>
   );
 };
 
