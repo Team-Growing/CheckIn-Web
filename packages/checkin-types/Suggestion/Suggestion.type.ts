@@ -36,3 +36,28 @@ export interface SuggestionResponse {
     ];
   };
 }
+
+export interface Suggestion {
+  data: {
+    suggestionId: {
+      value: number;
+    };
+    name: string;
+    content: string;
+    dayOfWeek: DayOfWeekType | string;
+    additional: string;
+    createdAt: string;
+    suggester: {
+      memberId: {
+        value: string;
+      };
+      name: string;
+      studentInfo: {
+        year: number;
+        grade: number;
+        room: number;
+        number: number;
+      };
+    };
+  };
+}

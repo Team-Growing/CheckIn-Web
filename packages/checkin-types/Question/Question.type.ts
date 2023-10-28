@@ -1,27 +1,29 @@
 export type QuestionStatus = "CONFIRMED" | "NOT_CONFIRMED";
 
 export interface QuestionReponse {
-  data: {
-    questionId: {
-      value: number;
+  data: Question;
+}
+
+export interface Question {
+  questionId: {
+    value: number;
+  };
+  questionStatus: QuestionStatus | string;
+  title: string;
+  content: string;
+  createdAt: string;
+  questioner: {
+    memberId: {
+      value: string;
     };
-    questionStatus: QuestionStatus | string;
-    title: string;
-    content: string;
-    createdAt: string;
-    questioner: {
-      memberId: {
-        value: string;
-      };
-      name: string;
-    };
+    name: string;
   };
 }
 
 export interface QuestionsResponse {
   data: {
     totalCount: number;
-    value: QuestionReponse[];
+    value: Question[];
   };
 }
 
