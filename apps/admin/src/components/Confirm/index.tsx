@@ -5,11 +5,11 @@ import { SwitchCase } from "@checkin/util";
 import QuestionConfirm from "./QuestionConfirm";
 import SuggestionConfirm from "./SuggestionConfirm";
 
-type SectionType = "문의" | "제안";
+export type ConfrimSectionType = "question" | "suggestion";
 
 const Confirm = () => {
-  const [section, setSection] = useState<SectionType>("문의");
-  const onChange = () => {};
+  const [section, setSection] = useState<ConfrimSectionType>("question");
+
   return (
     <S.ConfirmContainer>
       <S.ConfirmTopWrap>
@@ -20,15 +20,15 @@ const Confirm = () => {
         <ButtonWrapper>
           <Button
             type="primary"
-            onClick={() => setSection("문의")}
-            isSelect={section === "문의" ? false : true}
+            onClick={() => setSection("question")}
+            isSelect={section === "question" ? false : true}
           >
             문의 사항
           </Button>
           <Button
             type="primary"
-            onClick={() => setSection("제안")}
-            isSelect={section === "제안" ? false : true}
+            onClick={() => setSection("suggestion")}
+            isSelect={section === "suggestion" ? false : true}
           >
             수업 제안
           </Button>
@@ -36,7 +36,10 @@ const Confirm = () => {
       </S.ConfirmTopWrap>
       <SwitchCase
         value={section}
-        caseBy={{ 문의: <QuestionConfirm />, 제안: <SuggestionConfirm /> }}
+        caseBy={{
+          question: <QuestionConfirm />,
+          suggestion: <SuggestionConfirm />,
+        }}
       />
     </S.ConfirmContainer>
   );

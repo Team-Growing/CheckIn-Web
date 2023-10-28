@@ -1,3 +1,4 @@
+import { CheckInColor } from "@checkin/styled-theme";
 import styled from "styled-components";
 
 export const ConfirmListContainer = styled.div``;
@@ -17,7 +18,14 @@ export const ConfirmListItemContaienr = styled.div`
   align-items: center;
 
   height: 50px;
+
+  cursor: pointer;
   border-bottom: 1px solid #d2d2d2;
+
+  background-color: ${CheckInColor.Background.Lightest};
+  &:hover {
+    background-color: ${CheckInColor.Background.Lightbase};
+  }
 `;
 
 export const ConfirmListItem = styled.div`

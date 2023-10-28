@@ -9,6 +9,7 @@ export * from "./components/UI/Input/Input";
 export * from "./components/UI/AttendacneStudent/AttendanceStudent";
 export * from "./components/UI/Text/Text";
 export * from "./components/UI/AbsenceStudent/AbsenceStudent";
+export { default as Modal } from "./components/UI/Modal/Modal";
 
 // Layout exports
 export * from "./components/Layout/Flex/Flex";

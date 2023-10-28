@@ -44,16 +44,16 @@ class dataTransForm {
     }
   }
 
-  public TransformDayOfWeek(dayOfWeek: string) {
+  public TransformDayOfWeek(dayOfWeek: DayOfWeekType | string) {
     switch (dayOfWeek) {
-      case "월요일":
-        return "MONDAY";
-      case "화요일":
-        return "TUESDAY";
-      case "수요일":
-        return "WEDNESDAY";
-      case "목요일":
-        return "THURSDAY";
+      case "MONDAY":
+        return "월요일";
+      case "TUESDAY":
+        return "화요일";
+      case "WEDNESDAY":
+        return "수요일";
+      case "THURSDAY":
+        return "목요일";
     }
   }
 
