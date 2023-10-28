@@ -16,3 +16,14 @@ export const NoticeFormContainer = styled.div`
   background-color: red;
   bottom: 0;
 `;
+
+export const NoticeListContainer = styled.div`
+  width: 100%;
+
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 25px;
+`;

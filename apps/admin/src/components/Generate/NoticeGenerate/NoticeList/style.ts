@@ -30,3 +30,9 @@ export const NoticeText = styled.p`
   font-size: ${getRem(18)};
   font-weight: 500;
 `;
+
+export const NoticeCreatedAt = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+`;

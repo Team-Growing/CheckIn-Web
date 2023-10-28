@@ -1,24 +1,32 @@
-import { TitleText } from "@checkin/ui";
 import * as S from "./style";
 import { DeleteIcon } from "@checkin/icon";
 import useDeleteNotice from "@/hooks/Notice/useDeleteNotice";
-import { useGetAllNoticeQuery } from "@/queries/Notice/query";
+import { NoticeType } from "@checkin/types";
+import { dateTransform } from "@checkin/util";
+import Switch from "react-switch";
+import usePatchNoticeStatus from "@/hooks/Notice/usePatchNoticeStatus";
 
-const NoticeList = () => {
+interface Props {
+  data: NoticeType;
+}
+
+const NoticeList = ({ data }: Props) => {
   const { onDeleteNotice } = useDeleteNotice();
-  const { data } = useGetAllNoticeQuery();
+  const { noticeStatus, onPatchNoticeStatus, setNoticeStatus } =
+    usePatchNoticeStatus({
+      id: data.noticeId.value,
+      status: data.noticeStatus,
+    });
+
   return (
-    <S.NoticeListContainer>
-      <TitleText>NoticeList</TitleText>
-      {data?.data.map((data) => (
-        <S.NoticeWrap key={`${data.noticeId}`}>
-          <S.NoticeText>{data.content}</S.NoticeText>
-          <DeleteIcon
-            onClick={() => onDeleteNotice(String(data.noticeId.value))}
-          />
-        </S.NoticeWrap>
-      ))}
-    </S.NoticeListContainer>
+    <S.NoticeWrap key={`${data.noticeId}`}>
+      <S.NoticeText>{data.content}</S.NoticeText>
+      <S.NoticeCreatedAt>
+        {dateTransform.hyphen(data.createdAt)}
+      </S.NoticeCreatedAt>
+      <Switch checked={noticeStatus} onChange={onPatchNoticeStatus} />
+      <DeleteIcon onClick={() => onDeleteNotice(String(data.noticeId.value))} />
+    </S.NoticeWrap>
   );
 };
 
