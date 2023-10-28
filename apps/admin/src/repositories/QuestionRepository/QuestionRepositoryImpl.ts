@@ -1,9 +1,9 @@
-import { QuestionsResponse } from "@checkin/types";
+import { QuestionReponse, QuestionsResponse } from "@checkin/types";
 import { GetQuestionsParam, QuestionRepository } from "./QuestionRepository";
 import apiClient from "@/libs/Auth/customAxios";
 
 class QuestionRepositoryImpl implements QuestionRepository {
-  public async getQuestion(id: number): Promise<QuestionRepository> {
+  public async getQuestion(id: number): Promise<QuestionReponse> {
     const { data } = await apiClient.get(`/question/${id}`);
     return data;
   }

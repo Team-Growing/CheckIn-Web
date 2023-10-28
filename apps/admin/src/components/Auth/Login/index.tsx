@@ -13,7 +13,7 @@ const Login = () => {
     <>
       <S.LoginContainer onSubmit={onLogin}>
         <S.AuthTopWrap>
-          <CheckLogo />
+          <CheckLogo height="25" width="25" />
           <S.AuthHeading>로그인</S.AuthHeading>
           <S.AuthSubHeading>
             체크인을 사용하기 위해 로그인을 진행해주세요

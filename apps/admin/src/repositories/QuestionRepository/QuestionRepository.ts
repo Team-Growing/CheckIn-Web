@@ -1,8 +1,8 @@
-import { QuestionsResponse } from "@checkin/types";
+import { QuestionReponse, QuestionsResponse } from "@checkin/types";
 
 export interface QuestionRepository {
   getQuestions(param: GetQuestionsParam): Promise<QuestionsResponse>;
-  getQuestion(id: number): Promise<QuestionRepository>;
+  getQuestion(id: number): Promise<QuestionReponse>;
 }
 
 export interface GetQuestionsParam {
