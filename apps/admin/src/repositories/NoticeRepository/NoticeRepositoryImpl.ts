@@ -31,7 +31,9 @@ class NoticeRepositoryImpl implements NoticeRepository {
     id,
     noticeStatus,
   }: patchNoticeStatusParam): Promise<Response> {
-    const { data } = await apiClient.patch(`/notice/${id}`, { noticeStatus });
+    const { data } = await apiClient.patch(`/notice/status/${id}`, {
+      noticeStatus,
+    });
     return data;
   }
 }

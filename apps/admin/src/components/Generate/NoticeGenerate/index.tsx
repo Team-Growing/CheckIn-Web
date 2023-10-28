@@ -1,11 +1,13 @@
 import React from "react";
 import * as S from "./style";
-import { Button, Flex, TextInput } from "@checkin/ui";
+import { Button, Flex, TextInput, TitleText } from "@checkin/ui";
 import NoticeList from "./NoticeList";
 import useWriteNotice from "@/hooks/Notice/useWriteNotice";
+import { useGetAllNoticeQuery } from "@/queries/Notice/query";
 
 const NoticeGenerate = () => {
   const { notice, onChangeNoticeData, onSubmitNoticeData } = useWriteNotice();
+  const { data } = useGetAllNoticeQuery();
   return (
     <S.NoticeGenerateContainer>
       <Flex gap={30}>
@@ -19,7 +21,12 @@ const NoticeGenerate = () => {
           공지 생성
         </Button>
       </Flex>
-      <NoticeList />
+      <S.NoticeListContainer>
+        <TitleText>NoticeList</TitleText>
+        {data?.data.map((data) => (
+          <NoticeList data={data} />
+        ))}
+      </S.NoticeListContainer>
     </S.NoticeGenerateContainer>
   );
 };

@@ -1,12 +1,12 @@
 import { usePatchNoticeStatusMutation } from "@/queries/Notice/query";
 import { CheckinToast } from "@checkin/toast";
 import { useBooleanState } from "@checkin/util";
-import { useState } from "react";
+import { useEffect } from "react";
 import { useQueryClient } from "react-query";
 
 interface Props {
   id: number;
-  status: "ACTIVE" | "DEACTIVATED";
+  status: string;
 }
 
 const usePatchNoticeStatus = ({ id, status }: Props) => {
@@ -19,17 +19,17 @@ const usePatchNoticeStatus = ({ id, status }: Props) => {
     setValue: setNoticeStatus,
   } = useBooleanState();
 
-  setNoticeStatus(status === "ACTIVE" ? true : false);
-
-  const onChangeStatus = () => {
-    toggle();
-  };
+  useEffect(() => {
+    setNoticeStatus(status === "ACTIVE" ? true : false);
+  }, []);
 
   const onPatchNoticeStatus = () => {
+    setNoticeStatus((prev) => !prev);
+
     pathNoticeStatusMutation.mutate(
       {
         id: String(id),
-        noticeStatus: noticeStatus ? "ACTIVE" : "DEACTIVATED",
+        noticeStatus: noticeStatus ? "DEACTIVATED" : "ACTIVE",
       },
       {
         onSuccess: () => {
@@ -37,13 +37,13 @@ const usePatchNoticeStatus = ({ id, status }: Props) => {
           queryClient.invalidateQueries("notice/allNotice");
         },
         onError: () => {
-          CheckinToast.showError("성공");
+          CheckinToast.showError("에러");
         },
       }
     );
   };
 
-  return { noticeStatus, setNoticeStatus, onChangeStatus };
+  return { noticeStatus, setNoticeStatus, onPatchNoticeStatus };
 };
 
 export default usePatchNoticeStatus;
