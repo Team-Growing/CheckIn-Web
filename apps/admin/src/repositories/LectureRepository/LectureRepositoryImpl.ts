@@ -16,9 +16,8 @@ class LectureRepositoryImpl implements LectureRepository {
     grade,
     status,
   }: getLecturesByLectureStatusParam): Promise<LecturesResponse> {
-    const {
-      data,
-    } = await apiClient.get(`/lecture?status=${status}&grade=${grade}
+    const { data } =
+      await apiClient.get(`/lecture?status=${status}&grade=${grade}
       `);
     return data;
   }
@@ -31,6 +30,11 @@ class LectureRepositoryImpl implements LectureRepository {
       lectureStatus,
       ids,
     });
+    return data;
+  }
+
+  public async getTodayLectures(): Promise<LecturesResponse> {
+    const { data } = await apiClient.get("/lecture/today");
     return data;
   }
 }

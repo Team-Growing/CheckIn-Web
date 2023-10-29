@@ -1,5 +1,6 @@
 import { getLecturesByLectureStatusParam } from "@/repositories/LectureRepository/LectureRepository";
 import LectureRepositoryImpl from "@/repositories/LectureRepository/LectureRepositoryImpl";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { useMutation, useQuery } from "react-query";
 
 export const useCreateLectureMutation = () => {
@@ -24,3 +25,13 @@ export const usePatchLectureStatusMutation = () => {
   const mutation = useMutation(LectureRepositoryImpl.patchLectureStatus);
   return mutation;
 };
+
+export const useGetTodayLecturesQuery = () =>
+  useQuery(
+    CheckInQueryKey.lecture.getToday,
+    () => LectureRepositoryImpl.getTodayLectures(),
+    {
+      staleTime: 1000 * 60 * 60,
+      cacheTime: 1000 * 60 * 60,
+    }
+  );
