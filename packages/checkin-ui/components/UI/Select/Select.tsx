@@ -9,6 +9,7 @@ import {
 import { IoIosArrowDown } from "react-icons/io";
 import { SelectProps } from "./types";
 import { useBooleanState, useOutsideClick } from "@checkin/util";
+import { CheckInColor } from "@checkin/styled-theme";
 
 export const Select = ({
   items,
@@ -17,6 +18,7 @@ export const Select = ({
   onChange,
   customStyle,
   name,
+  placeholder,
 }: SelectProps) => {
   const [close, setClose] = useState<boolean>(true);
   const {
@@ -39,7 +41,11 @@ export const Select = ({
         close={isOpen}
         onClick={handleToggleButtonClick}
       >
-        <SelectText>{value}</SelectText>
+        <SelectText
+          color={value === "" ? "#C1C7DE" : CheckInColor.Text.Darkest}
+        >
+          {value === "" ? placeholder : value}
+        </SelectText>
         <SelectIcon close={!isOpen}>
           <IoIosArrowDown />
         </SelectIcon>

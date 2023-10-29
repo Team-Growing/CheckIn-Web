@@ -11,6 +11,7 @@ export const SelectWrap = ({
   info,
   intro,
   zIndex,
+  placeholder,
 }: SelectWrapProps) => {
   return (
     <S.SelectWrapContainer>
@@ -26,6 +27,7 @@ export const SelectWrap = ({
         name={name}
         onChange={onChange}
         value={value}
+        placeholder={placeholder}
         customStyle={customStyle}
         zIndex={zIndex}
       />

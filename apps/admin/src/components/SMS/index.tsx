@@ -31,7 +31,8 @@ const SMS = () => {
         name="lectureId"
         items={todayLectures?.map((data) => data.lectureName)!}
         onChange={getLectureId}
-        value={lectureName === "" ? "방과후 이름" : lectureName}
+        value={lectureName}
+        placeholder="방과후 이름"
         customStyle={{ marginTop: "26px", background: "#fff" }}
       />
       <Flex direction="column" gap={10} customStyle={{ marginTop: "32px" }}>

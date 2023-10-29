@@ -23,7 +23,8 @@ const AbsenceForm = () => {
           name="lectureId"
           items={myLectures?.map((data) => data.lectureName)}
           onChange={onSetLectureId}
-          value={lectureName === "" ? "문의 제목을 입력해주세요" : lectureName}
+          value={lectureName}
+          placeholder="문의 제목을 입력해주세요"
           customStyle={{ width: "100%" }}
         />
       </S.ApplyoutFormInputWrap>
