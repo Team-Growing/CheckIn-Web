@@ -1,4 +1,3 @@
-import React, { Dispatch, SetStateAction } from "react";
 import { CSSObject } from "styled-components";
 
 export interface SelectProps {
@@ -8,4 +7,5 @@ export interface SelectProps {
   zIndex?: number;
   customStyle?: CSSObject;
   name: string;
+  placeholder?: string;
 }

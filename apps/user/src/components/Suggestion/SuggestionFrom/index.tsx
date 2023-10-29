@@ -43,11 +43,8 @@ const SuggestionForm = () => {
           items={["월요일", "화요일", "수요일", "목요일"]}
           name="dayOfWeek"
           onChange={onSetDayOfWeek}
-          value={
-            suggestionData.dayOfWeek == ""
-              ? "ex ) 월요일"
-              : suggestionData.dayOfWeek
-          }
+          value={suggestionData.dayOfWeek}
+          placeholder="ex ) 월요일"
         />
 
         <TextareaWrap

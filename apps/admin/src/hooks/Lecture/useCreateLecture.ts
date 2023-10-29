@@ -19,7 +19,7 @@ export const useCreateLecture = () => {
 
   const [lectureSelectState, setLectureSelectState] = useState({
     placeType: "",
-    lectureTag: "SPORTS",
+    lectureTag: "",
     teacherId: "",
     targetGrade: "",
   });

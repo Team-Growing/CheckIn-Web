@@ -1,6 +1,6 @@
 import { getRem } from "@checkin/util";
 import styled, { CSSObject, css } from "styled-components";
-
+import { CheckInColor } from "@checkin/styled-theme";
 export const SelectContainer = styled.div<{
   close: boolean;
   customStyle?: CSSObject;
@@ -24,10 +24,10 @@ export const SelectContainer = styled.div<{
   ${({ customStyle }) => customStyle}
 `;
 
-export const SelectText = styled.p`
+export const SelectText = styled.p<{ color: string }>`
   font-size: ${getRem(14)};
   white-space: nowrap;
-  color: #c1c7de;
+  color: ${({ color }) => color};
 `;
 
 export const SelectIcon = styled.div<{ close: boolean }>`
