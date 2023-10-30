@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import * as S from "./style";
 import { Flex, SectionHeader, Select, TitleText } from "@checkin/ui";
 import styled from "styled-components";
 import { useGetAttendanceListQuery } from "@/queries/Attendance/query";
 import { useGetTodayLecturesQuery } from "@/queries/Lecture/query";
+import { useState } from "react";
 
 const SMS = () => {
   const [lectureId, setLectureId] = useState(0);
@@ -19,7 +19,6 @@ const SMS = () => {
 
   const todayLectures = useGetTodayLecturesQuery().data?.data;
   const { data } = useGetAttendanceListQuery(lectureId);
-  console.log(todayLectures);
 
   return (
     <S.CheckAttendanceContainer>
