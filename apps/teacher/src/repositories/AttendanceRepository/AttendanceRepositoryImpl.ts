@@ -30,7 +30,7 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     return data;
   }
 
-  public async getAttendantsCode(): Promise<AttendanceListResponse> {
+  public async getAttendants(): Promise<AttendanceListResponse> {
     const { data } = await apiClient.get(`/attendance/9/attendants`);
     return data;
   }
@@ -47,6 +47,7 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     memberId,
   }: AttendMemberParam): Promise<Response> {
     const { data } = await apiClient.post(`/attendance/confirmation/9`, {
+      lectureId,
       memberId,
     });
     return data;

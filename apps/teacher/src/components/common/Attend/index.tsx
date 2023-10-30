@@ -1,9 +1,11 @@
 import React from "react";
 import * as S from "./style";
 import AttendIcon from "../../../assets/image/AttendTitleIcon.svg";
-import AttendCard from "../../common/Attend/AttendCard";
+import AttendCard from "./AttendCompletedCard";
 import { Button } from "@checkin/ui";
 import { useGetAttendantsQuery } from "@/queries/AttendanceCode/query";
+import AttendNotCompletedcard from "./AttendNotCompletedCard";
+import AttendCompletedcard from "./AttendCompletedCard";
 export type UserType = {
   id: number;
   name: string;
@@ -12,23 +14,6 @@ export type UserType = {
 };
 const Attend = () => {
   const { data } = useGetAttendantsQuery();
-
-  console.log(data?.data.attendants);
-
-  // const dummyList = [
-  //   {
-  //     id: 0,
-  //     name: "철수",
-  //     age: 27,
-  //     position: "front-end",
-  //   },
-  //   {
-  //     id: 1,
-  //     name: "민성",
-  //     age: 24,
-  //     position: "back-end",
-  //   },
-  // ];
   return (
     <>
       <S.AttendWrap>
@@ -56,19 +41,22 @@ const Attend = () => {
           </Button>
         </S.ButtonWrap>
         <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
-        <S.AttendListWrapper></S.AttendListWrapper>
+        <S.AttendListWrapper>
+          {data?.data.attendants.map((data) => (
+            <AttendCompletedcard key={data.id} user={data}>
+              {data.content}
+            </AttendCompletedcard>
+          ))}
+        </S.AttendListWrapper>
         <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
         <S.AttendListWrapper>
-          {data?.data.attendants.map((data) => {
+          {data?.data.nonAttendants.map((data) => {
             return (
-              <AttendCard key={data.id} user={data}>
+              <AttendNotCompletedcard key={data.id} user={data}>
                 {data.content}
-              </AttendCard>
+              </AttendNotCompletedcard>
             );
           })}
-          {/* {.map((data) => {
-            return <AttendCard key={data.id} user={data}></AttendCard>;
-          })} */}
         </S.AttendListWrapper>
       </S.AttendWrap>
     </>
