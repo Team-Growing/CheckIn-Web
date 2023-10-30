@@ -27,6 +27,6 @@ export interface AttendLectureParam {
 }
 
 export interface AttendMemberParam {
-  lectureId: string;
+  lectureId: number;
   memberId: string;
 }

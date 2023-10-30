@@ -7,6 +7,7 @@ export interface ButtonProps {
   onClick?: () => void;
   children: string;
   isSelect?: boolean;
+  value?: string;
 }
 
 export type ButtonType =

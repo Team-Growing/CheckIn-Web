@@ -14,7 +14,7 @@ export const useGetCodeQuery = () =>
 export const useGetAttendantsQuery = () =>
   useQuery(
     "/attendance/9/attendants",
-    () => AttendanceRepositoryImpl.getAttendantsCode(),
+    () => AttendanceRepositoryImpl.getAttendants(),
     {
       cacheTime: 1000 * 60 * 60,
       staleTime: 1000 * 60 * 60,
@@ -26,9 +26,14 @@ export const useChangeCodeMutation = () => {
   return mutation;
 };
 
+// export const useGetAttendanceMutation = () => {
+//   const mutation = useMutation(AttendanceRepositoryImpl.getAttendanceCode);
+
+//   return mutation;
+// };
+
 export const useGetAttendanceMutation = () => {
-  const mutation = useMutation(AttendanceRepositoryImpl.getAttendanceCode);
+  const mutation = useMutation(AttendanceRepositoryImpl.getAttendance);
 
   return mutation;
 };
-
