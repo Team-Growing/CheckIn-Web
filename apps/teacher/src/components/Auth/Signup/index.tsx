@@ -40,7 +40,7 @@ const Signup = ({ setIsLogin }: Props) => {
   return (
     <>
       <S.AuthTopWrap>
-        <CheckLogo />
+        <CheckLogo width="25" height="25" />
         <S.AuthHeading>회원가입</S.AuthHeading>
         <S.AuthSubHeading>
           DAS를 사용하기 위해 회원가입을 진행해주세요
