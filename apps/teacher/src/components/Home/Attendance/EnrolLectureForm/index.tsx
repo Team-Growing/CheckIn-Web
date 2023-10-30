@@ -12,14 +12,19 @@ import {
   useChangeCodeMutation,
   useGetCodeQuery,
 } from "@/queries/AttendanceCode/query";
+import { CheckinToast } from "@checkin/toast";
+import { useQueryClient } from "react-query";
+import { CheckInQueryKey } from "@checkin/querykey";
 
-const EnrolLecture = () => {
-  const { data } = useGetCodeQuery();
+interface Props {
+  lectureId: number;
+}
 
-  const onClickChangeHandler = () => {
-    console.log("변경");
-    useChangeCodeMutation();
-  };
+const EnrolLecture = ({ lectureId }: Props) => {
+  const { data } = useGetCodeQuery(lectureId);
+  const queryClient = useQueryClient();
+  const onClickChangeHandler = () => {};
+  const changeCodeMutation = useChangeCodeMutation();
   return (
     <>
       <EnrolLectureFormContainer>
@@ -32,7 +37,19 @@ const EnrolLecture = () => {
         <Button
           customStyle={{ width: "40%" }}
           type="primary"
-          onClick={onClickChangeHandler}
+          onClick={() =>
+            changeCodeMutation.mutate(
+              { lectureId },
+              {
+                onSuccess: () => {
+                  CheckinToast.showSuccess("변경");
+                  queryClient.invalidateQueries(
+                    CheckInQueryKey.attendance.getAttendanceCode(lectureId)
+                  );
+                },
+              }
+            )
+          }
         >
           출석코드 변경
         </Button>

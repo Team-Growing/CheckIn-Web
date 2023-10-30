@@ -10,6 +10,7 @@ import {
   AttendLectureParam,
   AttendMemberParam,
   AttendanceRepository,
+  PostConfirmAttendanceParam,
   enroLectureByIdParam,
   getLectureByIdParam,
 } from "./AttendanceRepository";
@@ -25,8 +26,8 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     return data;
   }
 
-  public async getAttendanceCode(): Promise<AttendanceCode> {
-    const { data } = await apiClient.get(`/attendance/code/9`);
+  public async getAttendanceCode(lectureId: number): Promise<AttendanceCode> {
+    const { data } = await apiClient.get(`/attendance/code/${lectureId}`);
     return data;
   }
 
@@ -50,6 +51,19 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
       lectureId,
       memberId,
     });
+    return data;
+  }
+
+  public async postConfirmAttendance({
+    lectureId,
+    memberId,
+  }: PostConfirmAttendanceParam): Promise<Response> {
+    const { data } = await apiClient.post(
+      `/attendance/confirmation/${lectureId}`,
+      {
+        memberId,
+      }
+    );
     return data;
   }
 }

@@ -1,10 +1,11 @@
 import AttendanceRepositoryImpl from "@/repositories/AttendanceRepository/AttendanceRepositoryImpl";
 import { useQuery, useMutation } from "react-query";
+import { CheckInQueryKey } from "@checkin/querykey";
 
-export const useGetCodeQuery = () =>
+export const useGetCodeQuery = (lectureId: number) =>
   useQuery(
-    "/attendance/code/9",
-    () => AttendanceRepositoryImpl.getAttendanceCode(),
+    CheckInQueryKey.attendance.getAttendanceCode(lectureId),
+    () => AttendanceRepositoryImpl.getAttendanceCode(lectureId),
     {
       cacheTime: 1000 * 60 * 60,
       staleTime: 1000 * 60 * 60,
@@ -32,7 +33,12 @@ export const useChangeCodeMutation = () => {
 //   return mutation;
 // };
 
-export const useGetAttendanceMutation = () => {
+export const usePostConfirmAttendanceMutation = () => {
+  const mutation = useMutation(AttendanceRepositoryImpl.postConfirmAttendance);
+  return mutation;
+};
+
+export const useAttendanceMutation = () => {
   const mutation = useMutation(AttendanceRepositoryImpl.getAttendance);
 
   return mutation;

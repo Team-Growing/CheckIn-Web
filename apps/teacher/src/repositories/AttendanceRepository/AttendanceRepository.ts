@@ -7,8 +7,14 @@ import {
 
 export interface AttendanceRepository {
   attendanceLecture({ code, lectureId }: AttendLectureParam): Promise<Response>;
-  getAttendanceCode(): Promise<AttendanceCode>;
+  getAttendanceCode(lectureId: number): Promise<AttendanceCode>;
   getAttendance({ lectureId, memberId }: AttendMemberParam): Promise<Response>;
+  postConfirmAttendance(param: PostConfirmAttendanceParam): Promise<Response>;
+}
+
+export interface PostConfirmAttendanceParam {
+  lectureId: number;
+  memberId: string;
 }
 
 export interface enroLectureByIdParam {
