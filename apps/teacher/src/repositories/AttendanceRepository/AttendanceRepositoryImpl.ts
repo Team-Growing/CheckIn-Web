@@ -72,8 +72,11 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     lectureId,
     memberId,
   }: ChangeAttendanceStatusParam): Promise<Response> {
-    const { data } = await apiClient.delete(
-      `/attendance/${lectureId}/cancellation/${memberId}`
+    const {
+      data,
+    } = await apiClient.delete(
+      `/attendance/${lectureId}/cancellation/${memberId}`,
+      { data: { memberId } }
     );
     return data;
   }
