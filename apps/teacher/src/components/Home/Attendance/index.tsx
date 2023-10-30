@@ -1,6 +1,6 @@
 import { Card, CardTitle, Flex, Button } from "@checkin/ui";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CalendarImg from "../../../assets/Icon/Calendar.svg";
 import EnrolLecture from "./EnrolLectureForm";
 import { EnrolLectureButtonContainer } from "./EnrolLectureForm/style";
@@ -9,6 +9,7 @@ import { useGetMyLectures } from "@/queries/Lectures/query";
 const Enrol = () => {
   const { data } = useGetMyLectures();
   const [lectureId, setLectureId] = useState(0);
+
   return (
     <Card
       type="Enrol"
