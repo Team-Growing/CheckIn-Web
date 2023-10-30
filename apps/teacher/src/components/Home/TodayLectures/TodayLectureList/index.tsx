@@ -7,17 +7,17 @@ interface Props {
   data: LecturesResponse;
 }
 
-const TodayLaectureList = () => {
+const TodayLaectureList = ({ data }: Props) => {
   return (
     <LectureListWrapper>
-      {Array.from({ length: 10 }).map((idx, d) => (
+      {data.data.map((data) => (
         <LectureBox
-          grade="2학년"
-          people="10명"
-          place="강당"
-          teacher="백승하"
-          title="야구"
-          key={d}
+          grade={data.acceptableStudent.targetGrade}
+          lectureTag={data.lectureTag}
+          people={data.enrollStudent}
+          place={data.placeType}
+          teacher={data.lectureTeacher.name}
+          title={data.lectureName}
         />
       ))}
     </LectureListWrapper>

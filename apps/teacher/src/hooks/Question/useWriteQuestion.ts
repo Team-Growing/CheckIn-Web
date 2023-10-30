@@ -1,6 +1,6 @@
 import { useWriteQuestionMutation } from "@/queries/Question/query";
 import { CheckinToast } from "@checkin/toast";
-import { ChangeEvent, useCallback, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useQueryClient } from "react-query";
 
 const useWriteQuestion = () => {
@@ -10,7 +10,9 @@ const useWriteQuestion = () => {
 
   const [questionData, setQuestionData] = useState({ title: "", content: "" });
 
-  const onChangeQuestionData = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChangeQuestionData = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { value, name } = e.target;
     setQuestionData({ ...questionData, [name]: value });
   };
