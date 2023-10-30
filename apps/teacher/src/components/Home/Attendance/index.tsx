@@ -1,11 +1,14 @@
 import { Card, CardTitle, Flex, Button } from "@checkin/ui";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import CalendarImg from "../../../assets/Icon/Calendar.svg";
 import EnrolLecture from "./EnrolLectureForm";
 import { EnrolLectureButtonContainer } from "./EnrolLectureForm/style";
+import { useGetMyLectures } from "@/queries/Lectures/query";
 
 const Enrol = () => {
+  const { data } = useGetMyLectures();
+  const [lectureId, setLectureId] = useState(0);
   return (
     <Card
       type="Enrol"
@@ -24,12 +27,16 @@ const Enrol = () => {
         출석코드 생성
       </CardTitle>
       <EnrolLectureButtonContainer>
-        <Button customStyle={{ width: "15%" }} type="primary">
-          테니스A
-        </Button>
-        <Button customStyle={{ width: "15%" }} type="unSelect">
-          테니스B
-        </Button>
+        {data?.data.map((data) => (
+          <Button
+            onClick={() => setLectureId(data.lectureId.value)}
+            customStyle={{ width: "15%" }}
+            type="unSelect"
+            isSelect={lectureId === data.lectureId.value ? true : false}
+          >
+            {data.lectureName}
+          </Button>
+        ))}
       </EnrolLectureButtonContainer>
       <Flex
         gap={20}
@@ -40,7 +47,7 @@ const Enrol = () => {
           height: "100%",
         }}
       >
-        <EnrolLecture />
+        <EnrolLecture lectureId={lectureId} />
       </Flex>
     </Card>
   );

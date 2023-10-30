@@ -1,18 +1,7 @@
-// import {
-//   useChangeCodeQuery,
-//   useGetAttendanceMutation,
-// } from "@/queries/AttendanceCode/query";
-// import { CheckinToast } from "@checkin/toast";
-// import { ChangeEvent, useCallback, useState } from "react";
-// import { useQueryClient } from "react-query";
+import React from "react";
 
-// const useChangeCode = () => {
-//   const { data } = useChangeCodeQuery;
+const useChangeCode = () => {
+  return {};
+};
 
-//   return {
-//     attendanceData,
-//     onSubmitQuestionData,
-//   };
-// };
-
-// export default useChangeCode;
+export default useChangeCode;
