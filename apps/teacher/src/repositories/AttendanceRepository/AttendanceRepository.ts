@@ -9,10 +9,13 @@ export interface AttendanceRepository {
   attendanceLecture({ code, lectureId }: AttendLectureParam): Promise<Response>;
   getAttendanceCode(lectureId: number): Promise<AttendanceCode>;
   getAttendance({ lectureId, memberId }: AttendMemberParam): Promise<Response>;
-  postConfirmAttendance(param: PostConfirmAttendanceParam): Promise<Response>;
+  postConfirmAttendance(param: ChangeAttendanceStatusParam): Promise<Response>;
+  deleteCancelAttdendance(
+    param: ChangeAttendanceStatusParam
+  ): Promise<Response>;
 }
 
-export interface PostConfirmAttendanceParam {
+export interface ChangeAttendanceStatusParam {
   lectureId: number;
   memberId: string;
 }

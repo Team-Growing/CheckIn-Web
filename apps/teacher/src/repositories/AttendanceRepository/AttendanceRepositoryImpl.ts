@@ -10,7 +10,7 @@ import {
   AttendLectureParam,
   AttendMemberParam,
   AttendanceRepository,
-  PostConfirmAttendanceParam,
+  ChangeAttendanceStatusParam,
   enroLectureByIdParam,
   getLectureByIdParam,
 } from "./AttendanceRepository";
@@ -31,8 +31,10 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     return data;
   }
 
-  public async getAttendants(): Promise<AttendanceListResponse> {
-    const { data } = await apiClient.get(`/attendance/9/attendants`);
+  public async getAttendants(
+    lectureId: number
+  ): Promise<AttendanceListResponse> {
+    const { data } = await apiClient.get(`/attendance/${lectureId}/attendants`);
     return data;
   }
 
@@ -57,12 +59,21 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
   public async postConfirmAttendance({
     lectureId,
     memberId,
-  }: PostConfirmAttendanceParam): Promise<Response> {
+  }: ChangeAttendanceStatusParam): Promise<Response> {
     const { data } = await apiClient.post(
       `/attendance/confirmation/${lectureId}`,
       {
         memberId,
       }
+    );
+    return data;
+  }
+  public async deleteCancelAttdendance({
+    lectureId,
+    memberId,
+  }: ChangeAttendanceStatusParam): Promise<Response> {
+    const { data } = await apiClient.delete(
+      `/attendance/${lectureId}/cancellation/${memberId}`
     );
     return data;
   }
