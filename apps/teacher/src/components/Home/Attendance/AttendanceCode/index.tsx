@@ -4,10 +4,9 @@ import {
   EnrolLectureForm,
   EnrolLectureFormContainer,
   EnrolLectureFormText,
-  EnrolLectureInput,
   EnrolLecutureTextContainer,
 } from "./style";
-import { Button, Flex } from "@checkin/ui";
+import { Button } from "@checkin/ui";
 import {
   useChangeCodeMutation,
   useGetCodeQuery,
@@ -20,7 +19,7 @@ interface Props {
   lectureId: number;
 }
 
-const EnrolLecture = ({ lectureId }: Props) => {
+const AttendanceCode = ({ lectureId }: Props) => {
   const { data } = useGetCodeQuery(lectureId);
   const queryClient = useQueryClient();
   const onClickChangeHandler = () => {};
@@ -58,4 +57,4 @@ const EnrolLecture = ({ lectureId }: Props) => {
   );
 };
 
-export default EnrolLecture;
+export default AttendanceCode;

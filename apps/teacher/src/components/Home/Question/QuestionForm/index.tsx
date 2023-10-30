@@ -1,25 +1,17 @@
-import React, { useState } from "react";
-import { Button, Select, Textarea, Flex } from "@checkin/ui";
+import React from "react";
+import { Button, Textarea, Flex } from "@checkin/ui";
 import * as S from "./style";
 import useWriteQuestion from "@/hooks/Question/useWriteQuestion";
 
-const ApplyoutForm = () => {
+const QuestionForm = () => {
   const {
     questionData,
     onChangeQuestionData,
     onSubmitQuestionData,
   } = useWriteQuestion();
 
-  const [value, setValue] = useState("문의 제목을 선택해주세요");
-
   const autoResizeTextarea = () => {
     let textarea = document.querySelector(".autoTextarea");
-
-    if (textarea) {
-      textarea.style.height = "auto";
-      let height = textarea.scrollHeight; // 높이
-      textarea.style.height = `${height + 8}px`;
-    }
   };
 
   return (
@@ -30,9 +22,8 @@ const ApplyoutForm = () => {
         </S.ApplyoutRequireText>
         <Textarea
           placeholder="문의 제목을 입력해주세요"
-          customStyle={{ width: "100%" }}
-          type="text"
-          maxLength="1200%"
+          customStyle={{ width: "100%", height: "40px" }}
+          maxLength={1200}
           value={questionData.title}
           name="title"
           onChange={onChangeQuestionData}
@@ -41,25 +32,24 @@ const ApplyoutForm = () => {
           onKeyUp={autoResizeTextarea} // keyup이되엇을때마다 autoResizeTextarea실행
         />
       </S.ApplyoutFormInputWrap>
-      <S.ApplyoutFormInputWrap>
+      <S.ApplyoutFormInputWrap style={{ height: "50%" }}>
         <S.ApplyoutRequireText>
           문의 내용 <span>*</span>
         </S.ApplyoutRequireText>
         <Textarea
           placeholder="문의 내용을 입력해주세요"
-          customStyle={{ width: "100%" }}
-          type="text"
+          customStyle={{ width: "100%", height: "100%" }}
           value={questionData.content}
           name="content"
           onChange={onChangeQuestionData}
-          maxLength="1200%"
+          maxLength={1200}
           className="autoTextarea"
           onKeyDown={autoResizeTextarea} // keydown이되엇을때마다 autoResizeTextarea실행
           onKeyUp={autoResizeTextarea} // keyup이되엇을때마다 autoResizeTextarea실행
         />
       </S.ApplyoutFormInputWrap>
       <Flex
-        justify={"center"}
+        justify="end"
         customStyle={{
           width: "100%",
         }}
@@ -68,7 +58,7 @@ const ApplyoutForm = () => {
         <Button
           type="primary"
           onClick={onSubmitQuestionData}
-          style={{ width: "200px" }}
+          customStyle={{ width: "200px" }}
         >
           문의하기
         </Button>
@@ -77,4 +67,4 @@ const ApplyoutForm = () => {
   );
 };
 
-export default ApplyoutForm;
+export default QuestionForm;

@@ -1,10 +1,10 @@
 import { Card, CardTitle, Flex, Button } from "@checkin/ui";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CalendarImg from "../../../assets/Icon/Calendar.svg";
-import EnrolLecture from "./EnrolLectureForm";
-import { EnrolLectureButtonContainer } from "./EnrolLectureForm/style";
 import { useGetMyLectures } from "@/queries/Lectures/query";
+import AttendanceCode from "./AttendanceCode";
+import { EnrolLectureButtonContainer } from "./AttendanceCode/style";
 
 const Enrol = () => {
   const { data } = useGetMyLectures();
@@ -48,7 +48,7 @@ const Enrol = () => {
           height: "100%",
         }}
       >
-        <EnrolLecture lectureId={lectureId} />
+        <AttendanceCode lectureId={lectureId} />
       </Flex>
     </Card>
   );

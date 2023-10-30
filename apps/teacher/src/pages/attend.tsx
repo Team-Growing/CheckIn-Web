@@ -1,4 +1,4 @@
-import Attend from "@/components/common/Attend";
+import Attend from "@/components/Attend";
 
 export default function Home() {
   return <Attend />;

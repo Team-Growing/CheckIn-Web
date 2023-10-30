@@ -2,7 +2,7 @@ import { Card, CardTitle } from "@checkin/ui";
 import Image from "next/image";
 import React from "react";
 import Write from "../../../assets/Icon/Write.svg";
-import ApplyoutForm from "./ApplyoutForm";
+import QuestionForm from "./QuestionForm";
 
 const Applyout = () => {
   return (
@@ -17,7 +17,7 @@ const Applyout = () => {
         />
         담당자 문의
       </CardTitle>
-      <ApplyoutForm />
+      <QuestionForm />
     </Card>
   );
 };
