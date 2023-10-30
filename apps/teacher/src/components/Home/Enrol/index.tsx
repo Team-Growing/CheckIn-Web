@@ -2,7 +2,7 @@ import { Card, CardTitle, Flex, Button } from "@checkin/ui";
 import Image from "next/image";
 import React from "react";
 import CalendarImg from "../../../assets/Icon/Calendar.svg";
-import EnrolLectureForm from "./EnrolLectureForm";
+import EnrolLecture from "./EnrolLectureForm";
 import { EnrolLectureButtonContainer } from "./EnrolLectureForm/style";
 
 const Enrol = () => {
@@ -40,7 +40,7 @@ const Enrol = () => {
           height: "100%",
         }}
       >
-        <EnrolLectureForm />
+        <EnrolLecture />
       </Flex>
     </Card>
   );

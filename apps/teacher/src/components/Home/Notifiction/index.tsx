@@ -19,8 +19,6 @@ const Notifiction = () => {
     arrow: false,
   };
 
-  console.log();
-
   return (
     <NoticeContainer>
       <CardTitle>

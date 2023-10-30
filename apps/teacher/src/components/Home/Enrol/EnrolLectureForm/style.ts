@@ -1,9 +1,19 @@
 import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
-export const EnrolLectureFormContainer = styled.form`
+export const EnrolLectureFormContainer = styled.div`
   width: 100%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+`;
+export const EnrolLectureForm = styled.form`
+  width: 100%;
+  height: 50%;
 
   row-gap: 40px;
 

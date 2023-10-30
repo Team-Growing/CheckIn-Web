@@ -9,6 +9,7 @@ export const Button = ({
   customStyle,
   children,
   isSelect,
+  value,
 }: ButtonProps) => {
   return (
     <ButtonContainer
@@ -16,6 +17,7 @@ export const Button = ({
       customStyle={customStyle}
       onClick={onClick}
       buttonType={type}
+      value={value}
     >
       {children}
     </ButtonContainer>

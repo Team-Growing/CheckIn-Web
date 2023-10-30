@@ -26,11 +26,15 @@ export interface AttendanceList {
 }
 
 export interface AttendanceListResponse {
-  data: AttendanceList[];
+  data: AttendanceList;
 }
 
 export interface AttendanceCode extends Response {
   data: {
     code: string;
   };
+}
+
+export interface AttendanceCodeResponse {
+  lectureId: number;
 }

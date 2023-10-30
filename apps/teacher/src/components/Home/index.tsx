@@ -5,8 +5,11 @@ import TodayLectures from "./TodayLectures";
 import Notifiction from "./Notifiction";
 import Applyout from "./Applyout";
 import Enrol from "./Enrol";
+import { useGetMyLectures } from "@/queries/Lectures/query";
 
 const Home = () => {
+  const { data } = useGetMyLectures();
+  console.log(data?.status);
   return (
     <S.HomeContainer>
       <TodayLectures />
