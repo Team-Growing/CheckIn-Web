@@ -1,34 +1,19 @@
 import React from "react";
 import * as S from "./style";
 import AttendIcon from "../../../assets/image/AttendTitleIcon.svg";
-import AttendCard from "../../common/Attend/AttendCard";
+import AttendCard from "./AttendCompletedCard";
 import { Button } from "@checkin/ui";
-
-const dummyList = [
-  {
-    id: 1,
-    author: "hyun",
-    content: "첫번째",
-    emotion: 1,
-    created_date: new Date().getTime(),
-  },
-  {
-    id: 2,
-    author: "jeong",
-    content: "두번째",
-    emotion: 2,
-    created_date: new Date().getTime(),
-  },
-  {
-    id: 3,
-    author: "react",
-    content: "3번째",
-    emotion: 3,
-    created_date: new Date().getTime(),
-  },
-];
-
+import { useGetAttendantsQuery } from "@/queries/AttendanceCode/query";
+import AttendNotCompletedcard from "./AttendNotCompletedCard";
+import AttendCompletedcard from "./AttendCompletedCard";
+export type UserType = {
+  id: number;
+  name: string;
+  age: number;
+  position: string;
+};
 const Attend = () => {
+  const { data } = useGetAttendantsQuery();
   return (
     <>
       <S.AttendWrap>
@@ -57,15 +42,21 @@ const Attend = () => {
         </S.ButtonWrap>
         <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
         <S.AttendListWrapper>
-          {[...Array(5)].map((idx) => (
-            <AttendCard></AttendCard>
+          {data?.data.attendants.map((data) => (
+            <AttendCompletedcard key={data.id} user={data}>
+              {data.content}
+            </AttendCompletedcard>
           ))}
         </S.AttendListWrapper>
         <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
         <S.AttendListWrapper>
-          {[...Array(5)].map((idx) => (
-            <AttendCard></AttendCard>
-          ))}
+          {data?.data.nonAttendants.map((data) => {
+            return (
+              <AttendNotCompletedcard key={data.id} user={data}>
+                {data.content}
+              </AttendNotCompletedcard>
+            );
+          })}
         </S.AttendListWrapper>
       </S.AttendWrap>
     </>
