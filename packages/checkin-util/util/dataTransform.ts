@@ -44,6 +44,32 @@ class dataTransForm {
     }
   }
 
+  public submitPlaceType(placeType: LecturePlaceType | string) {
+    switch (placeType) {
+      case "운동장":
+        return "PLAYGROUND";
+      case "강당":
+        return "GYM";
+      case "농구장":
+        return "BASKETBALL_COURT";
+      case "테니스장":
+        return "TENNIS_COURT";
+    }
+  }
+
+  public submitTransformDayofWeek(dayOfWeek: DayOfWeekType | string) {
+    switch (dayOfWeek) {
+      case "월요일":
+        return "MONDAY";
+      case "화요일":
+        return "TUESDAY";
+      case "수요일":
+        return "WEDNESDAY";
+      case "목요일":
+        return "THURSDAY";
+    }
+  }
+
   public TransformDayOfWeek(dayOfWeek: DayOfWeekType | string) {
     switch (dayOfWeek) {
       case "MONDAY":
