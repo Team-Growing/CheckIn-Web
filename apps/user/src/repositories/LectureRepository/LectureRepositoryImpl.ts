@@ -23,7 +23,7 @@ class LectureRepositoryImpl implements LectureRepository {
   }
 
   public async getMyLectures(): Promise<LecturesResponse> {
-    const { data } = await apiClient.get("/member/lectures/my");
+    const { data } = await apiClient.get("/lecture/my");
     return data;
   }
 
@@ -31,6 +31,16 @@ class LectureRepositoryImpl implements LectureRepository {
     const { data } = await apiClient.get(
       `/lecture?status=ENROLMENT&grade=${grade}`
     );
+    return data;
+  }
+
+  public async getTodayMyLectures(): Promise<LecturesResponse> {
+    const { data } = await apiClient.get("/lecture/my/today");
+    return data;
+  }
+
+  public async getMemberLectures(): Promise<LecturesResponse> {
+    const { data } = await apiClient.get("/lecture/my");
     return data;
   }
 }
