@@ -6,23 +6,25 @@ interface Props {
   status: string;
   lectureIdList: number[];
   onChangeLectureIdList: (id: number) => void;
+  grade: number;
 }
 
 const LecturesList = ({
   status,
   onChangeLectureIdList,
   lectureIdList,
+  grade,
 }: Props) => {
-  const { data } = useGetLecturesByStatus({ status, grade: 2 });
+  const { data } = useGetLecturesByStatus({ status, grade });
 
   return (
     <>
       {data?.data.map((data) => (
         <LectureTagBox
           key={data.lectureId.value}
-          grade={String(data.acceptableStudent.targetGrade)}
+          grade={data.acceptableStudent.targetGrade}
           lectureTag={data.lectureTag}
-          people={String(data.enrollStudent)}
+          people={data.enrollStudent}
           place={data.placeType}
           teacher={data.lectureTeacher.teacherId.value}
           title={data.lectureName}

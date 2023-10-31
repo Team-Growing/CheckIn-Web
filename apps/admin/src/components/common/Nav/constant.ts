@@ -24,7 +24,7 @@ export const NAV_ITEM = [
   },
   {
     title: "방과후 관리",
-    path: "/cms",
+    path: "/cms/1",
     icon: MypageIcon,
   },
 ];
