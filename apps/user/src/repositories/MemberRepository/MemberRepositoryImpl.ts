@@ -7,11 +7,6 @@ class MemberRepositoryImpl implements MemberRepository {
     const { data } = await apiClient.get("/member/my");
     return data;
   }
-
-  public async getMemberLectures(): Promise<LecturesResponse> {
-    const { data } = await apiClient.get("/member/lectures/my");
-    return data;
-  }
 }
 
 export default new MemberRepositoryImpl();
