@@ -13,7 +13,3 @@ export interface EnroLectureByIdParam {
 }
 
 export interface GetLecturesParam extends Lectures {}
-
-export interface getLectureByIdParam {
-  id: string;
-}
