@@ -19,3 +19,5 @@ export * from "./Attendance/Attendance.type";
 export * from "./Suggestion/Suggestion.type";
 
 export * from "./Question/Question.type";
+
+export * from "./Absence/Absence.type";

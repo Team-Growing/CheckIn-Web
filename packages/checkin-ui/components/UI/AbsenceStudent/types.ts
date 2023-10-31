@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 
 export interface AbsenseStudentBox {
   name: string;
-  grade: string;
-  room: string;
-  number: string;
+  grade: number;
+  room: number;
+  number: number;
   reason: string;
   children: ReactNode;
 }

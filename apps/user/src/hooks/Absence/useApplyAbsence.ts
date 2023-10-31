@@ -1,5 +1,5 @@
 import { useApplyAbsenceMutation } from "@/queries/Absence/query";
-import { useGetMyLectures } from "@/queries/Lectures/query";
+import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
 import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
 import { ChangeEvent, FormEvent, useState } from "react";
@@ -10,7 +10,7 @@ const useApplyAbsence = () => {
 
   const applyAbsenceMutation = useApplyAbsenceMutation();
 
-  const myLectures = useGetMyLectures().data?.data!;
+  const myLectures = useGetTodayMyLecturesQuery().data?.data!;
 
   const [lectureName, setLectureName] = useState("");
 

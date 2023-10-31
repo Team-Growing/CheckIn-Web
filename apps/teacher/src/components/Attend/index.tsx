@@ -14,7 +14,7 @@ export type UserType = {
 const Attend = () => {
   const { data: myLecturesData } = useGetMyLectures();
 
-  const [lectureId, setLectureId] = useState(0);
+  const [lectureId, setLectureId] = useState<number>(0);
 
   const { data: attendanceListData } = useGetAttendantsQuery(lectureId!);
   const {
@@ -82,6 +82,29 @@ const Attend = () => {
                 }
               >
                 출석
+              </Button>
+            </AttendanceStudent>
+          ))}
+        </S.AttendListWrapper>
+        <S.AttendStudentTitle>결강한 학생</S.AttendStudentTitle>
+        <S.AttendListWrapper>
+          {attendanceListData?.data.absentees.map((data) => (
+            <AttendanceStudent
+              grade={data.studentInfo.grade}
+              name={data.name}
+              number={data.studentInfo.number}
+              room={data.studentInfo.room}
+            >
+              <Button
+                type="unSelect"
+                onClick={() =>
+                  onChangeAttendanceStatusCancel({
+                    lectureId,
+                    memberId: data.id,
+                  })
+                }
+              >
+                결강중
               </Button>
             </AttendanceStudent>
           ))}
