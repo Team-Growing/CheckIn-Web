@@ -1,11 +1,11 @@
 import * as S from "./style";
-import { useRouter } from "next/router";
 import { ProfileIcon } from "@checkin/icon";
 import { useGetMemberInfoQuery } from "@/queries/Member/query";
+import useLogout from "@/hooks/Auth/useLogout";
 
 const NavUser = () => {
   const { data } = useGetMemberInfoQuery();
-  const router = useRouter();
+  const { onLogout } = useLogout();
 
   return (
     <S.NavBottomBox>
@@ -19,10 +19,8 @@ const NavUser = () => {
         </S.NavUserInfoBox>
       </S.NavUserBox>
       <S.NavAuthBox>
-        <S.NavLoginText onClick={() => router.push("/sign")}>
-          로그인
-        </S.NavLoginText>
-        <S.NavLoginText>회원가입</S.NavLoginText>
+        <S.NavLoginText onClick={onLogout}>로그아웃</S.NavLoginText>
+        {/* <S.NavLoginText>회원가입</S.NavLoginText> */}
       </S.NavAuthBox>
     </S.NavBottomBox>
   );

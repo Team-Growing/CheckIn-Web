@@ -5,7 +5,7 @@ import {
   ACCESS_TOKEN_KEY,
   REFRESH_TOKEN_KEY,
 } from "@/constant/Token/Token.constant";
-import { usePostLoginMutation } from "@/queries/Auth/Auth.query";
+import { usePostLoginMutation } from "@/queries/Auth/query";
 import Token from "@/libs/token/Token";
 import { CheckinToast } from "@checkin/toast";
 
