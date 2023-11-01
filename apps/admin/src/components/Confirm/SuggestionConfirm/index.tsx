@@ -21,16 +21,14 @@ const SuggestionConfirm = () => {
     setPage(page);
   };
 
-  const {
-    value: isOpened,
-    setFalse: close,
-    setTrue: open,
-  } = useBooleanState(false);
+  const { value: isOpened, setFalse: close, setTrue: open } = useBooleanState(
+    false
+  );
 
   return (
     <>
       <ConfirmLengthText>
-        총 <span>{serverSuggestionsData?.data.totalCount}개의</span>의 수업제안
+        총 <span>{serverSuggestionsData?.data.totalCount}개</span>의 수업제안
         있습니다.
       </ConfirmLengthText>
       <S.ConfirmListContainer>

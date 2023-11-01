@@ -21,16 +21,14 @@ const QuestionConfirm = () => {
     setPage(page);
   };
 
-  const {
-    value: isOpened,
-    setFalse: close,
-    setTrue: open,
-  } = useBooleanState(false);
+  const { value: isOpened, setFalse: close, setTrue: open } = useBooleanState(
+    false
+  );
 
   return (
     <>
       <ConfirmLengthText>
-        총 <span>{serverQuestionsData?.data.totalCount}개의</span>의 문의가
+        총 <span>{serverQuestionsData?.data.totalCount}개</span>의 문의가
         있습니다.
       </ConfirmLengthText>
       <S.ConfirmListContainer>
