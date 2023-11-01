@@ -1,12 +1,8 @@
 import AttendanceRepositoryImpl from "@/repositories/AttendanceRepository/AttendanceRepositoryImpl";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { useQuery } from "react-query";
 
 export const useGetAttendanceListQuery = (lectureId: number) =>
-  useQuery(
-    "lecture/lectureAttendance",
-    () => AttendanceRepositoryImpl.getAttendanceList(lectureId),
-    {
-      staleTime: 1000 * 60 * 60,
-      cacheTime: 1000 * 60 * 60,
-    }
+  useQuery(CheckInQueryKey.attendance.getAttendacneList(lectureId), () =>
+    AttendanceRepositoryImpl.getAttendanceList(lectureId)
   );

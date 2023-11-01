@@ -1,18 +1,27 @@
 import React from "react";
 import { MyCancelLecturesContainer } from "./style";
+import { useGetMyAbsenceQuery } from "@/queries/Absence/query";
 import { CheckMyAbsense } from "@checkin/ui";
 
-const MyCancelLectures = () => {
+interface Props {
+  grade: number;
+  number: number;
+  room: number;
+  name: string;
+}
+
+const MyCancelLectures = ({ grade, name, number, room }: Props) => {
+  const { data: myAbsenceData } = useGetMyAbsenceQuery();
   return (
     <MyCancelLecturesContainer>
-      {Array.from({ length: 2 }).map(() => (
+      {myAbsenceData?.data.map((data) => (
         <CheckMyAbsense
-          grade="2"
-          isCheck={true}
-          name="백승하"
-          number="12"
-          reason="눈이 너무너무 아파요"
-          room="1"
+          grade={grade}
+          isCheck={data.absenceStatus === "ABSENCE_PENDING" ? false : true}
+          name={name}
+          number={number}
+          reason={data.reason}
+          room={room}
         />
       ))}
     </MyCancelLecturesContainer>

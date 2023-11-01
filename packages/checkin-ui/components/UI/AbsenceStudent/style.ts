@@ -2,6 +2,7 @@ import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const AbsenceStudentListContainer = styled.div`
+  width: 100%;
   height: 90px;
 
   display: flex;
@@ -12,6 +13,8 @@ export const AbsenceStudentListContainer = styled.div`
 
   padding-left: 17px;
   padding-right: 28px;
+
+  column-gap: 10px;
 
   background-color: #fff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
@@ -58,6 +61,9 @@ export const AbsensedReasonText = styled.p`
 export const CheckMyAbsenseBox = styled.div`
   width: 40%;
   height: 90px;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 
   display: flex;
   align-items: center;

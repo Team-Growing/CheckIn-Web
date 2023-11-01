@@ -1,4 +1,5 @@
 import { Response } from "../util/response";
+
 export interface AttendanceList {
   attendStudentCnt: number;
   attendants: [
@@ -13,6 +14,17 @@ export interface AttendanceList {
     }
   ];
   nonAttendants: [
+    {
+      id: string;
+      name: string;
+      studentInfo: {
+        grade: number;
+        room: number;
+        number: number;
+      };
+    }
+  ];
+  absentees: [
     {
       id: string;
       name: string;

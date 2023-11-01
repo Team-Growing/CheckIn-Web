@@ -5,6 +5,7 @@ export const CheckInQueryKey = {
   },
   absence: {
     getMy: "absence/myAbsence",
+    getAll: "absence/getAbsences",
   },
   lecture: {
     getToday: "lectures/todayLectures",

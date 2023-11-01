@@ -20,7 +20,11 @@ export const AbsenceStudentList = ({
           <Flex gap={5}>
             <S.AbsensedStudentName>{name}</S.AbsensedStudentName>
             <S.AbsensedStudentInfoText>
-              {dataTransform.schoolInfoTransform(grade, room, number)}
+              {dataTransform.schoolInfoTransform(
+                grade || 0,
+                room || 0,
+                number || 0
+              )}
             </S.AbsensedStudentInfoText>
           </Flex>
           <S.AbsensedReasonText>{`사유 : ${reason}`}</S.AbsensedReasonText>

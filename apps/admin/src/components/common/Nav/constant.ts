@@ -1,9 +1,9 @@
 import {
   MypageIcon,
-  NoticeIcon,
   SchoolIcon,
   GenerateIcon,
   CheckSuggestionIcon,
+  AbsenceIcon,
 } from "@checkin/icon";
 
 export const NAV_ITEM = [
@@ -26,5 +26,11 @@ export const NAV_ITEM = [
     title: "방과후 관리",
     path: "/cms/1",
     icon: MypageIcon,
+  },
+
+  {
+    title: "결강자 관리",
+    path: "/absence/list",
+    icon: AbsenceIcon,
   },
 ];

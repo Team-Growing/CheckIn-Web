@@ -3,6 +3,7 @@ export * from "./src/Nav/NoticeIcon";
 export * from "./src/Nav/SchoolIcon";
 export * from "./src/Nav/CheckSuggestionIcon";
 export * from "./src/Nav/GenerateIcon";
+export * from "./src/Nav/AbsenceIcon";
 
 export * from "./src/Icon/PhotoIcon";
 export * from "./src/Icon/ProfileIcon";
