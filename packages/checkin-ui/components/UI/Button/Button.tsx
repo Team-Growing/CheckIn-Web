@@ -78,6 +78,11 @@ export const WriteButton = ({
   );
 };
 
-export const ButtonWrapper = ({ children }: ButtonWrapperProps) => {
-  return <ButtonWrapperBox>{children}</ButtonWrapperBox>;
+export const ButtonWrapper = ({
+  children,
+  customStyle,
+}: ButtonWrapperProps) => {
+  return (
+    <ButtonWrapperBox customStyle={customStyle}>{children}</ButtonWrapperBox>
+  );
 };

@@ -19,4 +19,5 @@ export type ButtonType =
 
 export interface ButtonWrapperProps {
   children: ReactNode;
+  customStyle?: CSSObject;
 }

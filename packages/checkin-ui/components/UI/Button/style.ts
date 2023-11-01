@@ -38,10 +38,10 @@ export const ButtonContainer = styled.button<{
   }}
 `;
 
-export const ButtonWrapperBox = styled.div`
+export const ButtonWrapperBox = styled.div<{ customStyle?: CSSObject }>`
   width: auto;
   height: auto;
-
+  ${({ customStyle }) => customStyle}
   display: flex;
 
   margin-top: 1rem;

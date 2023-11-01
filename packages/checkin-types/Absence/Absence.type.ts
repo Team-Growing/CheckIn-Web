@@ -5,7 +5,7 @@ export interface AbsencesResponse {
       absenceId: {
         value: number;
       };
-      absenceStatus: AbsenceStatus | string;
+      absenceStatus: AbsenceStatus;
       reason: string;
       createdAt: string;
       lectureId: {

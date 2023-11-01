@@ -1,6 +1,6 @@
 import AbsenceRepositoryImpl from "@/repositories/AbsenceRepository/AbsenceRepositoryImpl";
 import { CheckInQueryKey } from "@checkin/querykey";
-import { useQuery } from "react-query";
+import { useMutation, useQuery } from "react-query";
 
 export const useGetAbsencesQuery = (date: string) =>
   useQuery(
@@ -11,3 +11,13 @@ export const useGetAbsencesQuery = (date: string) =>
       cacheTime: 1000 * 60 * 60,
     }
   );
+
+export const useDenyAbsenceMutation = () => {
+  const mutation = useMutation(AbsenceRepositoryImpl.denyAbsence);
+  return mutation;
+};
+
+export const useAllowAbsenceMutation = () => {
+  const mutation = useMutation(AbsenceRepositoryImpl.allowAbsence);
+  return mutation;
+};
