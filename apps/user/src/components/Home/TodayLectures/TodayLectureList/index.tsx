@@ -14,8 +14,8 @@ const TodayLaectureList = ({ data }: Props) => {
         <LectureBox
           key={idx}
           lectureTag={data.lectureTag}
-          grade={String(data.acceptableStudent.targetGrade)}
-          people={String(data.enrollStudent)}
+          grade={data.acceptableStudent.targetGrade}
+          people={data.enrollStudent}
           place={data.placeType}
           teacher={data.lectureTeacher.name}
           title={data.lectureName}

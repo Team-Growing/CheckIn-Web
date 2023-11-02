@@ -23,13 +23,3 @@ export const useGetMemberInfo = (
       ...options,
     }
   );
-
-export const useGetMemberLectures = () =>
-  useQuery(
-    CheckInQueryKey.member.getMyLectures,
-    () => MemberRepositoryImpl.getMemberLectures(),
-    {
-      cacheTime: 1000 * 60 * 60,
-      staleTime: 1000 * 60 * 5,
-    }
-  );

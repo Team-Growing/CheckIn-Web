@@ -57,7 +57,7 @@ const SignupFirst = ({
         </LoginS.AuthOppositePartWrap>
         <Flex justify="end">
           <NextButton
-            style={{ width: "138px" }}
+            customStyle={{ width: "138px" }}
             type="primary"
             onClick={submitFirstSignup}
           >
