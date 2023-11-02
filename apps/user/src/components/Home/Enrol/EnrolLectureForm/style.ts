@@ -2,7 +2,7 @@ import { getRem } from "@checkin/util";
 import styled from "styled-components";
 
 export const EnrolLectureFormContainer = styled.form`
-  width: 527px;
+  width: 75%;
   height: 371px;
 
   row-gap: 40px;

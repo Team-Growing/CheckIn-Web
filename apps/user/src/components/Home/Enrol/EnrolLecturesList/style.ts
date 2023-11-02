@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const EnrolLectureListContainer = styled.div`
-  width: 200px;
+  width: 35%;
   height: 100%;
 `;

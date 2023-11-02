@@ -8,8 +8,11 @@ import {
 import { usePostLoginMutation } from "@/queries/Auth/query";
 import Token from "@/libs/token/Token";
 import { CheckinToast } from "@checkin/toast";
+import { useQueryClient } from "react-query";
+import { CheckInQueryKey } from "@checkin/querykey";
 
 export const useLogin = () => {
+  const queryClient = useQueryClient();
   const router = useRouter();
 
   const idRef = useRef<HTMLInputElement>(null);
@@ -31,6 +34,7 @@ export const useLogin = () => {
             Token.setToken(ACCESS_TOKEN_KEY, data.data.accessToken);
             Token.setToken(REFRESH_TOKEN_KEY, data.data.refreshToken);
             router.push("/");
+            queryClient.invalidateQueries(CheckInQueryKey.member.getMy);
             CheckinToast.showSuccess("로그인 성공");
           },
         }
