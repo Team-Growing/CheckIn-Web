@@ -1,0 +1,81 @@
+
+Chromatic CLI v7.6.0
+https://www.chromatic.com/docs/cli
+
+Authenticating with Chromatic
+    → Connecting to https://index.chromatic.com
+Authenticated with Chromatic
+    → Using project token '****************7d75'
+Retrieving git information
+Retrieved git information
+    → Commit 'f041927' on branch 'main'; no ancestor found
+Collecting Storybook metadata
+Collected Storybook metadata
+    → ; supported addons found: Links, Essentials
+Initializing build
+Initialized build
+    → Build 3 initialized
+Building your Storybook
+    → Running command: yarn run build-storybook --output-dir /var/folders/sg/157f46zd2qn5ypxrbls4_4tr0000gn/T/chromatic--5272-5F63XgagCDJW
+The CLI tried to run your build-storybook script, but the command failed. This indicates a problem with your Storybook. Here's what to do:
+
+- Check the Storybook build log printed below.
+- Run npm run build-storybook or yarn build-storybook yourself and make sure it outputs a valid Storybook by opening the generated index.html in your browser.
+- Review the build-storybook CLI options at https://storybook.js.org/docs/configurations/cli-options/#for-build-storybook
+
+Command failed with exit code 1: yarn run build-storybook --output-dir /var/folders/sg/157f46zd2qn5ypxrbls4_4tr0000gn/T/chromatic--5272-5F63XgagCDJW
+
+ℹ Build command:
+yarn run build-storybook --output-dir /var/folders/sg/157f46zd2qn5ypxrbls4_4tr0000gn/T/chromatic--5272-5F63XgagCDJW
+
+ℹ Runtime metadata:
+{
+  "nodePlatform": "darwin",
+  "nodeVersion": "18.17.0",
+  "packageManager": "yarn",
+  "packageManagerVersion": "1.22.19"
+}
+
+ℹ Storybook build output:
+/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/packages/checkin-ui/build-storybook.log
+
+yarn run v1.22.19
+$ build-storybook --output-dir /var/folders/sg/157f46zd2qn5ypxrbls4_4tr0000gn/T/chromatic--5272-5F63XgagCDJW
+info @storybook/react v6.3.9
+info 
+info => Cleaning outputDir: /var/folders/sg/157f46zd2qn5ypxrbls4_4tr0000gn/T/chromatic--5272-5F63XgagCDJW
+info => Loading presets
+info => Compiling preview..
+info => Loading 1 config file in "/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/packages/checkin-ui/.storybook"
+info => Loading 9 other files in "/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/packages/checkin-ui/.storybook"
+info => Adding stories defined in "/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/packages/checkin-ui/.storybook/main.js"
+info => Using implicit CSS loaders
+info => Using default Webpack4 setup
+(node:5402) DeprecationWarning: Default PostCSS plugins are deprecated. When switching to '@storybook/addon-postcss',
+you will need to add your own plugins, such as 'postcss-flexbugs-fixes' and 'autoprefixer'.
+See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#deprecated-default-postcss-plugins for details.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+node:internal/crypto/hash:69
+  this[kHandle] = new _Hash(algorithm, xofLen);
+                  ^
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:69:19)
+    at Object.createHash (node:crypto:133:10)
+    at module.exports (/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/webpack/lib/util/createHash.js:135:53)
+    at NormalModule._initBuildHash (/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/webpack/lib/NormalModule.js:417:16)
+    at handleParseError (/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/webpack/lib/NormalModule.js:471:10)
+    at /Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/webpack/lib/NormalModule.js:503:5
+    at /Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/webpack/lib/NormalModule.js:358:12
+    at /Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/loader-runner/lib/LoaderRunner.js:373:3
+    at iterateNormalLoaders (/Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/loader-runner/lib/LoaderRunner.js:214:10)
+    at /Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/loader-runner/lib/LoaderRunner.js:205:4
+    at /Users/baekseungha/Documents/GitHub/CheckIn-Web/CheckIn-Web/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11) {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+Node.js v18.17.0
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
