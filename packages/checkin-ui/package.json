@@ -26,7 +26,7 @@
     "babel-loader": "^8.3.0",
     "chromatic": "^6.14.0",
     "eslint": "^7.32.0",
-    "eslint-config-custom": "*ㅜ",
+    "eslint-config-custom": "*",
     "tsconfig": "*",
     "typescript": "^4.5.2"
   },
@@ -34,5 +34,7 @@
     "react": "^18.2.0",
     "react-icons": "^4.10.1",
     "styled-components": "5.3.6"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@checkin/ui@0.1.0"
 }
