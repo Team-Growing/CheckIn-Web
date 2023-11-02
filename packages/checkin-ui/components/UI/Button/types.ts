@@ -15,7 +15,9 @@ export type ButtonType =
   | "secondary"
   | "outline"
   | "text"
-  | "unSelect";
+  | "unSelect"
+  | "white"
+  | "deny";
 
 export interface ButtonWrapperProps {
   children: ReactNode;

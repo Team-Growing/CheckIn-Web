@@ -5,6 +5,7 @@ import styled, {
 } from "styled-components";
 import { ButtonType } from "./types";
 import { getRem } from "@checkin/util";
+import { CheckInColor } from "@checkin/styled-theme";
 
 export const ButtonContainer = styled.button<{
   isSelect?: boolean;
@@ -79,6 +80,18 @@ const buttonStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
     background-color: #f5f5f5;
     color: #636363;
   `,
+  white: css`
+    border: 2px solid #636363;
+    background-color: ${CheckInColor.Background.Lightest};
+    color: #636363;
+  `,
+  deny: css`
+    border-radius: 5px;
+    background: ${CheckInColor.Text.Light};
+    color: #fff;
+    font-weight: 700;
+    border: none;
+  `,
 };
 
 const buttonSelectedStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
@@ -95,4 +108,6 @@ const buttonSelectedStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
     color: #ffffff;
     border: none;
   `,
+  white: css``,
+  deny: css``,
 };
