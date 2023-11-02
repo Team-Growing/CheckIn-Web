@@ -14,9 +14,5 @@
     "turbo": "latest"
   },
   "name": "check-in",
-  "packageManager": "pnpm@8.6.10",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@8.10.2"
 }
