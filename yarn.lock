@@ -3111,13 +3111,6 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-dom@^17.0.11":
-  version "17.0.22"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.22.tgz#34317e08be27b33fa9e7cdb56125b22538261bad"
-  integrity sha512-wHt4gkdSMb4jPp1vc30MLJxoWGsZs88URfmt3FRXoOEYrrqK3I8IuZLE/uFBb4UT6MRfI0wXFu4DS7LS0kUC7Q==
-  dependencies:
-    "@types/react" "^17"
-
 "@types/react-dom@^18.0.5":
   version "18.2.8"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.8.tgz#338f1b0a646c9f10e0a97208c1d26b9f473dffd6"
@@ -3153,15 +3146,6 @@
   version "18.2.23"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.23.tgz#60ad6cf4895e93bed858db0e03bcc4ff97d0410e"
   integrity sha512-qHLW6n1q2+7KyBEYnrZpcsAmU/iiCh9WGCKgXvMxx89+TYdJWRjZohVIo9XTcoLhfX3+/hP0Pbulu3bCZQ9PSA==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
-"@types/react@^17", "@types/react@^17.0.37":
-  version "17.0.69"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.69.tgz#245a0cf2f5b0fb1d645691d3083e3c7d4409b98f"
-  integrity sha512-klEeru//GhiQvXUBayz0Q4l3rKHWsBR/EUOhOeow6hK2jV7MlO44+8yEk6+OtPeOlRfnpUnrLXzGK+iGph5aeg==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
