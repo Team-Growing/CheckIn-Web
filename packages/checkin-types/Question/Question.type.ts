@@ -25,6 +25,7 @@ export interface QuestionsResponse {
     totalCount: number;
     value: Question[];
   };
+  nextPage: number;
 }
 
 export interface QuestionType {

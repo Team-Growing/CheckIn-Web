@@ -17,31 +17,31 @@ const RegistList = ({ grade }: Props) => {
     <ItemContainer>
       {data?.data.length === 0 && <div>수강 신청 기간이 아닙니다</div>}
       {data?.data.map((data) => {
+        console.log(data.lectureTeacher.name);
+
         return (
-          <>
-            <LectureTagBox
-              key={data.lectureId.value}
-              lectureTag={data.lectureTag}
-              type="Enrol"
-              grade={data.acceptableStudent.targetGrade}
-              people={data.enrollStudent}
-              place={data.placeType}
-              teacher={data.lectureTeacher.teacherId.value}
-              title={data.lectureName}
-              onClick={() =>
-                enrolLectureByIdMutation.mutate(data.lectureId.value, {
-                  onSuccess: () => {
-                    CheckinToast.showSuccess(
-                      `${data.lectureName} 수강 신청 성공`
-                    );
-                  },
-                  onError: () => {
-                    CheckinToast.showError("방과후 수강 신청 실패");
-                  },
-                })
-              }
-            />
-          </>
+          <LectureTagBox
+            key={data.lectureId.value}
+            lectureTag={data.lectureTag}
+            type="Enrol"
+            grade={data.acceptableStudent.targetGrade}
+            people={data.enrollStudent}
+            place={data.placeType}
+            teacher={data.lectureTeacher.name}
+            title={data.lectureName}
+            onClick={() =>
+              enrolLectureByIdMutation.mutate(data.lectureId.value, {
+                onSuccess: () => {
+                  CheckinToast.showSuccess(
+                    `${data.lectureName} 수강 신청 성공`
+                  );
+                },
+                onError: () => {
+                  CheckinToast.showError("방과후 수강 신청 실패");
+                },
+              })
+            }
+          />
         );
       })}
     </ItemContainer>

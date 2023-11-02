@@ -25,6 +25,15 @@ export interface LecturesResponse extends Response {
   data: LectureType[];
 }
 
+export interface LecturesAllResponse extends Response {
+  data: {
+    waitingPeriod: LectureTagType[];
+    enrolment: LectureTagType[];
+    coursePeriod: LectureTagType[];
+    termination: LectureTagType[];
+  };
+}
+
 export interface LectureType {
   lectureId: {
     value: number;

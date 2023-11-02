@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@checkin/toast": "*",
-    "@checkin/ui": "*",
+    "@checkin/toast": "workspace:*",
+    "@checkin/ui": "workspace:*",
     "axios": "^1.4.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",

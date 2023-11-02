@@ -54,12 +54,14 @@ export const EnrolLectureBox = ({
           <S.EnrolLectureTitle>{title}</S.EnrolLectureTitle>
           <S.EnrolLectureGrade>{`${grade}학년`}</S.EnrolLectureGrade>
         </S.EnrolLectureBoxTopWrap>
-        <S.EnrolLectureBottomWrap>
+        <div
+          style={{ display: "flex", flexDirection: "column", rowGap: "4px" }}
+        >
           <S.EnrolLectureInfoText>{`장소 : ${dataTransform.LecturePlaceTypeName(
             place
           )}`}</S.EnrolLectureInfoText>
           <S.EnrolLectureInfoText>{`참가인원 : ${people}`}</S.EnrolLectureInfoText>
-        </S.EnrolLectureBottomWrap>
+        </div>
       </S.EnrolLectureCard>
     </S.EnrolLectureBoxContainer>
   );

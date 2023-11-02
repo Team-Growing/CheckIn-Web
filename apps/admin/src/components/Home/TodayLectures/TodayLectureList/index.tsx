@@ -1,19 +1,24 @@
 import React from "react";
 import { LectureBox } from "@checkin/ui";
 import { LectureListWrapper } from "./style";
+import { LecturesResponse } from "@checkin/types";
 
-const TodayLecturesList = () => {
+interface Props {
+  data: LecturesResponse;
+}
+
+const TodayLecturesList = ({ data }: Props) => {
   return (
     <LectureListWrapper>
-      {Array.from({ length: 10 }).map((idx, d) => (
+      {data?.data.map((data) => (
         <LectureBox
-          lectureTag="SPORTS"
-          grade="2"
-          people="10"
-          place="PLAYGROUND"
-          teacher="백승하"
-          title="야구"
-          key={d}
+          key={data.lectureId.value}
+          lectureTag={data.lectureTag}
+          grade={data.acceptableStudent.targetGrade}
+          people={data.enrollStudent}
+          place={data.placeType}
+          teacher={data.lectureTeacher.name}
+          title={data.lectureName}
         />
       ))}
     </LectureListWrapper>

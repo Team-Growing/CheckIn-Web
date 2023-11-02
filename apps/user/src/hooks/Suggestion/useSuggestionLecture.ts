@@ -38,7 +38,7 @@ const useSuggestionLecture = () => {
         name: name,
         additional: additional,
         content: content,
-        dayOfWeek: dataTransform.TransformDayOfWeek(dayOfWeek)!,
+        dayOfWeek: dataTransform.submitTransformDayofWeek(dayOfWeek)!,
       },
       {
         onSuccess: () => {

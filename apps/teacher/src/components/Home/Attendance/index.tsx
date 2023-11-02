@@ -2,14 +2,13 @@ import { Card, CardTitle, Flex, Button } from "@checkin/ui";
 import Image from "next/image";
 import React, { useState } from "react";
 import CalendarImg from "../../../assets/Icon/Calendar.svg";
-import { useGetMyLectures } from "@/queries/Lectures/query";
+import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
 import AttendanceCode from "./AttendanceCode";
 import { EnrolLectureButtonContainer } from "./AttendanceCode/style";
 
 const Enrol = () => {
-  const { data } = useGetMyLectures();
   const [lectureId, setLectureId] = useState(0);
-
+  const { data } = useGetTodayMyLecturesQuery();
   return (
     <Card
       type="Enrol"
@@ -30,9 +29,10 @@ const Enrol = () => {
       <EnrolLectureButtonContainer>
         {data?.data.map((data) => (
           <Button
+            key={data.lectureId.value}
             onClick={() => setLectureId(data.lectureId.value)}
             customStyle={{ width: "15%" }}
-            type="unSelect"
+            type="secondary"
             isSelect={lectureId === data.lectureId.value ? true : false}
           >
             {data.lectureName}

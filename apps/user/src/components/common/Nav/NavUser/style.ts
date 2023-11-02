@@ -55,12 +55,6 @@ export const NavAuthBox = styled.div`
 `;
 
 export const NavLoginText = styled.p`
-  & + & {
-    border-left: 2px solid #6d6d6d;
-    padding-left: 8px;
-    margin-left: 8px;
-  }
-
   color: #6d6d6d;
   cursor: pointer;
 `;

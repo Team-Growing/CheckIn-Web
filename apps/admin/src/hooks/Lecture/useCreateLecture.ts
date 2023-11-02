@@ -1,6 +1,7 @@
 import { useCreateLectureMutation } from "@/queries/Lecture/query";
 import { useGetTeachesrQuery } from "@/queries/Member/query";
 import { CheckinToast } from "@checkin/toast";
+import { dataTransform } from "@checkin/util";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useQueryClient } from "react-query";
 
@@ -95,8 +96,12 @@ export const useCreateLecture = () => {
     e.preventDefault();
 
     const { lectureName, explanation } = lectureNameExplan;
-    const { lectureTag, placeType, targetGrade, teacherId } =
-      lectureSelectState;
+    const {
+      lectureTag,
+      placeType,
+      targetGrade,
+      teacherId,
+    } = lectureSelectState;
     const { startTime, endTime } = lectureTime;
     const { maxStudent, minStudent } = acceptableStudent;
     const { startDay, endDay } = lecturePeriod;
@@ -119,7 +124,7 @@ export const useCreateLecture = () => {
           startDay: startDay,
           startTime: startTime,
         },
-        placeType: placeType,
+        placeType: dataTransform.submitPlaceType(placeType)!,
       },
       {
         onSuccess: () => {

@@ -29,6 +29,11 @@ class LectureRepositoryImpl implements LectureRepository {
     );
     return data;
   }
+
+  public async getTodayMyLectures(): Promise<LecturesResponse> {
+    const { data } = await apiClient.get("/lecture/my/today");
+    return data;
+  }
 }
 
 export default new LectureRepositoryImpl();

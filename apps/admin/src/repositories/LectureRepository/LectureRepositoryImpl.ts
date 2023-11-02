@@ -1,4 +1,9 @@
-import { Lectures, LecturesResponse, Response } from "@checkin/types";
+import {
+  Lectures,
+  LecturesAllResponse,
+  LecturesResponse,
+  Response,
+} from "@checkin/types";
 import {
   LectureRepository,
   PatchLectureStatusParam,
@@ -16,8 +21,9 @@ class LectureRepositoryImpl implements LectureRepository {
     grade,
     status,
   }: getLecturesByLectureStatusParam): Promise<LecturesResponse> {
-    const { data } =
-      await apiClient.get(`/lecture?status=${status}&grade=${grade}
+    const {
+      data,
+    } = await apiClient.get(`/lecture?status=${status}&grade=${grade}
       `);
     return data;
   }
@@ -35,6 +41,11 @@ class LectureRepositoryImpl implements LectureRepository {
 
   public async getTodayLectures(): Promise<LecturesResponse> {
     const { data } = await apiClient.get("/lecture/today");
+    return data;
+  }
+
+  public async getAllLectures(grade: number): Promise<LecturesAllResponse> {
+    const { data } = await apiClient.get(`/lecture/all?grade=${grade}`);
     return data;
   }
 }

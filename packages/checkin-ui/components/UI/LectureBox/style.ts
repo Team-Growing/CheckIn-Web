@@ -146,15 +146,6 @@ export const EnrolLectureBoxTopWrap = styled.div`
   column-gap: 10px;
 `;
 
-export const EnrolLectureBottomWrap = styled.div`
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-
-  row-gap: 4px;
-`;
-
 export const EnrolLectureInfoText = styled.p`
   font-size: ${getRem(14)};
   color: #1f1f1f;
@@ -181,7 +172,7 @@ export const LectureTagBoxContainer = styled.div<{
   ${({ isSelect }) =>
     isSelect &&
     css`
-      border: 1px solid var(--main-base, #00c537);
+      border: 1px solid #00c537;
     `}
 `;
 

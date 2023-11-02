@@ -1,6 +1,7 @@
 import {
   LectureStatusType,
   Lectures,
+  LecturesAllResponse,
   LecturesResponse,
   Response,
 } from "@checkin/types";
@@ -15,6 +16,7 @@ export interface LectureRepository {
     lectureStatus,
   }: PatchLectureStatusParam): Promise<Response>;
   getTodayLectures(): Promise<LecturesResponse>;
+  getAllLectures(grade: number): Promise<LecturesAllResponse>;
 }
 
 export interface postLectureParam extends Lectures {}

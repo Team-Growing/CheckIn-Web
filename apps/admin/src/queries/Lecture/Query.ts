@@ -35,3 +35,13 @@ export const useGetTodayLecturesQuery = () =>
       cacheTime: 1000 * 60 * 60,
     }
   );
+
+export const useGetAllLecturesQuery = (grade: number) =>
+  useQuery(
+    CheckInQueryKey.lecture.getAll(grade),
+    () => LectureRepositoryImpl.getAllLectures(grade),
+    {
+      staleTime: 1000 * 60 * 60,
+      cacheTime: 1000 * 60 * 60,
+    }
+  );
