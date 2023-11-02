@@ -18,21 +18,15 @@ export const useSignup = () => {
     number: 0,
   });
 
-  const onChangeSignupData = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      const { value, name } = e.target;
-      setSignupData((prev) => ({ ...prev, [name]: value }));
-    },
-    [signupData]
-  );
+  const onChangeSignupData = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    setSignupData((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const onChangeSignupStudentInfoData = useCallback(
-    (e: ChangeEvent<HTMLInputElement>) => {
-      const { value, name } = e.target;
-      setStudentInfoData((prev) => ({ ...prev, [name]: value }));
-    },
-    [studentInfoData]
-  );
+  const onChangeSignupStudentInfoData = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, name } = e.target;
+    setStudentInfoData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const submitFirstSignup = useCallback(async () => {
     const { id, pw, email, name } = signupData;
@@ -43,7 +37,7 @@ export const useSignup = () => {
     setSection("second");
   }, [signupData]);
 
-  const submitSecondSignup = useCallback(async () => {
+  const submitSecondSignup = async () => {
     const { pw } = signupData;
     const { grade, number, room } = studentInfoData;
 
@@ -52,18 +46,20 @@ export const useSignup = () => {
       pw: sha512(pw),
       studentInfo: {
         grade: Number(grade),
-        number: Number(number),
         room: Number(room),
+        number: Number(number),
       },
     };
     try {
+      console.log(validStudentSignupData);
+
       await AuthRepositoryImpl.signupStudent(validStudentSignupData);
       window.alert("회원가입에 성공했습니다.(관리자 승인을 기다려주세요!)");
       window.location.reload();
     } catch {
       window.alert("실패");
     }
-  }, [signupData]);
+  };
 
   return {
     section,

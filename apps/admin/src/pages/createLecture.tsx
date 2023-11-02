@@ -1,8 +1,7 @@
-import Suggestion from "@/components/Generate";
-import React from "react";
+import Generate from "@/components/Generate";
 
 const createlecture = () => {
-  return <Suggestion />;
+  return <Generate />;
 };
 
 export default createlecture;

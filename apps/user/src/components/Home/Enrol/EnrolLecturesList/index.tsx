@@ -1,7 +1,10 @@
 import React from "react";
 import * as S from "./style";
 import { EnrolLectureBox } from "@checkin/ui";
-import { useGetMyLectures } from "@/queries/Lectures/query";
+import {
+  useGetMyLectures,
+  useGetTodayMyLecturesQuery,
+} from "@/queries/Lectures/query";
 
 interface Props {
   lectureId: number;
@@ -9,7 +12,7 @@ interface Props {
 }
 
 const EnrolLectureList = ({ lectureId, onClickSetId }: Props) => {
-  const { data } = useGetMyLectures();
+  const { data } = useGetTodayMyLecturesQuery();
 
   return (
     <S.EnrolLectureListContainer>

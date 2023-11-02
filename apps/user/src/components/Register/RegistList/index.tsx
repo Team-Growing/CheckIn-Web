@@ -15,6 +15,7 @@ const RegistList = ({ grade }: Props) => {
 
   return (
     <ItemContainer>
+      {data?.data.length === 0 && <div>수강 신청 기간이 아닙니다</div>}
       {data?.data.map((data) => {
         return (
           <>
@@ -22,8 +23,8 @@ const RegistList = ({ grade }: Props) => {
               key={data.lectureId.value}
               lectureTag={data.lectureTag}
               type="Enrol"
-              grade={String(data.acceptableStudent.targetGrade)}
-              people={String(data.enrollStudent)}
+              grade={data.acceptableStudent.targetGrade}
+              people={data.enrollStudent}
               place={data.placeType}
               teacher={data.lectureTeacher.teacherId.value}
               title={data.lectureName}

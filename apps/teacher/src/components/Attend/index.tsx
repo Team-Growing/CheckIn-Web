@@ -13,14 +13,11 @@ export type UserType = {
 };
 const Attend = () => {
   const { data: myLecturesData } = useGetMyLectures();
-
   const [lectureId, setLectureId] = useState<number>(0);
 
   const { data: attendanceListData } = useGetAttendantsQuery(lectureId!);
-  const {
-    onChangeAttendanceStatusConfirm,
-    onChangeAttendanceStatusCancel,
-  } = useChangeAttendanceStatus();
+  const { onChangeAttendanceStatusConfirm, onChangeAttendanceStatusCancel } =
+    useChangeAttendanceStatus();
   return (
     <>
       <S.AttendWrap>
@@ -32,6 +29,7 @@ const Attend = () => {
         <ButtonWrapper>
           {myLecturesData?.data.map((data) => (
             <Button
+              key={data.lectureId.value}
               type="primary"
               isSelect={lectureId === data.lectureId.value ? false : true}
               onClick={() => setLectureId(data.lectureId.value)}
@@ -44,6 +42,7 @@ const Attend = () => {
         <S.AttendListWrapper>
           {attendanceListData?.data.attendants.map((data) => (
             <AttendanceStudent
+              key={data.id}
               grade={data.studentInfo.grade}
               name={data.name}
               number={data.studentInfo.number}
@@ -67,6 +66,7 @@ const Attend = () => {
         <S.AttendListWrapper>
           {attendanceListData?.data.nonAttendants.map((data) => (
             <AttendanceStudent
+              key={data.id}
               grade={data.studentInfo.grade}
               name={data.name}
               number={data.studentInfo.number}
@@ -90,6 +90,7 @@ const Attend = () => {
         <S.AttendListWrapper>
           {attendanceListData?.data.absentees.map((data) => (
             <AttendanceStudent
+              key={data.id}
               grade={data.studentInfo.grade}
               name={data.name}
               number={data.studentInfo.number}

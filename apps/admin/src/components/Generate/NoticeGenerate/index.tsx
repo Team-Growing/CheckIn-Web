@@ -22,7 +22,7 @@ const NoticeGenerate = () => {
         </Button>
       </Flex>
       <S.NoticeListContainer>
-        <TitleText>NoticeList</TitleText>
+        <TitleText>공지사항</TitleText>
         {data?.data.map((data) => (
           <NoticeList data={data} />
         ))}

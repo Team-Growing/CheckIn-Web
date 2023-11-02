@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const Contact = () => {
   return (
-    <Card type="Enrol">
+    <Card type="Enrol" customStyle={{ width: "50%" }}>
       <CardTitle>
         <WriteIcon />
         담당자 문의

@@ -51,7 +51,7 @@ export const Select = ({
         </SelectIcon>
         {isOpen && (
           <SelectItemWrap style={{ zIndex }}>
-            {items.map((item, idx) => (
+            {items?.map((item, idx) => (
               <SelectItem
                 key={idx}
                 onClick={() => handleDropdownItemButtonClick(item)}

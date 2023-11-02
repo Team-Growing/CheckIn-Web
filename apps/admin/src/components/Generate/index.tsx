@@ -5,7 +5,7 @@ import { SwitchCase } from "@checkin/util";
 import NoticeGenerate from "./NoticeGenerate";
 import LectureGenerate from "./LectureGenerate";
 
-const Suggestion = () => {
+const Generate = () => {
   const [section, setSection] = useState("수업");
   return (
     <S.SuggestionContainer>
@@ -45,4 +45,4 @@ const Suggestion = () => {
   );
 };
 
-export default Suggestion;
+export default Generate;

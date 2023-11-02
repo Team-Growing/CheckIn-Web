@@ -50,9 +50,11 @@ const cardSize: Record<CardType, FlattenSimpleInterpolation> = {
   `,
 };
 
-export const CardTitleBox = styled.div`
+export const CardTitleBox = styled.div<{ customStyle?: CSSObject }>`
   width: auto;
   height: 36px;
+
+  ${({ customStyle }) => customStyle}
 
   display: flex;
   align-items: center;
