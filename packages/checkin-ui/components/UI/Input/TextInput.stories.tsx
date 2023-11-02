@@ -1,13 +1,13 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { Input } from "./Input";
+import { TextInput } from "./Input";
 
 export default {
   title: "ui/Input/TextInput",
-  component: Input,
+  component: TextInput,
   argTypes: {},
-} as ComponentMeta<typeof Input>;
+} as ComponentMeta<typeof TextInput>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input />;
+const Template: ComponentStory<typeof TextInput> = (args) => <TextInput />;
 
 export const Common = Template.bind({});
 Common.args = {};
