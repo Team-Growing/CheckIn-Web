@@ -18,6 +18,11 @@ export const NavContainer = styled.div`
   padding-bottom: 52px;
 `;
 
+export const NavLogoText = styled.p`
+  color: #54d879;
+  font-size: ${getRem(16)};
+`;
+
 export const NavTopWrap = styled.div`
   width: 100%;
 

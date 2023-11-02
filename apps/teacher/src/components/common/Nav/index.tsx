@@ -1,24 +1,22 @@
 import * as S from "./style";
-import logo from "../../../assets/image/TeacherLogo.svg";
-import NavItem from "./NavItem/index";
-import NavUser from "./";
+import NavItem from "./NavItem";
+import NavUser from "./NavUser";
+import { Logo } from "@checkin/icon";
 import { useRouter } from "next/router";
+import { Flex } from "@checkin/ui";
 
 const Nav = () => {
   const router = useRouter();
   return (
     <S.NavContainer>
       <S.NavTopWrap>
-        <S.NavLogo
-          src={logo.src}
-          width={200}
-          height={50}
-          alt="메인 로고"
-          onClick={() => router.push("/")}
-        />
+        <Flex customStyle={{ width: "100%" }} direction="column" align="center">
+          <Logo onClick={() => router.push("/")} />
+          <S.NavLogoText>Teacher</S.NavLogoText>
+        </Flex>
         <NavItem />
       </S.NavTopWrap>
-      {/* <NavUser /> */}
+      <NavUser />
     </S.NavContainer>
   );
 };
