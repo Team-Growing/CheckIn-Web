@@ -2,6 +2,7 @@ import * as S from "./style";
 import { useGetMemberInfo } from "@/queries/Member/Member.query";
 import { dataTransform } from "@checkin/util";
 import useLogout from "@/hooks/Auth/useLogout";
+import { ProfileIcon } from "@checkin/icon";
 
 const NavUser = () => {
   const { data } = useGetMemberInfo();
@@ -9,7 +10,9 @@ const NavUser = () => {
   return (
     <S.NavBottomBox>
       <S.NavUserBox>
-        <S.NavUserImageBackground></S.NavUserImageBackground>
+        <S.NavUserImageBackground>
+          <ProfileIcon />
+        </S.NavUserImageBackground>
         <S.NavUserInfoBox>
           <S.NavUserName>{data?.data.name}</S.NavUserName>
           <S.NavUserGrade>
