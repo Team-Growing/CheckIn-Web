@@ -26,6 +26,9 @@ importers:
 
   apps/admin:
     dependencies:
+      '@checkin/ui':
+        specifier: workspace:*
+        version: link:../../packages/checkin-ui
       axios:
         specifier: ^1.4.0
         version: 1.4.0
@@ -106,7 +109,7 @@ importers:
   apps/teacher:
     dependencies:
       '@checkin/ui':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../packages/checkin-ui
       axios:
         specifier: ^1.4.0
