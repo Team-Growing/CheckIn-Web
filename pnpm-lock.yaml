@@ -378,6 +378,9 @@ importers:
 
   packages/checkin-util:
     dependencies:
+      '@checkin/types':
+        specifier: workspace:*
+        version: link:../checkin-types
       dayjs:
         specifier: ^1.11.10
         version: 1.11.10
