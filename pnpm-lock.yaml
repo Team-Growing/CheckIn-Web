@@ -175,9 +175,18 @@ importers:
       '@checkin/icon':
         specifier: workspace:*
         version: link:../../packages/checkin-icon
+      '@checkin/querykey':
+        specifier: workspace:*
+        version: link:../../packages/checkin-queryKey
+      '@checkin/styled-theme':
+        specifier: workspace:*
+        version: link:../../packages/checkin-styled-theme
       '@checkin/toast':
         specifier: workspace:*
         version: link:../../packages/checkin-toastify
+      '@checkin/types':
+        specifier: workspace:*
+        version: link:../../packages/checkin-types
       '@checkin/ui':
         specifier: workspace:*
         version: link:../../packages/checkin-ui
@@ -7583,7 +7592,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.62.0(eslint@8.45.0)(typescript@4.5.2)
+      '@typescript-eslint/parser': 5.62.0(eslint@8.45.0)(typescript@5.1.6)
       debug: 3.2.7
       eslint: 8.45.0
       eslint-import-resolver-node: 0.3.9
@@ -7637,7 +7646,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.62.0(eslint@8.45.0)(typescript@4.5.2)
+      '@typescript-eslint/parser': 5.62.0(eslint@8.45.0)(typescript@5.1.6)
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.3
       array.prototype.flat: 1.3.2
