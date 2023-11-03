@@ -11,7 +11,7 @@ interface Props {
   onChangeAttendanceCode: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const EnrolLectureForm = ({
+const AttendLectureForm = ({
   onAttendanceLecture,
   onChangeAttendanceCode,
 }: Props) => {
@@ -26,4 +26,4 @@ const EnrolLectureForm = ({
   );
 };
 
-export default EnrolLectureForm;
+export default AttendLectureForm;

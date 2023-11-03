@@ -1,17 +1,14 @@
 import React from "react";
 import * as S from "./style";
 import { EnrolLectureBox } from "@checkin/ui";
-import {
-  useGetMyLectures,
-  useGetTodayMyLecturesQuery,
-} from "@/queries/Lectures/query";
+import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
 
 interface Props {
   lectureId: number;
   onClickSetId: (value: number) => void;
 }
 
-const EnrolLectureList = ({ lectureId, onClickSetId }: Props) => {
+const AttendList = ({ lectureId, onClickSetId }: Props) => {
   const { data } = useGetTodayMyLecturesQuery();
 
   return (
@@ -32,4 +29,4 @@ const EnrolLectureList = ({ lectureId, onClickSetId }: Props) => {
   );
 };
 
-export default EnrolLectureList;
+export default AttendList;
