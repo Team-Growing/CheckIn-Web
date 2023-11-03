@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@checkin/icon": "workspace:*",
+    "@checkin/util": "workspace:*",
     "@babel/core": "^7.20.2",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",

@@ -315,6 +315,9 @@ importers:
       '@checkin/icon':
         specifier: workspace:*
         version: link:../checkin-icon
+      '@checkin/util':
+        specifier: workspace:*
+        version: link:../checkin-util
       '@storybook/addon-actions':
         specifier: ^6.5.13
         version: 6.5.13(react-dom@17.0.2)(react@18.2.0)
