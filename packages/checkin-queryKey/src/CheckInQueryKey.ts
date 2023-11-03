@@ -24,7 +24,7 @@ export const CheckInQueryKey = {
   member: {
     getMy: "member/getMyMember",
     getTeacherList: "/member/getTeacherList",
-    getMyLectures: "member/getMyLectures",
+    getMyLectures: "lectures/myLectures",
     getMyTodayLectures: "member/getMyTodayLectures",
   },
 
