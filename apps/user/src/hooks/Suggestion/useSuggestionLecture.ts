@@ -1,7 +1,7 @@
 import { usePostSuggestionMutation } from "@/queries/Suggestion/query";
 import { CheckinToast } from "@checkin/toast";
 import { dataTransform } from "@checkin/util";
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { useQueryClient } from "react-query";
 
 const useSuggestionLecture = () => {
