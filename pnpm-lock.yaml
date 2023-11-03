@@ -312,6 +312,9 @@ importers:
       '@babel/core':
         specifier: ^7.20.2
         version: 7.20.2
+      '@checkin/icon':
+        specifier: workspace:*
+        version: link:../checkin-icon
       '@storybook/addon-actions':
         specifier: ^6.5.13
         version: 6.5.13(react-dom@17.0.2)(react@18.2.0)
