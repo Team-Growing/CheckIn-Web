@@ -315,6 +315,9 @@ importers:
       '@checkin/icon':
         specifier: workspace:*
         version: link:../checkin-icon
+      '@checkin/styled-theme':
+        specifier: workspace:*
+        version: link:../checkin-styled-theme
       '@checkin/util':
         specifier: workspace:*
         version: link:../checkin-util
