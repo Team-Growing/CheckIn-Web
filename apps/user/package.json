@@ -11,6 +11,7 @@
   "dependencies": {
     "@checkin/toast": "workspace:*",
     "@checkin/ui": "workspace:*",
+    "@checkin/icon": "workspace:*",
     "axios": "^1.4.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",

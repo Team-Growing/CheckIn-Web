@@ -35,10 +35,6 @@
     "react-icons": "^4.10.1",
     "styled-components": "5.3.6"
   },
-  "resolutions": {
-    "@types/react": "^18.0.10",
-    "@types/react-dom": "^18.0.5"
-  },
   "readme": "ERROR: No README data found!",
   "_id": "@checkin/ui@0.1.0"
 }
