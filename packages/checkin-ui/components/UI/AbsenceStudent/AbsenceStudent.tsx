@@ -1,8 +1,8 @@
 import * as S from "./style";
 import { CheckAbsenseIcon, ProfileIcon } from "@checkin/icon";
-import { Flex } from "@checkin/ui";
 import { AbsenseStudentBox, CheckAbsenseProps } from "./types";
 import { dataTransform } from "@checkin/util";
+import { Flex } from "../../Layout/Flex/Flex";
 
 export const AbsenceStudentList = ({
   children,

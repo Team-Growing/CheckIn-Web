@@ -1,12 +1,12 @@
-import { InputWrapContainer } from "./style";
-import { AuthInputWrapProps, InputWrapProps } from "./types";
 import {
   AuthInput,
   DateInput,
   InputInfo,
   InputIntroText,
   TextInput,
-} from "@checkin/ui";
+} from "../../../UI/Input/Input";
+import { InputWrapContainer } from "./style";
+import { AuthInputWrapProps, InputWrapProps } from "./types";
 
 export const TextInputWrap = ({
   customStyle,

@@ -1,6 +1,7 @@
+import { InputInfo, InputIntroText } from "../../../UI/Input/Input";
+import { Textarea } from "../../../UI/Textarea/Textarea";
 import { TextareaWrapWrapContainer } from "./style";
 import { TextareaWrapProps } from "./types";
-import { InputInfo, InputIntroText, Textarea } from "@checkin/ui";
 
 export const TextareaWrap = ({
   customStyle,

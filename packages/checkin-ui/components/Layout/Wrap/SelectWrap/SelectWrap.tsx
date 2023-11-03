@@ -1,6 +1,7 @@
+import { InputInfo, InputIntroText } from "../../../UI/Input/Input";
+import { Select } from "../../../UI/Select/Select";
 import * as S from "./style";
 import { SelectWrapProps } from "./types";
-import { InputInfo, InputIntroText, Select } from "@checkin/ui";
 export const SelectWrap = ({
   items,
   name,
