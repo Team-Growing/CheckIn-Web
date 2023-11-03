@@ -33,7 +33,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-icons": "^4.10.1",
-    "styled-components": "5.3.6"
+    "styled-components": "5.3.6",
+    "@checkin/ui": "workspace:*"
   },
   "readme": "ERROR: No README data found!",
   "_id": "@checkin/ui@0.1.0"
