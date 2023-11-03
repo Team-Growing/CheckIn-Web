@@ -1,5 +1,5 @@
-import { css } from "styled-components";
 import type { CSSProperties } from "react";
+import { css } from "styled-components";
 
 interface PropsType {
   flexDirection?: CSSProperties["flexDirection"];
