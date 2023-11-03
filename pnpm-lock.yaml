@@ -318,6 +318,9 @@ importers:
       '@checkin/styled-theme':
         specifier: workspace:*
         version: link:../checkin-styled-theme
+      '@checkin/types':
+        specifier: workspace:*
+        version: link:../checkin-types
       '@checkin/util':
         specifier: workspace:*
         version: link:../checkin-util
