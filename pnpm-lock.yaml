@@ -388,6 +388,9 @@ importers:
         specifier: 5.3.6
         version: 5.3.6(@babel/core@7.23.2)(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)
     devDependencies:
+      '@types/react':
+        specifier: ^18.0.10
+        version: 18.0.10
       '@types/styled-components':
         specifier: 5.1.28
         version: 5.1.28
