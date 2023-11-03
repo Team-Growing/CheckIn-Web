@@ -1,4 +1,4 @@
-import { Response } from "@checkin/types";
+import { Response } from "../util/response";
 
 export interface NoticeType {
   noticeId: {
