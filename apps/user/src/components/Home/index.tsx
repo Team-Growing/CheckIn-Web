@@ -3,8 +3,8 @@ import * as S from "./style";
 import { Flex } from "@checkin/ui";
 import TodayLectures from "./TodayLectures";
 import Notifiction from "./Notifiction";
-import Enrol from "./Enrol";
 import Absence from "./Absence";
+import Attend from "./Attend";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
         gap={20}
       >
         <Absence />
-        <Enrol />
+        <Attend />
       </Flex>
     </S.HomeContainer>
   );

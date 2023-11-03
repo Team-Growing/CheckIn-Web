@@ -5,7 +5,7 @@ import useAttendance from "@/hooks/Attendance/useAttendance";
 import AttendList from "./AttendList";
 import AttendLectureForm from "./AttendLectureForm";
 
-const Enrol = () => {
+const Attend = () => {
   const {
     lectureId,
     onAttendanceLecture,
@@ -29,4 +29,4 @@ const Enrol = () => {
   );
 };
 
-export default Enrol;
+export default Attend;
