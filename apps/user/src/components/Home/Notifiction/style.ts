@@ -12,6 +12,7 @@ export const NoticeContainer = styled.div`
   overflow: hidden;
   column-gap: 63px;
   padding-left: 29px;
+  padding-right: 29px;
 
   border-radius: 5px;
   border: 1px solid #cdd0dc;
@@ -19,6 +20,7 @@ export const NoticeContainer = styled.div`
 `;
 
 export const NoticeContent = styled.div`
+  width: 70%;
   color: #828282;
   font-size: ${getRem(18)};
   font-weight: 500;

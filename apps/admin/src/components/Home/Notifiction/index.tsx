@@ -1,20 +1,29 @@
-import { Card, CardTitle } from "@checkin/ui";
+import { CardTitle } from "@checkin/ui";
 import Image from "next/image";
-import React from "react";
-import NotifictionImg from "../../../assets/Icon/Notifiction.svg";
+import React, { useState } from "react";
 import { NotifictionIcon } from "@checkin/icon";
 import { NoticeContainer, NoticeContent } from "./style";
+import { useGetActiveNoticeQuery } from "@/queries/Notice/query";
 
 const Notifiction = () => {
+  const { data } = useGetActiveNoticeQuery();
+  const [noticeLength, setNoticeLength] = useState(data?.data.length! - 1);
+
+  setTimeout(() => {
+    if (noticeLength !== 0) {
+      setNoticeLength(noticeLength - 1);
+    } else {
+      setNoticeLength(data?.data.length! - 1);
+    }
+  }, 2000);
   return (
     <NoticeContainer>
       <CardTitle>
         <NotifictionIcon />
         공지사항
       </CardTitle>
-      <NoticeContent>
-        {"오늘 테니스 방과후는 방과후 강사님 사정으로 휴강합니다!"}
-      </NoticeContent>
+      <NoticeContent>{data?.data[noticeLength]?.content}</NoticeContent>
+      <p>{`${data?.data.length! - noticeLength}/${data?.data.length}`}</p>
     </NoticeContainer>
   );
 };

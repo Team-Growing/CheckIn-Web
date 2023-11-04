@@ -1,11 +1,20 @@
 import { CardTitle } from "@checkin/ui";
-import React, { useMemo } from "react";
+import React, { useState } from "react";
 import { NotifictionIcon } from "@checkin/icon";
 import { useGetActiveNoticeQuery } from "@/queries/Notice/query";
 import { NoticeContainer, NoticeContent } from "./style";
 
 const Notifiction = () => {
   const { data } = useGetActiveNoticeQuery();
+  const [noticeLength, setNoticeLength] = useState(data?.data.length! - 1);
+
+  setTimeout(() => {
+    if (noticeLength !== 0) {
+      setNoticeLength(noticeLength - 1);
+    } else {
+      setNoticeLength(data?.data.length! - 1);
+    }
+  }, 2000);
 
   return (
     <NoticeContainer>
@@ -13,9 +22,8 @@ const Notifiction = () => {
         <NotifictionIcon />
         공지사항
       </CardTitle>
-      <NoticeContent>
-        {"오늘 테니스 방과후는 방과후 강사님 사정으로 휴강합니다!"}
-      </NoticeContent>
+      <NoticeContent>{data?.data[noticeLength]?.content}</NoticeContent>
+      <p>{`${data?.data.length! - noticeLength}/${data?.data.length}`}</p>
     </NoticeContainer>
   );
 };
