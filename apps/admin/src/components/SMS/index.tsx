@@ -2,7 +2,7 @@ import * as S from "./style";
 import { Flex, SectionHeader, Select, TitleText } from "@checkin/ui";
 import styled from "styled-components";
 import { useGetAttendanceListQuery } from "@/queries/Attendance/query";
-import { useGetTodayLecturesQuery } from "@/queries/Lecture/query";
+import { useGetTodayLecturesQuery } from "@/queries/Lectures/query";
 import { useState } from "react";
 
 const SMS = () => {

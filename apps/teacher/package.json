@@ -9,7 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@checkin/toast": "workspace:*",
     "@checkin/ui": "workspace:*",
+    "@checkin/icon": "workspace:*",
+    "@checkin/util": "workspace:*",
+    "@checkin/types": "workspace:*",
+    "@checkin/querykey": "workspace:*",
+    "@checkin/styled-theme": "workspace:*",
     "axios": "^1.4.0",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.12",
@@ -23,7 +29,7 @@
     "recoil": "^0.7.7",
     "slick-carousel": "^1.8.1",
     "styled-components": "5.3.6",
-    "typescript": "^4.5.2"
+    "typescript": "5.1.6"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.3",

@@ -4,7 +4,6 @@ import { Button, ButtonWrapper, Flex, SectionHeader } from "@checkin/ui";
 import { CmsStatusList } from "./constant";
 import LecturesList from "./CMSList";
 import useManageLecture from "@/hooks/Lecture/useManageLecture";
-import { useGetAllLecturesQuery } from "@/queries/Lecture/query";
 import { useRouter } from "next/router";
 
 const CMS = () => {

@@ -1,5 +1,4 @@
-import { usePatchLectureStatusMutation } from "@/queries/Lecture/query";
-import { PatchLectureStatusParam } from "@/repositories/LectureRepository/LectureRepository";
+import { usePatchLectureStatusMutation } from "@/queries/Lectures/query";
 import { CheckinToast } from "@checkin/toast";
 import { LectureStatusType } from "@checkin/types";
 import { useState } from "react";
