@@ -26,9 +26,27 @@ importers:
 
   apps/admin:
     dependencies:
+      '@checkin/icon':
+        specifier: workspace:*
+        version: link:../../packages/checkin-icon
+      '@checkin/querykey':
+        specifier: workspace:*
+        version: link:../../packages/checkin-queryKey
+      '@checkin/styled-theme':
+        specifier: workspace:*
+        version: link:../../packages/checkin-styled-theme
+      '@checkin/toast':
+        specifier: workspace:*
+        version: link:../../packages/checkin-toastify
+      '@checkin/types':
+        specifier: workspace:*
+        version: link:../../packages/checkin-types
       '@checkin/ui':
         specifier: workspace:*
         version: link:../../packages/checkin-ui
+      '@checkin/util':
+        specifier: workspace:*
+        version: link:../../packages/checkin-util
       axios:
         specifier: ^1.4.0
         version: 1.4.0
