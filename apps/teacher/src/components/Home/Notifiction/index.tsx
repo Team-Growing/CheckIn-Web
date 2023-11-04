@@ -14,7 +14,11 @@ const Notifiction = () => {
         공지사항
       </CardTitle>
       {data?.data.map((data) => {
-        return <NoticeContent>{data.content}</NoticeContent>;
+        return (
+          <NoticeContent key={data.noticeId.value}>
+            {data.content}
+          </NoticeContent>
+        );
       })}
     </NoticeContainer>
   );
