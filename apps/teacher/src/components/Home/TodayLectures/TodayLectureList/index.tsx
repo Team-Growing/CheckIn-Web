@@ -12,6 +12,7 @@ const TodayLaectureList = ({ data }: Props) => {
     <LectureListWrapper>
       {data.data.map((data) => (
         <LectureBox
+          key={data.lectureId.value}
           grade={data.acceptableStudent.targetGrade}
           lectureTag={data.lectureTag}
           people={data.enrollStudent}
