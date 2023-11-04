@@ -1,20 +1,13 @@
 import { Card, CardTitle } from "@checkin/ui";
-import Image from "next/image";
 import React from "react";
-import Write from "../../../assets/Icon/Write.svg";
 import QuestionForm from "./QuestionForm";
+import { WriteIcon } from "@checkin/icon";
 
 const Applyout = () => {
   return (
     <Card type="Applyout">
       <CardTitle>
-        <Image
-          width={32}
-          height={32}
-          src={Write.src}
-          alt=""
-          style={{ marginBottom: "4px" }}
-        />
+        <WriteIcon />
         담당자 문의
       </CardTitle>
       <QuestionForm />
