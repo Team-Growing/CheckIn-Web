@@ -1,6 +1,6 @@
-import { useGetLecturesByStatus } from "@/queries/Lecture/query";
 import { LectureTagBox } from "@checkin/ui";
 import React from "react";
+import { useGetLecturesByStatus } from "@/queries/Lecture/query";
 
 interface Props {
   status: string;
