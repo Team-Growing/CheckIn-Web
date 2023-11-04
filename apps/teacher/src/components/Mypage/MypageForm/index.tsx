@@ -1,15 +1,14 @@
 import React from "react";
 import * as S from "./style";
-import {
-  Flex,
-  InputIntroText,
-  TextInput,
-  TextInputWrap,
-  WriteButton,
-} from "@checkin/ui";
+import { Flex, TextInputWrap, WriteButton } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
+import { MemberType } from "@checkin/types";
 
-const MypageForm = () => {
+interface Props {
+  myInfoData: MemberType;
+}
+
+const MypageForm = ({ myInfoData }: Props) => {
   return (
     <S.MypageFormContainer>
       <input id="profileUploadInput" type="file" />
@@ -19,12 +18,32 @@ const MypageForm = () => {
       </S.MypageImageBox>
       <Flex direction="column" gap={13}>
         <Flex gap={30}>
-          <TextInputWrap info="이름" require={false} />
-          <TextInputWrap info="아이디" require={false} />
+          <TextInputWrap
+            info="이름"
+            customStyle={{ width: "100px" }}
+            value={myInfoData.data.name}
+            require={false}
+          />
+          <TextInputWrap
+            info="E-mail"
+            customStyle={{ width: "auto" }}
+            value={myInfoData.data.email}
+            require={false}
+          />
         </Flex>
         <Flex gap={30}>
-          <TextInputWrap info="E-mail" require={false} />
-          <TextInputWrap info="전담과목" require={false} />
+          <TextInputWrap
+            info="담당과목"
+            customStyle={{ width: "100px" }}
+            value={myInfoData.data.memberRole}
+            require={false}
+          />
+          <TextInputWrap
+            info="아이디"
+            customStyle={{ width: "auto" }}
+            value={myInfoData.data.id}
+            require={false}
+          />
           <WriteButton type="primary" customStyle={{ marginTop: "20px" }}>
             수정하기
           </WriteButton>

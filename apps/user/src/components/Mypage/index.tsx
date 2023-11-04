@@ -14,7 +14,7 @@ const Mypage = () => {
   return (
     <S.MypageContainer>
       <SectionHeader title="마이페이지" subTitle="My page & Setting" />
-      <MypageForm />
+      <MypageForm serverMyInfo={serverMyInfo!} />
       <S.MypageSectionTitle
         style={{ marginTop: "37px" }}
       >{`${serverMyInfo?.data.name}님의 방과후`}</S.MypageSectionTitle>
