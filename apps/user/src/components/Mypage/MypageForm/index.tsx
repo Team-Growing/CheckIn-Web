@@ -2,8 +2,14 @@ import React from "react";
 import * as S from "./style";
 import { Flex, TextInputWrap, WriteButton } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
+import { MemberType } from "@checkin/types";
 
-const MypageForm = () => {
+interface Props {
+  serverMyInfo: MemberType;
+}
+
+const MypageForm = ({ serverMyInfo }: Props) => {
+  const { email, id, memberRole, name, studentInfo } = serverMyInfo.data;
   return (
     <S.MypageFormContainer>
       <input id="profileUploadInput" type="file" />
@@ -16,13 +22,13 @@ const MypageForm = () => {
           <TextInputWrap
             info="이름"
             customStyle={{ width: "80px" }}
-            value="김예림"
+            value={name}
             require={false}
           />
           <TextInputWrap
             info="E-mail"
             customStyle={{ width: "auto" }}
-            value="loveyr0118@gmail.com"
+            value={email}
             require={false}
           />
         </Flex>
@@ -30,13 +36,13 @@ const MypageForm = () => {
           <TextInputWrap
             info="학번"
             customStyle={{ width: "80px" }}
-            value="2402"
+            value={`${studentInfo.grade}${studentInfo.room}${studentInfo.number}`}
             require={false}
           />
           <TextInputWrap
             info="아이디"
             customStyle={{ width: "auto" }}
-            value="loveyr0118"
+            value={id}
             require={false}
           />
           <WriteButton type="primary" customStyle={{ marginTop: "20px" }}>
