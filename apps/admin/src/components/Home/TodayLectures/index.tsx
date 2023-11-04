@@ -2,7 +2,7 @@ import { Card, CardTitle } from "@checkin/ui";
 import React from "react";
 import { LectureIcon } from "@checkin/icon";
 import TodayLecturesList from "./TodayLectureList";
-import { useGetTodayLecturesQuery } from "@/queries/Lecture/query";
+import { useGetTodayLecturesQuery } from "@/queries/Lectures/query";
 
 const TodayLectures = () => {
   const { data } = useGetTodayLecturesQuery();

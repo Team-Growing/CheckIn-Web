@@ -1,4 +1,4 @@
-import { useCreateLectureMutation } from "@/queries/Lecture/query";
+import { useCreateLectureMutation } from "@/queries/Lectures/query";
 import { useGetTeachesrQuery } from "@/queries/Member/query";
 import { CheckinToast } from "@checkin/toast";
 import { dataTransform } from "@checkin/util";
@@ -96,12 +96,8 @@ export const useCreateLecture = () => {
     e.preventDefault();
 
     const { lectureName, explanation } = lectureNameExplan;
-    const {
-      lectureTag,
-      placeType,
-      targetGrade,
-      teacherId,
-    } = lectureSelectState;
+    const { lectureTag, placeType, targetGrade, teacherId } =
+      lectureSelectState;
     const { startTime, endTime } = lectureTime;
     const { maxStudent, minStudent } = acceptableStudent;
     const { startDay, endDay } = lecturePeriod;
