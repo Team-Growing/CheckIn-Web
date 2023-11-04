@@ -19,6 +19,7 @@ export const NoticeContainer = styled.div`
 `;
 
 export const NoticeContent = styled.div`
+  width: 70%;
   color: #828282;
   font-size: ${getRem(18)};
   font-weight: 500;
