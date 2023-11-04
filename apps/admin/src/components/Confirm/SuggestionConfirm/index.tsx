@@ -21,9 +21,11 @@ const SuggestionConfirm = () => {
     setPage(page);
   };
 
-  const { value: isOpened, setFalse: close, setTrue: open } = useBooleanState(
-    false
-  );
+  const {
+    value: isOpened,
+    setFalse: close,
+    setTrue: open,
+  } = useBooleanState(false);
 
   return (
     <>

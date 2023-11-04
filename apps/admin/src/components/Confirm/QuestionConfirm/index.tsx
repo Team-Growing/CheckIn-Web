@@ -21,9 +21,11 @@ const QuestionConfirm = () => {
     setPage(page);
   };
 
-  const { value: isOpened, setFalse: close, setTrue: open } = useBooleanState(
-    false
-  );
+  const {
+    value: isOpened,
+    setFalse: close,
+    setTrue: open,
+  } = useBooleanState(false);
 
   return (
     <>

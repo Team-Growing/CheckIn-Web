@@ -24,7 +24,7 @@ const NoticeGenerate = () => {
       <S.NoticeListContainer>
         <TitleText>공지사항</TitleText>
         {data?.data.map((data) => (
-          <NoticeList data={data} />
+          <NoticeList data={data} key={data.noticeId.value} />
         ))}
       </S.NoticeListContainer>
     </S.NoticeGenerateContainer>
