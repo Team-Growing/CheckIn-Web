@@ -7,9 +7,10 @@ import { Button, Flex } from "@checkin/ui";
 
 interface Props {
   id: number;
+  close: () => void;
 }
 
-const QuestionConfirmDetail = ({ id }: Props) => {
+const QuestionConfirmDetail = ({ id, close }: Props) => {
   const data = useGetQuestionQuery(id).data?.data;
   return (
     <S.Container onClick={stopBubbling}>
@@ -25,12 +26,11 @@ const QuestionConfirmDetail = ({ id }: Props) => {
             data?.createdAt
           )}`}</S.InfoText>
         </S.InfoBox>
-        <S.Content>
-          어쩌구저쩌구 교재가 필요해요 지금 당장 필요하니까 빨리 구매 안하면
-          수업 진행 안합니다^^
-        </S.Content>
+        <S.Content>{data?.content}</S.Content>
         <Flex justify="end">
-          <Button type="primary">확인하기</Button>
+          <Button type="primary" onClick={close}>
+            확인하기
+          </Button>
         </Flex>
       </S.Wrap>
     </S.Container>

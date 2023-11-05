@@ -1,15 +1,16 @@
 import * as S from "./style";
 import NavItem from "./NavItem/index";
 import NavUser from "./NavUser/index";
-import { useRouter } from "next/router";
 import { Logo } from "@checkin/icon";
+import Link from "next/link";
 
 const Nav = () => {
-  const router = useRouter();
   return (
     <S.NavContainer>
       <S.NavTopWrap>
-        <Logo onClick={() => router.push("/")} />
+        <Link href={"/"}>
+          <Logo />
+        </Link>
         <NavItem />
       </S.NavTopWrap>
       <NavUser />
