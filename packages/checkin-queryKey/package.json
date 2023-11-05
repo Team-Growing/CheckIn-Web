@@ -8,6 +8,7 @@
     "lint": "eslint \"**/*.ts*\""
   },
   "dependencies": {
+    "tsconfig": "workspace:*",
     "react": "^18.2.0"
   }
 }
