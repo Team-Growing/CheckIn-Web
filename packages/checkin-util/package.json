@@ -8,6 +8,7 @@
     "lint": "eslint \"**/*.ts*\""
   },
   "dependencies": {
+    "tsconfig": "workspace:*",
     "@checkin/types": "workspace:*",
     "dayjs": "^1.11.10",
     "react": "^18.2.0",
