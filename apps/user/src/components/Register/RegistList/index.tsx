@@ -17,8 +17,6 @@ const RegistList = ({ grade }: Props) => {
     <ItemContainer>
       {data?.data.length === 0 && <div>수강 신청 기간이 아닙니다</div>}
       {data?.data.map((data) => {
-        console.log(data.lectureTeacher.name);
-
         return (
           <LectureTagBox
             key={data.lectureId.value}
