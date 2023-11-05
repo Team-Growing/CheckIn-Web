@@ -4,17 +4,17 @@ import * as S from "./style";
 import Link from "next/link";
 
 const NavItem = () => {
-  const { pathname, push } = useRouter();
+  const { pathname } = useRouter();
 
   return (
     <S.NavItemWrap>
       {NAV_ITEM.map((data, idx) => (
         <Link href={data.path} key={idx}>
           <S.NavItemBox
-            isMatch={data.path == pathname ? true : false}
+            isMatch={data.pathname === pathname ? true : false}
             key={idx}
           >
-            <data.icon isMatch={data.path == pathname ? true : false} />
+            <data.icon isMatch={data.pathname == pathname ? true : false} />
             <S.NavItemText>{data.title}</S.NavItemText>
           </S.NavItemBox>
         </Link>

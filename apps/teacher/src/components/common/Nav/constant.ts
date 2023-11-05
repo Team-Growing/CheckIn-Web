@@ -1,4 +1,4 @@
-import { MypageIcon, NoticeIcon, SchoolIcon } from "@checkin/icon";
+import { MypageIcon, SchoolIcon } from "@checkin/icon";
 
 export const NAV_ITEM = [
   {

@@ -10,6 +10,7 @@ import React from "react";
 import { CalendarIcon } from "@checkin/icon";
 import { useGetAbsencesQuery } from "@/queries/Absence/query";
 import { dateTransform } from "@checkin/util";
+import Link from "next/link";
 
 const Absence = () => {
   const day = new Date();
@@ -17,10 +18,13 @@ const Absence = () => {
 
   return (
     <Card type="Applyout" customStyle={{ width: "41%" }}>
-      <CardTitle>
-        <CalendarIcon />
-        결강자 승인
-      </CardTitle>
+      <Flex justify="between" align="center">
+        <CardTitle>
+          <CalendarIcon />
+          결강자 승인
+        </CardTitle>
+        <Link href="/absence/list">더보기</Link>
+      </Flex>
       <Flex
         direction="column"
         customStyle={{ height: "100%", overflow: "auto" }}

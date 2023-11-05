@@ -14,7 +14,7 @@ const NavItem = () => {
             isMatch={data.pathname == pathname ? true : false}
             key={idx}
           >
-            <data.icon isMatch={data.path == pathname ? true : false} />
+            <data.icon isMatch={data.pathname == pathname ? true : false} />
             <S.NavItemText>{data.title}</S.NavItemText>
           </S.NavItemBox>
         </Link>
