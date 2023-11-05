@@ -4,6 +4,7 @@ import NavUser from "./NavUser/index";
 import { useRouter } from "next/router";
 import { Logo } from "@checkin/icon";
 import { Flex } from "@checkin/ui";
+import Link from "next/link";
 
 const Nav = () => {
   const router = useRouter();
@@ -11,7 +12,9 @@ const Nav = () => {
     <S.NavContainer>
       <S.NavTopWrap>
         <Flex customStyle={{ width: "100%" }} direction="column" align="center">
-          <Logo onClick={() => router.push("/")} />
+          <Link href="/">
+            <Logo />
+          </Link>
           <S.NavLogoText>Admin</S.NavLogoText>
         </Flex>
         <NavItem />

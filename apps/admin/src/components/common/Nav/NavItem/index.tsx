@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { NAV_ITEM } from "../constant";
 import * as S from "./style";
+import Link from "next/link";
 
 const NavItem = () => {
   const { pathname, push } = useRouter();
@@ -8,14 +9,15 @@ const NavItem = () => {
   return (
     <S.NavItemWrap>
       {NAV_ITEM.map((data, idx) => (
-        <S.NavItemBox
-          isMatch={data.path == pathname ? true : false}
-          key={idx}
-          onClick={() => push(data.path)}
-        >
-          <data.icon isMatch={data.path == pathname ? true : false} />
-          <S.NavItemText>{data.title}</S.NavItemText>
-        </S.NavItemBox>
+        <Link href={data.path} key={idx}>
+          <S.NavItemBox
+            isMatch={data.path == pathname ? true : false}
+            key={idx}
+          >
+            <data.icon isMatch={data.path == pathname ? true : false} />
+            <S.NavItemText>{data.title}</S.NavItemText>
+          </S.NavItemBox>
+        </Link>
       ))}
     </S.NavItemWrap>
   );

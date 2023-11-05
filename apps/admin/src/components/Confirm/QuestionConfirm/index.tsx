@@ -78,7 +78,7 @@ const QuestionConfirm = () => {
         itemsCountPerPage={10}
       />
       <Modal isOpened={isOpened} onClose={close}>
-        <QuestionConfirmDetail id={id} />
+        <QuestionConfirmDetail id={id} close={close} />
       </Modal>
     </>
   );
