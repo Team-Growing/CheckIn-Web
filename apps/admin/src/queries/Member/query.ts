@@ -1,10 +1,10 @@
 import { UseQueryOptions, useQuery } from "react-query";
-import { CheckInQueryKey } from "../queryKey";
 import { CheckinToast } from "@checkin/toast";
 import { AxiosError } from "axios";
 import { MemberType } from "@checkin/types";
 import Token from "@/libs/Token/Token";
 import MemberRepositoryImpl from "@/repositories/MemberRepository/MemberRepositoryImpl";
+import { CheckInQueryKey } from "@checkin/querykey";
 
 export const useGetMemberInfoQuery = (
   options?: UseQueryOptions<MemberType, AxiosError, MemberType, string>

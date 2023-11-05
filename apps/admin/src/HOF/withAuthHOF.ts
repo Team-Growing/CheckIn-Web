@@ -19,9 +19,7 @@ const withAuth = (getServerSideProps: GetServerSideProps) => {
 
     try {
       return await getServerSideProps(context);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 };
 

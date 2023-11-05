@@ -1,9 +1,11 @@
 import React from "react";
 import * as S from "./style";
 import { useGetQuestionsQuery } from "@/queries/Question/query";
+import { dateTransform } from "@checkin/util";
 
 const ContactList = () => {
   const { data } = useGetQuestionsQuery({ limit: 5, page: 1 });
+
   return (
     <>
       <S.ContactListContainer>
@@ -14,7 +16,7 @@ const ContactList = () => {
         </S.ContactListTitle>
         {data?.data.value.map((data) => (
           <S.ContactListText key={data.questionId.value}>
-            <p>{data.createdAt}</p>
+            <p>{dateTransform.hyphen(data.createdAt)}</p>
             <p>{data.title}</p>
             <p>{data.questioner.name}</p>
           </S.ContactListText>

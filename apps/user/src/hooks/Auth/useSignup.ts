@@ -51,8 +51,6 @@ export const useSignup = () => {
       },
     };
     try {
-      console.log(validStudentSignupData);
-
       await AuthRepositoryImpl.signupStudent(validStudentSignupData);
       window.alert("회원가입에 성공했습니다.(관리자 승인을 기다려주세요!)");
       window.location.reload();

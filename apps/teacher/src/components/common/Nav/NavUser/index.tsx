@@ -1,5 +1,4 @@
 import * as S from "./style";
-import { dataTransform } from "@checkin/util";
 import useLogout from "@/hooks/Auth/useLogout";
 import { ProfileIcon } from "@checkin/icon";
 import { useGetMemberInfo } from "@/queries/Member/query";
@@ -7,7 +6,6 @@ import { useGetMemberInfo } from "@/queries/Member/query";
 const NavUser = () => {
   const { data } = useGetMemberInfo();
   const { onLogout } = useLogout();
-  console.log(data);
 
   return (
     <S.NavBottomBox>

@@ -34,7 +34,7 @@ export const getServerSideProps = withAuth(async () => {
     }),
 
     queryClient.prefetchQuery({
-      queryKey: CheckInQueryKey.member.getMyTodayLectures,
+      queryKey: CheckInQueryKey.lecture.getTodayMyLectures,
       queryFn: LectureRepositoryImpl.getTodayMyLectures,
     }),
   ]);
