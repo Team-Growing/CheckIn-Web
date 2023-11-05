@@ -8,7 +8,7 @@ const Auth = () => {
       <S.AuthBackGround>
         <S.AuthContainer>
           <S.AuthPanelWrap>
-            <S.AuthPanel src={AuthImg.src} />
+            <S.AuthPanel src={AuthImg.src} alt="" />
           </S.AuthPanelWrap>
           <S.AuthWrap>
             <Login />

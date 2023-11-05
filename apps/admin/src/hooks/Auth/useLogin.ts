@@ -38,6 +38,9 @@ export const useLogin = () => {
             CheckinToast.showSuccess("로그인 성공");
             queryClient.invalidateQueries([CheckInQueryKey.member.getMy]);
           },
+          onError: () => {
+            CheckinToast.showError("로그인 실패");
+          },
         }
       );
     }

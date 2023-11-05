@@ -2,6 +2,8 @@ import { ChangeEvent, useCallback, useState } from "react";
 import { sha512 } from "js-sha512";
 import AuthRepositoryImpl from "../../repositories/AuthRepository/AuthRepositoryImpl";
 import { StudentInfoType, StudentSignupType } from "@checkin/types";
+import { patternCheck } from "@checkin/util";
+import { CheckinToast } from "@checkin/toast";
 
 export const useSignup = () => {
   const [section, setSection] = useState<"first" | "second">("first");
@@ -34,12 +36,33 @@ export const useSignup = () => {
       window.alert("양식이 비었습니다");
       return;
     }
+
+    if (!patternCheck.idCheck(id)) {
+      CheckinToast.showInfo("아이디 형식을 지켜주세요");
+      return;
+    }
+
+    if (!patternCheck.pwCheck(pw)) {
+      CheckinToast.showInfo("비밀번호 형식을 지켜주세요");
+      return;
+    }
+
+    if (!patternCheck.emailCheck(email)) {
+      CheckinToast.showInfo("이메일 형식을 지켜주세요");
+      return;
+    }
+
     setSection("second");
   }, [signupData]);
 
   const submitSecondSignup = async () => {
     const { pw } = signupData;
     const { grade, number, room } = studentInfoData;
+
+    if (grade > 3 || room > 4 || number > 20) {
+      CheckinToast.showInfo("올바른 학급정보, 기수를 입력해주세요");
+      return;
+    }
 
     const validStudentSignupData = {
       ...signupData,

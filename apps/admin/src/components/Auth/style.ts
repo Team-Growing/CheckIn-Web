@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import AuthBackground from "../../assets/Image/AuthBackground.svg";
+import Image from "next/image";
 
 export const AuthBackGround = styled.div`
   width: 100%;
@@ -26,7 +27,7 @@ export const AuthPanelWrap = styled.div`
   position: relative;
 `;
 
-export const AuthPanel = styled.img`
+export const AuthPanel = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
