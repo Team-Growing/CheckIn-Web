@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { FormEvent, useRef } from "react";
 import { sha512 } from "js-sha512";
-
 import { CheckinToast } from "@checkin/toast";
 import {
   ACCESS_TOKEN_KEY,
@@ -9,17 +8,12 @@ import {
 } from "@/constant/Token/Token.constant";
 import Token from "@/libs/token/Token";
 import { usePostLoginMutation } from "@/queries/Auth/query";
-import { usePoseInfoAtomStateStore } from "@/store/lectureId";
-import { useGetMyLectures } from "@/queries/Lectures/query";
 
 export const useLogin = () => {
   const router = useRouter();
   const idRef = useRef<HTMLInputElement>(null);
   const pwRef = useRef<HTMLInputElement>(null);
-  const setLecureId = usePoseInfoAtomStateStore();
   const postLoginMutation = usePostLoginMutation();
-
-  // const { datas } = useGetMyLectures();
 
   const onLogin = (e: FormEvent) => {
     e.preventDefault();
@@ -36,6 +30,9 @@ export const useLogin = () => {
             Token.setToken(REFRESH_TOKEN_KEY, data.refreshToken);
             router.push("/");
             CheckinToast.showSuccess("로그인 성공");
+          },
+          onError: () => {
+            CheckinToast.showError("로그인 실패");
           },
         }
       );
