@@ -16,6 +16,7 @@ export const CheckInQueryKey = {
     ],
     getById: (lectureId: number) => ["lecture/getLecture", lectureId],
     getAll: (grade: number) => ["lecture/getLectures", grade],
+    getTodayMyLectures: "lectures/getMyTodayLectures",
   },
   question: {
     getQuestions: "questions/getQuestions",
@@ -25,7 +26,6 @@ export const CheckInQueryKey = {
     getMy: "member/getMyMember",
     getTeacherList: "/member/getTeacherList",
     getMyLectures: "lectures/myLectures",
-    getMyTodayLectures: "member/getMyTodayLectures",
   },
 
   attendance: {

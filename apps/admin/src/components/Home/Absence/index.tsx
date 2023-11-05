@@ -25,25 +25,29 @@ const Absence = () => {
         direction="column"
         customStyle={{ height: "100%", overflow: "auto" }}
       >
-        {data?.data.map((data) => (
-          <AbsenceStudentList
-            grade={data.absentee?.studentInfo.grade}
-            name={data.absentee?.name}
-            number={data.absentee?.studentInfo.number}
-            room={data.absentee?.studentInfo.room}
-            reason={data?.reason}
-            key={data.absenceId?.value}
-          >
-            <ButtonWrapper>
-              <Button type="primary" customStyle={{ width: "65px" }}>
-                승인
-              </Button>
-              <Button type="secondary" customStyle={{ width: "65px" }}>
-                거절
-              </Button>
-            </ButtonWrapper>
-          </AbsenceStudentList>
-        ))}
+        {data?.data.length! < 1 ? (
+          <div>결강 신청이 없습니다</div>
+        ) : (
+          data?.data.map((data) => (
+            <AbsenceStudentList
+              grade={data.absentee?.studentInfo.grade}
+              name={data.absentee?.name}
+              number={data.absentee?.studentInfo.number}
+              room={data.absentee?.studentInfo.room}
+              reason={data?.reason}
+              key={data.absenceId?.value}
+            >
+              <ButtonWrapper>
+                <Button type="primary" customStyle={{ width: "65px" }}>
+                  승인
+                </Button>
+                <Button type="secondary" customStyle={{ width: "65px" }}>
+                  거절
+                </Button>
+              </ButtonWrapper>
+            </AbsenceStudentList>
+          ))
+        )}
       </Flex>
     </Card>
   );
