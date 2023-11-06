@@ -22,7 +22,6 @@ interface Props {
 const AttendanceCode = ({ lectureId }: Props) => {
   const { data } = useGetCodeQuery(lectureId);
   const queryClient = useQueryClient();
-  const onClickChangeHandler = () => {};
   const changeCodeMutation = useChangeCodeMutation();
   return (
     <>

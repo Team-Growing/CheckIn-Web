@@ -1,6 +1,7 @@
 import AttendanceRepositoryImpl from "@/repositories/AttendanceRepository/AttendanceRepositoryImpl";
 import { useQuery, useMutation } from "react-query";
 import { CheckInQueryKey } from "@checkin/querykey";
+import { CheckinToast } from "@checkin/toast";
 
 export const useGetCodeQuery = (lectureId: number) =>
   useQuery(
@@ -9,6 +10,11 @@ export const useGetCodeQuery = (lectureId: number) =>
     {
       cacheTime: 1000 * 60 * 60,
       staleTime: 1000 * 60 * 60,
+      onError: (data: any) => {
+        if (data.response.data.status === 403) {
+          CheckinToast.showError("지금은 코드 발급 기간이 아닙니다");
+        }
+      },
     }
   );
 
