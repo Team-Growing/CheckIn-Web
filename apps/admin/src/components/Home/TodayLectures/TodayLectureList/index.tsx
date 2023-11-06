@@ -9,19 +9,23 @@ interface Props {
 
 const TodayLecturesList = ({ data }: Props) => {
   return (
-    <LectureListWrapper>
-      {data?.data.map((data) => (
-        <LectureBox
-          key={data.lectureId.value}
-          lectureTag={data.lectureTag}
-          grade={data.acceptableStudent.targetGrade}
-          people={data.enrollStudent}
-          place={data.placeType}
-          teacher={data.lectureTeacher.name}
-          title={data.lectureName}
-        />
-      ))}
-    </LectureListWrapper>
+    <div style={{ overflowX: "auto" }}>
+      <LectureListWrapper>
+        <div style={{ display: "flex", columnGap: "20px" }}>
+          {data.data.map((data) => (
+            <LectureBox
+              key={data.lectureId.value}
+              grade={data.acceptableStudent.targetGrade}
+              lectureTag={data.lectureTag}
+              people={data.enrollStudent}
+              place={data.placeType}
+              teacher={data.lectureTeacher.name}
+              title={data.lectureName}
+            />
+          ))}
+        </div>
+      </LectureListWrapper>
+    </div>
   );
 };
 

@@ -5,9 +5,6 @@ export const LectureListWrapper = styled.div`
   height: 100%;
 
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 
   column-gap: 20px;
-  overflow-x: scroll;
 `;
