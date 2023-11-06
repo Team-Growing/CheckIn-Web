@@ -14,7 +14,7 @@ const Notifiction = () => {
     } else {
       setNoticeLength(data?.data.length! - 1);
     }
-  }, 2000);
+  }, 3000);
   return (
     <NoticeContainer>
       <CardTitle>

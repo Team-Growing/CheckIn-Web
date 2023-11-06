@@ -1,5 +1,4 @@
 import { CardTitle } from "@checkin/ui";
-import Image from "next/image";
 import React, { useState } from "react";
 import { NotifictionIcon } from "@checkin/icon";
 import { NoticeContainer, NoticeContent } from "./style";
@@ -15,7 +14,7 @@ const Notifiction = () => {
     } else {
       setNoticeLength(data?.data.length! - 1);
     }
-  }, 2000);
+  }, 3000);
   return (
     <NoticeContainer>
       <CardTitle>
