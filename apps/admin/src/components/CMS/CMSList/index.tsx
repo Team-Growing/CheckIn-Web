@@ -26,7 +26,7 @@ const LecturesList = ({
           lectureTag={data.lectureTag}
           people={data.enrollStudent}
           place={data.placeType}
-          teacher={data.lectureTeacher.teacherId.value}
+          teacher={data.lectureTeacher.name}
           title={data.lectureName}
           isSelect={lectureIdList.includes(data.lectureId.value) ? true : false}
           onSelect={() => onChangeLectureIdList(data.lectureId.value)}
