@@ -7,6 +7,7 @@ import AttendLectureForm from "./AttendLectureForm";
 
 const Attend = () => {
   const {
+    attendanceCode,
     lectureId,
     onAttendanceLecture,
     onClickSetId,
@@ -21,6 +22,7 @@ const Attend = () => {
       <Flex gap={20} customStyle={{ width: "100%", height: "100%" }}>
         <AttendList lectureId={lectureId} onClickSetId={onClickSetId} />
         <AttendLectureForm
+          attendanceCode={attendanceCode}
           onAttendanceLecture={onAttendanceLecture}
           onChangeAttendanceCode={onChangeAttendanceCode}
         />

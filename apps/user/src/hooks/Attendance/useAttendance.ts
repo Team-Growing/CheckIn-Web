@@ -23,18 +23,19 @@ const useAttendance = () => {
       { lectureId: stringLectureId, code: attendanceCode },
       {
         onSuccess: () => {
-          setAttendacneCode("");
           CheckinToast.showSuccess("출석체크 성공");
+          setAttendacneCode("");
         },
         onError: () => {
-          setAttendacneCode("");
           CheckinToast.showError("출석체크 실패");
+          setAttendacneCode("");
         },
       }
     );
   };
 
   return {
+    attendanceCode,
     lectureId,
     onClickSetId,
     onChangeAttendanceCode,
