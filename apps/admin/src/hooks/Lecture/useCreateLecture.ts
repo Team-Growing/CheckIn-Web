@@ -137,6 +137,7 @@ export const useCreateLecture = () => {
           setLectureTime({ startTime: "", endTime: "" });
           setAcceptableStudent({ maxStudent: "", minStudent: "" });
           setLecturePeriod({ startDay: "", endDay: "" });
+          setTeacherName("");
         },
       }
     );
