@@ -81,7 +81,7 @@ const Absence = () => {
                   승인
                 </Button>
                 <Button
-                  type="unSelect"
+                  type="deny"
                   onClick={() =>
                     denyAbsenceMutation.mutate(data.absenceId.value, {
                       onSuccess: () => {

@@ -1,5 +1,12 @@
 import * as S from "./style";
-import { Flex, SectionHeader, Select, TitleText } from "@checkin/ui";
+import {
+  AttendanceStudent,
+  Button,
+  Flex,
+  SectionHeader,
+  Select,
+  TitleText,
+} from "@checkin/ui";
 import styled from "styled-components";
 import { useGetAttendanceListQuery } from "@/queries/Attendance/query";
 import { useGetTodayLecturesQuery } from "@/queries/Lectures/query";
@@ -18,7 +25,7 @@ const SMS = () => {
   };
 
   const todayLectures = useGetTodayLecturesQuery().data?.data;
-  const { data } = useGetAttendanceListQuery(lectureId);
+  const { data: attendanceListData } = useGetAttendanceListQuery(lectureId);
 
   return (
     <S.CheckAttendanceContainer>
@@ -36,11 +43,57 @@ const SMS = () => {
       />
       <Flex direction="column" gap={10} customStyle={{ marginTop: "32px" }}>
         <TitleText>출석한 학생</TitleText>
-        <Box></Box>
+        <Box>
+          {attendanceListData?.data.attendants.map((data) => (
+            <AttendanceStudent
+              key={data.id}
+              grade={data.studentInfo.grade}
+              name={data.name}
+              number={data.studentInfo.number}
+              room={data.studentInfo.room}
+            >
+              <Button customStyle={{ width: "150px" }} type="unSelect">
+                출석 취소
+              </Button>
+            </AttendanceStudent>
+          ))}
+        </Box>
       </Flex>
       <Flex direction="column" gap={10} customStyle={{ marginTop: "52px" }}>
         <TitleText>미출석한 학생</TitleText>
-        <Box></Box>
+        <Box>
+          {attendanceListData?.data.nonAttendants.map((data) => (
+            <AttendanceStudent
+              key={data.id}
+              grade={data.studentInfo.grade}
+              name={data.name}
+              number={data.studentInfo.number}
+              room={data.studentInfo.room}
+            >
+              <Button customStyle={{ width: "150px" }} type="unSelect">
+                출석 취소
+              </Button>
+            </AttendanceStudent>
+          ))}
+        </Box>
+      </Flex>
+      <Flex direction="column" gap={10} customStyle={{ marginTop: "52px" }}>
+        <TitleText>결강한 학생</TitleText>
+        <Box>
+          {attendanceListData?.data.absentees.map((data) => (
+            <AttendanceStudent
+              key={data.id}
+              grade={data.studentInfo.grade}
+              name={data.name}
+              number={data.studentInfo.number}
+              room={data.studentInfo.room}
+            >
+              <Button customStyle={{ width: "150px" }} type="unSelect">
+                결강중
+              </Button>
+            </AttendanceStudent>
+          ))}
+        </Box>
       </Flex>
     </S.CheckAttendanceContainer>
   );
