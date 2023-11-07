@@ -8,13 +8,20 @@ import {
 } from "@checkin/ui";
 import React from "react";
 import { CalendarIcon } from "@checkin/icon";
-import { useGetAbsencesQuery } from "@/queries/Absence/query";
+import {
+  useAllowAbsenceMutation,
+  useDenyAbsenceMutation,
+  useGetAbsencesQuery,
+} from "@/queries/Absence/query";
 import { dateTransform } from "@checkin/util";
 import Link from "next/link";
+import { CheckinToast } from "@checkin/toast";
 
 const Absence = () => {
   const day = new Date();
   const { data } = useGetAbsencesQuery(dateTransform.hyphen(String(day)));
+  const denyAbsenceMutation = useDenyAbsenceMutation();
+  const allowAbsenceMutation = useAllowAbsenceMutation();
 
   return (
     <Card type="Applyout" customStyle={{ width: "41%" }}>
@@ -41,14 +48,46 @@ const Absence = () => {
               reason={data?.reason}
               key={data.absenceId?.value}
             >
-              <ButtonWrapper>
-                <Button type="primary" customStyle={{ width: "65px" }}>
-                  승인
-                </Button>
-                <Button type="secondary" customStyle={{ width: "65px" }}>
-                  거절
-                </Button>
-              </ButtonWrapper>
+              {data.absenceStatus === "ABSENCE_ALLOWED" ? (
+                <>승인됨</>
+              ) : data.absenceStatus === "ABSENCE_DENIED" ? (
+                <>거절됨</>
+              ) : (
+                <ButtonWrapper>
+                  <Button
+                    onClick={() => {
+                      allowAbsenceMutation.mutate(data.absenceId.value, {
+                        onSuccess: () => {
+                          CheckinToast.showSuccess("결강을 승인하셨습니다");
+                        },
+                        onError: () => {
+                          CheckinToast.showError("결강 승인 실패");
+                        },
+                      });
+                    }}
+                    type="primary"
+                    customStyle={{ width: "65px" }}
+                  >
+                    승인
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      denyAbsenceMutation.mutate(data.absenceId.value, {
+                        onSuccess: () => {
+                          CheckinToast.showSuccess("결강을 거절하셨습니다");
+                        },
+                        onError: () => {
+                          CheckinToast.showError("결강 거절 실패");
+                        },
+                      });
+                    }}
+                    type="deny"
+                    customStyle={{ width: "65px" }}
+                  >
+                    거절
+                  </Button>
+                </ButtonWrapper>
+              )}
             </AbsenceStudentList>
           ))
         )}
