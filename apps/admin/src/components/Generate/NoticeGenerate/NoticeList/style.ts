@@ -26,6 +26,7 @@ export const NoticeWrap = styled.div`
 `;
 
 export const NoticeText = styled.p`
+  width: 70%;
   color: #828282;
   font-size: ${getRem(18)};
   font-weight: 500;
