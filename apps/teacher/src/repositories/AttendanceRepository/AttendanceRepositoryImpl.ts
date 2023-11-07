@@ -11,11 +11,8 @@ import {
   AttendMemberParam,
   AttendanceRepository,
   ChangeAttendanceStatusParam,
-  enroLectureByIdParam,
-  getLectureByIdParam,
 } from "./AttendanceRepository";
 import apiClient from "@/libs/Auth/customAxios";
-import { promises } from "dns";
 
 class AttendanceRepositoryImpl implements AttendanceRepository {
   public async attendanceLecture({
@@ -72,10 +69,8 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     lectureId,
     memberId,
   }: ChangeAttendanceStatusParam): Promise<Response> {
-    const {
-      data,
-    } = await apiClient.delete(
-      `/attendance/${lectureId}/cancellation/${memberId}`,
+    const { data } = await apiClient.delete(
+      `/attendance/${lectureId}/cancellation`,
       { data: { memberId } }
     );
     return data;
