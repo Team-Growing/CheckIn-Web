@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./style";
 import { useGetQuestionsQuery } from "@/queries/Question/query";
-import { dateTransform } from "@checkin/util";
+import { dateTransform, stringEllipsis } from "@checkin/util";
 
 const ContactList = () => {
   const { data } = useGetQuestionsQuery({ limit: 5, page: 1 });
@@ -17,7 +17,7 @@ const ContactList = () => {
         {data?.data.value.map((data) => (
           <S.ContactListText key={data.questionId.value}>
             <p>{dateTransform.hyphen(data.createdAt)}</p>
-            <p>{data.title}</p>
+            <p>{`${stringEllipsis(data.title, 25)}`}</p>
             <p>{data.questioner.name}</p>
           </S.ContactListText>
         ))}
