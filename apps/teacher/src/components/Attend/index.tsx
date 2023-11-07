@@ -49,6 +49,7 @@ const Attend = () => {
               room={data.studentInfo.room}
             >
               <Button
+                customStyle={{ width: "150px" }}
                 type="unSelect"
                 onClick={() =>
                   onChangeAttendanceStatusCancel({
@@ -74,6 +75,7 @@ const Attend = () => {
             >
               <Button
                 type="primary"
+                customStyle={{ width: "150px" }}
                 onClick={() =>
                   onChangeAttendanceStatusConfirm({
                     lectureId,
@@ -97,6 +99,7 @@ const Attend = () => {
               room={data.studentInfo.room}
             >
               <Button
+                customStyle={{ width: "150px" }}
                 type="unSelect"
                 onClick={() =>
                   onChangeAttendanceStatusCancel({

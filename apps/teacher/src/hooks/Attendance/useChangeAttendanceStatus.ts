@@ -21,13 +21,13 @@ const useChangeAttendanceStatus = () => {
       { lectureId, memberId },
       {
         onSuccess: () => {
-          CheckinToast.showSuccess("출석처리 하였습니다");
+          CheckinToast.showSuccess("출석 취소 처리 하였습니다");
           queryClient.invalidateQueries(
             CheckInQueryKey.attendance.getAttendacneList(lectureId)
           );
         },
         onError: () => {
-          CheckinToast.showError("출석 처리 실패");
+          CheckinToast.showError("출석 취소 처리 실패");
         },
       }
     );

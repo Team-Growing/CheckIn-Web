@@ -8,6 +8,7 @@ import { CalendarIcon } from "@checkin/icon";
 const Enrol = () => {
   const [lectureId, setLectureId] = useState(0);
   const { data } = useGetTodayMyLecturesQuery();
+
   return (
     <Card
       type="Enrol"
@@ -24,8 +25,8 @@ const Enrol = () => {
           <Button
             key={data.lectureId.value}
             onClick={() => setLectureId(data.lectureId.value)}
-            customStyle={{ width: "15%" }}
-            type="secondary"
+            customStyle={{ width: "20%" }}
+            type="unSelect"
             isSelect={lectureId === data.lectureId.value ? true : false}
           >
             {data.lectureName}
