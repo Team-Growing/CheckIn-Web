@@ -16,8 +16,11 @@ import {
 import { dateTransform } from "@checkin/util";
 import Link from "next/link";
 import { CheckinToast } from "@checkin/toast";
+import { useQueryClient } from "react-query";
+import { CheckInQueryKey } from "@checkin/querykey";
 
 const Absence = () => {
+  const queryClient = useQueryClient();
   const day = new Date();
   const { data } = useGetAbsencesQuery(dateTransform.hyphen(String(day)));
   const denyAbsenceMutation = useDenyAbsenceMutation();
@@ -59,6 +62,9 @@ const Absence = () => {
                       allowAbsenceMutation.mutate(data.absenceId.value, {
                         onSuccess: () => {
                           CheckinToast.showSuccess("결강을 승인하셨습니다");
+                          queryClient.invalidateQueries(
+                            CheckInQueryKey.absence.getAll
+                          );
                         },
                         onError: () => {
                           CheckinToast.showError("결강 승인 실패");
@@ -75,6 +81,9 @@ const Absence = () => {
                       denyAbsenceMutation.mutate(data.absenceId.value, {
                         onSuccess: () => {
                           CheckinToast.showSuccess("결강을 거절하셨습니다");
+                          queryClient.invalidateQueries(
+                            CheckInQueryKey.absence.getAll
+                          );
                         },
                         onError: () => {
                           CheckinToast.showError("결강 거절 실패");
