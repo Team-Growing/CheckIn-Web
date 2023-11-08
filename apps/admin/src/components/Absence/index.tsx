@@ -15,8 +15,11 @@ import {
 import { dataTransform, dateTransform, stringEllipsis } from "@checkin/util";
 import { ProfileIcon } from "@checkin/icon";
 import { CheckinToast } from "@checkin/toast";
+import { useQueryClient } from "react-query";
+import { CheckInQueryKey } from "@checkin/querykey";
 
 const Absence = () => {
+  const queryClient = useQueryClient();
   const [date, setDate] = useState(dateTransform.hyphen(String(new Date())));
   const { data, refetch } = useGetAbsencesQuery(date);
 
@@ -70,7 +73,12 @@ const Absence = () => {
                   onClick={() =>
                     allowAbsenceMutation.mutate(data.absenceId.value, {
                       onSuccess: () => {
-                        CheckinToast.showSuccess("승인 하였습니다");
+                        CheckinToast.showSuccess(
+                          `${data.absentee.name}의 결강 승인`
+                        );
+                        queryClient.invalidateQueries(
+                          CheckInQueryKey.absence.getAll
+                        );
                       },
                       onError: () => {
                         CheckinToast.showError("승인 실패 서버에러..");
@@ -87,6 +95,9 @@ const Absence = () => {
                       onSuccess: () => {
                         CheckinToast.showSuccess(
                           `${data.absentee.name}의 결강 거절`
+                        );
+                        queryClient.invalidateQueries(
+                          CheckInQueryKey.absence.getAll
                         );
                       },
                       onError: () => {
