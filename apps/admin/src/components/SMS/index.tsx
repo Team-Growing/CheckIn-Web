@@ -11,6 +11,7 @@ import styled from "styled-components";
 import { useGetAttendanceListQuery } from "@/queries/Attendance/query";
 import { useGetTodayLecturesQuery } from "@/queries/Lectures/query";
 import { useState } from "react";
+import useChangeAttendanceStatus from "@/hooks/Attendance/useChangeAttendanceStatus";
 
 const SMS = () => {
   const [lectureId, setLectureId] = useState(0);
@@ -26,6 +27,9 @@ const SMS = () => {
 
   const todayLectures = useGetTodayLecturesQuery().data?.data;
   const { data: attendanceListData } = useGetAttendanceListQuery(lectureId);
+
+  const { onChangeAttendanceStatusCancel, onChangeAttendanceStatusConfirm } =
+    useChangeAttendanceStatus();
 
   return (
     <S.CheckAttendanceContainer>
@@ -52,7 +56,16 @@ const SMS = () => {
               number={data.studentInfo.number}
               room={data.studentInfo.room}
             >
-              <Button customStyle={{ width: "150px" }} type="unSelect">
+              <Button
+                onClick={() =>
+                  onChangeAttendanceStatusCancel({
+                    lectureId,
+                    memberId: data.id,
+                  })
+                }
+                customStyle={{ width: "150px" }}
+                type="unSelect"
+              >
                 출석 취소
               </Button>
             </AttendanceStudent>
@@ -70,7 +83,16 @@ const SMS = () => {
               number={data.studentInfo.number}
               room={data.studentInfo.room}
             >
-              <Button customStyle={{ width: "150px" }} type="unSelect">
+              <Button
+                customStyle={{ width: "150px" }}
+                type="primary"
+                onClick={() =>
+                  onChangeAttendanceStatusConfirm({
+                    lectureId,
+                    memberId: data.id,
+                  })
+                }
+              >
                 출석
               </Button>
             </AttendanceStudent>

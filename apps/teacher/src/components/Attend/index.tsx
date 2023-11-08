@@ -11,6 +11,7 @@ export type UserType = {
   age: number;
   position: string;
 };
+
 const Attend = () => {
   const { data: myLecturesData } = useGetMyLectures();
   const [lectureId, setLectureId] = useState<number>(0);
