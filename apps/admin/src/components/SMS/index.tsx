@@ -71,7 +71,7 @@ const SMS = () => {
               room={data.studentInfo.room}
             >
               <Button customStyle={{ width: "150px" }} type="unSelect">
-                출석 취소
+                출석
               </Button>
             </AttendanceStudent>
           ))}
