@@ -40,9 +40,11 @@ const useApplyAbsence = () => {
       onSuccess: () => {
         CheckinToast.showSuccess("결강 신청 성공 선생님의 승인을 기다려주세요");
         queryClient.invalidateQueries(CheckInQueryKey.absence.getMy);
+        setLectureName("");
+        setApplyAbsenceData({ lectureId: 0, reason: "" });
       },
       onError: () => {
-        CheckinToast.showError("서버 에러 ㅋㅋ");
+        CheckinToast.showError("서버 에러");
       },
     });
   };
