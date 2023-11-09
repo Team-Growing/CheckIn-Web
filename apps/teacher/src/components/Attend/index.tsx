@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import AttendIcon from "../../assets/image/AttendTitleIcon.svg";
-import { AttendanceStudent, Button, ButtonWrapper } from "@checkin/ui";
+import { AttendanceStudent, Button, ButtonWrapper, Flex } from "@checkin/ui";
 import { useGetAttendantsQuery } from "@/queries/AttendanceCode/query";
 import { useGetMyLectures } from "@/queries/Lectures/query";
 import useChangeAttendanceStatus from "@/hooks/Attendance/useChangeAttendanceStatus";
@@ -39,81 +39,87 @@ const Attend = () => {
             </Button>
           ))}
         </ButtonWrapper>
-        <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
-        <S.AttendListWrapper>
-          {attendanceListData?.data.attendants.map((data) => (
-            <AttendanceStudent
-              key={data.id}
-              grade={data.studentInfo.grade}
-              name={data.name}
-              number={data.studentInfo.number}
-              room={data.studentInfo.room}
-            >
-              <Button
-                customStyle={{ width: "150px" }}
-                type="unSelect"
-                onClick={() =>
-                  onChangeAttendanceStatusCancel({
-                    lectureId,
-                    memberId: data.id,
-                  })
-                }
+        <Flex direction="column" gap={10} customStyle={{ marginTop: "32px" }}>
+          <S.AttendStudentTitle>출석 한 학생</S.AttendStudentTitle>
+          <S.AttendListWrapper>
+            {attendanceListData?.data.attendants.map((data) => (
+              <AttendanceStudent
+                key={data.id}
+                grade={data.studentInfo.grade}
+                name={data.name}
+                number={data.studentInfo.number}
+                room={data.studentInfo.room}
               >
-                출석 취소
-              </Button>
-            </AttendanceStudent>
-          ))}
-        </S.AttendListWrapper>
-        <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
-        <S.AttendListWrapper>
-          {attendanceListData?.data.nonAttendants.map((data) => (
-            <AttendanceStudent
-              key={data.id}
-              grade={data.studentInfo.grade}
-              name={data.name}
-              number={data.studentInfo.number}
-              room={data.studentInfo.room}
-            >
-              <Button
-                type="primary"
-                customStyle={{ width: "150px" }}
-                onClick={() =>
-                  onChangeAttendanceStatusConfirm({
-                    lectureId,
-                    memberId: data.id,
-                  })
-                }
+                <Button
+                  customStyle={{ width: "150px" }}
+                  type="unSelect"
+                  onClick={() =>
+                    onChangeAttendanceStatusCancel({
+                      lectureId,
+                      memberId: data.id,
+                    })
+                  }
+                >
+                  출석 취소
+                </Button>
+              </AttendanceStudent>
+            ))}
+          </S.AttendListWrapper>
+        </Flex>
+        <Flex direction="column" gap={10} customStyle={{ marginTop: "52px" }}>
+          <S.AttendStudentTitle>미출석 한 학생</S.AttendStudentTitle>
+          <S.AttendListWrapper>
+            {attendanceListData?.data.nonAttendants.map((data) => (
+              <AttendanceStudent
+                key={data.id}
+                grade={data.studentInfo.grade}
+                name={data.name}
+                number={data.studentInfo.number}
+                room={data.studentInfo.room}
               >
-                출석
-              </Button>
-            </AttendanceStudent>
-          ))}
-        </S.AttendListWrapper>
-        <S.AttendStudentTitle>결강한 학생</S.AttendStudentTitle>
-        <S.AttendListWrapper>
-          {attendanceListData?.data.absentees.map((data) => (
-            <AttendanceStudent
-              key={data.id}
-              grade={data.studentInfo.grade}
-              name={data.name}
-              number={data.studentInfo.number}
-              room={data.studentInfo.room}
-            >
-              <Button
-                customStyle={{ width: "150px" }}
-                type="unSelect"
-                onClick={() =>
-                  onChangeAttendanceStatusCancel({
-                    lectureId,
-                    memberId: data.id,
-                  })
-                }
+                <Button
+                  type="primary"
+                  customStyle={{ width: "150px" }}
+                  onClick={() =>
+                    onChangeAttendanceStatusConfirm({
+                      lectureId,
+                      memberId: data.id,
+                    })
+                  }
+                >
+                  출석
+                </Button>
+              </AttendanceStudent>
+            ))}
+          </S.AttendListWrapper>
+        </Flex>
+        <Flex direction="column" gap={10} customStyle={{ marginTop: "52px" }}>
+          <S.AttendStudentTitle>결강한 학생</S.AttendStudentTitle>
+          <S.AttendListWrapper>
+            {attendanceListData?.data.absentees.map((data) => (
+              <AttendanceStudent
+                key={data.id}
+                grade={data.studentInfo.grade}
+                name={data.name}
+                number={data.studentInfo.number}
+                room={data.studentInfo.room}
               >
-                결강중
-              </Button>
-            </AttendanceStudent>
-          ))}
-        </S.AttendListWrapper>
+                <Button
+                  customStyle={{ width: "150px" }}
+                  type="unSelect"
+                  onClick={() =>
+                    onChangeAttendanceStatusCancel({
+                      lectureId,
+                      memberId: data.id,
+                    })
+                  }
+                >
+                  결강중
+                </Button>
+              </AttendanceStudent>
+            ))}
+          </S.AttendListWrapper>
+        </Flex>
       </S.AttendWrap>
     </>
   );

@@ -2,11 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 
 export const AttendWrap = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: #f2f2f2;
-  padding: 69px 0px 30px 112px;
-  box-sizing: border-box;
+  padding: 69px 104px;
 `;
 
 export const AttendTitleContainer = styled.div`
@@ -53,12 +49,8 @@ export const ButtonWrap = styled.div`
 `;
 
 export const AttendListWrapper = styled.div`
-  width: 100%;
-
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 
-  column-gap: 20px;
-  overflow-x: scroll;
+  gap: 12px;
 `;
