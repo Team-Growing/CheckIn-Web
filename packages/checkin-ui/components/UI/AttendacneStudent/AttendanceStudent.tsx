@@ -3,6 +3,7 @@ import * as S from "./style";
 import { ProfileIcon } from "@checkin/icon";
 import { AttendStudentProps } from "./types";
 import { dataTransform } from "@checkin/util";
+
 export const AttendanceStudent = ({
   children,
   grade,
@@ -15,7 +16,7 @@ export const AttendanceStudent = ({
       <S.AttendanceStudentProfileBox>
         <ProfileIcon />
       </S.AttendanceStudentProfileBox>
-      <Flex direction="column" align="center">
+      <Flex direction="column" align="center" gap={8}>
         <S.AttendanceStudentName>{name}</S.AttendanceStudentName>
         <S.AttendanceStudentGrade>
           {dataTransform.schoolInfoTransform(grade, room, number)}
