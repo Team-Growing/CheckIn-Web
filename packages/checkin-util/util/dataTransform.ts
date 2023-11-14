@@ -31,6 +31,19 @@ class dataTransForm {
     }
   }
 
+  public submitLectureTagTransform(lectureTag: string) {
+    switch (lectureTag) {
+      case "스포츠":
+        return "SPORTS";
+      case "악기":
+        return "INSTRUMENT";
+      case "자율":
+        return "AUTONOMY";
+      case "나르샤":
+        return "NARSHA";
+    }
+  }
+
   public LecturePlaceTypeName(placeType: LecturePlaceType | string) {
     switch (placeType) {
       case "PLAYGROUND":
@@ -80,6 +93,15 @@ class dataTransForm {
         return "수요일";
       case "THURSDAY":
         return "목요일";
+    }
+  }
+
+  public submitTargetGradeTransform(targetGrade: string) {
+    switch (targetGrade) {
+      case "1학년":
+        return 1;
+      case "2학년":
+        return 2;
     }
   }
 
