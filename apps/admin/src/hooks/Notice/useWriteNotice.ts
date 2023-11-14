@@ -1,4 +1,5 @@
 import { useWriteNoticeMutation } from "@/queries/Notice/query";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
 import { ChangeEvent, useState } from "react";
 import { useQueryClient } from "react-query";
@@ -22,12 +23,12 @@ const useWriteNotice = () => {
       },
       {
         onSuccess: () => {
-          CheckinToast.showSuccess("공지 생성 성공");
+          CheckinToast.showSuccess("공지가 생성 되었습니다.");
           setNotice("");
-          queryClient.invalidateQueries("notice/allNotice");
+          queryClient.invalidateQueries(CheckInQueryKey.notice.getAll);
         },
         onError: () => {
-          CheckinToast.showError("실패");
+          CheckinToast.showError("error");
         },
       }
     );

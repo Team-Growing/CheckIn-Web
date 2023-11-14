@@ -1,4 +1,5 @@
 import NoticeRepositoryImpl from "@/repositories/NoticeRepository/NoticeRepositoryImpl";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { useMutation, useQuery } from "react-query";
 
 export const useWriteNoticeMutation = () => {
@@ -17,10 +18,14 @@ export const usePatchNoticeStatusMutation = () => {
 };
 
 export const useGetAllNoticeQuery = () =>
-  useQuery("notice/allNotice", () => NoticeRepositoryImpl.getAllNotice(), {
-    staleTime: 1000 * 60 * 60,
-    cacheTime: 1000 * 60 * 60,
-  });
+  useQuery(
+    CheckInQueryKey.notice.getAll,
+    () => NoticeRepositoryImpl.getAllNotice(),
+    {
+      staleTime: 1000 * 60 * 60,
+      cacheTime: 1000 * 60 * 60,
+    }
+  );
 
 export const useGetActiveNoticeQuery = () =>
   useQuery(

@@ -1,4 +1,5 @@
 import { usePatchNoticeStatusMutation } from "@/queries/Notice/query";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
 import { useBooleanState } from "@checkin/util";
 import { useEffect } from "react";
@@ -33,11 +34,10 @@ const usePatchNoticeStatus = ({ id, status }: Props) => {
       },
       {
         onSuccess: () => {
-          CheckinToast.showSuccess("성공");
-          queryClient.invalidateQueries("notice/allNotice");
+          queryClient.invalidateQueries(CheckInQueryKey.notice.getAll);
         },
         onError: () => {
-          CheckinToast.showError("에러");
+          CheckinToast.showError("error...");
         },
       }
     );
