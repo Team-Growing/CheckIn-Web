@@ -2,6 +2,7 @@ import withAuth from "@/HOF/withAuthHOF";
 import Confirm from "@/components/Confirm";
 import QuestionRepositoryImpl from "@/repositories/QuestionRepository/QuestionRepositoryImpl";
 import SuggestionRepositoryImpl from "@/repositories/SuggestionRepository/SuggestionRepositoryImpl";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
 import { QueryClient, dehydrate } from "react-query";
@@ -18,7 +19,7 @@ export const getServerSideProps = withAuth(
 
     await Promise.all([
       queryClient.prefetchQuery({
-        queryKey: ["question/getQuestions", page],
+        queryKey: CheckInQueryKey.question.getQuestions,
         queryFn: () =>
           QuestionRepositoryImpl.getQuestions({
             page: page,
