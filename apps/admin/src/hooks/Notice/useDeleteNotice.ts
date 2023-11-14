@@ -1,4 +1,5 @@
 import { useDeleteNoticeMutation } from "@/queries/Notice/query";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
 import { useQueryClient } from "react-query";
 
@@ -8,16 +9,20 @@ const useDeleteNotice = () => {
   const deleteNoticeMutation = useDeleteNoticeMutation();
 
   const onDeleteNotice = (id: string) => {
-    deleteNoticeMutation.mutate(id, {
-      onSuccess: () => {
-        CheckinToast.showSuccess("공지 삭제 성공");
-        queryClient.invalidateQueries("notice/allNotice");
-      },
-      onError: () => {
-        CheckinToast.showError("공지 삭제 실패");
-      },
-    });
+    const confirm = window.confirm("공지를 삭제하시겠습니까");
+    if (confirm) {
+      deleteNoticeMutation.mutate(id, {
+        onSuccess: () => {
+          CheckinToast.showSuccess("공지가 삭제되었습니다.");
+          queryClient.invalidateQueries(CheckInQueryKey.notice.getAll);
+        },
+        onError: () => {
+          CheckinToast.showError("error...");
+        },
+      });
+    }
   };
+
   return { onDeleteNotice };
 };
 
