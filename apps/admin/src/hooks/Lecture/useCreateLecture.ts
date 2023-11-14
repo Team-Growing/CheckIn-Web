@@ -1,5 +1,6 @@
 import { useCreateLectureMutation } from "@/queries/Lectures/query";
 import { useGetTeachesrQuery } from "@/queries/Member/query";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
 import { dataTransform } from "@checkin/util";
 import { ChangeEvent, FormEvent, useState } from "react";
@@ -107,9 +108,9 @@ export const useCreateLecture = () => {
         acceptableStudent: {
           maxStudent: Number(maxStudent),
           minStudent: Number(minStudent),
-          targetGrade: Number(targetGrade),
+          targetGrade: dataTransform.submitTargetGradeTransform(targetGrade)!,
         },
-        lectureTag: lectureTag,
+        lectureTag: dataTransform.submitLectureTagTransform(lectureTag)!,
         teacherId: teacherId,
         explanation: explanation,
         lectureName: lectureName,
@@ -125,7 +126,9 @@ export const useCreateLecture = () => {
       {
         onSuccess: () => {
           CheckinToast.showSuccess("강좌 생성 성공");
-          queryClient.invalidateQueries("lectures/getLectures");
+          queryClient.invalidateQueries(
+            CheckInQueryKey.lecture.getAll(Number(targetGrade))
+          );
           setLectureNameExplan({ explanation: "", lectureName: "" });
           setLectureSelectState({
             lectureTag: "",
