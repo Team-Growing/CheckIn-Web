@@ -19,7 +19,7 @@ export const InputIntroText = ({ children }: InputInfoProps) => {
 };
 
 export const DateInput = ({ customStyle, ...attr }: InputProps) => {
-  return <TextInput type="date" {...attr} />;
+  return <TextInput customStyle={customStyle} type="date" {...attr} />;
 };
 
 export const AuthInput = ({ customStyle, ...attr }: AuthInputProps) => {
