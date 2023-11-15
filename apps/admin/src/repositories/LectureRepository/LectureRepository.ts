@@ -16,7 +16,7 @@ export interface LectureRepository {
     lectureStatus,
   }: PatchLectureStatusParam): Promise<Response>;
   getTodayLectures(): Promise<LecturesResponse>;
-  getAllLectures(grade: number): Promise<LecturesAllResponse>;
+  getAllLectures(grade: number): Promise<LecturesResponse>;
 }
 
 export interface postLectureParam extends Lectures {}
