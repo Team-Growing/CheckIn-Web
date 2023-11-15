@@ -7,7 +7,7 @@ import {
 
 export interface AttendanceRepository {
   attendanceLecture({ code, lectureId }: AttendLectureParam): Promise<Response>;
-  getAttendanceCode(lectureId: number): Promise<AttendanceCode>;
+  getAttendanceCode(lectureId: number): Promise<AttendanceCode | void>;
   getAttendance({ lectureId, memberId }: AttendMemberParam): Promise<Response>;
   postConfirmAttendance(param: ChangeAttendanceStatusParam): Promise<Response>;
   deleteCancelAttdendance(

@@ -23,9 +23,13 @@ class AttendanceRepositoryImpl implements AttendanceRepository {
     return data;
   }
 
-  public async getAttendanceCode(lectureId: number): Promise<AttendanceCode> {
-    const { data } = await apiClient.get(`/attendance/code/${lectureId}`);
-    return data;
+  public async getAttendanceCode(
+    lectureId: number
+  ): Promise<AttendanceCode | void> {
+    if (lectureId !== 0) {
+      const { data } = await apiClient.get(`/attendance/code/${lectureId}`);
+      return data;
+    }
   }
 
   public async getAttendants(
