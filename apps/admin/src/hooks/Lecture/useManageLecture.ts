@@ -1,10 +1,11 @@
 import { usePatchLectureStatusMutation } from "@/queries/Lectures/query";
+import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
 import { LectureStatusType } from "@checkin/types";
 import { useState } from "react";
 import { useQueryClient } from "react-query";
 
-const useManageLecture = () => {
+const useManageLecture = (grade: number) => {
   const queryClient = useQueryClient();
 
   const patchLectureStatusMutation = usePatchLectureStatusMutation();
@@ -33,26 +34,7 @@ const useManageLecture = () => {
         onSuccess: () => {
           CheckinToast.showSuccess("강좌 상태 수정 변경");
           setLectureIdList([]);
-          queryClient.invalidateQueries([
-            "lectures/getLectures",
-            "WAITING_PERIOD",
-            2,
-          ]);
-          queryClient.invalidateQueries([
-            "lectures/getLectures",
-            "ENROLMENT",
-            2,
-          ]);
-          queryClient.invalidateQueries([
-            "lectures/getLectures",
-            "COURSE_PERIOD",
-            2,
-          ]);
-          queryClient.invalidateQueries([
-            "lectures/getLectures",
-            "TERMINATION",
-            2,
-          ]);
+          queryClient.invalidateQueries(CheckInQueryKey.lecture.getAll(grade));
         },
         onError: () => {
           CheckinToast.showError("강좌 상태 수정 실패");

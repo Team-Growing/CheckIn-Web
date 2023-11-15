@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import * as S from "./style";
 import { Button, ButtonWrapper, Flex, SectionHeader } from "@checkin/ui";
 import { CmsStatusList } from "./constant";
@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 
 const CMS = () => {
   const { query } = useRouter();
-  const [grade, setGrade] = useState(Number(query.grade));
   const router = useRouter();
 
   const {
@@ -16,7 +15,7 @@ const CMS = () => {
     onChangeLectureIdList,
     onChangeLectureStatus,
     onPatchLectureStatus,
-  } = useManageLecture();
+  } = useManageLecture(Number(query.grade));
 
   return (
     <S.CMSContainer>
@@ -28,9 +27,8 @@ const CMS = () => {
           <Button
             customStyle={{ width: "138px" }}
             type="primary"
-            isSelect={grade === 1 ? false : true}
+            isSelect={Number(query.grade) === 1 ? false : true}
             onClick={() => {
-              setGrade(1);
               router.push("/cms/1");
             }}
           >
@@ -39,9 +37,8 @@ const CMS = () => {
           <Button
             customStyle={{ width: "138px" }}
             type="primary"
-            isSelect={grade === 2 ? false : true}
+            isSelect={Number(query.grade) === 2 ? false : true}
             onClick={() => {
-              setGrade(2);
               router.push("/cms/2");
             }}
           >
@@ -69,9 +66,9 @@ const CMS = () => {
             </S.CmsStatusBox>
             <LecturesList
               status={item.status}
-              grade={grade}
               lectureIdList={lectureIdList}
               onChangeLectureIdList={onChangeLectureIdList}
+              grade={Number(query.grade)}
             />
           </Flex>
         ))}
