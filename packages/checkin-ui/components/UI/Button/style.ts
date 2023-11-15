@@ -82,7 +82,7 @@ const buttonStyle: Record<ButtonType, FlattenSimpleInterpolation> = {
   `,
   white: css`
     border: 2px solid #636363;
-    background-color: ${CheckInColor.Background.Lightest};
+    background-color: ${CheckInColor.Background.Lightbase};
     color: #636363;
   `,
   deny: css`
