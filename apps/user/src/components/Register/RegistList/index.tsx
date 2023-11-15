@@ -34,8 +34,8 @@ const RegistList = ({ grade }: Props) => {
                     `${data.lectureName} 수강 신청 성공`
                   );
                 },
-                onError: () => {
-                  CheckinToast.showError("방과후 수강 신청 실패");
+                onError: (data: any) => {
+                  CheckinToast.showError(data.response.data.message);
                 },
               })
             }
