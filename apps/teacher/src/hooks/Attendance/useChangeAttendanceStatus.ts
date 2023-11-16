@@ -5,7 +5,6 @@ import {
 import { ChangeAttendanceStatusParam } from "@/repositories/AttendanceRepository/AttendanceRepository";
 import { CheckInQueryKey } from "@checkin/querykey";
 import { CheckinToast } from "@checkin/toast";
-import React from "react";
 import { useQueryClient } from "react-query";
 
 const useChangeAttendanceStatus = () => {
@@ -21,7 +20,7 @@ const useChangeAttendanceStatus = () => {
       { lectureId, memberId },
       {
         onSuccess: () => {
-          CheckinToast.showSuccess("출석 취소 처리 하였습니다");
+          CheckinToast.showSuccess("출석 취소 처리 되었습니다");
           queryClient.invalidateQueries(
             CheckInQueryKey.attendance.getAttendacneList(lectureId)
           );
@@ -41,7 +40,7 @@ const useChangeAttendanceStatus = () => {
       { lectureId, memberId },
       {
         onSuccess: () => {
-          CheckinToast.showSuccess("출석 취소 되었습니다");
+          CheckinToast.showSuccess("출석 처리 되었습니다");
           queryClient.invalidateQueries(
             CheckInQueryKey.attendance.getAttendacneList(lectureId)
           );

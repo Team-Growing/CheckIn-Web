@@ -3,8 +3,9 @@ import * as S from "./style";
 import AttendIcon from "../../assets/image/AttendTitleIcon.svg";
 import { AttendanceStudent, Button, ButtonWrapper, Flex } from "@checkin/ui";
 import { useGetAttendantsQuery } from "@/queries/AttendanceCode/query";
-import { useGetMyLectures } from "@/queries/Lectures/query";
+import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
 import useChangeAttendanceStatus from "@/hooks/Attendance/useChangeAttendanceStatus";
+import { useRouter } from "next/router";
 export type UserType = {
   id: number;
   name: string;
@@ -13,12 +14,16 @@ export type UserType = {
 };
 
 const Attend = () => {
-  const { data: myLecturesData } = useGetMyLectures();
-  const [lectureId, setLectureId] = useState<number>(0);
+  const router = useRouter();
 
-  const { data: attendanceListData } = useGetAttendantsQuery(lectureId!);
+  const { data: myLecturesData } = useGetTodayMyLecturesQuery();
+  const { data: attendanceListData } = useGetAttendantsQuery(
+    Number(router.query.id)
+  );
+
   const { onChangeAttendanceStatusConfirm, onChangeAttendanceStatusCancel } =
     useChangeAttendanceStatus();
+
   return (
     <>
       <S.AttendWrap>
@@ -32,8 +37,10 @@ const Attend = () => {
             <Button
               key={data.lectureId.value}
               type="primary"
-              isSelect={lectureId === data.lectureId.value ? false : true}
-              onClick={() => setLectureId(data.lectureId.value)}
+              isSelect={
+                Number(router.query.id) === data.lectureId.value ? false : true
+              }
+              onClick={() => router.push(String(data.lectureId.value))}
             >
               {data.lectureName}
             </Button>
@@ -55,7 +62,7 @@ const Attend = () => {
                   type="unSelect"
                   onClick={() =>
                     onChangeAttendanceStatusCancel({
-                      lectureId,
+                      lectureId: Number(router.query.id),
                       memberId: data.id,
                     })
                   }
@@ -82,7 +89,7 @@ const Attend = () => {
                   customStyle={{ width: "150px" }}
                   onClick={() =>
                     onChangeAttendanceStatusConfirm({
-                      lectureId,
+                      lectureId: Number(router.query.id),
                       memberId: data.id,
                     })
                   }
@@ -109,7 +116,7 @@ const Attend = () => {
                   type="unSelect"
                   onClick={() =>
                     onChangeAttendanceStatusCancel({
-                      lectureId,
+                      lectureId: Number(router.query.id),
                       memberId: data.id,
                     })
                   }
