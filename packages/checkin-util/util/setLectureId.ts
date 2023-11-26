@@ -1,7 +1,7 @@
 import { LectureType } from "@checkin/types";
 import { useState } from "react";
 
-const transformLectureIdByName = () => {
+const transFormLectureIdByName = () => {
   const [lectureName, setLectureName] = useState("");
 
   const findLectureIdByName = (
@@ -18,4 +18,4 @@ const transformLectureIdByName = () => {
   return { lectureName, findLectureIdByName };
 };
 
-export default transformLectureIdByName;
+export default transFormLectureIdByName;
