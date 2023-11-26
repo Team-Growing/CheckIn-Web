@@ -7,7 +7,7 @@ import { MypageIcon, SchoolIcon } from "@checkin/icon";
 const NavItem = () => {
   const { pathname } = useRouter();
   const { data } = useGetTodayMyLecturesQuery();
-  const firstLectureId = data?.data[0].lectureId.value;
+  const firstLectureId = data?.data[0]?.lectureId.value;
 
   return (
     <S.NavItemWrap>
