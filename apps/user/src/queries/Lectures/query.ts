@@ -57,7 +57,7 @@ export const useGetEnrolmentLecturesQuery = (
 
 export const useGetTodayMyLecturesQuery = () =>
   useQuery(
-    "lectures/todayMyLectures",
+    CheckInQueryKey.lecture.getTodayMyLectures,
     () => LectureRepositoryImpl.getTodayMyLectures(),
     {
       staleTime: 1000 * 60 * 60,
