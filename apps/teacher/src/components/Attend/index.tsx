@@ -40,7 +40,7 @@ const Attend = () => {
               isSelect={
                 Number(router.query.id) === data.lectureId.value ? false : true
               }
-              onClick={() => router.push(String(data.lectureId.value))}
+              onClick={() => router.replace(String(data.lectureId.value))}
             >
               {data.lectureName}
             </Button>

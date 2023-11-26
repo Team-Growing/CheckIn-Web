@@ -28,7 +28,7 @@ export const useLogin = () => {
           onSuccess: ({ data }) => {
             Token.setToken(ACCESS_TOKEN_KEY, data.accessToken);
             Token.setToken(REFRESH_TOKEN_KEY, data.refreshToken);
-            router.push("/");
+            router.replace("/");
             CheckinToast.showSuccess("로그인 성공");
           },
           onError: () => {

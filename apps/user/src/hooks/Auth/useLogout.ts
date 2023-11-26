@@ -6,7 +6,7 @@ const useLogout = () => {
 
   const onLogout = () => {
     Token.clearToken();
-    router.push("/sign");
+    router.replace("/sign");
   };
 
   return { onLogout };

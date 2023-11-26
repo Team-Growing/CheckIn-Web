@@ -10,7 +10,7 @@ const useTokenCheck = () => {
     const checkTokens = () => {
       if (!Token.getToken(ACCESS_TOKEN_KEY)) {
         CheckinToast.showError("토큰이 위조");
-        router.push("/sign");
+        router.replace("/sign");
       }
     };
     checkTokens();

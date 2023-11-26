@@ -29,7 +29,7 @@ const CMS = () => {
             type="primary"
             isSelect={Number(query.grade) === 1 ? false : true}
             onClick={() => {
-              router.push("/cms/1");
+              router.replace("/cms/1");
             }}
           >
             1학년
@@ -39,7 +39,7 @@ const CMS = () => {
             type="primary"
             isSelect={Number(query.grade) === 2 ? false : true}
             onClick={() => {
-              router.push("/cms/2");
+              router.replace("/cms/2");
             }}
           >
             2학년

@@ -33,7 +33,7 @@ export const useLogin = () => {
           onSuccess: (data) => {
             Token.setToken(ACCESS_TOKEN_KEY, data.data.accessToken);
             Token.setToken(REFRESH_TOKEN_KEY, data.data.refreshToken);
-            router.push("/");
+            router.replace("/");
 
             CheckinToast.showSuccess("로그인 성공");
             queryClient.invalidateQueries([CheckInQueryKey.member.getMy]);
