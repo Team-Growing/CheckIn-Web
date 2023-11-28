@@ -6,6 +6,7 @@ import { RecoilRoot } from "recoil";
 import { Hydrate, QueryClient, QueryClientProvider } from "react-query";
 import { CheckinToastContainer } from "@checkin/toast";
 import { GlobalStyle } from "@checkin/styled-theme";
+import { captureException } from "@sentry/nextjs";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,6 +16,9 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
       refetchOnReconnect: false,
       staleTime: 1000,
+      onError: (error) => {
+        captureException(error);
+      },
     },
   },
 });
