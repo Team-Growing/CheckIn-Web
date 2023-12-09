@@ -1,11 +1,10 @@
-import { useRouter } from "next/router";
 import { NAV_ITEM } from "../constant";
 import * as S from "./style";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavItem = () => {
-  const { pathname } = useRouter();
-
+  const pathname = usePathname();
   return (
     <S.NavItemWrap>
       {NAV_ITEM.map((data, idx) => (

@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import AuthImg from "../../assets/Image/AuthImg.svg";
 import Login from "./Login";

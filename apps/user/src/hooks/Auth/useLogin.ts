@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { FormEvent, useRef } from "react";
 import { sha512 } from "js-sha512";
 import {
