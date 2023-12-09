@@ -10,25 +10,4 @@ const myinfo = () => {
   return <Mypage />;
 };
 
-export const getServerSideProps = withAuth(async () => {
-  const queryClient = new QueryClient();
-
-  await Promise.all([
-    queryClient.prefetchQuery({
-      queryKey: CheckInQueryKey.member.getMyLectures,
-      queryFn: LectureRepositoryImpl.getMyLectures,
-    }),
-    queryClient.prefetchQuery({
-      queryKey: CheckInQueryKey.member.getMy,
-      queryFn: MemberRepositoryImpl.getMemberInfo,
-    }),
-  ]);
-
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-  };
-});
-
 export default myinfo;

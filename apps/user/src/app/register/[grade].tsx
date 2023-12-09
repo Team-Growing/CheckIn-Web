@@ -9,21 +9,4 @@ const RegisterPage = () => {
   return <Register />;
 };
 
-export const getServerSideProps = withAuth(
-  async ({ query }: GetServerSidePropsContext) => {
-    const queryClient = new QueryClient();
-
-    await queryClient.prefetchQuery({
-      queryKey: ["lectures/getEnrolmentLectures", Number(query.grade)],
-      queryFn: () =>
-        LectureRepositoryImpl.getEnrolmentLectures(Number(query.grade)),
-    });
-
-    return {
-      props: {
-        dehydratedState: dehydrate(queryClient),
-      },
-    };
-  }
-);
 export default RegisterPage;
