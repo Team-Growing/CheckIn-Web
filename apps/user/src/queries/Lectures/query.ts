@@ -1,5 +1,4 @@
 import LectureRepositoryImpl from "@/repositories/LectureRepository/LectureRepositoryImpl";
-import { CheckInQueryKey } from "@checkin/querykey";
 import { LecturesResponse } from "@checkin/types";
 import { AxiosError } from "axios";
 import { UseQueryOptions, useQuery } from "react-query";
@@ -55,11 +54,19 @@ export const useGetEnrolmentLecturesQuery = (
     }
   );
 
-export const useGetTodayMyLecturesQuery = () =>
+export const useGetTodayMyLecturesQuery = (
+  options?: UseQueryOptions<
+    LecturesResponse,
+    AxiosError,
+    LecturesResponse,
+    "lectures/getMyTodayLectures"
+  >
+) =>
   useQuery(
-    CheckInQueryKey.lecture.getTodayMyLectures,
+    "lectures/getMyTodayLectures",
     () => LectureRepositoryImpl.getTodayMyLectures(),
     {
+      ...options,
       staleTime: 1000 * 60 * 60,
       cacheTime: 1000 * 60 * 60,
     }
