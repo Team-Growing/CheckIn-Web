@@ -9,7 +9,7 @@ interface Props {
 }
 
 const AttendList = ({ lectureId, onClickSetId }: Props) => {
-  const { data } = useGetTodayMyLecturesQuery({ suspense: true });
+  const { data } = useGetTodayMyLecturesQuery();
 
   return (
     <S.EnrolLectureListContainer>
