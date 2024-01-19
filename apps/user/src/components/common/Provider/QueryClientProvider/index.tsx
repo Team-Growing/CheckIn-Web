@@ -15,11 +15,7 @@ const QueryClientProvider = ({ children }: Props) => {
       new QueryClient({
         defaultOptions: {
           queries: {
-            retry: false,
-            retryOnMount: false,
             refetchOnWindowFocus: false,
-            refetchOnReconnect: false,
-            staleTime: 1000,
             onError: (error) => {
               captureException(error);
             },

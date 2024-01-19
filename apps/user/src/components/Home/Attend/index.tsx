@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardTitle, Flex } from "@checkin/ui";
-import React, { Suspense } from "react";
+import React from "react";
 import useAttendance from "@/hooks/Attendance/useAttendance";
 import AttendList from "./AttendList";
 import AttendLectureForm from "./AttendLectureForm";
@@ -24,9 +24,7 @@ const Attend = () => {
           출석코드 입력
         </CardTitle>
         <Flex gap={20} customStyle={{ width: "100%", height: "100%" }}>
-          <Suspense fallback={<span>loading...</span>}>
-            <AttendList lectureId={lectureId} onClickSetId={onClickSetId} />
-          </Suspense>
+          <AttendList lectureId={lectureId} onClickSetId={onClickSetId} />
           <AttendLectureForm
             attendanceCode={attendanceCode}
             onAttendanceLecture={onAttendanceLecture}
