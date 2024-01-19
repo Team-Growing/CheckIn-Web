@@ -1,3 +1,5 @@
+import { MemberInfoData } from "../Member/Member.type";
+
 export type LectureStatusType =
   | "WAITING_PERIOD"
   | "ENROLMENT"
@@ -23,6 +25,13 @@ export type DayOfWeekType =
 
 export interface LecturesResponse extends Response {
   data: LectureType[];
+}
+
+export interface MemberLecturesResponse extends Response {
+  data: {
+    info: MemberInfoData;
+    lectures: LectureType[];
+  };
 }
 
 export interface LecturesAllResponse extends Response {
