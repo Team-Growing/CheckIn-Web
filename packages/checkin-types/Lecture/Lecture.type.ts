@@ -1,3 +1,5 @@
+import { MemberInfoData } from "../Member/Member.type";
+
 export type LectureStatusType =
   | "WAITING_PERIOD"
   | "ENROLMENT"
