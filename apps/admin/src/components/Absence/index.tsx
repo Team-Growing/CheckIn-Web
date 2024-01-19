@@ -12,7 +12,7 @@ import {
   useDenyAbsenceMutation,
   useGetAbsencesQuery,
 } from "@/queries/Absence/query";
-import { dataTransform, dateTransform, stringEllipsis } from "@checkin/util";
+import { dataTransform, dateTransform } from "@checkin/util";
 import { ProfileIcon } from "@checkin/icon";
 import { CheckinToast } from "@checkin/toast";
 import { useQueryClient } from "react-query";

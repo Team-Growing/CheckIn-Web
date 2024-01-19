@@ -1,4 +1,4 @@
-import { AbsencesResponse, Response } from "@checkin/types";
+import { MemberAbsencesResponse, Response } from "@checkin/types";
 import { AbsenceRepository, ApplyAbsenceParam } from "./AbsenceRepository";
 import apiClient from "@/libs/Auth/customAxios";
 
@@ -8,7 +8,7 @@ class AbsenceRepositoryImpl implements AbsenceRepository {
     return data;
   }
 
-  public async getMyAbsence(): Promise<AbsencesResponse> {
+  public async getMyAbsence(): Promise<MemberAbsencesResponse> {
     const { data } = await apiClient.get("/absence/my");
     return data;
   }
