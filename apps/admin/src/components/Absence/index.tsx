@@ -42,7 +42,7 @@ const Absence = () => {
       />
       <DateInput onChange={onChangeDate} value={date} />
       <S.Wrap>
-        {data?.data.map((data) => (
+        {data?.data.absences.map((data) => (
           <S.ItemBox key={data.lectureId.value}>
             <Flex gap={30} align="center">
               <Flex gap={20} align="center">
