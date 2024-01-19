@@ -1,5 +1,5 @@
 import LectureRepositoryImpl from "@/repositories/LectureRepository/LectureRepositoryImpl";
-import { LecturesResponse } from "@checkin/types";
+import { LecturesResponse, MemberLecturesResponse } from "@checkin/types";
 import { AxiosError } from "axios";
 import { UseQueryOptions, useQuery } from "react-query";
 
@@ -23,9 +23,9 @@ export const useGetTodayLectures = (
 
 export const useGetMyLectures = (
   options?: UseQueryOptions<
-    LecturesResponse,
+    MemberLecturesResponse,
     AxiosError,
-    LecturesResponse,
+    MemberLecturesResponse,
     "lectures/myLectures"
   >
 ) =>
