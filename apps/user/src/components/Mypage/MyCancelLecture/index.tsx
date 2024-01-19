@@ -14,7 +14,7 @@ const MyCancelLectures = ({ grade, name, number, room }: Props) => {
   const { data: myAbsenceData } = useGetMyAbsenceQuery();
   return (
     <MyCancelLecturesContainer>
-      {myAbsenceData?.data.map((data) => (
+      {myAbsenceData?.data.absences.map((data) => (
         <CheckMyAbsense
           key={data.absenceId.value}
           grade={grade}

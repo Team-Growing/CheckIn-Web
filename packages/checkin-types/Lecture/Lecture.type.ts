@@ -25,6 +25,13 @@ export interface LecturesResponse extends Response {
   data: LectureType[];
 }
 
+export interface MemberLecturesResponse extends Response {
+  data: {
+    info: MemberInfoData;
+    lectures: LectureType[];
+  };
+}
+
 export interface LecturesAllResponse extends Response {
   data: {
     waitingPeriod: LectureTagType[];

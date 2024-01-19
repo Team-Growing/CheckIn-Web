@@ -1,20 +1,20 @@
 import { LectureTagBox } from "@checkin/ui";
 import React from "react";
 import { MyLectusContainer } from "./style";
-import { LecturesResponse } from "@checkin/types";
+import { MemberLecturesResponse } from "@checkin/types";
 
 interface Props {
-  serverMemberLecturesData: LecturesResponse;
+  serverMemberLecturesData: MemberLecturesResponse;
 }
 
 const MyLectures = ({ serverMemberLecturesData }: Props) => {
   return (
     <>
       <MyLectusContainer>
-        {serverMemberLecturesData.data.length === 0 && (
+        {serverMemberLecturesData.data.lectures.length === 0 && (
           <div>신청된 방과후가 없습니다</div>
         )}
-        {serverMemberLecturesData.data.map((data) => (
+        {serverMemberLecturesData.data.lectures.map((data) => (
           <LectureTagBox
             key={data.lectureId.value}
             lectureTag={data.lectureTag}

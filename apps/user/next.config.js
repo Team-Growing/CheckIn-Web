@@ -4,7 +4,7 @@ const { withSentryConfig } = require("@sentry/nextjs");
 
 const ENV = {
   ENV: process.env.NODE_ENV ?? "",
-  API_HOST: process.env.API_HOST ?? process.env.REACT_APP_API_KEY,
+  API_HOST: process.env.API_HOST ?? process.env.NEXT_PUBLIC_BASE_URL,
 };
 
 const nextConfig = {
