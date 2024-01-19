@@ -232,9 +232,6 @@ importers:
       '@checkin/util':
         specifier: workspace:*
         version: link:../../packages/checkin-util
-      '@sentry/nextjs':
-        specifier: ^7.82.0
-        version: 7.82.0(next@13.4.12)(react@18.2.0)
       '@suspensive/react':
         specifier: ^1.23.2
         version: 1.23.2(react@18.2.0)

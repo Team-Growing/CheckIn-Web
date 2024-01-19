@@ -1,6 +1,5 @@
 "use client";
 
-import { captureException } from "@sentry/nextjs";
 import React, { useState } from "react";
 import { QueryClient } from "react-query";
 import type { ReactNode } from "react";
@@ -16,9 +15,6 @@ const QueryClientProvider = ({ children }: Props) => {
         defaultOptions: {
           queries: {
             refetchOnWindowFocus: false,
-            onError: (error) => {
-              captureException(error);
-            },
           },
         },
       })
