@@ -15,8 +15,8 @@ export const NAV_ITEM = [
   },
   {
     title: "마이페이지",
-    pathname: "/myinfo",
-    path: "/myinfo",
+    pathname: "/profile",
+    path: "/profile",
     icon: MypageIcon,
   },
 ];

@@ -3,26 +3,21 @@ import { MyCancelLecturesContainer } from "./style";
 import { useGetMyAbsenceQuery } from "@/queries/Absence/query";
 import { CheckMyAbsense } from "@checkin/ui";
 
-interface Props {
-  grade: number;
-  number: number;
-  room: number;
-  name: string;
-}
+const MyCancelLectures = () => {
+  const { data: myAbsenceData } = useGetMyAbsenceQuery({ suspense: true });
 
-const MyCancelLectures = ({ grade, name, number, room }: Props) => {
-  const { data: myAbsenceData } = useGetMyAbsenceQuery();
   return (
     <MyCancelLecturesContainer>
-      {myAbsenceData?.data.map((data) => (
+      {myAbsenceData?.data.absences[0] === undefined && <span>없다</span>}
+      {myAbsenceData?.data.absences.map((data) => (
         <CheckMyAbsense
           key={data.absenceId.value}
-          grade={grade}
+          grade={myAbsenceData.data.info.studentInfo.grade}
           isCheck={data.absenceStatus === "ABSENCE_PENDING" ? false : true}
-          name={name}
-          number={number}
+          name={myAbsenceData.data.info.name}
+          number={myAbsenceData.data.info.studentInfo.number}
           reason={data.reason}
-          room={room}
+          room={myAbsenceData.data.info.studentInfo.room}
         />
       ))}
     </MyCancelLecturesContainer>

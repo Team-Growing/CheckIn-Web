@@ -1,15 +1,16 @@
 import React from "react";
 import * as S from "./style";
 import { EnrolLectureBox } from "@checkin/ui";
-import { LecturesResponse } from "@checkin/types";
+import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
 
 interface Props {
-  data: LecturesResponse;
   lectureId: number;
   onClickSetId: (value: number) => void;
 }
 
-const AttendList = ({ data, lectureId, onClickSetId }: Props) => {
+const AttendList = ({ lectureId, onClickSetId }: Props) => {
+  const { data } = useGetTodayMyLecturesQuery({ suspense: true });
+
   return (
     <S.EnrolLectureListContainer>
       {data?.data.map((data) => (
