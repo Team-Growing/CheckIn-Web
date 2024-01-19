@@ -1,3 +1,5 @@
+"use client";
+
 import { CardTitle } from "@checkin/ui";
 import React, { useState } from "react";
 import { NotifictionIcon } from "@checkin/icon";
@@ -5,7 +7,7 @@ import { useGetActiveNoticeQuery } from "@/queries/Notice/query";
 import { NoticeContainer, NoticeContent } from "./style";
 
 const Notifiction = () => {
-  const { data } = useGetActiveNoticeQuery();
+  const { data } = useGetActiveNoticeQuery({ suspense: true });
   const [noticeLength, setNoticeLength] = useState(data?.data.length! - 1);
 
   setTimeout(() => {

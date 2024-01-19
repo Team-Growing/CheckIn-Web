@@ -1,3 +1,4 @@
+"use client";
 import { useAttendanceLectureMutation } from "@/queries/Attendance/query";
 import { CheckinToast } from "@checkin/toast";
 import { ChangeEvent, FormEvent, useState } from "react";

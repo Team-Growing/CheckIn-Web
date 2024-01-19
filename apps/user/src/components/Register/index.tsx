@@ -1,11 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import RegistList from "./RegistList";
 import * as S from "./style";
 import { Button, ButtonWrapper, SectionHeader } from "@checkin/ui";
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 
 const Register = () => {
-  const { query } = useRouter();
+  const query = useParams();
 
   return (
     <S.RegisterContainer>

@@ -1,10 +1,11 @@
+"use client";
+
 import { Card, CardTitle, Flex } from "@checkin/ui";
 import React from "react";
-import { CalendarIcon } from "@checkin/icon";
 import useAttendance from "@/hooks/Attendance/useAttendance";
 import AttendList from "./AttendList";
 import AttendLectureForm from "./AttendLectureForm";
-import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
+import { CalendarIcon } from "@checkin/icon";
 
 const Attend = () => {
   const {
@@ -14,31 +15,24 @@ const Attend = () => {
     onClickSetId,
     onChangeAttendanceCode,
   } = useAttendance();
-  const { data } = useGetTodayMyLecturesQuery();
 
   return (
-    <Card type="Enrol">
-      <CardTitle>
-        <CalendarIcon />
-        출석코드 입력
-      </CardTitle>
-      {data?.data.length === 0 ? (
-        <>오늘은 방과후가 없습니다</>
-      ) : (
+    <>
+      <Card type="Enrol">
+        <CardTitle>
+          <CalendarIcon />
+          출석코드 입력
+        </CardTitle>
         <Flex gap={20} customStyle={{ width: "100%", height: "100%" }}>
-          <AttendList
-            data={data!}
-            lectureId={lectureId}
-            onClickSetId={onClickSetId}
-          />
+          <AttendList lectureId={lectureId} onClickSetId={onClickSetId} />
           <AttendLectureForm
             attendanceCode={attendanceCode}
             onAttendanceLecture={onAttendanceLecture}
             onChangeAttendanceCode={onChangeAttendanceCode}
           />
         </Flex>
-      )}
-    </Card>
+      </Card>
+    </>
   );
 };
 

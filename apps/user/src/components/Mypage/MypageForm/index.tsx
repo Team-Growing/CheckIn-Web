@@ -3,13 +3,10 @@ import * as S from "./style";
 import { Flex, TextInputWrap, WriteButton } from "@checkin/ui";
 import { PhotoIcon } from "@checkin/icon";
 import { MemberType } from "@checkin/types";
+import { useGetMemberInfo } from "@/queries/Member/Member.query";
 
-interface Props {
-  serverMyInfo: MemberType;
-}
-
-const MypageForm = ({ serverMyInfo }: Props) => {
-  const { email, id, memberRole, name, studentInfo } = serverMyInfo.data;
+const MypageForm = () => {
+  const { data } = useGetMemberInfo({ suspense: true });
   return (
     <S.MypageFormContainer>
       <input id="profileUploadInput" type="file" />
@@ -22,13 +19,13 @@ const MypageForm = ({ serverMyInfo }: Props) => {
           <TextInputWrap
             info="이름"
             customStyle={{ width: "80px" }}
-            value={name}
+            value={data?.data.name}
             require={false}
           />
           <TextInputWrap
             info="E-mail"
             customStyle={{ width: "auto" }}
-            value={email}
+            value={data?.data.email}
             require={false}
           />
         </Flex>
@@ -36,13 +33,13 @@ const MypageForm = ({ serverMyInfo }: Props) => {
           <TextInputWrap
             info="학번"
             customStyle={{ width: "80px" }}
-            value={`${studentInfo.grade}${studentInfo.room}${studentInfo.number}`}
+            value={`${data?.data.studentInfo.grade}${data?.data.studentInfo.room}${data?.data.studentInfo.number}`}
             require={false}
           />
           <TextInputWrap
             info="아이디"
             customStyle={{ width: "auto" }}
-            value={id}
+            value={data?.data.id}
             require={false}
           />
           <WriteButton type="primary" customStyle={{ marginTop: "20px" }}>

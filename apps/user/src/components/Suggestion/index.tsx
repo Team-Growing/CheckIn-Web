@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import * as S from "./style";
 import { SectionHeader } from "@checkin/ui";

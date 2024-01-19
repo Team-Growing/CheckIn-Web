@@ -1,10 +1,15 @@
-import { LecturesResponse, Lectures, Response } from "@checkin/types";
+import {
+  LecturesResponse,
+  Lectures,
+  Response,
+  MemberLecturesResponse,
+} from "@checkin/types";
 
 export interface LectureRepository {
   enrolLecture(id: enroLectureByIdParam): Promise<Response>;
   getLectureById(id: getLectureByIdParam): Promise<Lectures>;
   getTodayLecture(): Promise<LecturesResponse>;
-  getMyLectures(): Promise<LecturesResponse>;
+  getMyLectures(): Promise<MemberLecturesResponse>;
   getEnrolmentLectures(grade: number): Promise<LecturesResponse>;
   getTodayMyLectures(): Promise<LecturesResponse>;
   getMemberLectures(): Promise<LecturesResponse>;

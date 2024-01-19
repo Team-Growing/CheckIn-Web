@@ -1,32 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { Suspense } from "react";
 import { SectionHeader } from "@checkin/ui";
 import * as S from "./style";
 import MypageForm from "./MypageForm";
 import MyCancelLectures from "./MyCancelLecture";
 import MyLectures from "./MyLectures";
 import { useGetMemberInfo } from "@/queries/Member/Member.query";
-import { useGetMyLectures } from "@/queries/Lectures/query";
+
 const Mypage = () => {
-  const { data: serverMemberLecturesData } = useGetMyLectures();
-  const { data: serverMyInfo } = useGetMemberInfo();
-  const { name } = serverMyInfo?.data!;
-  const { grade, number, room } = serverMyInfo?.data.studentInfo!;
+  const { data } = useGetMemberInfo();
+
   return (
     <S.MypageContainer>
       <SectionHeader title="마이페이지" subTitle="My page & Setting" />
-      <MypageForm serverMyInfo={serverMyInfo!} />
+      <Suspense fallback={<span>loading...</span>}>
+        <MypageForm />
+      </Suspense>
+      <S.MypageSectionTitle style={{ marginTop: "37px" }}>{`${
+        data?.data.name === undefined ? "홍길동" : data.data.name
+      }님의 방과후`}</S.MypageSectionTitle>
+
+      <Suspense fallback={<span>loading...</span>}>
+        <MyLectures />
+      </Suspense>
       <S.MypageSectionTitle
-        style={{ marginTop: "37px" }}
-      >{`${serverMyInfo?.data.name}님의 방과후`}</S.MypageSectionTitle>
-      {serverMemberLecturesData?.data ? (
-        <MyLectures serverMemberLecturesData={serverMemberLecturesData} />
-      ) : (
-        <>Server Error...</>
-      )}
-      <S.MypageSectionTitle style={{ marginTop: "22px" }}>
-        {`${serverMyInfo?.data.name}님의 결강신청`}
-      </S.MypageSectionTitle>
-      <MyCancelLectures grade={grade} number={number} room={room} name={name} />
+        style={{ marginTop: "22px" }}
+      >{`${data?.data.name}님의 결강신청`}</S.MypageSectionTitle>
+      <Suspense fallback={<span>loading...</span>}>
+        <MyCancelLectures />
+      </Suspense>
     </S.MypageContainer>
   );
 };
