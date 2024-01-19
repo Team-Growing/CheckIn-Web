@@ -1,15 +1,10 @@
-import { useGetTeachesrQuery } from "@/queries/Member/query";
+import { TeacherData } from "@checkin/types";
 import { Flex, SelectWrap } from "@checkin/ui";
 import React from "react";
 
 interface Props {
   teacherName: string;
-  teachersData: [
-    {
-      id: string;
-      name: string;
-    }
-  ];
+  teachersData: TeacherData[];
   lectureSelectState: {
     placeType: string;
     lectureTag: string;
