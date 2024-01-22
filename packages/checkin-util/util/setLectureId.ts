@@ -1,3 +1,5 @@
+"use client";
+
 import { LectureType } from "@checkin/types";
 import { useState } from "react";
 

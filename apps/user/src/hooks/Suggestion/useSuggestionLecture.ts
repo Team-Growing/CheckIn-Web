@@ -1,3 +1,4 @@
+"use client";
 import { usePostSuggestionMutation } from "@/queries/Suggestion/query";
 import { CheckinToast } from "@checkin/toast";
 import { dataTransform } from "@checkin/util";

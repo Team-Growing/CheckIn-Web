@@ -1,3 +1,5 @@
+"use client";
+
 import { useApplyAbsenceMutation } from "@/queries/Absence/query";
 import { useGetTodayMyLecturesQuery } from "@/queries/Lectures/query";
 import { CheckInQueryKey } from "@checkin/querykey";
