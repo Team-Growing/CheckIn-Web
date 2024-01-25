@@ -1,3 +1,5 @@
+"use client";
+
 import { CardTitle } from "@checkin/ui";
 import React, { useState } from "react";
 import { NotifictionIcon } from "@checkin/icon";

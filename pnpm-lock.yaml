@@ -235,6 +235,9 @@ importers:
       '@sentry/nextjs':
         specifier: ^7.82.0
         version: 7.82.0(next@13.4.12)(react@18.2.0)
+      '@suspensive/react':
+        specifier: ^1.25.0
+        version: 1.25.0(react@18.2.0)
       axios:
         specifier: ^1.4.0
         version: 1.6.0
@@ -4191,6 +4194,14 @@ packages:
       regenerator-runtime: 0.13.11
       resolve-from: 5.0.0
     dev: true
+
+  /@suspensive/react@1.25.0(react@18.2.0):
+    resolution: {integrity: sha512-vvWBNMyTOyl3vYMVV+G/d/XogYx7spMGGOLKxF+CSyvCF5vxmnZsEaeFtPveFGnP1mAtfcxfn0pzc169bEkS/Q==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@swc/helpers@0.5.1:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
